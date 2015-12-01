@@ -1,0 +1,35 @@
+# siunitx.sty {{{1
+snippet num
+alias   \num
+	\num{${1}}${0}
+
+snippet si
+alias   \si
+	\si{${1:#:unit}}${0}
+
+snippet SI
+alias   \SI
+	\SI{${1:#:num}}{${2:#:unit}}${0}
+
+snippet numlist
+alias   \numlist
+	\numlist{${1}}${0}
+
+snippet numrange
+alias   \numrange
+	\numrange{${1:#:begin}}{${2:#:end}}${0}
+
+snippet SIlist
+alias   \SIlist
+	\SIlist{${1:#:num}}{${2:#:unit}}${0}
+
+snippet SIrange
+alias   \SIrange
+	\SIrange{${1:#:begin}}{${2:#:end}}{${3:#:unit}}${0}
+
+# subfigure.sty {{{1
+snippet thesubfigure
+alias   \thesubfigure
+	\renewcommand*{\thesubfigure}{${1}{subfigure}${2}}
+
+# vim:set noet fdm=marker:

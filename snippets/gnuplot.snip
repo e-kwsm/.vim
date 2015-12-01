@@ -1,0 +1,25 @@
+# shebang {{{1
+snippet #!
+abbr    #!/usr/bin/env gnuplot
+alias   shebang
+options head
+	#!/usr/bin/env gnuplot
+	${0}
+
+# terminal {{{1
+snippet svg
+	set terminal svg size ${1:600}, ${2:480} \
+		enhanced \
+		fname '${3:Arial}' fsize ${4:12} \
+		name '${5:Gnuplot}'
+	${0}
+
+snippet epscairo
+	set terminal epscairo \
+		enhanced ${1:color} \
+		font '${2:Sans}, ${3:10}' fontscale '${4:1}' \
+		linewidth '${5:0.5}' \
+		size ${6:3}, ${7:3}
+	${0}
+
+# vim:set fdm=marker:
