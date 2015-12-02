@@ -66,7 +66,6 @@ if v:version >= 700 && filereadable(expand("~/.vim/bundle/neobundle.vim/README.m
     NeoBundle 'mattn/emmet-vim'
     NeoBundle 'davidhalter/jedi-vim'
     NeoBundle 'ujihisa/neco-look'
-    NeoBundle 'tyru/open-browser.vim'
     NeoBundle 'mattn/emmet-vim'
     " }}}
 
@@ -292,10 +291,6 @@ let g:tagbar_autofocus=1
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :TagbarOpen fjc<CR>
 endif
-" }}}
-
-" tyru/open-browser.vim {{{
-nmap <C-l> <Plug>(openbrowser-open)
 " }}}
 
 source $VIMRUNTIME/macros/matchit.vim
