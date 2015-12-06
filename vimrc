@@ -285,6 +285,10 @@ endif
 let g:neosnippet#snippets_directory='~/.vim/snippets/'
 " }}}
 
+" bling/vim-airline {{{
+let g:airline#extensions#tabline#enabled = 1
+" }}}
+
 " majutsushi/tagbar {{{
 if filereadable(expand("~/.vim/bundle/tagbar/README.md"))
 let g:tagbar_autofocus=1
@@ -332,11 +336,11 @@ autocmd FileType gitconfig  setl noexpandtab
 autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4
 autocmd FileType python     setl shiftwidth=4 tabstop=4
 autocmd FileType sh         setl shiftwidth=4 tabstop=4
-autocmd FileType tex        setl textwidth=120 softtabstop=4 conceallevel=0
+autocmd FileType tex        setl textwidth=120 softtabstop=4 conceallevel=0 foldmethod=marker foldmarker=[[[,]]]
 autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
 autocmd FileType neosnippet setl noexpandtab
 
-autocmd FileType cpp setlocal path+=/usr/local/boost/include/boost
+autocmd FileType cpp setlocal path+=/usr/include/c++/4.9,/usr/local/boost/include/boost
 set cinoptions+=g2,h2
 set cinoptions+=:2,=2
 
