@@ -340,7 +340,7 @@ autocmd FileType tex        setl textwidth=120 softtabstop=4 conceallevel=0 fold
 autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
 autocmd FileType neosnippet setl noexpandtab
 
-autocmd FileType cpp setlocal path+=/usr/include/c++/4.9,/usr/local/boost/include/boost
+autocmd FileType cpp setlocal path+=/usr/include/c++/4.9,/usr/local/boost/include
 set cinoptions+=g2,h2
 set cinoptions+=:2,=2
 
