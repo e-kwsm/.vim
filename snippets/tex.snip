@@ -1,3 +1,22 @@
+# beamer.cls {{{1
+snippet block
+alias   \begin{block} \block
+	\begin{block}{${1:#:TITLE}}
+		${0}
+	\end{block}
+
+snippet alertblock
+alias   \begin{alertblock} \alertblock
+	\begin{alertblock}{${1:#:TITLE}}
+		${0}
+	\end{alertblock}
+
+snippet exampleblock
+alias   \begin{exampleblock} \exampleblock
+	\begin{exampleblock}{${1:#:TITLE}}
+		${0}
+	\end{exampleblock}
+
 # mathtools.sty {{{1
 snippet matrix*
 alias   \begin{matrix*} \matrix*
@@ -73,7 +92,7 @@ snippet SIrange
 alias   \SIrange
 	\SIrange{${1:#:begin}}{${2:#:end}}{${3:#:unit}}${0}
 
-# subfigure.sty {{{1
+# subcaption.sty {{{1
 snippet thesubfigure
 alias   \thesubfigure
 	\renewcommand*{\thesubfigure}{${1}{subfigure}${2}}
