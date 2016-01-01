@@ -6,12 +6,6 @@ autocmd BufReadPost *
       \   exe "normal g`\"" |
       \ endif
 
-"set fileencodings=ucs-bom,utf-8,default,latin1
-set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
-set fileformats=unix,dos,mac
-set ruler
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-
 colorscheme desert
 
 " Shougo/NeoBundle {{{
@@ -295,31 +289,34 @@ endif
 " }}}
 
 source $VIMRUNTIME/macros/matchit.vim
-set runtimepath+=~/.vim/after/
 if filereadable(expand("$HOME/.vimrc_local"))
   source $HOME/.vimrc_local
 endif
 
-set mouse=a
-set showcmd
-set cmdheight=1
+" set {{{1
 set autowrite
+set cmdheight=1
 set expandtab
-set tabstop=4
-set shiftwidth=2
-set wrap
+set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
+set fileformats=unix,dos,mac
 set hidden
-set modeline
-set history=100
-set ruler
-set relativenumber
-set showcmd
-set wildmenu
 set laststatus=2
-set scrolloff=4
-set title
-let &titleold=getcwd()
+set modeline
+set mouse=a
 set nohlsearch
+set relativenumber
+set ruler
+set scrolloff=2
+set shiftwidth=2
+set showcmd
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set tabstop=4
+set title
+set wildmenu
+set wrap
+" }}}1
+
+let &titleold=getcwd()
 
 highlight LineNr ctermfg=darkred
 
