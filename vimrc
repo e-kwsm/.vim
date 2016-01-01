@@ -323,24 +323,25 @@ set nohlsearch
 
 highlight LineNr ctermfg=darkred
 
-autocmd BufRead,BufNewFile *.txt  set textwidth=80
+augroup myFileTypeConfig " {{{1
+  autocmd!
+  autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4
+  autocmd FileType cpp        setl path+=/usr/include/c++/4.9,/usr/local/boost/include
+  autocmd FileType csv        setl noexpandtab
+  autocmd FileType gitcommit  setl textwidth=0 | exe "normal! gg"
+  autocmd FileType gitconfig  setl noexpandtab
+  autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4
+  autocmd FileType neosnippet setl noexpandtab
+  autocmd FileType python     setl shiftwidth=4 tabstop=4
+  autocmd FileType sh         setl shiftwidth=4 tabstop=4
+  autocmd FileType tex        setl textwidth=100 softtabstop=4 conceallevel=0
+        \ foldmethod=marker foldmarker=[[[,]]]
+  autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
 
-autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4
-autocmd FileType csv        setl noexpandtab
-autocmd FileType gitcommit  setl textwidth=0
-autocmd FileType gitcommit  exe "normal gg"
-autocmd FileType gitconfig  setl noexpandtab
-autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4
-autocmd FileType python     setl shiftwidth=4 tabstop=4
-autocmd FileType sh         setl shiftwidth=4 tabstop=4
-autocmd FileType tex        setl textwidth=120 softtabstop=4 conceallevel=0 foldmethod=marker foldmarker=[[[,]]]
-autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
-autocmd FileType neosnippet setl noexpandtab
+  set cinoptions+=g2,h2
+  set cinoptions+=:2,=2
 
-autocmd FileType cpp setlocal path+=/usr/include/c++/4.9,/usr/local/boost/include
-set cinoptions+=g2,h2
-set cinoptions+=:2,=2
-
-let g:tex_flavor = "latex"
+  let g:tex_flavor = "latex"
+augroup END " }}}1
 
 " vim:set et fdm=marker:
