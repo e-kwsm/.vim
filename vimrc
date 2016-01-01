@@ -1,7 +1,10 @@
-filetype on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 syntax enable
+
+autocmd BufReadPost *
+      \ if line("'\"") > 1 && line("'\"") <= line("$") |
+      \   exe "normal g`\"" |
+      \ endif
 
 "set fileencodings=ucs-bom,utf-8,default,latin1
 set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
@@ -10,12 +13,6 @@ set ruler
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 colorscheme desert
-
-autocmd BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-      \   exe "normal g`\"" |
-      \ endif
-
 
 " Shougo/NeoBundle {{{
 if v:version >= 700 && filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
