@@ -323,10 +323,10 @@ set nohlsearch
 
 highlight LineNr ctermfg=darkred
 
-autocmd BufRead,BufNewFile *.csv,*.tsv setl noexpandtab
 autocmd BufRead,BufNewFile *.txt  set textwidth=80
 
 autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4
+autocmd FileType csv        setl noexpandtab
 autocmd FileType gitcommit  setl textwidth=0
 autocmd FileType gitcommit  exe "normal gg"
 autocmd FileType gitconfig  setl noexpandtab
