@@ -337,7 +337,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType neosnippet setl noexpandtab
   autocmd FileType python     setl shiftwidth=4 tabstop=4
   autocmd FileType sh         setl shiftwidth=4 tabstop=4
-  autocmd FileType tex        setl textwidth=100 softtabstop=4 conceallevel=0
+  autocmd FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
   autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
 
