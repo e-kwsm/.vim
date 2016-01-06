@@ -316,6 +316,11 @@ set wildmenu
 set wrap
 " }}}1
 
+" map {{{1
+nnoremap <F5> :source ~/.vim/vimrc<CR>
+nnoremap mm :make<CR>
+" }}}1
+
 let &titleold=getcwd()
 
 highlight LineNr ctermfg=darkred
