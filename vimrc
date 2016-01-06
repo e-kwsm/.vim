@@ -296,6 +296,7 @@ endif
 " set {{{1
 set autowrite
 set cmdheight=1
+set conceallevel=0
 set expandtab
 set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
 set fileformats=unix,dos,mac
