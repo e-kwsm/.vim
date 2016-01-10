@@ -347,4 +347,10 @@ augroup myFileTypeConfig " {{{1
   let g:tex_flavor = "latex"
 augroup END " }}}1
 
+" command {{{1
+if !exists(":WrapToNext")
+  command WrapToNext execute "normal! F<Space>r<CR>J"
+endif
+" }}}1
+
 " vim:set et fdm=marker:
