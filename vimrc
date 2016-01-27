@@ -305,6 +305,7 @@ set laststatus=2
 set modeline
 set mouse=a
 set nohlsearch
+set visualbell
 set relativenumber
 set ruler
 set scrolloff=2
