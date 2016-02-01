@@ -256,6 +256,8 @@ let g:neocomplcache_force_overwrite_completefunc=1
 endif " }}}
 
 " Shougo/neosnippet.vim {{{
+let g:neosnippet#expand_word_boundary = 1
+
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
