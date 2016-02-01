@@ -7,6 +7,10 @@ snippet dfrac
 alias   \dfrac
 	\dfrac{${1}}{${2}}${0}
 
+snippet text
+alias   \text
+	\text{${1}}
+
 # beamer.cls {{{1
 snippet block
 alias   \begin{block} \block
@@ -25,6 +29,11 @@ alias   \begin{exampleblock} \exampleblock
 	\begin{exampleblock}{${1:#:TITLE}}
 		${0}
 	\end{exampleblock}
+
+# graphicx.sty {{{1
+snippet \includegraphics
+alias   includegraphics
+	\includegraphics[${1}]{${2}}
 
 # mathtools.sty {{{1
 snippet matrix*
