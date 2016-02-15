@@ -35,7 +35,6 @@ if filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
 
   NeoBundle 'Shougo/neosnippet.vim'
   NeoBundle 'Shougo/neosnippet-snippets'
-  NeoBundle 'Shougo/vimshell.vim'
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/vimproc.vim', {
         \ 'build' : {
@@ -46,14 +45,11 @@ if filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
         \    },
         \ }
   NeoBundle 'tpope/vim-endwise'
-  NeoBundle 'tpope/vim-fugitive'
-  NeoBundle 'tpope/vim-pathogen'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'vim-airline/vim-airline'
   NeoBundle 'vim-airline/vim-airline-themes'
   NeoBundle 'majutsushi/tagbar'
   NeoBundle 'bronson/vim-trailing-whitespace'
-  NeoBundle 'mattn/emmet-vim'
   NeoBundle 'davidhalter/jedi-vim'
   NeoBundle 'ujihisa/neco-look'
   " }}}
