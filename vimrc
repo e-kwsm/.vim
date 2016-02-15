@@ -6,8 +6,6 @@ autocmd BufReadPost *
       \   exe "normal g`\"" |
       \ endif
 
-colorscheme desert
-
 " Shougo/NeoBundle {{{
 if filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
   " NeoBundle
@@ -304,8 +302,8 @@ endif
 " }}}
 
 source $VIMRUNTIME/macros/matchit.vim
-if filereadable(expand("$HOME/.vimrc_local"))
-  source $HOME/.vimrc_local
+if filereadable(expand("~/.vimrc_local"))
+  source ~/.vimrc_local
 endif
 
 " set {{{1
@@ -334,13 +332,14 @@ set wrap
 " }}}1
 
 " map {{{1
-nnoremap <F5> :source ~/.vim/vimrc<CR>
+nnoremap <F5> :source $MYVIMRC<CR>
 nnoremap mm :make<CR>
 " }}}1
 
-let &titleold=getcwd()
-
+colorscheme desert
 highlight LineNr ctermfg=darkred
+
+let &titleold=getcwd()
 
 augroup myFileTypeConfig " {{{1
   autocmd!
