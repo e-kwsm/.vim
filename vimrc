@@ -10,65 +10,65 @@ colorscheme desert
 
 " Shougo/NeoBundle {{{
 if v:version >= 700 && filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
-    " NeoBundle
-    if has('vim_starting')
-        " Required:
-        set runtimepath+=~/.vim/bundle/neobundle.vim/
-    endif
-
+  " NeoBundle
+  if has('vim_starting')
     " Required:
-    call neobundle#begin(expand('~/.vim/bundle/'))
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  endif
 
-    " Let NeoBundle manage NeoBundle
-    " Required:
-    NeoBundleFetch 'Shougo/neobundle.vim'
+  " Required:
+  call neobundle#begin(expand('~/.vim/bundle/'))
 
-    " My Bundles here: {{{
-    function! s:meet_neocomplete_requirements()
-        return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
-    endfunction
-    if s:meet_neocomplete_requirements()
-        NeoBundle 'Shougo/neocomplete.vim'
-        NeoBundleFetch 'Shougo/neocomplcache.vim'
-    else
-        NeoBundleFetch 'Shougo/neocomplete.vim'
-        NeoBundle 'Shougo/neocomplcache.vim'
-    endif
+  " Let NeoBundle manage NeoBundle
+  " Required:
+  NeoBundleFetch 'Shougo/neobundle.vim'
 
-    NeoBundle 'Shougo/neosnippet.vim'
-    NeoBundle 'Shougo/neosnippet-snippets'
-    NeoBundle 'Shougo/vimshell.vim'
-    NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'Shougo/vimproc.vim', {
-          \ 'build' : {
-          \     'windows' : 'tools\\update-dll-mingw',
-          \     'cygwin' : 'make -f make_cygwin.mak',
-          \     'mac' : 'make -f make_mac.mak',
-          \     'unix' : 'make -f make_unix.mak',
-          \    },
-          \ }
-    NeoBundle 'tpope/vim-endwise'
-    NeoBundle 'tpope/vim-fugitive'
-    NeoBundle 'tpope/vim-pathogen'
-    NeoBundle 'tpope/vim-surround'
-    NeoBundle 'vim-airline/vim-airline'
-    NeoBundle 'vim-airline/vim-airline-themes'
-    NeoBundle 'majutsushi/tagbar'
-    NeoBundle 'bronson/vim-trailing-whitespace'
-    NeoBundle 'mattn/emmet-vim'
-    NeoBundle 'davidhalter/jedi-vim'
-    NeoBundle 'ujihisa/neco-look'
-    NeoBundle 'mattn/emmet-vim'
-    " }}}
+  " My Bundles here: {{{
+  function! s:meet_neocomplete_requirements()
+    return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
+  endfunction
+  if s:meet_neocomplete_requirements()
+    NeoBundle 'Shougo/neocomplete.vim'
+    NeoBundleFetch 'Shougo/neocomplcache.vim'
+  else
+    NeoBundleFetch 'Shougo/neocomplete.vim'
+    NeoBundle 'Shougo/neocomplcache.vim'
+  endif
 
-    call neobundle#end()
+  NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
+  NeoBundle 'Shougo/vimshell.vim'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/vimproc.vim', {
+        \ 'build' : {
+        \     'windows' : 'tools\\update-dll-mingw',
+        \     'cygwin' : 'make -f make_cygwin.mak',
+        \     'mac' : 'make -f make_mac.mak',
+        \     'unix' : 'make -f make_unix.mak',
+        \    },
+        \ }
+  NeoBundle 'tpope/vim-endwise'
+  NeoBundle 'tpope/vim-fugitive'
+  NeoBundle 'tpope/vim-pathogen'
+  NeoBundle 'tpope/vim-surround'
+  NeoBundle 'vim-airline/vim-airline'
+  NeoBundle 'vim-airline/vim-airline-themes'
+  NeoBundle 'majutsushi/tagbar'
+  NeoBundle 'bronson/vim-trailing-whitespace'
+  NeoBundle 'mattn/emmet-vim'
+  NeoBundle 'davidhalter/jedi-vim'
+  NeoBundle 'ujihisa/neco-look'
+  NeoBundle 'mattn/emmet-vim'
+  " }}}
 
-    " Required:
-    filetype plugin indent on
+  call neobundle#end()
 
-    " If there are uninstalled bundles found on startup,
-    " this will conveniently prompt you to install them.
-    NeoBundleCheck
+  " Required:
+  filetype plugin indent on
+
+  " If there are uninstalled bundles found on startup,
+  " this will conveniently prompt you to install them.
+  NeoBundleCheck
 endif
 " }}}
 
