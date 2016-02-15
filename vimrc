@@ -58,7 +58,6 @@ if v:version >= 700 && filereadable(expand("~/.vim/bundle/neobundle.vim/README.m
   NeoBundle 'mattn/emmet-vim'
   NeoBundle 'davidhalter/jedi-vim'
   NeoBundle 'ujihisa/neco-look'
-  NeoBundle 'mattn/emmet-vim'
   " }}}
 
   call neobundle#end()
