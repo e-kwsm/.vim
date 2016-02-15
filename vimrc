@@ -361,6 +361,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType sh         setl shiftwidth=4 tabstop=4
   autocmd FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
+        \ spell spelllang+=cjk
   autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
 
   set cinoptions+=g2,h2
