@@ -9,12 +9,10 @@ autocmd BufReadPost *
 colorscheme desert
 
 " Shougo/NeoBundle {{{
-if v:version >= 700 && filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
+if filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
   " NeoBundle
-  if has('vim_starting')
-    " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-  endif
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 
   " Required:
   call neobundle#begin(expand('~/.vim/bundle/'))
@@ -64,6 +62,8 @@ if v:version >= 700 && filereadable(expand("~/.vim/bundle/neobundle.vim/README.m
 
   " Required:
   filetype plugin indent on
+
+  let g:neobundle#types#git#clone_depth = 1
 
   " If there are uninstalled bundles found on startup,
   " this will conveniently prompt you to install them.
