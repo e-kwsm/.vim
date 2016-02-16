@@ -1,3 +1,8 @@
+if has('nvim') && has('python3')
+" Shougo/deoplete.nvim {{{
+let g:deoplete#enable_at_startup = 1
+" }}}
+else
 " neocomplete.vim or neocomplecache.vim {{{
 if has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
 " Shougo/neocomplete.vim {{{
@@ -181,6 +186,7 @@ let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:neocomplcache_force_overwrite_completefunc=1
 " }}}
 endif " }}}
+endif
 
 " Shougo/neosnippet.vim {{{
 " Plugin key-mappings.

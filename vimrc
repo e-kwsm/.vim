@@ -20,12 +20,16 @@ if filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   " My Bundles here: {{{
-  if has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
-    NeoBundle 'Shougo/neocomplete.vim'
-    NeoBundleFetch 'Shougo/neocomplcache.vim'
+  if has('nvim') && has('python3')
+    NeoBundle 'Shougo/deoplete.nvim'
   else
-    NeoBundleFetch 'Shougo/neocomplete.vim'
-    NeoBundle 'Shougo/neocomplcache.vim'
+    if has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
+      NeoBundle 'Shougo/neocomplete.vim'
+      NeoBundleFetch 'Shougo/neocomplcache.vim'
+    else
+      NeoBundleFetch 'Shougo/neocomplete.vim'
+      NeoBundle 'Shougo/neocomplcache.vim'
+    endif
   endif
 
   NeoBundle 'Shougo/neosnippet.vim'
