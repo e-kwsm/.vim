@@ -6,63 +6,53 @@ autocmd BufReadPost *
       \   exe "normal g`\"" |
       \ endif
 
-" Shougo/NeoBundle {{{
-if filereadable(expand("~/.vim/bundle/neobundle.vim/README.md"))
-  " NeoBundle
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" Shougo/dein.vim {{{
+if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md"))
+  set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-  " Required:
-  call neobundle#begin(expand('~/.vim/bundle/'))
-
-  " Let NeoBundle manage NeoBundle
-  " Required:
-  NeoBundleFetch 'Shougo/neobundle.vim'
-
-  " My Bundles here: {{{
+  call dein#begin(expand('~/.vim/bundle'))
+  call dein#add('Shougo/dein.vim')
+  " plugins {{{
   if has('nvim') && has('python3')
-    NeoBundle 'Shougo/deoplete.nvim'
+    call dein#add('Shougo/deoplete.nvim')
   else
     if has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
-      NeoBundle 'Shougo/neocomplete.vim'
-      NeoBundleFetch 'Shougo/neocomplcache.vim'
+      call dein#add('Shougo/neocomplete.vim')
+      call dein#add('Shougo/neocomplcache.vim', {'rtp': ''})
     else
-      NeoBundleFetch 'Shougo/neocomplete.vim'
-      NeoBundle 'Shougo/neocomplcache.vim'
+      call dein#add('Shougo/neocomplete.vim', {'rtp': ''})
+      call dein#add('Shougo/neocomplcache.vim')
     endif
   endif
 
-  NeoBundle 'Shougo/neosnippet.vim'
-  NeoBundle 'Shougo/neosnippet-snippets'
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'Shougo/vimproc.vim', {
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/vimproc.vim', {
         \ 'build' : {
         \     'windows' : 'tools\\update-dll-mingw',
         \     'cygwin' : 'make -f make_cygwin.mak',
         \     'mac' : 'make -f make_mac.mak',
         \     'unix' : 'make -f make_unix.mak',
         \    },
-        \ }
-  NeoBundle 'tpope/vim-endwise'
-  NeoBundle 'tpope/vim-surround'
-  NeoBundle 'vim-airline/vim-airline'
-  NeoBundle 'vim-airline/vim-airline-themes'
-  NeoBundle 'majutsushi/tagbar'
-  NeoBundle 'bronson/vim-trailing-whitespace'
-  NeoBundle 'davidhalter/jedi-vim'
-  NeoBundle 'ujihisa/neco-look'
+        \ })
+  call dein#add('tpope/vim-endwise')
+  call dein#add('tpope/vim-surround')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('majutsushi/tagbar')
+  call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('davidhalter/jedi-vim')
+  call dein#add('ujihisa/neco-look')
   " }}}
+  call dein#end()
 
-  call neobundle#end()
+  let g:dein#types#git#clone_depth = 1
+  if dein#check_install()
+    call dein#install()
+  endif
 
-  " Required:
   filetype plugin indent on
-
-  let g:neobundle#types#git#clone_depth = 1
-
-  " If there are uninstalled bundles found on startup,
-  " this will conveniently prompt you to install them.
-  NeoBundleCheck
 
   if filereadable(expand("~/.vim/plugins.vim"))
     source ~/.vim/plugins.vim
