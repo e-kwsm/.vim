@@ -102,14 +102,14 @@ let &titleold=getcwd()
 
 augroup myFileTypeConfig " {{{1
   autocmd!
-  autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100 colorcolumn=+1
+  autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType cpp        setl path+=/usr/include/c++/4.9,/usr/local/boost/include
   autocmd FileType csv        setl noexpandtab
   autocmd FileType gitcommit  setl textwidth=0 | exe "normal! gg"
   autocmd FileType gitconfig  setl noexpandtab
-  autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4
+  autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType neosnippet setl noexpandtab
-  autocmd FileType python     setl shiftwidth=4 tabstop=4
+  autocmd FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType sh         setl shiftwidth=4 tabstop=4
   autocmd FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
@@ -121,6 +121,10 @@ augroup myFileTypeConfig " {{{1
 
   let g:tex_flavor = "latex"
 augroup END " }}}1
+
+au BufWinEnter,WinEnter * if &textwidth > 0
+      \ | let w:m=matchadd('ErrorMsg', printf('\%%>%dv.\+', &textwidth), -1)
+      \ | endif
 
 " command {{{1
 if !exists(":WrapToNext")
