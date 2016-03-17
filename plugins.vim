@@ -211,6 +211,10 @@ let g:neosnippet#expand_word_boundary = 1
 let g:neosnippet#snippets_directory = '~/.vim/snippets/'
 " }}}
 
+" davidhalter/jedi-vim {{{
+let g:jedi#force_py_version = 3
+" }}}
+
 " vim-airline/vim-airline {{{
 let g:airline#extensions#tabline#enabled = 1
 if !exists('g:airline_symbols')
