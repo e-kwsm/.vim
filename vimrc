@@ -25,6 +25,7 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
     endif
   endif
 
+  call dein#add('Shougo/neoinclude.vim')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/unite.vim')
