@@ -71,7 +71,7 @@ set laststatus=2
 set modeline
 set mouse=a
 set nohlsearch
-set visualbell
+set number
 set relativenumber
 set ruler
 set scrolloff=2
@@ -80,6 +80,7 @@ set showcmd
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set tabstop=4
 set title
+set visualbell
 set wildmenu
 set wrap
 " }}}1
