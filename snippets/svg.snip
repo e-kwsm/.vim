@@ -1,0 +1,139 @@
+#include xml
+
+snippet <svg
+alias   svg
+	<svg width="${2:0}" height="${3:0}"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink">
+	${0}
+	</svg>
+
+snippet element
+alias   <
+	<${1}>
+		${0}
+	</$1>
+
+snippet element_empty
+alias   <2
+	<${1}/>
+
+snippet attirbute_value
+alias   =
+	="${1}"
+
+snippet comment
+alias   <!--
+	<!--${1}-->
+
+# element
+snippet <circle
+alias   circle
+	<circle cx="${1:0}" cy="${2:0}" r="${3:0}"/>
+
+snippet <ellipse
+alias   ellipse
+	<ellipse cx="${1:0}" cy="${2:0}" rx="${3:0}" ry="${4:0}"/>
+
+snippet <g
+alias   g
+	<g id="${1}">
+		${0}
+	</g>
+
+snippet <image
+alias   image
+	<image x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"
+		xlink:href="${5}"/>${0}
+
+snippet <line
+alias   line
+	<line x1="${1:0}" y1="${2:0}" x2="${3:0}" y2="${4:0}"/>
+
+snippet <path
+alias   path
+	<path d="${1}"/>
+
+snippet <polygon
+alias   polygon
+	<polygon points="${1}"/>
+
+snippet <polyline
+alias   polyline
+	<polyline points="${1}"/>
+
+snippet <rect
+alias   rect
+	<rect x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"/>
+
+snippet <symbol
+alias   symbol
+	<symbol id="${1}">
+		${0}
+	</symbol>
+
+snippet <text
+alias   text
+	<text x="${1:0}" y="${2:0}">${3}</text>
+
+snippet <tspan
+alias   tspan
+	<tspan>${1}</tspan>
+
+snippet <use
+alias   use
+	<use x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"
+		xlink:href="${5}"/>${0}
+
+# attribute
+snippet font-family
+alias   font-family=
+	font-family="${1}"
+
+snippet font-size
+alias   font-size=
+	font-size="${1}"
+
+snippet font-style
+alias   font-style=
+	font-style="${1}"
+
+snippet id
+alias   id=
+	id="${1}"
+
+snippet style
+alias   style=
+	style="${1}"
+
+snippet transform
+alias   transform=
+	transform="${1}"
+
+snippet width_height
+alias   width=
+	width="${1:0}" height="${2:0}"
+
+snippet x_y
+alias   x=
+	x="${1:0}" y="${2:0}"
+
+# attribute value
+## transform
+snippet matrix
+	matrix(${1})
+
+snippet rotate
+	rotate(${1:0})
+
+snippet scale
+	scale(${1:1})
+
+snippet skewX
+	skewX(${1:0})
+
+snippet skewY
+	skewY(${1:0})
+
+snippet translate
+	translate(${1:0})
