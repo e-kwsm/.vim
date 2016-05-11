@@ -100,6 +100,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType cpp        setl path+=/usr/include/c++/4.9,/usr/local/boost/current/include
   autocmd FileType csv        setl noexpandtab
+  autocmd FileType gau        setl cursorline
   autocmd FileType gitcommit  setl textwidth=0 | exe "normal! gg"
   autocmd FileType gitconfig  setl noexpandtab
   autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
