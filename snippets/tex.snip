@@ -1,6 +1,14 @@
-snippet sqrt
-alias   \sqrt
+snippet \mathrm
+alias   mathrm
+	\mathrm{${1}}
+
+snippet \sqrt
+alias   sqrt
 	\sqrt{${1}}${0}
+
+snippet \renewcommand
+alias   renewcommand
+	\renewcommand{${1}}{${2}}
 
 # amsmath.sty {{{1
 snippet dfrac
@@ -29,6 +37,11 @@ alias   \begin{exampleblock} \exampleblock
 	\begin{exampleblock}{${1:#:TITLE}}
 		${0}
 	\end{exampleblock}
+
+# bm.cls {{{1
+snippet \bm
+alias   bm
+	\bm{${1}}
 
 # graphicx.sty {{{1
 snippet \includegraphics
@@ -73,6 +86,10 @@ alias   \begin{Vmatrix*} \Vmatrix*
 	\end{Vmatrix*}
 
 # physics.sty {{{1
+snippet \dd
+alias   dd
+	\dd{${1}}
+
 snippet dv
 alias   \dv
 	\dv{${1}}{${2}}${0}
@@ -80,6 +97,10 @@ alias   \dv
 snippet pdv
 alias   \pdv
 	\pdv{${1}}{${2}}${0}
+
+snippet \var
+alias   var
+	\var{${1}}
 
 # siunitx.sty {{{1
 snippet num
