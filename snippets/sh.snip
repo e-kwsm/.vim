@@ -2,3 +2,13 @@ snippet chkargc
 	if [ $# ${1:-eq 1} ]; then
 		${0}
 	fi
+
+snippet mktempfile
+	${1:tmpf}=$(mktemp ${2:/tmp/XXX})
+	trap "rm -f ${$1}" 0 1 2 15
+	${0}
+
+snippet mktempdir
+	${1:tmpd}=$(mktemp -d ${2:/tmp/XXX})
+	trap "rm -rf ${$1}" 0 1 2 15
+	${0}
