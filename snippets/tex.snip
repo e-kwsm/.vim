@@ -1,22 +1,17 @@
 snippet \mathrm
-alias   mathrm
 	\mathrm{${1}}
 
 snippet \sqrt
-alias   sqrt
 	\sqrt{${1}}${0}
 
 snippet \renewcommand
-alias   renewcommand
 	\renewcommand{${1}}{${2}}
 
 # amsmath.sty {{{1
-snippet dfrac
-alias   \dfrac
+snippet \dfrac
 	\dfrac{${1}}{${2}}${0}
 
-snippet text
-alias   \text
+snippet \text
 	\text{${1}}
 
 # beamer.cls {{{1
@@ -40,12 +35,10 @@ alias   \begin{exampleblock} \exampleblock
 
 # bm.cls {{{1
 snippet \bm
-alias   bm
 	\bm{${1}}
 
 # graphicx.sty {{{1
 snippet \includegraphics
-alias   includegraphics
 	\includegraphics[${1}]{${2}}
 
 # mathtools.sty {{{1
@@ -87,57 +80,44 @@ alias   \begin{Vmatrix*} \Vmatrix*
 
 # physics.sty {{{1
 snippet \dd
-alias   dd
 	\dd{${1}}
 
-snippet dv
-alias   \dv
+snippet \dv
 	\dv{${1}}{${2}}${0}
 
-snippet pdv
-alias   \pdv
+snippet \pdv
 	\pdv{${1}}{${2}}${0}
 
 snippet \var
-alias   var
 	\var{${1}}
 
 # siunitx.sty {{{1
-snippet num
-alias   \num
+snippet \num
 	\num{${1}}${0}
 
-snippet si
-alias   \si
+snippet \si
 	\si{${1:#:unit}}${0}
 
-snippet SI
-alias   \SI
+snippet \SI
 	\SI{${1:#:num}}{${2:#:unit}}${0}
 
-snippet numlist
-alias   \numlist
+snippet \numlist
 	\numlist{${1}}${0}
 
-snippet numrange
-alias   \numrange
+snippet \numrange
 	\numrange{${1:#:begin}}{${2:#:end}}${0}
 
-snippet SIlist
-alias   \SIlist
+snippet \SIlist
 	\SIlist{${1:#:num}}{${2:#:unit}}${0}
 
-snippet SIrange
-alias   \SIrange
+snippet \SIrange
 	\SIrange{${1:#:begin}}{${2:#:end}}{${3:#:unit}}${0}
 
 # subcaption.sty {{{1
-snippet subcaptionbox
-alias   \subcaptionbox
+snippet \subcaptionbox
   \subcaptionbox{${1:#:heading}}{${2:#:contents}}
 
-snippet thesubfigure
-alias   \thesubfigure
+snippet \thesubfigure
 	\renewcommand*{\thesubfigure}{${1}{subfigure}${2}}
 
-# vim:set noet fdm=marker:
+# vim: noet fdm=marker
