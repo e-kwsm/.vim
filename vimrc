@@ -104,7 +104,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType gitcommit  setl textwidth=0 | exe "normal! gg"
   autocmd FileType gitconfig  setl noexpandtab
   autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
-  autocmd FileType markdown   setl spell textwidth=100
+  autocmd FileType markdown   setl spell spelllang=cjk textwidth=100
   autocmd FileType neosnippet setl noexpandtab
   autocmd FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType sh         setl shiftwidth=4 tabstop=4
