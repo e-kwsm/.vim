@@ -10,3 +10,4 @@ autocmd BufRead,BufNewFile *.pdf_tex	setl filetype=tex
 autocmd BufRead,BufNewFile *.plt	setl filetype=gnuplot
 autocmd BufRead,BufNewFile *.tlu	setf lua
 autocmd BufRead,BufNewFile *.tsv	setf csv
+autocmd BufRead,BufNewFile *.xyz	setf xyz

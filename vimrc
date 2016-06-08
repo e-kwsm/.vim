@@ -112,6 +112,7 @@ augroup myFileTypeConfig " {{{1
         \ foldmethod=marker foldmarker=[[[,]]]
         \ spell spelllang+=cjk
   autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
+  autocmd FileType xyz        setl cursorline
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
