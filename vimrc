@@ -107,7 +107,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType markdown   setl spell spelllang=cjk textwidth=100
   autocmd FileType neosnippet setl noexpandtab
   autocmd FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
-  autocmd FileType sh         setl shiftwidth=4 tabstop=4
+  autocmd FileType sh         setl shiftwidth=2 tabstop=2 textwidth=100
   autocmd FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
         \ spell spelllang+=cjk
