@@ -1,5 +1,20 @@
+snippet \newcounter
+	\newcounter{${1}}
+
+snippet \setcounter
+	\setcounter{${1}}{${2:0}}
+
 snippet \mathrm
 	\mathrm{${1}}
+
+snippet \newcommand
+	\newcommand{${1}}{${2}}
+
+snippet \newcommand*
+	\newcommand*{${1}}{${2}}
+
+snippet \sum
+	\sum_{${1}}^{${2}}
 
 snippet \sqrt
 	\sqrt{${1}}${0}
@@ -7,14 +22,20 @@ snippet \sqrt
 snippet \renewcommand
 	\renewcommand{${1}}{${2}}
 
-# amsmath.sty {{{1
+snippet \textsuperscript
+	\textsuperscript{${1}}
+
+snippet \textsubscript
+	\textsubscript{${1}}
+
+# amsmath.sty [[[1
 snippet \dfrac
 	\dfrac{${1}}{${2}}${0}
 
 snippet \text
 	\text{${1}}
 
-# beamer.cls {{{1
+# beamer.cls [[[1
 snippet block
 alias   \begin{block} \block
 	\begin{block}{${1:#:TITLE}}
@@ -33,15 +54,19 @@ alias   \begin{exampleblock} \exampleblock
 		${0}
 	\end{exampleblock}
 
-# bm.cls {{{1
+snippet \usebeamercolor
+alias   usebeamercolor
+	{\usebeamercolor[${1:fg}]{${2:#:structure}} ${3:#:text}}${0}
+
+# bm.cls [[[1
 snippet \bm
 	\bm{${1}}
 
-# graphicx.sty {{{1
+# graphicx.sty [[[1
 snippet \includegraphics
 	\includegraphics[${1}]{${2}}
 
-# mathtools.sty {{{1
+# mathtools.sty [[[1
 snippet matrix*
 alias   \begin{matrix*} \matrix*
 	\begin{matrix*}[${1:c}]
@@ -78,7 +103,7 @@ alias   \begin{Vmatrix*} \Vmatrix*
 		${2}
 	\end{Vmatrix*}
 
-# physics.sty {{{1
+# physics.sty [[[1
 snippet \dd
 	\dd{${1}}
 
@@ -91,7 +116,7 @@ snippet \pdv
 snippet \var
 	\var{${1}}
 
-# siunitx.sty {{{1
+# siunitx.sty [[[1
 snippet \num
 	\num{${1}}${0}
 
@@ -113,11 +138,24 @@ snippet \SIlist
 snippet \SIrange
 	\SIrange{${1:#:begin}}{${2:#:end}}{${3:#:unit}}${0}
 
-# subcaption.sty {{{1
+# subcaption.sty [[[1
 snippet \subcaptionbox
   \subcaptionbox{${1:#:heading}}{${2:#:contents}}
 
 snippet \thesubfigure
 	\renewcommand*{\thesubfigure}{${1}{subfigure}${2}}
 
-# vim: noet fdm=marker
+# wrapfig.sty [[[1
+snippet \wrapfigure
+	\begin{wrapfigure}[]{${1:r}}}{${2}${3:\\textwidth}}
+		\centering
+		\includegraphics[${4}]{${5}}
+		\caption{${6}}
+		\label{${7}}
+	\end{wrapfigure}
+
+# xcolor.sty [[[1
+snippet \color
+	{\color{${1:#:color}}${2:#:text}}
+
+# vim: noet fdm=marker fmr=[[[,]]]
