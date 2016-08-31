@@ -1,6 +1,8 @@
 if has('nvim') && has('python3')
 " Shougo/deoplete.nvim {{{
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 100
+call deoplete#custom#set('_', 'sorters', ['sorter_word'])
 " }}}
 else
 " neocomplete.vim or neocomplecache.vim {{{
