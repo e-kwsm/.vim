@@ -68,6 +68,7 @@ set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
 set fileformats=unix,dos,mac
 set hidden
 set laststatus=2
+set makeprg=make\ -j8
 set modeline
 set mouse=a
 set nohlsearch
