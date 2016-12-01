@@ -84,6 +84,9 @@ set title
 set visualbell
 set wildmenu
 set wrap
+if has('nvim')
+  set inccommand=split
+endif
 " }}}1
 
 " map {{{1
