@@ -36,17 +36,17 @@ snippet \text
 	\text{${1}}
 
 # beamer.cls [[[1
-snippet block
-alias   \begin{block} \block
-	\begin{block}{${1:#:TITLE}}
-		${0}
-	\end{block}
-
 snippet alertblock
 alias   \begin{alertblock} \alertblock
 	\begin{alertblock}{${1:#:TITLE}}
 		${0}
 	\end{alertblock}
+
+snippet block
+alias   \begin{block} \block
+	\begin{block}{${1:#:TITLE}}
+		${0}
+	\end{block}
 
 snippet exampleblock
 alias   \begin{exampleblock} \exampleblock
@@ -54,9 +54,14 @@ alias   \begin{exampleblock} \exampleblock
 		${0}
 	\end{exampleblock}
 
+snippet \overlayarea
+	\begin{overlayarea}{${1}${2:\\textwidth}}{${3}${4:\\textheight}}
+		${0}
+	\end{overlayarea}
+
 snippet \usebeamercolor
 alias   usebeamercolor
-	{\usebeamercolor[${1:fg}]{${2:#:structure}} ${3:#:text}}${0}
+	\usebeamercolor[${1:fg}]{${2:#:structure}} ${3:#:text}
 
 # bm.cls [[[1
 snippet \bm
@@ -65,6 +70,10 @@ snippet \bm
 # graphicx.sty [[[1
 snippet \includegraphics
 	\includegraphics[${1}]{${2}}
+
+# hyperref.sty [[[1
+snippet \href
+	\href{${1:#:url}}{${2:#:text}}
 
 # mathtools.sty [[[1
 snippet matrix*
@@ -104,11 +113,20 @@ alias   \begin{Vmatrix*} \Vmatrix*
 	\end{Vmatrix*}
 
 # physics.sty [[[1
+snippet \bra
+	\bra{${1}}
+
+snippet \braket
+	\braket{${1}}{${2}}
+
 snippet \dd
 	\dd{${1}}
 
 snippet \dv
 	\dv{${1}}{${2}}${0}
+
+snippet \ket
+	\ket{${1}}
 
 snippet \pdv
 	\pdv{${1}}{${2}}${0}
@@ -145,6 +163,12 @@ snippet \subcaptionbox
 snippet \thesubfigure
 	\renewcommand*{\thesubfigure}{${1}{subfigure}${2}}
 
+# tcolorbox.sty [[[1
+snippet \tcolorbox
+	\begin{tcolorbox}[${1}]
+		${0}
+	\end{tcolorbox}
+
 # wrapfig.sty [[[1
 snippet \wrapfigure
 	\begin{wrapfigure}[]{${1:r}}}{${2}${3:\\textwidth}}
@@ -156,6 +180,9 @@ snippet \wrapfigure
 
 # xcolor.sty [[[1
 snippet \color
-	{\color{${1:#:color}}${2:#:text}}
+	\color{${1:#:color}} ${2:#:text}
+
+snippet \textcolor
+	\textcolor{${1:#:color}}{${2:#:text}}
 
 # vim: noet fdm=marker fmr=[[[,]]]
