@@ -28,8 +28,6 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/unite.vim')
-  call dein#add('Shougo/vimproc.vim')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
@@ -75,7 +73,7 @@ set nohlsearch
 set number
 set relativenumber
 set ruler
-set scrolloff=2
+set scrolloff=1
 set shiftwidth=2
 set showcmd
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
