@@ -7,19 +7,33 @@ options head
 	${0}
 
 # terminal {{{1
-snippet svg
-	set terminal svg size ${1:600}, ${2:480} \
+snippet set-terminal-svg
+alias   set-term-svg
+	set terminal svg size ${1:300}, ${2:300} \
 		enhanced \
-		fname '${3:Arial}' fsize ${4:12} \
-		name '${5:Gnuplot}'
+		font '${3:Arial}, ${4:10}' \
+		#name '${5:Gnuplot}'
+	set output '${6:a}.svg'
 	${0}
 
-snippet epscairo
+snippet set-terminal-pdfcairo
+alias   set-term-pdf
+	set terminal pdfcairo \
+		enhanced ${1:color} \
+		font '${2:Sans}, ${3:10}' fontscale ${4:1} \
+		linewidth ${5:1} \
+		size ${6:3}, ${7:3}
+	set output '${8:a}.pdf'
+	${0}
+
+snippet set-terminal-epscairo
+alias   set-term-eps
 	set terminal epscairo \
 		enhanced ${1:color} \
-		font '${2:Sans}, ${3:10}' fontscale '${4:1}' \
-		linewidth '${5:0.5}' \
+		font '${2:Sans}, ${3:10}' fontscale ${4:1} \
+		linewidth ${5:1} \
 		size ${6:3}, ${7:3}
+	set output '${8:a}.eps'
 	${0}
 
 # vim:set fdm=marker:
