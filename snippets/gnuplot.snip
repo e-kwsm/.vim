@@ -26,6 +26,17 @@ alias   set_term_pdf
 	set output '${8:a}.pdf'
 	${0}
 
+snippet set_terminal_pngcairo
+alias   set_term_png
+	set terminal pngcairo \
+		enhanced ${1:color} \
+		transparent \
+		font '${2:Sans}, ${3:10}' fontscale ${4:1} \
+		linewidth ${5:1} \
+		size ${6:300}, ${7:300}
+	set output '${8:a}.png'
+	${0}
+
 snippet set_terminal_epscairo
 alias   set_term_eps
 	set terminal epscairo \
@@ -35,5 +46,14 @@ alias   set_term_eps
 		size ${6:3}, ${7:3}
 	set output '${8:a}.eps'
 	${0}
+
+# misc {{{1
+snippet set_labels
+	set xlabel '${1}'
+	set ylabel '${2}'
+
+snippet set_ranges
+	set xrange [${1}]
+	set yrange [${2}]
 
 # vim:set fdm=marker:
