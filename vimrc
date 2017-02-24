@@ -53,9 +53,6 @@ endif
 " }}}
 
 source $VIMRUNTIME/macros/matchit.vim
-if filereadable(expand("~/.vimrc_local"))
-  source ~/.vimrc_local
-endif
 
 " set {{{1
 set autowrite
@@ -131,5 +128,9 @@ if !exists(":WrapToNext")
   command WrapToNext execute "normal! F<Space>r<CR>J"
 endif
 " }}}1
+
+if filereadable(expand("~/.vimrc_local"))
+  source ~/.vimrc_local
+endif
 
 " vim:set et fdm=marker:
