@@ -81,7 +81,17 @@ set wildmenu
 set wrap
 if has('nvim')
   set inccommand=split
+  if empty($SSH_CONNECTION)
+    set termguicolors
+  endif
 endif
+" }}}1
+
+" let {{{1
+let g:loaded_python_provider = 1 " disabled
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_skip_check = 1 " disabled
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
 " }}}1
 
 " map {{{1
