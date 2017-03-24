@@ -9,16 +9,26 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
+                "addbibresource",
+                "autocite",
                 "bigskip",
                 "clearpage",
                 "endinput",
+                "footfullcite",
                 "footnotesize",
+                "insertsection",
+                "insertsubsection",
+                "insertsubsubsection",
                 "medskip",
+                "newpage",
                 "normalsize",
                 "paperheight",
                 "paperwidth",
                 "scriptsize",
                 "smallskip",
+                "supercite",
                 "textheight",
+                "textsubscript",
+                "textsuperscript",
                 "textwidth",
                 ]
