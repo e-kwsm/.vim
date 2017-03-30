@@ -16,13 +16,7 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   if has('nvim') && has('python3')
     call dein#add('Shougo/deoplete.nvim')
   else
-    if has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
-      call dein#add('Shougo/neocomplete.vim')
-      call dein#add('Shougo/neocomplcache.vim', {'rtp': ''})
-    else
-      call dein#add('Shougo/neocomplete.vim', {'rtp': ''})
-      call dein#add('Shougo/neocomplcache.vim')
-    endif
+    call dein#add('Shougo/neocomplete.vim')
   endif
 
   call dein#add('Shougo/neoinclude.vim')
@@ -46,9 +40,71 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
 
   filetype plugin indent on
 
-  if filereadable(expand("~/.vim/plugins.vim"))
-    source ~/.vim/plugins.vim
+  " plugin config {{{
+  " Shougo/deoplete.nvim {{{
+  if has('nvim') && has('python3')
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#auto_complete_delay = 100
+    call deoplete#custom#set('_', 'sorters', ['sorter_word'])
   endif
+  " }}}
+
+  " Shougo/neosnippet.vim {{{
+  " Plugin key-mappings.
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+  " SuperTab like snippets behavior.
+  "imap <expr><TAB>
+  " \ pumvisible() ? "\<C-n>" :
+  " \ neosnippet#expandable_or_jumpable() ?
+  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+        \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+  " For snippet_complete marker.
+  if has('conceal')
+    set conceallevel=2 concealcursor=niv
+  endif
+
+  let g:neosnippet#expand_word_boundary = 1
+  let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+  " }}}
+
+  " davidhalter/jedi-vim {{{
+  let g:jedi#force_py_version = 3
+  " }}}
+
+  " vim-airline/vim-airline {{{
+  let g:airline#extensions#tabline#enabled = 1
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  " unicode symbols
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.crypt = '🔒'
+  let g:airline_symbols.linenr = '␊'
+  let g:airline_symbols.linenr = '␤'
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.paste = '∥'
+  let g:airline_symbols.whitespace = 'Ξ'
+  " }}}
+
+  " majutsushi/tagbar {{{
+  let g:tagbar_autofocus=1
+  nmap <F8> :TagbarToggle<CR>
+  nmap <F9> :TagbarOpen fjc<CR>
+  " }}}
+
+  " }}}
 endif
 " }}}
 
