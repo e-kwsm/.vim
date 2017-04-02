@@ -6,7 +6,7 @@
 if exists("b:current_syntax")
   finish
 endif
-let b:current_syntax = "gauss"
+let b:current_syntax = "gaussian"
 
 syn case ignore
 
