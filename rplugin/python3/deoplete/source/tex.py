@@ -23,6 +23,7 @@ class Source(Base):
                 "medskip",
                 "newpage",
                 "normalsize",
+                "operatorname",
                 "paperheight",
                 "paperwidth",
                 "printbibliography",
