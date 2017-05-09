@@ -19,6 +19,7 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
     call dein#add('Shougo/neocomplete.vim')
   endif
 
+  call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
@@ -147,7 +148,6 @@ endif
 let g:loaded_python_provider = 1 " disabled
 let g:python3_host_prog = '/usr/bin/python3'
 let g:python_host_skip_check = 1 " disabled
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
 " }}}1
 
 " map {{{1
@@ -165,6 +165,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType cpp        setl path+=/usr/include/c++/4.9,/usr/local/boost/current/include
   autocmd FileType csv        setl cursorline noexpandtab tabstop=8
+  autocmd FileType diff       exe "normal! gg"
   autocmd FileType gaussian   setl cursorline
   autocmd FileType gitcommit  setl textwidth=0 spell | exe "normal! gg"
   autocmd FileType gitconfig  setl noexpandtab
@@ -183,6 +184,7 @@ augroup myFileTypeConfig " {{{1
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
 
+  let g:c_gnu = 1
   let g:tex_flavor = "latex"
 augroup END " }}}1
 
