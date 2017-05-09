@@ -26,15 +26,15 @@ alias   set_term_pdf
 	set output '${8:a}.pdf'
 	${0}
 
-snippet set_terminal_pngcairo
-alias   set_term_png
-	set terminal pngcairo \
-		enhanced ${1:color} \
-		transparent \
-		font '${2:Sans}, ${3:10}' fontscale ${4:1} \
-		linewidth ${5:1} \
-		size ${6:300}, ${7:300}
-	set output '${8:a}.png'
+snippet set_terminal_png
+snippet set_term_png
+	 set terminal png \
+		transparent nointerlace \
+		truecolor \
+		linewidth 1  \
+		font "${1:arial}, ${2:10}" fontscale 1 \
+		size ${3:300}, ${4:300}
+	set output '${5:a}.png'
 	${0}
 
 snippet set_terminal_epscairo

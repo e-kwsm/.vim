@@ -22,6 +22,9 @@ snippet \sqrt
 snippet \renewcommand
 	\renewcommand{${1}}{${2}}
 
+snippet \renewcommand*
+	\renewcommand*{${1}}{${2}}
+
 snippet \textsuperscript
 	\textsuperscript{${1}}
 
@@ -48,6 +51,14 @@ alias   \begin{block} \block
 		${0}
 	\end{block}
 
+delete columns
+snippet columns
+	\begin{columns}
+		\begin{column}{${1:0.5}${2:\\textwidth}}
+			${0}
+		\end{column}
+	\end{columns}
+
 snippet exampleblock
 alias   \begin{exampleblock} \exampleblock
 	\begin{exampleblock}{${1:#:TITLE}}
@@ -59,9 +70,16 @@ snippet \overlayarea
 		${0}
 	\end{overlayarea}
 
+snippet setbeamerbackgroundgrid
+	\setbeamertemplate{background}[grid][step=0.1\paper${1:width}]
+
 snippet \usebeamercolor
 alias   usebeamercolor
 	\usebeamercolor[${1:fg}]{${2:#:structure}} ${3:#:text}
+
+snippet foldmarkerframe
+options head
+	% vim: fmr=\\begin{frame},\\end{frame}
 
 # bm.cls [[[1
 snippet \bm
@@ -74,6 +92,12 @@ snippet \includegraphics
 # hyperref.sty [[[1
 snippet \href
 	\href{${1:#:url}}{${2:#:text}}
+
+# listings.sty [[[1
+snippet \lstlisting
+	\begin{lstlisting}[${1}]
+		${0}
+	\end{lstlisting}
 
 # mathtools.sty [[[1
 snippet matrix*
@@ -164,6 +188,9 @@ snippet \thesubfigure
 	\renewcommand*{\thesubfigure}{${1}{subfigure}${2}}
 
 # tcolorbox.sty [[[1
+snippet \newtcolorbox
+	\newtcolorbox{${1:#:name}}{${2:#:options}}
+
 snippet \tcolorbox
 	\begin{tcolorbox}[${1}]
 		${0}

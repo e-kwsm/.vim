@@ -1,5 +1,6 @@
-#include xml
+# vim:fdm=marker
 
+# basic {{{1
 snippet <svg
 alias   svg
 	<svg width="${2:0}" height="${3:0}"
@@ -26,45 +27,51 @@ snippet comment
 alias   <!--
 	<!--${1}-->
 
-# element
+# element {{{1
 snippet <circle
 alias   circle
-	<circle cx="${1:0}" cy="${2:0}" r="${3:0}"/>
+	<circle cx="${1:0}" cy="${2:0}" r="${3:0}"${0}/>
+
+snippet <defs
+alias   defs
+	<defs>
+		${0}
+	</defs>
 
 snippet <ellipse
 alias   ellipse
-	<ellipse cx="${1:0}" cy="${2:0}" rx="${3:0}" ry="${4:0}"/>
+	<ellipse cx="${1:0}" cy="${2:0}" rx="${3:0}" ry="${4:0}"${0}/>
 
 snippet <g
 alias   g
-	<g id="${1}">
+	<g id="${1}"${2}>
 		${0}
 	</g>
 
 snippet <image
 alias   image
 	<image x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"
-		xlink:href="${5}"/>${0}
+		xlink:href="${5}"/>
 
 snippet <line
 alias   line
-	<line x1="${1:0}" y1="${2:0}" x2="${3:0}" y2="${4:0}"/>
+	<line x1="${1:0}" y1="${2:0}" x2="${3:0}" y2="${4:0}"${0}/>
 
 snippet <path
 alias   path
-	<path d="${1}"/>
+	<path d="${1}"${0}/>
 
 snippet <polygon
 alias   polygon
-	<polygon points="${1}"/>
+	<polygon points="${1}"${0}/>
 
 snippet <polyline
 alias   polyline
-	<polyline points="${1}"/>
+	<polyline points="${1}"${0}/>
 
 snippet <rect
 alias   rect
-	<rect x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"/>
+	<rect x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"${0}/>
 
 snippet <symbol
 alias   symbol
@@ -74,7 +81,7 @@ alias   symbol
 
 snippet <text
 alias   text
-	<text x="${1:0}" y="${2:0}">${3}</text>
+	<text x="${1:0}" y="${2:0}"${3}>${0}</text>
 
 snippet <tspan
 alias   tspan
@@ -83,9 +90,9 @@ alias   tspan
 snippet <use
 alias   use
 	<use x="${1:0}" y="${2:0}" width="${3:0}" height="${4:0}"
-		xlink:href="${5}"/>${0}
+		xlink:href="${5}"${0}/>
 
-# attribute
+# attribute {{{1
 snippet font-family
 alias   font-family=
 	font-family="${1}"
@@ -118,8 +125,8 @@ snippet x_y
 alias   x=
 	x="${1:0}" y="${2:0}"
 
-# attribute value
-## transform
+# attribute value {{{1
+## transform {{{2
 snippet matrix
 	matrix(${1})
 
@@ -137,3 +144,4 @@ snippet skewY
 
 snippet translate
 	translate(${1:0})
+
