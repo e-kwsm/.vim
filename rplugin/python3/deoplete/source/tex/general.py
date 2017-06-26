@@ -9,13 +9,10 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
-                "addbibresource",
-                "autocite",
                 "bigskip",
                 "clearpage",
                 "endinput",
                 "figurename",
-                "footfullcite",
                 "footnotesize",
                 "insertsection",
                 "insertsubsection",
@@ -26,14 +23,8 @@ class Source(Base):
                 "operatorname",
                 "paperheight",
                 "paperwidth",
-                "printbibliography",
                 "scriptsize",
-                "setbeamercolor",
-                "setbeamerfont",
-                "setbeamersize",
-                "setbeamertemplate",
                 "smallskip",
-                "supercite",
                 "tablename",
                 "textasciitilde",
                 "textbigcircle",
@@ -42,7 +33,4 @@ class Source(Base):
                 "textsubscript",
                 "textsuperscript",
                 "textwidth",
-                "usebeamercolor",
-                "usebeamerfont",
-                "usebeamertemplate",
                 ]
