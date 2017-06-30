@@ -31,6 +31,7 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('davidhalter/jedi-vim')
   call dein#add('ujihisa/neco-look')
+  call dein#add('nvie/vim-flake8')
   " }}}
   call dein#end()
 
@@ -105,6 +106,9 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   nmap <F9> :TagbarOpen fjc<CR>
   " }}}
 
+  " nvie/vim-flake8 {{{
+  autocmd BufWritePost *.py call Flake8()
+  " }}}
   " }}}
 endif
 " }}}
