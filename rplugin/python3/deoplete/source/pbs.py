@@ -18,5 +18,6 @@ class Source(Base):
                 "PBS_NUM_PPN",
                 "PBS_O_HOST",
                 "PBS_O_WORKDIR",
+                "PBS_SERVER",
                 "PBS_TASKNUM",
                 ]
