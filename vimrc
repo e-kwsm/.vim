@@ -169,7 +169,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType cpp        setl path+=/usr/include/c++/4.9,/usr/local/boost/current/include
   autocmd FileType csv        setl cursorline noexpandtab tabstop=8
-  autocmd FileType diff       exe "normal! gg"
+  autocmd FileType diff       setl cursorline | exe "normal! gg"
   autocmd FileType gaussian   setl cursorline
   autocmd FileType gitcommit  setl textwidth=0 spell | exe "normal! gg"
   autocmd FileType gitconfig  setl noexpandtab
@@ -179,6 +179,7 @@ augroup myFileTypeConfig " {{{1
   autocmd FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
   autocmd FileType sh         setl shiftwidth=2 tabstop=2 textwidth=100
   autocmd FileType svg        setl shiftwidth=2 tabstop=2 textwidth=100 nowrap iskeyword+=-
+  autocmd FileType tcl        setl iskeyword+=-
   autocmd FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
         \ spell spelllang+=cjk
