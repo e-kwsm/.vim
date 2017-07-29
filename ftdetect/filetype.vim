@@ -1,4 +1,4 @@
-autocmd BufRead,BufNewFile /usr/include/c++/* setf cpp
+autocmd BufRead /usr/include/c++/* setf cpp
 
 autocmd BufRead,BufNewFile *.aux	setl filetype=tex
 autocmd BufRead,BufNewFile *.bbx	setl filetype=tex
