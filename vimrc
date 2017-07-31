@@ -108,6 +108,7 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
 
   " nvie/vim-flake8 {{{
   autocmd BufWritePost *.py call Flake8()
+  autocmd QuitPre *.py cclose | let g:flake8_show_quickfix=0
   " }}}
   " }}}
 endif
