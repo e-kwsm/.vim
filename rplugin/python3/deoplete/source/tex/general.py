@@ -10,7 +10,9 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
+            "DeclareMathOperator",
             "bigskip",
+            "boldsymbol",
             "clearpage",
             "endinput",
             "figurename",
@@ -27,6 +29,7 @@ class Source(Base):
             "scriptsize",
             "smallskip",
             "tablename",
+            "tableofcontents",
             "textasciitilde",
             "textbigcircle",
             "textbullet",
