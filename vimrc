@@ -186,6 +186,12 @@ augroup myFileTypeConfig " {{{1
   au FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
   au FileType xyz        setl cursorline
 
+  " shebang
+  au BufNewFile *.bash put!='#!/bin/bash' | exe "normal! j"
+  au BufNewFile *.plt put!='#!/usr/bin/env gnuplot' | exe "normal! j"
+  au BufNewFile *.py put!='#!/usr/bin/env python3' | exe "normal! j"
+  au BufNewFile *.sh put!='#!/bin/sh' | exe "normal! j"
+
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
 
@@ -198,6 +204,10 @@ au BufWinEnter,WinEnter * if &textwidth > 0
       \ | endif
 
 " command {{{1
+if !exists(":Ipython")
+  command Ipython :te ipython
+endif
+
 if !exists(":WrapToNext")
   command WrapToNext execute "normal! F<Space>r<CR>J"
 endif
