@@ -1,7 +1,7 @@
 filetype plugin indent on
 syntax enable
 
-autocmd BufReadPost *
+au BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal g`\"" |
       \ endif
@@ -107,8 +107,8 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   " }}}
 
   " nvie/vim-flake8 {{{
-  autocmd BufWritePost *.py call Flake8()
-  autocmd QuitPre *.py cclose | let g:flake8_show_quickfix=0
+  au BufWritePost *.py call Flake8()
+  au QuitPre *.py cclose | let g:flake8_show_quickfix=0
   " }}}
   " }}}
 endif
@@ -166,26 +166,25 @@ highlight LineNr ctermfg=darkred
 let &titleold=getcwd()
 
 augroup myFileTypeConfig " {{{1
-  autocmd!
-  autocmd FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
-  autocmd FileType cpp        setl path+=/usr/include/c++/4.9,/usr/local/boost/current/include
-  autocmd FileType csv        setl cursorline noexpandtab tabstop=8
-  autocmd FileType diff       setl cursorline | exe "normal! gg"
-  autocmd FileType gaussian   setl cursorline
-  autocmd FileType gitcommit  setl textwidth=0 spell | exe "normal! gg"
-  autocmd FileType gitconfig  setl noexpandtab
-  autocmd FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
-  autocmd FileType markdown   setl spell spelllang+=cjk textwidth=100
-  autocmd FileType neosnippet setl noexpandtab
-  autocmd FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
-  autocmd FileType sh         setl shiftwidth=2 tabstop=2 textwidth=100
-  autocmd FileType svg        setl shiftwidth=2 tabstop=2 textwidth=100 nowrap iskeyword+=-
-  autocmd FileType tcl        setl iskeyword+=-
-  autocmd FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
+  au!
+  au FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
+  au FileType csv        setl cursorline noexpandtab tabstop=8
+  au FileType diff       setl cursorline | exe "normal! gg"
+  au FileType gaussian   setl cursorline
+  au FileType gitcommit  setl textwidth=0 spell | exe "normal! gg"
+  au FileType gitconfig  setl noexpandtab
+  au FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
+  au FileType markdown   setl spell spelllang=en,cjk textwidth=100
+  au FileType neosnippet setl noexpandtab
+  au FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
+  au FileType sh         setl shiftwidth=2 tabstop=2 textwidth=100
+  au FileType svg        setl shiftwidth=2 tabstop=2 textwidth=100 nowrap iskeyword+=-
+  au FileType tcl        setl iskeyword+=-
+  au FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
-        \ spell spelllang+=cjk
-  autocmd FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
-  autocmd FileType xyz        setl cursorline
+        \ spell spelllang=en,cjk
+  au FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
+  au FileType xyz        setl cursorline
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
