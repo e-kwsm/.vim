@@ -100,6 +100,24 @@ class Source(Base):
                 "printbibliography",
                 "supercite",
             ],
+            "fontspec": [
+                "fontspec",
+                "newfontfamily",
+                "setmainfont",
+                "setmonofont",
+                "setsansfont",
+            ],
+            "graphicx": [
+                "includegraphics",
+            ],
+            "KOMA-Script": [
+                "RedeclareSectionCommand",
+                "setkomafont",
+            ],
+            "tikz": [
+                "tikz",
+                "usetikzlibrary",
+            ],
         }
         self._candidates = []
         for pkg, cmds in pkgcmds.items():
