@@ -1,11 +1,6 @@
 filetype plugin indent on
 syntax enable
 
-au BufReadPost *
-      \ if line("'\"") > 1 && line("'\"") <= line("$") |
-      \   exe "normal g`\"" |
-      \ endif
-
 " Shougo/dein.vim {{{
 if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md"))
   set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
@@ -167,6 +162,11 @@ let &titleold=getcwd()
 
 augroup myFileTypeConfig " {{{1
   au!
+  au BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
+
   au FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
   au FileType csv        setl cursorline noexpandtab tabstop=8
   au FileType diff       setl cursorline | exe "normal! gg"
@@ -191,6 +191,10 @@ augroup myFileTypeConfig " {{{1
   au BufNewFile *.plt put!='#!/usr/bin/env gnuplot' | exe "normal! j"
   au BufNewFile *.py put!='#!/usr/bin/env python3' | exe "normal! j"
   au BufNewFile *.sh put!='#!/bin/sh' | exe "normal! j"
+
+  if has('nvim')
+    au TermOpen term://* startinsert
+  endif
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
