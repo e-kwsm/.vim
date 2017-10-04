@@ -12,12 +12,14 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
+            "FiraSans",
             "amsmath",
             "amssymb",
             "biblatex",
             "chemfig",
             "filecontents",
             "float",
+            "fontawesome",
             "geometry",
             "graphicx",
             "grffile",
@@ -25,11 +27,17 @@ class Source(Base):
             "luatexja",
             "mathtools",
             "mhchem",
+            "noto",
             "physics",
             "siunitx",
+            "sourcecodepro",
+            "sourcesanspro",
+            "sourceserifspro",
             "subcaption",
             "subdepth",
             "tcolorbox",
+            "typicons",
+            "unicode-math",
             "xcolor",
             "xeCJK",
         ]

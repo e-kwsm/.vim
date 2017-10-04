@@ -255,6 +255,7 @@ class Source(Base):
                 "thetable",
             ],
             "beamer": [
+                "addtobeamertemplate",
                 "defbeamertemplate",
                 "insertsection",
                 "insertsubsection",
@@ -293,6 +294,8 @@ class Source(Base):
             ],
             "graphicx": [
                 "includegraphics",
+                "resizebox",
+                "scalebox",
             ],
             "KOMA-Script": [
                 "RedeclareSectionCommand",
@@ -301,7 +304,12 @@ class Source(Base):
             ],
             "tikz": [
                 "tikz",
+                "tikzset",
                 "usetikzlibrary",
+            ],
+            "xcolor": [
+                "color",
+                "textcolor",
             ],
         }
         self._candidates = []
