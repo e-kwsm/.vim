@@ -1,13 +1,13 @@
 filetype plugin indent on
 syntax enable
 
-" Shougo/dein.vim {{{
+" Shougo/dein.vim {{{1
 if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md"))
   set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
   call dein#begin(expand('~/.vim/bundle'))
   call dein#add('Shougo/dein.vim')
-  " plugins {{{
+  " plugins {{{2
   if has('nvim') && has('python3')
     call dein#add('Shougo/deoplete.nvim')
   else
@@ -24,10 +24,12 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('majutsushi/tagbar')
   call dein#add('bronson/vim-trailing-whitespace')
-  call dein#add('davidhalter/jedi-vim')
   call dein#add('ujihisa/neco-look')
-  call dein#add('nvie/vim-flake8')
-  " }}}
+  if has('python3')
+    call dein#add('davidhalter/jedi-vim')
+    call dein#add('nvie/vim-flake8')
+  endif
+  " }}}2
   call dein#end()
 
   let g:dein#types#git#clone_depth = 1
@@ -37,16 +39,15 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
 
   filetype plugin indent on
 
-  " plugin config {{{
-  " Shougo/deoplete.nvim {{{
+  " plugin config {{{2
+  " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
     let g:deoplete#auto_complete_delay = 100
     call deoplete#custom#set('_', 'sorters', ['sorter_word'])
   endif
-  " }}}
 
-  " Shougo/neosnippet.vim {{{
+  " Shougo/neosnippet.vim {{{3
   " Plugin key-mappings.
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
   smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -67,13 +68,13 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
 
   let g:neosnippet#expand_word_boundary = 1
   let g:neosnippet#snippets_directory = '~/.vim/snippets/'
-  " }}}
 
-  " davidhalter/jedi-vim {{{
-  let g:jedi#force_py_version = 3
-  " }}}
+  " davidhalter/jedi-vim {{{3
+  if has('python3')
+    let g:jedi#force_py_version = 3
+  endif
 
-  " vim-airline/vim-airline {{{
+  " vim-airline/vim-airline {{{3
   let g:airline#extensions#tabline#enabled = 1
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -93,21 +94,18 @@ if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md
   let g:airline_symbols.paste = 'Þ'
   let g:airline_symbols.paste = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
-  " }}}
 
-  " majutsushi/tagbar {{{
+  " majutsushi/tagbar {{{3
   let g:tagbar_autofocus=1
   nmap <F8> :TagbarToggle<CR>
   nmap <F9> :TagbarOpen fjc<CR>
-  " }}}
 
-  " nvie/vim-flake8 {{{
+  " nvie/vim-flake8 {{{3
   au BufWritePost *.py call Flake8()
   au QuitPre *.py cclose | let g:flake8_show_quickfix=0
-  " }}}
-  " }}}
+  " }}}2
 endif
-" }}}
+" }}}1
 
 source $VIMRUNTIME/macros/matchit.vim
 
@@ -208,12 +206,22 @@ au BufWinEnter,WinEnter * if &textwidth > 0
       \ | endif
 
 " command {{{1
-if !exists(":Ipython")
-  command Ipython :te ipython
+if !exists(":ShExe")
+  command -nargs=* ShExe w | !chmod u+x % && %:p <args>
 endif
 
 if !exists(":WrapToNext")
   command WrapToNext execute "normal! F<Space>r<CR>J"
+endif
+
+if has('nvim')
+  if !exists(":Exe")
+    command -nargs=* Exe w | te chmod u+x % && %:p <args>
+  endif
+
+  if !exists(":Ipython")
+    command -nargs=* Ipython te ipython <args>
+  endif
 endif
 " }}}1
 
