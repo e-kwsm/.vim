@@ -39,6 +39,7 @@ class Source(Base):
                 "exampleblock",
                 "frame",
                 "overlayarea",
+                "overprint",
             ],
             "filecontents": [
                 "filecontents",
