@@ -128,7 +128,8 @@ set ruler
 set scrolloff=1
 set shiftwidth=2
 set showcmd
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set spelllang=en,cjk
+set suffixes+=.aux,.bbl,.bcf,.blg,.dvi,.log,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv
 set tabstop=4
 set title
 set visualbell
@@ -151,6 +152,7 @@ let g:python_host_skip_check = 1 " disabled
 " map {{{1
 nnoremap <F5> :source $MYVIMRC<CR>
 nnoremap mm :make<CR>
+noremap Q gq
 " }}}1
 
 colorscheme desert
@@ -167,20 +169,19 @@ augroup myFileTypeConfig " {{{1
 
   au FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
   au FileType csv        setl cursorline noexpandtab tabstop=8
-  au FileType diff       setl cursorline | exe "normal! gg"
+  au FileType diff       setl cursorline
   au FileType gaussian   setl cursorline
-  au FileType gitcommit  setl textwidth=0 spell | exe "normal! gg"
+  au FileType gitcommit  setl textwidth=0 spell
   au FileType gitconfig  setl noexpandtab
   au FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
-  au FileType markdown   setl spell spelllang=en,cjk textwidth=100
+  au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
   au FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
   au FileType sh         setl shiftwidth=2 tabstop=2 textwidth=100
   au FileType svg        setl shiftwidth=2 tabstop=2 textwidth=100 nowrap iskeyword+=-
   au FileType tcl        setl iskeyword+=-
-  au FileType tex        setl textwidth=100 softtabstop=4 colorcolumn=+1
+  au FileType tex        setl spell softtabstop=4 textwidth=100 colorcolumn=+1
         \ foldmethod=marker foldmarker=[[[,]]]
-        \ spell spelllang=en,cjk
   au FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
   au FileType xyz        setl cursorline
 
@@ -189,6 +190,11 @@ augroup myFileTypeConfig " {{{1
   au BufNewFile *.plt put!='#!/usr/bin/env gnuplot' | exe "normal! j"
   au BufNewFile *.py put!='#!/usr/bin/env python3' | exe "normal! j"
   au BufNewFile *.sh put!='#!/bin/sh' | exe "normal! j"
+
+  " git
+  au BufReadPost */.git/ADD_EDIT.patch      exe "normal! 3G0"
+  au BufReadPost */.git/COMMIT_EDITMSG      exe "normal! gg"
+  au BufReadPost */.git/addp-hunk-edit.diff exe "normal! 3G0"
 
   if has('nvim')
     au TermOpen term://* startinsert
@@ -200,10 +206,6 @@ augroup myFileTypeConfig " {{{1
   let g:c_gnu = 1
   let g:tex_flavor = "latex"
 augroup END " }}}1
-
-au BufWinEnter,WinEnter * if &textwidth > 0
-      \ | let w:m=matchadd('ErrorMsg', printf('\%%>%dv.\+', &textwidth), -1)
-      \ | endif
 
 " command {{{1
 if !exists(":ShExe")
@@ -219,8 +221,20 @@ if has('nvim')
     command -nargs=* Exe w | te chmod u+x % && %:p <args>
   endif
 
+  if !exists(":Gnuplot")
+    command -nargs=* Gnuplot te gnuplot <args>
+  endif
+
   if !exists(":Ipython")
     command -nargs=* Ipython te ipython <args>
+  endif
+
+  if !exists(":LuaLaTeX")
+    command -nargs=* LuaLaTeX w | te cd %:h && lualatex <args> %:t
+  endif
+
+  if !exists(":SpTe")
+    command -nargs=* SpTe sp | te <args>
   endif
 endif
 " }}}1
