@@ -1,5 +1,6 @@
 from .base import Base
 
+
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
@@ -9,14 +10,14 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
-                "Parencite",
-                "addbibresource",
-                "autocite",
-                "citeauthor",
-                "citetitle",
-                "footfullcite",
-                "fullcite",
-                "parencite",
-                "printbibliography",
-                "supercite",
-                ]
+            "Parencite",
+            "addbibresource",
+            "autocite",
+            "citeauthor",
+            "citetitle",
+            "footfullcite",
+            "fullcite",
+            "parencite",
+            "printbibliography",
+            "supercite",
+        ]

@@ -1,5 +1,6 @@
 from .base import Base
 
+
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
@@ -9,12 +10,12 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
-                "animate",
-                "circle",
-                "ellipse",
-                "image",
-                "line",
-                "polygon",
-                "polyline",
-                "rect",
-                ]
+            "animate",
+            "circle",
+            "ellipse",
+            "image",
+            "line",
+            "polygon",
+            "polyline",
+            "rect",
+        ]

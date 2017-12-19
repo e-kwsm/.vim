@@ -1,5 +1,6 @@
 from .base import Base
 
+
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
@@ -9,17 +10,17 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
-                "defbeamertemplate",
-                "setbeamercolor",
-                "setbeamerfont",
-                "setbeamersize",
-                "setbeamertemplate",
-                "usebackgroundtemplate",
-                "usebeamercolor",
-                "usebeamerfont",
-                "usebeamertemplate",
-                "usecolortheme",
-                "usefonttheme",
-                "useinnertheme",
-                "useoutertheme",
-                ]
+            "defbeamertemplate",
+            "setbeamercolor",
+            "setbeamerfont",
+            "setbeamersize",
+            "setbeamertemplate",
+            "usebackgroundtemplate",
+            "usebeamercolor",
+            "usebeamerfont",
+            "usebeamertemplate",
+            "usecolortheme",
+            "usefonttheme",
+            "useinnertheme",
+            "useoutertheme",
+        ]
