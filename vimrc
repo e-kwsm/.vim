@@ -129,7 +129,8 @@ set scrolloff=1
 set shiftwidth=2
 set showcmd
 set spelllang=en,cjk
-set suffixes+=.aux,.bbl,.bcf,.blg,.dvi,.log,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv
+"set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set suffixes+=.aux,.bbl,.bcf,.blg,.d,.dvi,.log,.nav,.out,.pdf,.snm,.svgz,.toc,.run.xml,.vrb,.xdv
 set tabstop=4
 set title
 set visualbell
@@ -219,6 +220,22 @@ endif
 if has('nvim')
   if !exists(":Exe")
     command -nargs=* Exe w | te chmod u+x % && %:p <args>
+  endif
+
+  if !exists(":GitAddPatch")
+    command GitAddPatch w | te git add -p %
+  endif
+
+  if !exists(":GitCommitChangesOfFile")
+    command GitCommitChangesOfFile w | te git add % && git commit -m %
+  endif
+
+  if !exists(":GitCommitFilenameAsMsg")
+    command GitCommitFilenameAsMsg te git commit -m %
+  endif
+
+  if !exists(":GitDiff")
+    command -nargs=* GitDiff te git diff % <args>
   endif
 
   if !exists(":Gnuplot")
