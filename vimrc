@@ -126,12 +126,10 @@ set number
 set relativenumber
 set ruler
 set scrolloff=1
-set shiftwidth=2
 set showcmd
 set spelllang=en,cjk
 "set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set suffixes+=.aux,.bbl,.bcf,.blg,.d,.dvi,.log,.nav,.out,.pdf,.snm,.svgz,.toc,.run.xml,.vrb,.xdv
-set tabstop=4
 set title
 set visualbell
 set wildmenu
@@ -168,22 +166,24 @@ augroup myFileTypeConfig " {{{1
         \   exe "normal g`\"" |
         \ endif
 
-  au FileType c,cpp      setl shiftwidth=4 tabstop=4 textwidth=100
-  au FileType csv        setl cursorline noexpandtab tabstop=8
+  au FileType c,cpp      setl shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType csv        setl cursorline noexpandtab
   au FileType diff       setl cursorline
   au FileType gaussian   setl cursorline
   au FileType gitcommit  setl textwidth=0 spell
   au FileType gitconfig  setl noexpandtab
-  au FileType gnuplot    setl shiftwidth=4 tabstop=4 textwidth=100
+  au FileType gnuplot    setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
-  au FileType python     setl shiftwidth=4 tabstop=4 textwidth=100
-  au FileType sh         setl shiftwidth=2 tabstop=2 textwidth=100
-  au FileType svg        setl shiftwidth=2 tabstop=2 textwidth=100 nowrap iskeyword+=-
+  au FileType python     setl shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType sh         setl shiftwidth=2 softtabstop=2 textwidth=100
+                          \ | let g:is_posix = 1
+  au FileType sshconfig  setl noexpandtab
+  au FileType svg        setl shiftwidth=2 softtabstop=2 textwidth=100 nowrap iskeyword+=-
   au FileType tcl        setl iskeyword+=-
-  au FileType tex        setl spell softtabstop=4 textwidth=100 colorcolumn=+1
-        \ foldmethod=marker foldmarker=[[[,]]]
-  au FileType vim        setl noexpandtab tabstop=8 foldmethod=marker
+  au FileType tex        setl shiftwidth=2 spell textwidth=100 colorcolumn=+1
+                          \ foldmethod=marker foldmarker=[[[,]]]
+  au FileType vim        setl noexpandtab foldmethod=marker
   au FileType xyz        setl cursorline
 
   " shebang
