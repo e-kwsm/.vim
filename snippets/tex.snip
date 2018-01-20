@@ -212,4 +212,44 @@ snippet \color
 snippet \textcolor
 	\textcolor{${1:#:color}}{${2:#:text}}
 
+# xparse.sty [[[1
+snippet \NewDocumentCommand
+	\NewDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+
+snippet \RenewDocumentCommand
+	\RenewDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+
+snippet \ProvideDocumentCommand
+	\ProvideDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+
+snippet \DeclareDocumentCommand
+	\DeclareDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+
+snippet \IfNoValueT
+	\IfNoValueT{${1:#:arg}}{${2:#:true}}
+
+snippet \IfNoValueF
+	\IfNoValueF{${1:#:arg}}{${2:#:false}}
+
+snippet \IfNoValueTF
+	\IfNoValueTF{${1:#:arg}}{${2:#:true}}{${3:#:false}}
+
+snippet \IfValueT
+	\IfValueT{${1:#:arg}}{${2:#:true}}
+
+snippet \IfValueF
+	\IfValueF{${1:#:arg}}{${2:#:false}}
+
+snippet \IfValueTF
+	\IfValueTF{${1:#:arg}}{${2:#:true}}{${3:#:false}}
+
+snippet \IfBooleanT
+	\IfBooleanT{${1:#:arg}}{${2:#:true}}
+
+snippet \IfBooleanF
+	\IfBooleanF{${1:#:arg}}{${2:#:false}}
+
+snippet \IfBooleanTF
+	\IfBooleanTF{${1:#:arg}}{${2:#:true}}{${3:#:false}}
+
 # vim: noet fdm=marker fmr=[[[,]]]

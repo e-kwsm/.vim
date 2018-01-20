@@ -44,4 +44,5 @@ class Source(Base):
             "unicode-math",
             "xcolor",
             "xeCJK",
+            "xparse",
         ]

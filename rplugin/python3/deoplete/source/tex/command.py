@@ -1544,6 +1544,21 @@ class Source(Base):
                 "color",
                 "textcolor",
             ],
+            "xparse": [
+                "DeclareDocumentCommand",
+                "IfBooleanF",
+                "IfBooleanT",
+                "IfBooleanTF",
+                "IfNoValueF",
+                "IfNoValueT",
+                "IfNoValueTF",
+                "IfValueF",
+                "IfValueT",
+                "IfValueTF",
+                "NewDocumentCommand",
+                "ProvideDocumentCommand",
+                "RenewDocumentCommand",
+            ],
         }
         self._candidates = []
         for pkg, cmds in pkgcmds.items():
