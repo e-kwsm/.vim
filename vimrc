@@ -2,10 +2,11 @@ filetype plugin indent on
 syntax enable
 
 " Shougo/dein.vim {{{1
-if filereadable(expand("~/.vim/bundle/repos/github.com/Shougo/dein.vim/README.md"))
-  set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
-
-  call dein#begin(expand('~/.vim/bundle'))
+let s:dein_bundle_root = expand('~/.vim/bundle')
+let s:dein_dein = s:dein_bundle_root . '/repos/github.com/Shougo/dein.vim'
+if isdirectory(s:dein_dein)
+  let &runtimepath .= ',' . s:dein_dein
+  call dein#begin(s:dein_bundle_root)
   call dein#add('Shougo/dein.vim')
   " plugins {{{2
   if has('nvim') && has('python3')
