@@ -81,9 +81,15 @@ snippet foldmarkerframe
 options head
 	% vim: fmr=\\begin{frame},\\end{frame}
 
-# bm.cls [[[1
+# bm.sty [[[1
 snippet \bm
 	\bm{${1}}
+
+# expl3.sty [[[1
+snippet \ExplSyntaxOn
+	\ExplSyntaxOn
+	${0}
+	\ExplSyntaxOff
 
 # graphicx.sty [[[1
 snippet \includegraphics
@@ -195,6 +201,10 @@ snippet \tcolorbox
 	\begin{tcolorbox}[${1}]
 		${0}
 	\end{tcolorbox}
+
+# tikz.sty [[[1
+snippet \tikz
+	\tikz ${1};
 
 # wrapfig.sty [[[1
 snippet \wrapfigure

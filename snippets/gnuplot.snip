@@ -11,9 +11,8 @@ snippet set_terminal_svg
 alias   set_term_svg
 	set terminal svg size ${1:300}, ${2:300} \
 		enhanced \
-		font '${3:Arial}, ${4:10}' \
-		#name '${5:Gnuplot}'
-	set output '${6:a}.svg'
+		font '${3:Arial}, ${4:10}'
+	set output '${5:a}.svg'
 	${0}
 
 snippet set_terminal_pdfcairo
@@ -57,6 +56,7 @@ snippet set_ranges
 	set yrange [${2}]
 
 snippet Italic
+alias   italic
 	{/:Italic ${1}}
 
 # vim:set fdm=marker:
