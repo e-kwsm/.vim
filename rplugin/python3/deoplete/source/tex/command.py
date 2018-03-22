@@ -5,7 +5,7 @@ class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
         self.name = "LaTeX cmd"
-        self.mark = "[LaTeX]"
+        self.mark = "[cmd]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\\[a-zA-Z]*"
         self.rank = 1000
@@ -44,7 +44,10 @@ class Source(Base):
                 "Phi",
                 "Pi",
                 "ProcessOptions",
+                "ProvideTextCommand",
+                "ProvideTextCommandDefault",
                 "ProvidesClass",
+                "ProvidesFile",
                 "ProvidesPackage",
                 "Psi",
                 "RequirePackage",
@@ -131,6 +134,7 @@ class Source(Base):
                 "gamma",
                 "geq",
                 "gg",
+                "hbar",
                 "hbox",
                 "hfill",
                 "hline",
@@ -156,6 +160,7 @@ class Source(Base):
                 "label",
                 "labelsep",
                 "lambda",
+                "lceil",
                 "leavevmode",
                 "leftarrow",
                 "leftharpoondown",
@@ -163,6 +168,7 @@ class Source(Base):
                 "leftrightarrow",
                 "leq",
                 "let",
+                "lfloor",
                 "lineskip",
                 "ll",
                 "llap",
@@ -228,6 +234,7 @@ class Source(Base):
                 "parindent",
                 "parskip",
                 "partial",
+                "partial",
                 "perp",
                 "phantom",
                 "phi",
@@ -242,10 +249,12 @@ class Source(Base):
                 "qquad",
                 "quad",
                 "raisebox",
+                "rceil",
                 "ref",
                 "relax",
                 "renewcommand",
                 "renewenvironment",
+                "rfloor",
                 "rho",
                 "right",
                 "rightarrow",
@@ -307,6 +316,7 @@ class Source(Base):
                 "theequation",
                 "thefootnote",
                 "thepage",
+                "therefore",
                 "theta",
                 "thicklines",
                 "thickmuskip",
@@ -412,6 +422,14 @@ class Source(Base):
                 "parencite",
                 "printbibliography",
                 "supercite",
+            ],
+            "expl3": [
+                "ExplSyntaxOff",
+                "ExplSyntaxOn",
+                "GetIdInfo",
+                "ProvideExplClass",
+                "ProvideExplFile",
+                "ProvideExplPackage",
             ],
             "fontawesome": [
                 "faAdjust",
@@ -1145,6 +1163,7 @@ class Source(Base):
                 "faYoutubeSquare",
             ],
             "fontspec": [
+                "addfontfeature",
                 "fontspec",
                 "newfontfamily",
                 "setmainfont",
@@ -1550,6 +1569,14 @@ class Source(Base):
             "xcolor": [
                 "color",
                 "textcolor",
+            ],
+            "xkeyval": [
+                "CurrentOption",
+                "define@choicekey",
+                "define@choicekey*",
+                "define@cmdkey",
+                "define@cmdkeys",
+                "define@key",
             ],
             "xparse": [
                 "ArgumentSpecification",
