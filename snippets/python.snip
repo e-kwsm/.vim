@@ -1,7 +1,15 @@
 delete ifmain
 snippet     ifmain
 abbr        if __name__ == "__main__": ...
-alias       main
 options     head
 	if __name__ == "__main__":
 		${0:pass}
+
+snippet main
+	def ${1:main}():
+		pass
+		${0}
+	
+	
+	if __name__ == "__main__":
+		$1()
