@@ -210,8 +210,12 @@ augroup myFileTypeConfig " {{{1
 augroup END " }}}1
 
 " command {{{1
+if !exists(':Remove')
+  command Remove !rm -f %
+endif
+
 if !exists(":ShExe")
-  command -nargs=* ShExe w | !chmod u+x % && %:p <args>
+  command -nargs=* ShExe up | !chmod u+x % && %:p <args>
 endif
 
 if !exists(":WrapToNext")
@@ -220,15 +224,15 @@ endif
 
 if has('nvim')
   if !exists(":Exe")
-    command -nargs=* Exe w | te chmod u+x % && %:p <args>
+    command -nargs=* Exe up | te chmod u+x % && %:p <args>
   endif
 
   if !exists(":GitAddPatch")
-    command GitAddPatch w | te git add -p %
+    command GitAddPatch up | te git add -p %
   endif
 
   if !exists(":GitCommitChangesOfFile")
-    command GitCommitChangesOfFile w | te git add % && git commit -m %
+    command GitCommitChangesOfFile up | te git add % && git commit -m %
   endif
 
   if !exists(":GitCommitFilenameAsMsg")
@@ -236,7 +240,7 @@ if has('nvim')
   endif
 
   if !exists(":GitDiff")
-    command -nargs=* GitDiff te git diff % <args>
+    command -nargs=* GitDiff up | te git diff % <args>
   endif
 
   if !exists(":Gnuplot")
@@ -248,11 +252,15 @@ if has('nvim')
   endif
 
   if !exists(":LuaLaTeX")
-    command -nargs=* LuaLaTeX w | te cd %:h && lualatex <args> %:t
+    command -nargs=* LuaLaTeX up | te lualatex -output-directory %:h <args> %
   endif
 
   if !exists(":SpTe")
     command -nargs=* SpTe sp | te <args>
+  endif
+
+  if !exists(":XeLaTeX")
+    command -nargs=* XeLaTeX up | te xelatex -output-directory %:h <args> %
   endif
 endif
 " }}}1
