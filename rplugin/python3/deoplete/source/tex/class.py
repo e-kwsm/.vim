@@ -14,6 +14,7 @@ class Source(Base):
             "article",
             "beamer",
             "book",
+            "jlreq",
             "minimal",
             "report",
             "scrartcl",
