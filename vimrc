@@ -127,10 +127,12 @@ set number
 set relativenumber
 set ruler
 set scrolloff=1
+set shiftwidth=2
 set showcmd
 set spelllang=en,cjk
 "set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-set suffixes+=.aux,.bbl,.bcf,.blg,.d,.dvi,.log,.nav,.out,.pdf,.snm,.svgz,.toc,.run.xml,.vrb,.xdv
+set suffixes=.bak,~,.o,.info,.swp,.obj
+set suffixes+=.aux,.bbl,.bcf,.blg,.d,.dvi,.log,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv
 set title
 set visualbell
 set wildmenu
@@ -184,19 +186,21 @@ augroup myFileTypeConfig " {{{1
   au FileType tcl        setl iskeyword+=-
   au FileType tex        setl shiftwidth=2 spell textwidth=100 colorcolumn=+1
                           \ foldmethod=marker foldmarker=[[[,]]]
-  au FileType vim        setl noexpandtab foldmethod=marker
+  au FileType vim        setl expandtab foldmethod=marker shiftwidth=2
   au FileType xyz        setl cursorline
 
   " shebang
-  au BufNewFile *.bash put!='#!/bin/bash' | exe "normal! j"
-  au BufNewFile *.plt put!='#!/usr/bin/env gnuplot' | exe "normal! j"
-  au BufNewFile *.py put!='#!/usr/bin/env python3' | exe "normal! j"
-  au BufNewFile *.sh put!='#!/bin/sh' | exe "normal! j"
+  au BufNewFile *.bash put!='#!/bin/bash'            | exe "normal! j"
+  au BufNewFile *.jl   put!='#!/usr/bin/env julia'   | exe "normal! j"
+  au BufNewFile *.plt  put!='#!/usr/bin/env gnuplot' | exe "normal! j"
+  au BufNewFile *.py   put!='#!/usr/bin/env python3' | exe "normal! j"
+  au BufNewFile *.sh   put!='#!/bin/sh'              | exe "normal! j"
 
   " git
   au BufReadPost */.git/ADD_EDIT.patch      exe "normal! 3G0"
   au BufReadPost */.git/COMMIT_EDITMSG      exe "normal! gg"
   au BufReadPost */.git/addp-hunk-edit.diff exe "normal! 3G0"
+  au BufReadPost */.git/rebase-merge/git-rebase-todo exe "normal! gg"
 
   if has('nvim')
     au TermOpen term://* startinsert
@@ -204,6 +208,7 @@ augroup myFileTypeConfig " {{{1
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
+  set cinoptions+=N-s
 
   let g:c_gnu = 1
   let g:tex_flavor = "latex"
