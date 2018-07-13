@@ -1,1 +1,2 @@
-    syn keyword cConstant __GNUG__
+syn keyword cConstant __GNUG__ __GNUC_MINOR__ __GNUC_PATCHLEVEL__ __GNUC_STDC_INLINE__
+syn keyword cConstant __clang__ __clang_major__ __clang_minor__ __clang_patchlevel__ __clang_version__

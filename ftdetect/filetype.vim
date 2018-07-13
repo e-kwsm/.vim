@@ -12,3 +12,5 @@ autocmd BufRead,BufNewFile *.plt     setl filetype=gnuplot
 autocmd BufRead,BufNewFile *.tlu     setf lua
 autocmd BufRead,BufNewFile *.tsv     setf csv
 autocmd BufRead,BufNewFile *.xyz     setf xyz
+
+autocmd BufNewFile,BufRead * if getline(1) == '#%Module' | setf tcl | endif
