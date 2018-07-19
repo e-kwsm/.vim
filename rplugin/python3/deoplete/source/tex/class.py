@@ -21,4 +21,5 @@ class Source(Base):
             "scrbook",
             "scrreprt",
             "standalone",
+            "subfiles",
         ]

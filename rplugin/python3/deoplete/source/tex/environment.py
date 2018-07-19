@@ -1,3 +1,4 @@
+# vi: fdm=marker fmr=[,]
 from .base import Base
 
 
