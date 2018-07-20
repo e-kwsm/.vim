@@ -13,4 +13,4 @@ autocmd BufRead,BufNewFile *.tlu     setf lua
 autocmd BufRead,BufNewFile *.tsv     setf csv
 autocmd BufRead,BufNewFile *.xyz     setf xyz
 
-autocmd BufNewFile,BufRead * if getline(1) == '#%Module' | setf tcl | endif
+autocmd BufNewFile,BufRead * if getline(1) =~ '^#%Module' | setf module | endif
