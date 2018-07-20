@@ -45,7 +45,7 @@ if isdirectory(s:dein_dein)
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
     let g:deoplete#auto_complete_delay = 100
-    call deoplete#custom#set('_', 'sorters', ['sorter_word'])
+    call deoplete#custom#source('_', 'sorters', ['sorter_word'])
   endif
 
   " Shougo/neosnippet.vim {{{3
