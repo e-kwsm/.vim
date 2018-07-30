@@ -7,6 +7,7 @@ class Source(Base):
         self.name = "SLURM environment variables"
         self.mark = "[SLURM]"
         self.filetypes = ["sh"]
+        self.input_pattern = r"\$"
 
     def gather_candidates(self, context):
         return [

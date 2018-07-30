@@ -8,7 +8,7 @@ class Source(Base):
         self.name = "env"
         self.mark = "[env]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(begin|end|renewenvironment)\{\w*"
+        self.input_pattern = r"\\(begin|end|renewenvironment)\{"
         self.rank = 800
         pkgenvs = {
             "": [

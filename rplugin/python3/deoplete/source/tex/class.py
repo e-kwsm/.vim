@@ -7,7 +7,7 @@ class Source(Base):
         self.name = "cls"
         self.mark = "[cls]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(documentclass|LoadClass|LoadClassWithOptions|PassOptionsToClass)(\[.*\])?\{\w*"
+        self.input_pattern = r"\\(documentclass|LoadClass|LoadClassWithOptions|PassOptionsToClass)(\[.*\])?\{"
 
     def gather_candidates(self, context):
         return [

@@ -7,7 +7,7 @@ class Source(Base):
         self.name = "sty"
         self.mark = "[sty]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(usepackage|PassOptionsToPackage|RequirePackage)(\[.*\])?\{\w*"
+        self.input_pattern = r"\\(usepackage|PassOptionsToPackage|RequirePackage)(\[.*\])?\{"
         self.rank = 1000
 
     def gather_candidates(self, context):
