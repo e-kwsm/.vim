@@ -1,3 +1,4 @@
+import re
 from .base import Base
 
 
@@ -7,7 +8,7 @@ class Source(Base):
         self.name = "GFM"
         self.mark = "[GFM]"
         self.filetypes = ["markdown"]
-        self.input_pattern = r"^\s*```$"
+        self.input_pattern = r"^\s*```"
         self._candidate = []
         for lang in [
             "C",
@@ -54,4 +55,5 @@ class Source(Base):
                 self._candidate += [lang.lower()]
 
     def gather_candidates(self, context):
-        return self._candidate
+        if re.search(self.input_pattern, context["input"]):
+            return self._candidate

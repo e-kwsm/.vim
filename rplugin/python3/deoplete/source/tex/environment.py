@@ -1,4 +1,5 @@
 # vi: fdm=marker fmr=[,]
+import re
 from .base import Base
 
 
@@ -8,7 +9,7 @@ class Source(Base):
         self.name = "env"
         self.mark = "[env]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(begin|end|renewenvironment)\{"
+        self.input_pattern = r"\\(?:begin|end|renewenvironment)\{[A-Za-z]*$"
         self.rank = 800
         pkgenvs = {
             "": [
@@ -112,4 +113,5 @@ class Source(Base):
                 }]
 
     def gather_candidates(self, context):
-        return self._candidates
+        if re.search(self.input_pattern, context["input"]):
+            return self._candidates

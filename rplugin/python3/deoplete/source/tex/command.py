@@ -1,4 +1,5 @@
 # vi: fdm=marker fmr=[,]
+import re
 from .base import Base
 
 
@@ -8,7 +9,7 @@ class Source(Base):
         self.name = "LaTeX cmd"
         self.mark = "[cmd]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\[a-zA-Z]*"
+        self.input_pattern = r"\\[A-Za-z]*$"
         self.rank = 1000
         pkgcmds = {
             "": [
@@ -1684,4 +1685,5 @@ class Source(Base):
                 }]
 
     def gather_candidates(self, context):
-        return self._candidates
+        if re.search(self.input_pattern, context["input"]):
+            return self._candidates

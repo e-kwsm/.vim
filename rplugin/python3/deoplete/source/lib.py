@@ -1,13 +1,14 @@
+import re
 from .base import Base
 
 
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "make"
-        self.mark = "[make]"
+        self.name = "lib"
+        self.mark = "[lib]"
         self.filetypes = ["make"]
-        self.input_pattern = r"\b-l\w*"
+        self.input_pattern = r"\B-l"
         self._candidate = [{
             "word": "l" + l,
             "kind": "lib",
@@ -29,4 +30,5 @@ class Source(Base):
         ]]
 
     def gather_candidates(self, context):
-        return self._candidate
+        if re.search(self.input_pattern, context["input"]):
+            return self._candidate
