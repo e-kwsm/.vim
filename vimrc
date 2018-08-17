@@ -20,6 +20,7 @@ if isdirectory(s:dein_dein)
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('lyuts/vim-rtags')
   call dein#add('majutsushi/tagbar')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
@@ -212,6 +213,10 @@ augroup myFileTypeConfig " {{{1
 augroup END " }}}1
 
 " command {{{1
+if !exists(':ShowSyntaxGroup')
+  command ShowSyntaxGroup echo synIDattr(synID(line('.'), col('.'), 1), 'name')
+endif
+
 if !exists(':Remove')
   command Remove !rm -f %
 endif
