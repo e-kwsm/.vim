@@ -20,13 +20,12 @@ if isdirectory(s:dein_dein)
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('itchyny/lightline.vim')
   call dein#add('lyuts/vim-rtags')
   call dein#add('majutsushi/tagbar')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
   call dein#add('ujihisa/neco-look')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
   " }}}2
   call dein#end()
 
@@ -42,7 +41,6 @@ if isdirectory(s:dein_dein)
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
     let g:deoplete#auto_complete_delay = 100
-    call deoplete#custom#source('_', 'sorters', ['sorter_word'])
   endif
 
   " Shougo/neosnippet.vim {{{3
@@ -170,7 +168,7 @@ augroup myFileTypeConfig " {{{1
   au FileType csv        setl cursorline noexpandtab
   au FileType diff       setl cursorline
   au FileType gaussian   setl cursorline
-  au FileType gitcommit  setl spell textwidth=0
+  au FileType gitcommit  setl textwidth=0 spell
   au FileType gitconfig  setl noexpandtab
   au FileType gnuplot    setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType markdown   setl spell textwidth=100
