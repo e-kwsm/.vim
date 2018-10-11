@@ -140,7 +140,7 @@ augroup myFileTypeConfig " {{{1
   au!
   au BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \   exe "normal g`\"" |
+        \   exe 'normal g`"' |
         \ endif
 
   au FileType c,cpp      setl shiftwidth=4 softtabstop=4 textwidth=100
@@ -249,7 +249,7 @@ if has('nvim')
 endif
 " }}}1
 
-if filereadable(expand("~/.vimrc_local"))
+if filereadable(expand('~/.vimrc_local'))
   source ~/.vimrc_local
 endif
 
