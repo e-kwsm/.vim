@@ -5,6 +5,7 @@ C60
 C70
 DFT
 Diels
+EQE
 GGA
 GTO
 GitHub
@@ -12,9 +13,12 @@ GitLab
 Grignard
 HSE
 Hund
+IQE
 LDA
+LUMO
 LYP
 LanL2DZ/=
+Levenshtein
 M06
 MD5
 MOF
@@ -29,6 +33,7 @@ ORCID
 PBE
 PBE1PBE
 PCBM
+PCE
 PEDOT
 PSS
 Perdew
@@ -43,6 +48,8 @@ achiral
 acyl
 adenosine
 agonist
+aldehydes
+aldol
 alkane
 alkanes
 alkene
@@ -135,6 +142,7 @@ geminate
 graphene
 guanidine
 helicene
+hemiacetal
 hetero
 heteroatom
 heterocyclic
@@ -161,6 +169,9 @@ ketones
 kinase
 mV/=
 magnon
+memoize
+memoized
+memoizes
 mesoporous
 mesoscale
 metamaterial
@@ -173,6 +184,7 @@ nanocomposite
 nanocrystal
 nanocrystalline
 nanocrystals
+nanocubes
 nanofiber
 nanofibers
 nanomachine
@@ -190,6 +202,7 @@ nanotubes
 nanowire
 nanowires
 nitrile
+noncovalent
 nucleophile
 nucleophilic
 nucleophilicity
@@ -208,6 +221,7 @@ phononic
 photocatalysis
 photocatalyst
 photocatalytic
+photochromic
 photochromism
 photoelectrode
 photoexcitation
@@ -218,11 +232,13 @@ photoredox
 photoreduction
 photosensitized
 photosensitizer
+photosensitizing
 photovoltaics
 phthalocyanine
 picosecond
 plasmon
 plasmonic
+polaron
 polyacene
 polyolefin
 polyphenylene
@@ -286,5 +302,6 @@ vicinal
 vinylene
 zeolite
 zeolites
+zwitterion
 μm/=
 μs/=
