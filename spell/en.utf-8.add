@@ -3,22 +3,31 @@ Becke
 Brønsted
 C60
 C70
+CRISPR
 DFT
 Diels
 EQE
+Ekman
+El Niño
 GGA
 GTO
+Galilei
 GitHub
 GitLab
 Grignard
 HSE
 Hund
 IQE
+Kitaev
 LDA
+LHC
 LUMO
 LYP
+La Niña
 LanL2DZ/=
 Levenshtein
+LuaLaTeX/=
+LuaTeX/=
 M06
 MD5
 MOF
@@ -26,10 +35,13 @@ MP2
 Majorana
 Markovnikov
 Mersenne
+Minkowski
 Møller
 NBO
 NMR
+Noether
 ORCID
+OpenType
 PBE
 PBE1PBE
 PCBM
@@ -42,6 +54,11 @@ SCF
 SDD
 SHA1
 STO
+TODO
+TrueType
+XeLaTeX/=
+XeTeX/=
+absorbance
 acene
 acetyl
 achiral
@@ -75,6 +92,7 @@ azole
 bandgap
 basicity
 benzo
+bicontinuous
 bilayered
 biomaterial
 biomaterials
@@ -95,6 +113,8 @@ chromophore
 chromophores
 cis
 clickable
+cryo
+crystallinity
 cubane
 cycloalkane
 cyclobutane
@@ -131,6 +151,7 @@ endo
 endocyclic
 endohedral
 enol
+enone
 ethoxide
 exo
 femtosecond
@@ -139,6 +160,7 @@ functionalization
 functionalize
 functionalized
 geminate
+glutamine
 graphene
 guanidine
 helicene
@@ -160,6 +182,7 @@ hydrogenase
 imide
 imine
 iminium
+in silico
 interfacial
 intramolecular
 ionically
@@ -227,6 +250,7 @@ photoelectrode
 photoexcitation
 photoexcited
 photoinduced
+photonic
 photonics
 photoredox
 photoreduction
@@ -278,6 +302,7 @@ stereochemistry
 stereoselective
 steric
 sterically
+substituent
 sulfonate
 sulfonated
 sulfonyl
@@ -285,6 +310,7 @@ superresolution
 supramolecular
 svg/=
 synergetic
+synthetase
 templated
 templating
 thermochromism
