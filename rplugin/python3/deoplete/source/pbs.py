@@ -8,7 +8,7 @@ class Source(Base):
         self.name = "PBS environment variables"
         self.mark = "[PBS]"
         self.filetypes = ["sh"]
-        self.input_pattern = r"\$\w*$"
+        self.input_pattern = r"\$\{?\w*$"
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
