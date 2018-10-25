@@ -111,6 +111,7 @@ set title
 set visualbell
 set wildmenu
 set wrap
+
 if has('nvim')
   set inccommand=split
   if empty($SSH_CONNECTION)
@@ -138,10 +139,6 @@ let &titleold=getcwd()
 
 augroup myFileTypeConfig " {{{1
   au!
-  au BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \   exe 'normal g`"' |
-        \ endif
 
   au FileType c,cpp      setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType csv        setl cursorline noexpandtab
@@ -177,16 +174,25 @@ augroup myFileTypeConfig " {{{1
   au BufReadPost */.git/addp-hunk-edit.diff exe 'normal! 3G0'
   au BufReadPost */.git/rebase-merge/git-rebase-todo exe 'normal! gg'
 
-  if has('nvim')
-    au TermOpen term://* startinsert
-  endif
-
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
   set cinoptions+=N-s
 
   let g:c_gnu = 1
   let g:tex_flavor = 'latex'
+augroup END " }}}1
+
+augroup myHooks " {{{1
+  au!
+  au BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe 'normal g`"' |
+        \ endif
+  au BufReadPost * if &diff | set foldmethod=diff | endif
+  au QuickFixCmdPost *grep* cwindow
+  if has('nvim')
+    au TermOpen term://* startinsert
+  endif
 augroup END " }}}1
 
 " command {{{1
