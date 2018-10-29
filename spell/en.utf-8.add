@@ -1,4 +1,6 @@
+AFM
 B3LYP
+BHJ
 Becke
 Brønsted
 C60
@@ -18,6 +20,7 @@ Grignard
 HSE
 Hund
 IQE
+Ising
 Kitaev
 LDA
 LHC
@@ -79,6 +82,9 @@ allyl
 allylic
 amination
 amyloid
+anthracene
+antiferromagnetic
+antiferromagnetism
 arene
 aryl
 aug-cc-pV5Z/=
@@ -96,6 +102,7 @@ bicontinuous
 bilayered
 biomaterial
 biomaterials
+boronate
 boronic
 carboxylic
 cc-pV5Z/=
@@ -113,6 +120,8 @@ chromophore
 chromophores
 cis
 clickable
+coenzyme
+copolymerization
 cryo
 crystallinity
 cubane
@@ -128,6 +137,7 @@ cyclopropane
 delocalization
 deprotonation
 deuteration
+diamagnetism
 dibenzo
 diene
 diketopyrrolopyrrole
@@ -155,6 +165,9 @@ enone
 ethoxide
 exo
 femtosecond
+ferrimagnetic
+ferrimagnetism
+ferromagnetism
 fullerene
 functionalization
 functionalize
@@ -186,6 +199,7 @@ in silico
 interfacial
 intramolecular
 ionically
+ionicity
 isomerization
 isoprene
 ketones
@@ -200,6 +214,7 @@ mesoscale
 metamaterial
 metamaterials
 methoxide
+micelle
 mimetics
 monolayer
 nanocluster
@@ -260,6 +275,7 @@ photosensitizing
 photovoltaics
 phthalocyanine
 picosecond
+piperidine
 plasmon
 plasmonic
 polaron
@@ -275,6 +291,7 @@ pseudogap
 pseudopotential
 pyrazole
 pyrrole
+quadruplex
 quasiparticle
 quasiparticles
 qubit
@@ -287,19 +304,24 @@ regiorandom
 regioregular
 regioselective
 regioselectivity
+reptation
 rhodamine
+rotaxane
 scission
 semimetal
+sigmoidal
 silane
 silyl
 solvation
 sp/=
 sp2/=
 sp3/=
+spinel
 spintronics
 stereochemical
 stereochemistry
 stereoselective
+stereoselectivities
 steric
 sterically
 substituent
