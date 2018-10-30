@@ -6,6 +6,7 @@ Brønsted
 C60
 C70
 CRISPR
+Cahn
 DFT
 Diels
 EQE
@@ -18,9 +19,11 @@ GitHub
 GitLab
 Grignard
 HSE
+Higgs
 Hund
 IQE
 Ising
+Kavli
 Kitaev
 LDA
 LHC
@@ -44,6 +47,7 @@ NBO
 NMR
 Noether
 ORCID
+OTFSC
 OpenType
 PBE
 PBE1PBE
@@ -162,6 +166,7 @@ endocyclic
 endohedral
 enol
 enone
+enthalpic
 ethoxide
 exo
 femtosecond
@@ -298,6 +303,7 @@ qubit
 quinoidal
 quinoline
 redox
+refactor
 regio
 regiocontrollable
 regiorandom
@@ -348,6 +354,7 @@ van der Waals
 vibronic
 vicinal
 vinylene
+wavefunction
 zeolite
 zeolites
 zwitterion
