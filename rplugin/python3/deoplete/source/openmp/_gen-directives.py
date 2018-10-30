@@ -233,9 +233,10 @@ class Source(Base):
     for d1, d2 in combinations(omp_directives, 2):
         if d1 > d2:
             d1, d2 = d2, d1
-        if re.search("^" + d1 + r"\b", d2):
+        m = re.search("^" + d1 + " ", d2)
+        if m:
             exclusives.setdefault(d1, set())
-            exclusives[d1].add(re.sub("\s+.*", "", re.sub("^" + d1 + " ", "", d2)))
+            exclusives[d1].add(re.sub(" .*", "", d2[m.end():]))
 
     for directive, clauses in omp_directives.items():
         clauses = "\n".join([" " * 16 + "\"" + c + "\"," for c in clauses])
