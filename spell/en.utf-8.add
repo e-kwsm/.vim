@@ -1,4 +1,5 @@
 AFM
+API
 B3LYP
 BHJ
 Becke
@@ -12,6 +13,7 @@ Diels
 EQE
 Ekman
 El Niño
+Förster
 GGA
 GTO
 Galilei
@@ -19,6 +21,7 @@ GitHub
 GitLab
 Grignard
 HSE
+Hartree
 Higgs
 Hund
 IQE
@@ -254,10 +257,12 @@ oligo
 oligomeric
 orientational
 osmolyte
+ouroboros
 oxazole
 pKa/=
 perovskite
 perovskites
+perturbate
 perturbative
 phenylene
 phononic
