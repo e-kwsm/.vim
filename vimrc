@@ -169,12 +169,6 @@ augroup myFileTypeConfig " {{{1
   au BufNewFile *.tlu  put!='#!/usr/bin/env texlua'  | exe 'normal! j'
   au BufNewFile *.sh   put!='#!/bin/sh'              | exe 'normal! j'
 
-  " git
-  au BufReadPost */.git/ADD_EDIT.patch      exe 'normal! 3G0'
-  au BufReadPost */.git/COMMIT_EDITMSG      exe 'normal! gg'
-  au BufReadPost */.git/addp-hunk-edit.diff exe 'normal! 3G0'
-  au BufReadPost */.git/rebase-merge/git-rebase-todo exe 'normal! gg'
-
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
   set cinoptions+=N-s
@@ -191,6 +185,13 @@ augroup myHooks " {{{1
         \ endif
   au BufReadPost * if &diff | set foldmethod=diff | endif
   au QuickFixCmdPost *grep* cwindow
+
+  " git
+  au BufReadPost ADD_EDIT.patch      exe 'normal! 6G0'
+  au BufReadPost COMMIT_EDITMSG      exe 'normal! gg'
+  au BufReadPost addp-hunk-edit.diff exe 'normal! 6G0'
+  au BufReadPost git-rebase-todo     exe 'normal! gg'
+
   if has('nvim')
     au TermOpen term://* startinsert
   endif
