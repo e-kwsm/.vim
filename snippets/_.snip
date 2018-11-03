@@ -1,116 +1,252 @@
+# vi:foldmethod=marker
 snippet doi
 	https://doi.org/
 
 snippet loremipsum
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-snippet emdash
-alias ---
-	—
+# Latin-1 Supplement Block {{{1
+snippet Auml	# U+00C4
+	Ä
+snippet Aring	# U+00C5
+	Å
+snippet Ouml	# U+00D6
+	Ö
+snippet Oslash	# U+00D8
+	Ø
+snippet Uuml	# U+00DC
+	Ü
+snippet eszett	# U+00DF
+	ß
+snippet auml	# U+00E4
+	ä
+snippet aring	# U+00E5
+	å
+snippet ouml	# U+00F6
+	ö
+snippet oslash	# U+00F8
+	ø
+snippet uuml	# U+00FC
+	ü
 
-snippet endash
+# Latin Extended-A Block {{{1
+snippet hbar	# U+0127
+	ħ
+
+# Greek and Coptic Block {{{1
+snippet _Alpha
+	Α
+snippet _Beta
+	Β
+snippet _Gamma
+	Γ
+snippet _Delta
+	Δ
+snippet _Epsilon
+	Ε
+snippet _Zeta
+	Ζ
+snippet _Eta
+	Η
+snippet _Theta
+	Θ
+snippet _Iota
+	Ι
+snippet _Kappa
+	Κ
+snippet _Lambda
+	Λ
+snippet _Mu
+	Μ
+snippet _Nu
+	Ν
+snippet _Xi
+	Ξ
+snippet _Omicron
+	Ο
+snippet _Pi
+	Π
+snippet _Rho
+	Ρ
+snippet _Sigma
+	Σ
+snippet _Tau
+	Τ
+snippet _Upsilon
+	Υ
+snippet _Phi
+	Φ
+snippet _Chi
+	Χ
+snippet _Psi
+	Ψ
+snippet _Omega
+	Ω
+snippet _alpha
+	α
+snippet _beta
+	β
+snippet _gamma
+	γ
+snippet _delta
+	δ
+snippet _epsilon
+	ε
+snippet _zeta
+	ζ
+snippet _eta
+	η
+snippet _theta
+	θ
+snippet _iota
+	ι
+snippet _kappa
+	κ
+snippet _lambda
+	λ
+snippet _mu
+	μ
+snippet _nu
+	ν
+snippet _xi
+	ξ
+snippet _omicron
+	ο
+snippet _pi
+	π
+snippet _rho
+	ρ
+snippet _sigmaf
+	ς
+snippet _sigma
+	σ
+snippet _tau
+	τ
+snippet _upsilon
+	υ
+snippet _phi
+	φ
+snippet _chi
+	χ
+snippet _psi
+	ψ
+snippet _omega
+	ω
+
+# Latin Extended Additional Block {{{1
+snippet Eszett	# U+1E9E
+	ẞ
+
+# General Punctuation Block {{{1
+snippet endash	# U+2013
 alias --
 	–
+snippet emdash	# U+2014
+alias ---
+	—
+snippet	dagger	# U+2020
+	†
+snippet	Dagger	# U+2021
+	‡
+snippet prime	# U+2032
+	′
+snippet Prime	# U+2033
+	″
 
-snippet minus
+# Category: Symbol, Math {{{1
+snippet PLUS_MINUS_SIGN	# U+00B1
+	±
+snippet MULTIPLICATION_SIGN	# U+00D7
+	×
+snippet FOR ALL	# U+2200
+	∀
+snippet THERE_EXISTS	# U+2203
+	∃
+snippet THERE_DOES_NOT_EXIST	# U+2204
+	∄
+snippet EMPTY_SET	# U+2205
+	∅
+snippet NABLA	# U+2207
+	∇
+snippet ELEMENT_OF	# U+2208
+	∈
+snippet NOT_AN_ELEMENT_OF	# U+2209
+	∉
+snippet CONTAINS_AS_MEMBER	# U+220B
+	∋
+snippet DOES_NOT_CONTAIN_AS_MEMBER	# U+220C
+	∌
+snippet N_ARY_PRODUCT	# U+220F
+	∏
+snippet N_ARY_SUMMATION	# U+2211
+	∑
+snippet MINUS_SIGN	# U+2212
 	−
-
-
-snippet ALPHA
-	Α
-snippet BETA
-	Β
-snippet GAMMA
-	Γ
-snippet DELTA
-	Δ
-snippet EPSILON
-	Ε
-snippet ZETA
-	Ζ
-snippet ETA
-	Η
-snippet THETA
-	Θ
-snippet IOTA
-	Ι
-snippet KAPPA
-	Κ
-snippet LAMBDA
-	Λ
-snippet MU
-	Μ
-snippet NU
-	Ν
-snippet XI
-	Ξ
-snippet OMICRON
-	Ο
-snippet PI
-	Π
-snippet RHO
-	Ρ
-snippet SIGMA
-	Σ
-snippet TAU
-	Τ
-snippet UPSILON
-	Υ
-snippet PHI
-	Φ
-snippet CHI
-	Χ
-snippet PSI
-	Ψ
-snippet OMEGA
-	Ω
-snippet alpha
-	α
-snippet beta
-	β
-snippet gamma
-	γ
-snippet delta
-	δ
-snippet epsilon
-	ε
-snippet zeta
-	ζ
-snippet eta
-	η
-snippet theta
-	θ
-snippet iota
-	ι
-snippet kappa
-	κ
-snippet lambda
-	λ
-snippet mu
-	μ
-snippet nu
-	ν
-snippet xi
-	ξ
-snippet omicron
-	ο
-snippet pi
-	π
-snippet rho
-	ρ
-snippet sigmaf
-	ς
-snippet sigma
-	σ
-snippet tau
-	τ
-snippet upsilon
-	υ
-snippet phi
-	φ
-snippet chi
-	χ
-snippet psi
-	ψ
-snippet omega
-	ω
+snippet MINUS_OR_PLUS_SIGN	# U+2213
+	∓
+snippet PROPORTIONAL_TO	# U+221D
+	∝
+snippet INFINITY	# U+221E
+	∞
+snippet DIVIDES	# U+2223
+	∣
+snippet DOES_NOT_DIVIDE	# U+2224
+	∤
+snippet LOGICAL_AND	# U+2227
+	∧
+snippet LOGICAL_OR	# U+2228
+	∨
+snippet INTERSECTION	# U+2229
+	∩
+snippet UNION	# U+222A
+	∪
+snippet THEREFORE	# U+2234
+	∴
+snippet BECAUSE	# U+2235
+	∵
+snippet ASYMPTOTICALLY_EQUAL_TO	# U+2243
+	≃
+snippet NOT_ASYMPTOTICALLY_EQUAL_TO	# U+2244
+	≄
+snippet ALMOST_EQUAL_TO	# U+2248
+	≈
+snippet NOT_ALMOST_EQUAL_TO	# U+2249
+	≉
+snippet IDENTICAL_TO	# U+2261
+	≡
+snippet NOT_IDENTICAL_TO	# U+2262
+	≢
+snippet LESS_THAN_OR_EQUAL_TO	# U+2264
+	≤
+snippet GREATER_THAN_OR_EQUAL_TO	# U+2265
+	≥
+snippet MUCH_LESS_THAN	# U+226A
+	≪
+snippet MUCH_GREATER_THAN	# U+226B
+	≫
+snippet LESS_THAN_OR_GREATER_THAN	# +2276
+	≶
+snippet GREATER-THAN_OR_LESS_THAN	# U+2277
+	≷
+snippet SUBSET_OF	# U+2282
+	⊂
+snippet SUPERSET_OF	# U+2283
+	⊃
+snippet NOT_A_SUBSET_OF	# U+2284
+	⊄
+snippet NOT_A_SUPERSET_OF	# U+2285
+	⊅
+snippet SUBSET_OF_OR_EQUAL_TO	# U+2286
+	⊆
+snippet SUPERSET_OF_OR_EQUAL_TO	# U+2287
+	⊇
+snippet NEITHER_A_SUBSET_OF_NOR_EQUAL_TO	# U+2288
+	⊈
+snippet NEITHER_A_SUPERSET_OF_NOR_EQUAL_TO	# U+2289
+	⊉
+snippet CIRCLED_PLUS	# U+2295
+	⊕
+snippet CIRCLED_MINUS	# U+2296
+	⊖
+snippet CIRCLED_TIMES	# U+2297
+	⊗
