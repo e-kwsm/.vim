@@ -360,6 +360,17 @@ class Source(Base):
                 "xi",
                 "zeta",
             ],
+            "algorithm2e": [
+                "KwIn",
+                "LinesNumbered",
+                "KwOut",
+                "KwData",
+                "KwResult",
+                "KwTo",
+                "KwRet",
+                "Return",
+                "Begin",
+            ],
             "amsmath": [
                 "DeclareMathOperator",
                 "Longleftarrow",
@@ -396,6 +407,14 @@ class Source(Base):
                 "thetable",
             ],
             "beamer": [
+                "AtBeginDocument",
+                "AtBeginLecture",
+                "AtBeginNote",
+                "AtBeginPart",
+                "AtBeginSection",
+                "AtBeginSubsection",
+                "AtBeginSubsubsection",
+                "AtEndNote",
                 "addtobeamertemplate",
                 "alt",
                 "defbeamertemplate",
@@ -1314,6 +1333,10 @@ class Source(Base):
                 "includegraphics",
                 "resizebox",
                 "scalebox",
+            ],
+            "hyperref": [
+                "hypersetup",
+                "hyperpage",
             ],
             "jlreq": [
                 "DeclareBlockHeading",
