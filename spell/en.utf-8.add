@@ -1,6 +1,7 @@
 AFM
 API
 B3LYP
+BFS
 BHJ
 Becke
 Brønsted
@@ -8,7 +9,9 @@ C60
 C70
 CRISPR
 Cahn
+DFS
 DFT
+DMC
 Diels
 EQE
 Ekman
@@ -60,6 +63,7 @@ PEDOT
 PSS
 Perdew
 Plesset
+QMC
 SCF
 SDD
 SHA1
@@ -72,6 +76,7 @@ absorbance
 acene
 acetyl
 achiral
+actin
 acyl
 adenosine
 agonist
@@ -109,8 +114,11 @@ bicontinuous
 bilayered
 biomaterial
 biomaterials
+biosynthesis
+biradical
 boronate
 boronic
+butoxy
 carboxylic
 cc-pV5Z/=
 cc-pV6Z/=
@@ -149,6 +157,7 @@ dibenzo
 diene
 diketopyrrolopyrrole
 dimerization
+diradical
 electrocatalysis
 electrocatalyst
 electrocatalytic
@@ -171,11 +180,13 @@ enol
 enone
 enthalpic
 ethoxide
+excitons
 exo
 femtosecond
 ferrimagnetic
 ferrimagnetism
 ferromagnetism
+formamide
 fullerene
 functionalization
 functionalize
@@ -212,8 +223,11 @@ isomerization
 isoprene
 ketones
 kinase
+lanthanides
+lectin
 mV/=
 magnon
+maleic
 memoize
 memoized
 memoizes
@@ -247,12 +261,14 @@ nanotube
 nanotubes
 nanowire
 nanowires
+niobate
 nitrile
 noncovalent
 nucleophile
 nucleophilic
 nucleophilicity
 nucleoside
+nucleosome
 oligo
 oligomeric
 orientational
@@ -272,6 +288,7 @@ photocatalytic
 photochromic
 photochromism
 photoelectrode
+photoemission
 photoexcitation
 photoexcited
 photoinduced
@@ -294,6 +311,9 @@ polyolefin
 polyphenylene
 polythiophene
 porphyrin
+postdoc
+postdocs
+prion
 propene
 protonated
 protonation
@@ -307,6 +327,7 @@ quasiparticles
 qubit
 quinoidal
 quinoline
+quinone
 redox
 refactor
 regio
@@ -317,11 +338,15 @@ regioselective
 regioselectivity
 reptation
 rhodamine
+ribose
 rotaxane
 scission
+semiconductive
 semimetal
 sigmoidal
 silane
+siloxane
+siloxy
 silyl
 solvation
 sp/=
@@ -344,8 +369,13 @@ supramolecular
 svg/=
 synergetic
 synthetase
+tautomer
+tautomeric
+tautomerism
+tautomerization
 templated
 templating
+tert/=
 thermochromism
 thiazole
 thiol
@@ -353,6 +383,7 @@ thiophene
 titania
 tribology
 tryptophan
+tunability
 ultrathin
 upconversion
 van der Waals
@@ -363,5 +394,6 @@ wavefunction
 zeolite
 zeolites
 zwitterion
+zwitterionic
 μm/=
 μs/=
