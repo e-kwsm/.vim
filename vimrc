@@ -12,6 +12,7 @@ if isdirectory(s:dein_dein)
   if has('python3')
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('davidhalter/jedi-vim')
+    call dein#add('lyuts/vim-rtags')
     call dein#add('nvie/vim-flake8')
   endif
 
@@ -22,7 +23,6 @@ if isdirectory(s:dein_dein)
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
-  call dein#add('lyuts/vim-rtags')
   call dein#add('majutsushi/tagbar')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
@@ -151,6 +151,7 @@ augroup myFileTypeConfig " {{{1
   au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
   au FileType python     setl shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType rst        setl foldmethod=manual
   au FileType sh         setl shiftwidth=2 softtabstop=2 textwidth=100
                           \ | let g:is_posix = 1
   au FileType sshconfig  setl noexpandtab
@@ -162,12 +163,12 @@ augroup myFileTypeConfig " {{{1
   au FileType xyz        setl cursorline
 
   " shebang
-  au BufNewFile *.bash put!='#!/bin/bash'            | exe 'normal! j'
-  au BufNewFile *.jl   put!='#!/usr/bin/env julia'   | exe 'normal! j'
-  au BufNewFile *.plt  put!='#!/usr/bin/env gnuplot' | exe 'normal! j'
-  au BufNewFile *.py   put!='#!/usr/bin/env python3' | exe 'normal! j'
-  au BufNewFile *.tlu  put!='#!/usr/bin/env texlua'  | exe 'normal! j'
-  au BufNewFile *.sh   put!='#!/bin/sh'              | exe 'normal! j'
+  au BufNewFile *.bash put!='#!/bin/bash'            | :2
+  au BufNewFile *.jl   put!='#!/usr/bin/env julia'   | :2
+  au BufNewFile *.plt  put!='#!/usr/bin/env gnuplot' | :2
+  au BufNewFile *.py   put!='#!/usr/bin/env python3' | :2
+  au BufNewFile *.tlu  put!='#!/usr/bin/env texlua'  | :2
+  au BufNewFile *.sh   put!='#!/bin/sh'              | :2
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
@@ -187,10 +188,10 @@ augroup myHooks " {{{1
   au QuickFixCmdPost *grep* cwindow
 
   " git
-  au BufReadPost ADD_EDIT.patch      exe 'normal! 6G0'
-  au BufReadPost COMMIT_EDITMSG      exe 'normal! gg'
-  au BufReadPost addp-hunk-edit.diff exe 'normal! 6G0'
-  au BufReadPost git-rebase-todo     exe 'normal! gg'
+  au BufReadPost ADD_EDIT.patch      :6
+  au BufReadPost COMMIT_EDITMSG      :1
+  au BufReadPost addp-hunk-edit.diff :6
+  au BufReadPost git-rebase-todo     :1
 
   if has('nvim')
     au TermOpen term://* startinsert
