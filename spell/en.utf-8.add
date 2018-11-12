@@ -3,12 +3,14 @@ API
 B3LYP
 BFS
 BHJ
+BSSE
 Becke
 Brønsted
 C60
 C70
 CRISPR
 Cahn
+Condon
 DFS
 DFT
 DMC
@@ -70,6 +72,7 @@ SHA1
 STO
 TODO
 TrueType
+Warshall
 XeLaTeX/=
 XeTeX/=
 absorbance
@@ -151,8 +154,11 @@ cyclopentane
 cyclopropane
 delocalization
 deprotonation
+deque
 deuteration
+diabatic
 diamagnetism
+diathermic
 dibenzo
 diene
 diketopyrrolopyrrole
