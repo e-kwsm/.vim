@@ -151,7 +151,7 @@ augroup myFileTypeConfig " {{{1
   au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
   au FileType python     setl shiftwidth=4 softtabstop=4 textwidth=100
-  au FileType rst        setl foldmethod=manual
+  au FileType rst        setl foldmethod=manual spell
   au FileType sh         setl shiftwidth=2 softtabstop=2 textwidth=100
                           \ | let g:is_posix = 1
   au FileType sshconfig  setl noexpandtab
