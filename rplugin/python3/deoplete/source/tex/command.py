@@ -1414,12 +1414,27 @@ class Source(Base):
                 "mintinline",
                 "usemintedstyle",
             ],
+            "pgffor": [
+                "foreach",
+            ],
             "subfiles": [
                 "subfile",
             ],
             "tikz": [
+                "clip",
+                "coordinate",
+                "draw",
+                "fill",
+                "filldraw",
+                "node",
+                "nodepart",
+                "path",
+                "pattern",
+                "shade",
+                "shadedraw",
                 "tikz",
                 "tikzset",
+                "useasboundingbox",
                 "usetikzlibrary",
             ],
             "tocstyle": [
