@@ -1,8 +1,18 @@
-snippet \newcounter
-	\newcounter{${1}}
+snippet \begingroup
+	\begingroup
+		${0}
+	\endgroup
 
-snippet \setcounter
-	\setcounter{${1}}{${2:0}}
+delete document
+snippet document
+	\begin{document}
+	${0}
+	\end{document}
+
+snippet \makeatletter
+	\makeatletter
+	${0}
+	\makeatother
 
 snippet \mathrm
 	\mathrm{${1}}
@@ -13,11 +23,8 @@ snippet \newcommand
 snippet \newcommand*
 	\newcommand*{${1}}{${2}}
 
-snippet \sum
-	\sum_{${1}}^{${2}}
-
-snippet \sqrt
-	\sqrt{${1}}${0}
+snippet \newcounter
+	\newcounter{${1}}
 
 snippet \renewcommand
 	\renewcommand{${1}}{${2}}
@@ -25,11 +32,20 @@ snippet \renewcommand
 snippet \renewcommand*
 	\renewcommand*{${1}}{${2}}
 
-snippet \textsuperscript
-	\textsuperscript{${1}}
+snippet \setcounter
+	\setcounter{${1}}{${2:0}}
+
+snippet \sqrt
+	\sqrt{${1}}${0}
+
+snippet \sum
+	\sum_{${1}}^{${2}}
 
 snippet \textsubscript
 	\textsubscript{${1}}
+
+snippet \textsuperscript
+	\textsuperscript{${1}}
 
 # amsmath.sty [[[1
 snippet \dfrac
@@ -80,10 +96,6 @@ alias   usebeamercolor
 snippet foldmarkerframe
 options head
 	% vim: fmr=\\\\begin{frame},\\\\end{frame}
-
-# bm.sty [[[1
-snippet \bm
-	\bm{${1}}
 
 # expl3.sty [[[1
 snippet \ExplSyntaxOn
@@ -141,6 +153,21 @@ alias   \begin{Vmatrix*} \Vmatrix*
 	\begin{Vmatrix*}[${1:c}]
 		${2}
 	\end{Vmatrix*}
+
+# minted.sty [[[1
+snippet \inputminted
+	\inputminted{${1:#:lang}}{${2:#:file}}
+
+snippet \mint
+	\mint{${1:#:lang}}{${2}}
+
+snippet minted
+	\begin{minted}{${1:#:lang}}
+		${0}
+	\end{minted}
+
+snippet \mintinline
+	\mintinline{${1:#:lang}}{${2}}
 
 # physics.sty [[[1
 snippet \bra
