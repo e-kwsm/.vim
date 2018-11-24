@@ -48,6 +48,7 @@ M06
 MD5
 MOF
 MP2
+Madelung
 Majorana
 Mannich
 Markovnikov
@@ -82,6 +83,7 @@ UTF-8
 Warshall
 XeLaTeX/=
 XeTeX/=
+ab initio
 absorbance
 acene
 acetophenone
@@ -89,6 +91,7 @@ acetyl
 achiral
 actin
 acyl
+adatom
 adenosine
 agonist
 aldehydes
@@ -110,6 +113,7 @@ anthracene
 antiferromagnetic
 antiferromagnetism
 apoptosis
+apoptotic
 arene
 arginine
 aryl
@@ -125,6 +129,7 @@ azole
 bandgap
 basicity
 benzo
+benzoic
 benzophenone
 bicontinuous
 bilayered
@@ -133,12 +138,14 @@ biofuel
 bioinformatics
 biomaterial
 biomaterials
+biomimetic
 biosensing
 biosynthesis
 biradical
 boronate
 boronic
 butoxy
+carbene
 carboxylic
 cc-pV5Z/=
 cc-pV6Z/=
@@ -152,6 +159,7 @@ chalcogenides
 chemisorption
 chemoinformatics
 chirality
+chromodynamics
 chromophore
 chromophores
 cis
@@ -173,6 +181,7 @@ cyclopentane
 cyclopropane
 cytokine
 delocalization
+dendritic
 deprotonation
 deque
 deuteration
@@ -213,6 +222,7 @@ exo
 femtosecond
 ferrimagnetic
 ferrimagnetism
+ferroelectricity
 ferromagnetism
 formamide
 fullerene
@@ -244,6 +254,7 @@ imide
 imine
 iminium
 in silico
+infectivity
 interfacial
 intramolecular
 ionically
@@ -289,6 +300,7 @@ nanoribbon
 nanorod
 nanoscale
 nanosheet
+nanosieve
 nanostructure
 nanostructured
 nanotube
@@ -297,6 +309,8 @@ nanowire
 nanowires
 niobate
 nitrile
+nonadiabatic
+noncanonical
 noncovalent
 nuclearity
 nucleophile
@@ -309,6 +323,7 @@ oligomeric
 orientational
 osmolyte
 ouroboros
+overpotential
 oxazole
 pKa/=
 pathogenicity
@@ -336,12 +351,14 @@ photoreduction
 photosensitized
 photosensitizer
 photosensitizing
+photosystem
 photovoltaics
 phthalocyanine
 picosecond
 piperidine
 plasmon
 plasmonic
+pluripotent
 polaron
 polyacene
 polyolefin
@@ -379,6 +396,7 @@ reptation
 rhodamine
 ribose
 rotaxane
+rutile
 scission
 semiconductive
 semimetal
@@ -390,6 +408,7 @@ silyl
 soliton
 solvation
 spinel
+spinodal
 spintronics
 stereochemical
 stereochemistry
@@ -428,6 +447,7 @@ van der Waals
 vibronic
 vicinal
 vinylene
+von
 voxel
 wavefunction
 zeolite
