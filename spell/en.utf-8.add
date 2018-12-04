@@ -20,6 +20,7 @@ Diels
 EQE
 Ekman
 El Niño
+FRM
 Förster
 GGA
 GTO
@@ -61,6 +62,7 @@ Noether
 ORCID
 OTFSC
 OpenType
+P3HT
 PBE
 PBE1PBE
 PCBM
@@ -72,6 +74,7 @@ PTSD
 Perdew
 Plesset
 QMC
+RHF
 SCF
 SDD
 SHA1
@@ -105,6 +108,7 @@ alkyne
 alkynes
 allosteric
 allyl
+allylation
 allylic
 amination
 amyloid
@@ -122,6 +126,7 @@ aug-cc-pV6Z/=
 aug-cc-pVDZ/=
 aug-cc-pVQZ/=
 aug-cc-pVTZ/=
+autophagic
 autophagy
 azide
 azobenzene
@@ -145,6 +150,7 @@ biradical
 boronate
 boronic
 butoxy
+butyric
 carbene
 carboxylic
 cc-pV5Z/=
@@ -180,6 +186,8 @@ cyclooctane
 cyclopentane
 cyclopropane
 cytokine
+de novo
+debye
 delocalization
 dendritic
 deprotonation
@@ -212,6 +220,7 @@ enantioselectivity
 endo
 endocyclic
 endohedral
+endosome
 enol
 enone
 enthalpic
@@ -245,6 +254,7 @@ heterojunctions
 heterolysis
 heterolytic
 heteronuclear
+hexylthiophene
 homogenous
 homolysis
 homolytic
@@ -256,12 +266,14 @@ iminium
 in silico
 infectivity
 interfacial
+intersystem
 intramolecular
 ionically
 ionicity
 isomerization
 isoprene
 isopropanol
+junctional
 ketones
 kinase
 lanthanides
@@ -281,9 +293,11 @@ metamaterials
 methoxide
 miRNA/=
 micelle
+microstructure
 mimetics
 monolayer
 myoglobin
+myosin
 nanocluster
 nanocomposite
 nanocrystal
@@ -309,6 +323,7 @@ nanowire
 nanowires
 niobate
 nitrile
+nitro
 nonadiabatic
 noncanonical
 noncovalent
