@@ -40,6 +40,7 @@ class Source(Base):
                 "multirow",
                 "nicematrix",
                 "pdfpages",
+                "pgfmath",
                 "physics",
                 "shellesc",
                 "siunitx",
