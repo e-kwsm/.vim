@@ -42,6 +42,7 @@ LUMO
 LYP
 La Niña
 LanL2DZ/=
+Laplacian
 Levenshtein
 LuaLaTeX/=
 LuaTeX/=
@@ -73,6 +74,7 @@ PSS
 PTSD
 Perdew
 Plesset
+Pochhammer
 QMC
 RHF
 SCF
@@ -260,11 +262,13 @@ homolysis
 homolytic
 https/=
 hydrogenase
+hypergeometric
 imide
 imine
 iminium
 in silico
 infectivity
+inkjet
 interfacial
 intersystem
 intramolecular
