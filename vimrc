@@ -127,7 +127,6 @@ endif
 " let {{{1
 let g:loaded_python_provider = 1 " disabled
 let g:python3_host_prog = '/usr/bin/python3'
-let g:python_host_skip_check = 1 " disabled
 " }}}1
 
 " map {{{1
