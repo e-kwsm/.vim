@@ -15,6 +15,7 @@ Condon
 DFS
 DFT
 DFTB
+DHCP
 DMC
 Diels
 EQE
@@ -23,6 +24,7 @@ El Niño
 FRM
 Förster
 GGA
+GPG
 GTO
 Galilei
 GitHub
@@ -70,6 +72,7 @@ PCBM
 PCE
 PEDOT
 POSIX
+PRNG
 PSS
 PTSD
 Perdew
@@ -85,6 +88,7 @@ TLS
 TODO
 TrueType
 UTF-8
+VLAN
 Warshall
 XeLaTeX/=
 XeTeX/=
@@ -149,6 +153,7 @@ biomimetic
 biosensing
 biosynthesis
 biradical
+bispherical
 boronate
 boronic
 butoxy
