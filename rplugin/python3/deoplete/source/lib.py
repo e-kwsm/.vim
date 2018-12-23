@@ -1,3 +1,5 @@
+from pathlib import Path
+import os
 import re
 from .base import Base
 
@@ -9,26 +11,25 @@ class Source(Base):
         self.mark = "[lib]"
         self.filetypes = ["make"]
         self.input_pattern = r"\B-l"
-        self._candidate = [{
+
+        libpaths = set()
+        for envvar in [
+            "LD_LIBRARY_PATH",
+            "LD_RUN_PATH",
+            "LIBRARY_PATH",
+        ]:
+            libpaths.update(os.environ.get(envvar, "").split(":"))
+        libs = set()
+        for libpath in libpaths:
+            for lib in Path(libpath).glob("lib*.so*"):
+                lib = re.sub(r"^lib(\S+?)\.so(?:\.\d+)*$", r"\1", lib.name)
+                libs.add(lib)
+
+        self._candidates = [{
             "word": "l" + l,
-            "kind": "lib",
             "abbr": "-l" + l,
-        } for l in [
-            "boost_coroutine",
-            "boost_date_time",
-            "boost_graph",
-            "boost_log",
-            "boost_program_options",
-            "boost_serialization",
-            "boost_system",
-            "boost_timer",
-            "boost_unit_test_framework",
-            "pthread",
-            "tbb",
-            "tbbmalloc",
-            "tbbmalloc_proxy",
-        ]]
+        } for l in sorted(libs)]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
-            return self._candidate
+            return self._candidates
