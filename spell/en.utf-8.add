@@ -22,6 +22,7 @@ EQE
 Ekman
 El Niño
 FRM
+Ferrers
 Förster
 GGA
 GPG
@@ -80,6 +81,7 @@ Plesset
 Pochhammer
 QMC
 RHF
+Rodrigues
 SCF
 SDD
 SHA1
@@ -154,11 +156,13 @@ biosensing
 biosynthesis
 biradical
 bispherical
+borane
 boronate
 boronic
 butoxy
 butyric
 carbene
+carboxyl
 carboxylic
 cc-pV5Z/=
 cc-pV6Z/=
@@ -279,6 +283,7 @@ intersystem
 intramolecular
 ionically
 ionicity
+irrotational
 isomerization
 isoprene
 isopropanol
@@ -391,6 +396,7 @@ polythiophene
 porphyrin
 postdoc
 postdocs
+prefactor
 prion
 propene
 protonated
