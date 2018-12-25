@@ -46,6 +46,11 @@ alias   set_term_eps
 	set output '${8:a}.eps'
 	${0}
 
+snippet set_terminal_tikz
+alias   set_term_tikz
+	set terminal tikz \
+		size ${1:x}, ${2:y}
+
 # misc {{{1
 snippet set_labels
 	set xlabel '${1}'
@@ -58,5 +63,8 @@ snippet set_ranges
 snippet Italic
 alias   italic
 	{/:Italic ${1}}
+
+snippet set_pallette_cubehelix
+	set palette cubehelix start ${1:0.5} cycles ${2:-1.5} saturation ${3:1}
 
 # vim:set fdm=marker:
