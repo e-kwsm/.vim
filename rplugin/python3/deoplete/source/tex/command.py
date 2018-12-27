@@ -591,6 +591,14 @@ class Source(Base):
                 "setchemfig",
                 "vflipnext",
             ],
+            "dirtree": [
+                "DTAtCode",
+                "DTbaselineskip",
+                "DTcomment",
+                "DTsetlength",
+                "DTstyle",
+                "DTstylecomment",
+            ],
             "expl3": [
                 "ExplSyntaxOff",
                 "ExplSyntaxOn",

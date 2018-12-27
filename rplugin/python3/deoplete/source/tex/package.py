@@ -22,6 +22,7 @@ class Source(Base):
                 "biblatex",
                 "booktabs",
                 "chemfig",
+                "dirtree",
                 "enumitem",
                 "expl3",
                 "filecontents",
