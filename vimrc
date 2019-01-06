@@ -2,11 +2,13 @@ filetype plugin indent on
 syntax enable
 
 " Shougo/dein.vim {{{1
-let s:dein_bundle_root = expand('~/.vim/bundle')
-let s:dein_dein = s:dein_bundle_root . '/repos/github.com/Shougo/dein.vim'
-if isdirectory(s:dein_dein)
-  let &runtimepath .= ',' . s:dein_dein
-  call dein#begin(s:dein_bundle_root)
+let s:bundle_root = expand('~/.vim/bundle')
+let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
+if !isdirectory(s:dein_dir)
+  echo 'git clone --depth 1 https://github.com/Shougo/dein.vim ' . s:dein_dir
+else
+  let &runtimepath .= ',' . s:dein_dir
+  call dein#begin(s:bundle_root)
   call dein#add('Shougo/dein.vim')
   " plugins {{{2
   if has('python3')
@@ -44,7 +46,6 @@ if isdirectory(s:dein_dein)
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
-    let g:deoplete#auto_complete_delay = 100
   endif
 
   " Shougo/neosnippet.vim {{{3
@@ -175,6 +176,7 @@ augroup myFileTypeConfig " {{{1
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
   set cinoptions+=N-s
+  let &path .= ',' . substitute($CPLUS_INCLUDE_PATH, ':', ',', 'g')
 
   let g:c_gnu = 1
   let g:tex_flavor = 'latex'
