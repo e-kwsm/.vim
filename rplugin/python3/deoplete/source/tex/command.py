@@ -556,6 +556,7 @@ class Source(Base):
                 "bibbysegment",
                 "citeauthor",
                 "citetitle",
+                "clearfield",
                 "footfullcite",
                 "fullcite",
                 "newrefsection",
@@ -1505,7 +1506,7 @@ class Source(Base):
                 #"xrightleftharpoons",
             ],
             "minted": [
-                "imputminted",
+                "inputminted",
                 "listingscaption",
                 "listoflistingscaption",
                 "newminted",
