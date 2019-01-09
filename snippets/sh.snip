@@ -4,12 +4,12 @@ snippet chkargc
 	fi
 
 snippet mktempfile
-	${1:tmpf}=$(mktemp ${2:/tmp/XXX})
+	${1:tmpf}=$(mktemp ${2:/tmp/tmp.XXXXXXXXXX})
 	trap "rm -f $$1" 0 1 2 15
 	${0}
 
 snippet mktempdir
-	${1:tmpd}=$(mktemp -d ${2:/tmp/XXX})
+	${1:tmpd}=$(mktemp -d ${2:/tmp/tmp.XXXXXXXXXX})
 	trap "rm -rf $$1" 0 1 2 15
 	${0}
 
