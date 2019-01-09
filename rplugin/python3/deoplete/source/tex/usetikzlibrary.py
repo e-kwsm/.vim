@@ -14,14 +14,17 @@ class Source(Base):
         self.input_pattern = r"\\usetikzlibrary\{[\w.-]*(?:,\s*[\w.-]*)*$"
         self.rank = 800
 
-        #s = subprocess.run(["kpsewhich", "-var-value=TEXMFDIST"], stdout=subprocess.PIPE, encoding="utf-8")
-        #texmfdist = Path(s.stdout.replace("\n", ""))
+        #proc = subprocess.run(["kpsewhich", "-var-value=TEXMFDIST"], stdout=subprocess.PIPE,
+        #                      universal_newlines=True)
+        #texmfdist = Path(proc.stdout.replace("\n", ""))
 
         libraries = OrderedDict()
+
         #libraries["tikz"] = list(l.name.replace("tikzlibrary", "").replace(".code.tex", "")
         #        for l in texmfdist.glob("**/tikzlibrary*.code.tex"))
         #libraries["pgf"]  = list(l.name.replace("pgflibrary", "").replace(".code.tex", "")
         #        for l in texmfdist.glob("**/pgflibrary*.code.tex"))
+
         libraries["tikz"] = [
             "3d",
             "angles",
