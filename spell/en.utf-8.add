@@ -2,6 +2,8 @@ AFM
 ALS
 API
 AST
+Ab Initio
+Angewandte Chemie
 B3LYP
 BFS
 BHJ
@@ -114,6 +116,7 @@ alkane
 alkanes
 alkene
 alkenes
+alkenyl
 alkylation
 alkyne
 alkynes
@@ -132,6 +135,7 @@ apoptotic
 arene
 arginine
 aryl
+arylation
 aug-cc-pV5Z/=
 aug-cc-pV6Z/=
 aug-cc-pVDZ/=
@@ -216,6 +220,7 @@ dibenzo
 diene
 diketopyrrolopyrrole
 dimerization
+dipolar
 diradical
 electrocatalysis
 electrocatalyst
@@ -271,6 +276,7 @@ heterolytic
 heteronuclear
 hexylthiophene
 homogenous
+homojunction
 homolysis
 homolytic
 https/=
@@ -433,6 +439,7 @@ reptation
 rhodamine
 ribose
 rotaxane
+rubrene
 rutile
 scission
 semiconductive
