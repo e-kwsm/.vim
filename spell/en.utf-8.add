@@ -132,8 +132,20 @@ antiferromagnetic
 antiferromagnetism
 apoptosis
 apoptotic
+arccos
+arccot
+arccsc
+arcosh
+arcoth
+arcsch
+arcsec
+arcsin
+arctan
 arene
 arginine
+arsech
+arsinh
+artanh
 aryl
 arylation
 aug-cc-pV5Z/=
@@ -192,8 +204,12 @@ coenzyme
 convolutional
 copolymerization
 copyedit
+cosh
+coth
 cryo
 crystallinity
+csc
+csch
 cubane
 cycloalkane
 cyclobutane
@@ -222,6 +238,7 @@ diketopyrrolopyrrole
 dimerization
 dipolar
 diradical
+eV/=
 electrocatalysis
 electrocatalyst
 electrocatalytic
@@ -442,6 +459,7 @@ rotaxane
 rubrene
 rutile
 scission
+sech
 semiconductive
 semimetal
 sigmoidal
@@ -449,6 +467,7 @@ silane
 siloxane
 siloxy
 silyl
+sinh
 soliton
 solvation
 spinel
@@ -469,6 +488,7 @@ supramolecular
 svg/=
 synergetic
 synthetase
+tanh
 tautomer
 tautomeric
 tautomerism
