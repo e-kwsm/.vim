@@ -94,6 +94,11 @@ class Source(Base):
                 "verse",
                 "visibleenv",
             ],
+            "biblatex": [
+                "refcontext",
+                "refsection",
+                "refsegment",
+            ],
             "filecontents": [
                 "filecontents",
             ],
