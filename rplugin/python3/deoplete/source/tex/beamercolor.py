@@ -12,7 +12,7 @@ class Source(Base):
             r"ifbeamercolorempty(?:\[[bf]g\])?",
             r"setbeamercolor\*?",
             r"usebeamercolor\*?(?:\[[bf]g\])?",
-        ]) + r")\{[^\}]*$"
+        ]) + r")\{\w*$"
         self.rank = 800
 
     def gather_candidates(self, context):

@@ -8,7 +8,7 @@ class Source(Base):
         self.name = "beamer.size"
         self.mark = "[beamer.size]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\setbeamersize\{[^\}]*$"
+        self.input_pattern = r"\\setbeamersize\{\w*$"
         self._candidate = [{
             "word": s + "=",
             "abbr": s,

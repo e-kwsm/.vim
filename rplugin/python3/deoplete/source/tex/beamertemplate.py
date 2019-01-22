@@ -17,7 +17,7 @@ class Source(Base):
             r"ifbeamertemplateempty",
             r"setbeamertemplate",
             r"usebeamertemplate\*{,3}",
-        ]) + r")\{[^\}]*$"
+        ]) + r")\{\w*$"
         self.rank = 800
 
     def gather_candidates(self, context):

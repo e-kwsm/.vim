@@ -8,7 +8,7 @@ class Source(Base):
         self.name = "beamer.font"
         self.mark = "[beamer.font]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:set|use)beamerfont\*?\{[^\}]*$"
+        self.input_pattern = r"\\(?:set|use)beamerfont\*?\{\w*$"
         self.rank = 800
 
     def gather_candidates(self, context):
