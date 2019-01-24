@@ -10,6 +10,7 @@ BHJ
 BSSE
 Becke
 Brønsted
+CBM
 CPython/=
 CRISPR
 Cahn
@@ -35,6 +36,7 @@ GitHub
 GitLab
 Grignard
 Grimme
+Gummel
 HSE
 Hartree
 Higgs
@@ -81,21 +83,26 @@ POSIX
 PRNG
 PSS
 PTSD
+PV
 Perdew
 Plesset
 Pochhammer
 QMC
+Queisser
 RHF
 Rodrigues
 SCF
 SDD
 SHA1
 STO
+Scharfetter
 TLS
 TODO
 TrueType
 UTF-8
+VBM
 VLAN
+Wannier
 Warshall
 XeLaTeX/=
 XeTeX/=
@@ -248,6 +255,7 @@ electrophile
 electrophilic
 electrophilicity
 electroreduction
+electrotechnical
 emissive
 enamine
 enantiomer
@@ -299,6 +307,7 @@ homolytic
 https/=
 hydrogenase
 hypergeometric
+ideality
 imide
 imine
 iminium
@@ -310,6 +319,7 @@ intersystem
 intramolecular
 ionically
 ionicity
+irradiance
 irrotational
 isomerization
 isoprene
@@ -338,6 +348,7 @@ micelle
 microstructure
 mimetics
 monolayer
+multicrystalline
 myoglobin
 myosin
 nanocluster
@@ -382,6 +393,7 @@ osmolyte
 ouroboros
 overpotential
 oxazole
+pA/=
 pKa/=
 pathogenicity
 permittivities
