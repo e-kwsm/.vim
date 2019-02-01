@@ -363,7 +363,7 @@ class Source(Base):
             "adjustbox": [
                 "adjustbox",
                 "adjustimage",
-                "adjincludegraphics"
+                "adjincludegraphics",
             ],
             "algorithm2e": [
                 "KwIn",
@@ -456,6 +456,10 @@ class Source(Base):
                 "thesubsection",
                 "thesubsubsection",
                 "thetable",
+            ],
+            "array": [
+                "multicolumn",
+                "newcolomntype",
             ],
             "beamer": [
                 "AtBeginDocument",
@@ -603,6 +607,7 @@ class Source(Base):
                 "citeauthor",
                 "citetitle",
                 "clearfield",
+                "endrefsection",
                 "footfullcite",
                 "fullcite",
                 "newrefsection",
@@ -1826,6 +1831,9 @@ class Source(Base):
                 "tikzsetexternalprefix",
                 "tikzsetfigurename",
                 "tikzsetnextfilename",
+            ],
+            "tikz/multipart": [
+                "nodepart",
             ],
             "tocstyle": [
                 "aliastoc",
