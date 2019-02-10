@@ -22,6 +22,7 @@ DHCP
 DMC
 DOI
 Diels
+EPBT
 EQE
 Ekman
 El Niño
@@ -32,8 +33,8 @@ GGA
 GPG
 GTO
 Galilei
-GitHub
-GitLab
+GitHub/=
+GitLab/=
 Grignard
 Grimme
 Gummel
@@ -324,6 +325,8 @@ irrotational
 isomerization
 isoprene
 isopropanol
+isosurface
+isosurfaces
 junctional
 ketones
 kinase
@@ -347,6 +350,7 @@ miRNA/=
 micelle
 microstructure
 mimetics
+monocrystalline
 monolayer
 multicrystalline
 myoglobin
@@ -388,6 +392,7 @@ nucleoside
 nucleosome
 oligo
 oligomeric
+optimizable
 orientational
 osmolyte
 ouroboros
@@ -472,6 +477,7 @@ rubrene
 rutile
 scission
 sech
+selenide
 semiconductive
 semimetal
 sigmoidal
@@ -521,6 +527,7 @@ ultrathin
 upconversion
 van der Waals
 vibronic
+vibronically
 vicinal
 vinylene
 von
