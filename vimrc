@@ -23,6 +23,10 @@ else
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Vimjas/vim-python-pep8-indent')
+  call dein#add('autozimu/LanguageClient-neovim', {
+    \ 'rev': 'next',
+    \ 'build': 'bash install.sh',
+    \ })
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
   call dein#add('itchyny/lightline.vim')
@@ -69,6 +73,18 @@ else
 
   let g:neosnippet#expand_word_boundary = 1
   let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+
+  " autozimu/LanguageClient-neovim {{{3
+  let g:LanguageClient_serverCommands = {
+        \ 'cpp': ['clangd'],
+        \ 'python': ['pyls'],
+        \ }
+
+  let g:LanguageClient_settingsPath = expand('~/.config/LSP/settings.json')
+
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
   " davidhalter/jedi-vim {{{3
   if has('python3')
