@@ -39,6 +39,7 @@ Grignard
 Grimme
 Gummel
 HSE
+HTTPS
 Hartree
 Higgs
 Hund
@@ -134,6 +135,7 @@ allylation
 allylic
 amination
 amyloid
+annulation
 anoxia
 anthracene
 antiferromagnetic
@@ -293,6 +295,7 @@ helicene
 hemiacetal
 hetero
 heteroatom
+heterocycle
 heterocyclic
 heterogenous
 heterojunction
@@ -306,6 +309,8 @@ homojunction
 homolysis
 homolytic
 https/=
+hydrazone
+hydrogel
 hydrogenase
 hypergeometric
 ideality
@@ -346,6 +351,7 @@ mesoscale
 metamaterial
 metamaterials
 methoxide
+methylammonium
 miRNA/=
 micelle
 microstructure
@@ -353,6 +359,7 @@ mimetics
 monocrystalline
 monolayer
 multicrystalline
+multimodal
 myoglobin
 myosin
 nanocluster
@@ -392,6 +399,7 @@ nucleoside
 nucleosome
 oligo
 oligomeric
+oligothiophene
 optimizable
 orientational
 osmolyte
