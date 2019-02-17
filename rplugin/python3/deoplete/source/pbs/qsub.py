@@ -23,7 +23,7 @@ class Source(Base):
             "word": k,
             "abbr": "-" + k,
             "menu": v,
-        } for k, v in directive.items()]
+        } for k, v in sorted(directive.items())]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
