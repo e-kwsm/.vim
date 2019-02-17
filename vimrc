@@ -160,6 +160,7 @@ let &titleold=getcwd()
 augroup myFileTypeConfig " {{{1
   au!
 
+  au FileType bib        setl spell
   au FileType c,cpp      setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType csv        setl cursorline noexpandtab
   au FileType diff       setl cursorline
@@ -196,6 +197,7 @@ augroup myFileTypeConfig " {{{1
 
   let g:c_gnu = 1
   let g:tex_flavor = 'latex'
+  let g:tex_noindent_env = 'document\|verbatim\|lstlisting\|refsection\|refsegment'
 augroup END " }}}1
 
 augroup myHooks " {{{1
