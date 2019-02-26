@@ -8,8 +8,11 @@ class Source(Base):
         self.name = "sty"
         self.mark = "[sty]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:usepackage|PassOptionsToPackage|RequirePackage)(?:\[.*?\])?" \
-                r"\{[\w.-]*(?:,\s*[\w.-]*)*$"
+        self.input_pattern = r"\\(?:" + "|".join([
+            "usepackage",
+            "PassOptionsToPackage",
+            "RequirePackage",
+        ]) + r")(?:\[.*?\])?\{[\w.-]*$"
         self.rank = 1000
 
     def gather_candidates(self, context):

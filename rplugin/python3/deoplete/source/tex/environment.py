@@ -9,7 +9,11 @@ class Source(Base):
         self.name = "env"
         self.mark = "[env]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:begin|end|renewenvironment)\{[A-Za-z]*$"
+        self.input_pattern = r"\\(?:" + "|".join([
+            "begin",
+            "end",
+            "renewenvironment"
+        ]) + r")\{[A-Za-z]*$"
         self.rank = 800
         pkgenvs = {
             "": [
