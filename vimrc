@@ -15,7 +15,6 @@ else
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('davidhalter/jedi-vim')
     call dein#add('lyuts/vim-rtags')
-    call dein#add('nvie/vim-flake8')
   endif
 
   call dein#add('Shougo/neco-syntax')
@@ -95,10 +94,6 @@ else
   let g:tagbar_autofocus=1
   nmap <F8> :TagbarToggle<CR>
   nmap <F9> :TagbarOpen fjc<CR>
-
-  " nvie/vim-flake8 {{{3
-  au BufWritePost *.py call Flake8()
-  au QuitPre *.py cclose | let g:flake8_show_quickfix=0
   " }}}2
 endif
 " }}}1
