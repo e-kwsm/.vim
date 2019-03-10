@@ -1,5 +1,9 @@
 import re
-from pygments.lexers import get_all_lexers
+try:
+    from pygments.lexers import get_all_lexers
+except ImportError:
+    def get_all_lexers():
+        return []
 from .base import Base
 
 
