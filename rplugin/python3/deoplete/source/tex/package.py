@@ -46,6 +46,7 @@ class Source(Base):
                 "pdfpages",
                 "pgfmath",
                 "physics",
+                "ragged2e",
                 "shellesc",
                 "siunitx",
                 "subcaption",

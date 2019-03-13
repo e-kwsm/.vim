@@ -1795,6 +1795,12 @@ class Source(Base):
                 "variation",
                 "vqty",
             ],
+            "ragged2e": [
+                "Centering",
+                "RaggedLeft",
+                "RaggedRight",
+                "justifying",
+            ],
             "subfiles": [
                 "subfile",
             ],
