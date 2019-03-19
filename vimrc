@@ -13,7 +13,6 @@ else
   " plugins {{{2
   if has('python3')
     call dein#add('Shougo/deoplete.nvim')
-    call dein#add('davidhalter/jedi-vim')
     call dein#add('lyuts/vim-rtags')
   endif
 
@@ -79,16 +78,20 @@ else
         \ 'python': ['pyls'],
         \ }
 
+  augroup LSP_close
+    autocmd! InsertLeave <buffer> if pumvisible() == 0 | pclose | endif
+  augroup END
   let g:LanguageClient_settingsPath = expand('~/.config/LSP/settings.json')
 
-  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-  nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+  function LC_maps()
+    if has_key(g:LanguageClient_serverCommands, &filetype)
+      nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
+      nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+      nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+    endif
+  endfunction
 
-  " davidhalter/jedi-vim {{{3
-  if has('python3')
-    let g:jedi#force_py_version = 3
-  endif
+  autocmd FileType * call LC_maps()
 
   " majutsushi/tagbar {{{3
   let g:tagbar_autofocus=1
@@ -130,6 +133,7 @@ set wrap
 
 if has('nvim')
   set inccommand=split
+  set wildoptions+=pum
   if empty($SSH_CONNECTION)
     set termguicolors
   endif
@@ -142,7 +146,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 " }}}1
 
 " map {{{1
-nnoremap <F5> :source $MYVIMRC<CR>
 nnoremap mm :make<CR>
 noremap Q gq
 " }}}1
