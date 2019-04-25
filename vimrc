@@ -1,6 +1,15 @@
 filetype plugin indent on
 syntax enable
 
+if has('nvim') " {{{
+  let g:loaded_python_provider = 1 " disabled
+  for s:p in range(8, 5, -1)
+    let g:python3_host_prog = trim(system('which python3.' . string(s:p)))
+    if !v:shell_error | break | endif
+    unlet g:python3_host_prog
+  endfor
+endif " }}}
+
 " Shougo/dein.vim {{{1
 let s:bundle_root = expand('~/.vim/bundle')
 let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
@@ -30,6 +39,7 @@ else
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('majutsushi/tagbar')
+  call dein#add('ncm2/float-preview.nvim')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
@@ -97,6 +107,10 @@ else
   let g:tagbar_autofocus=1
   nmap <F8> :TagbarToggle<CR>
   nmap <F9> :TagbarOpen fjc<CR>
+
+  " ncm2/float-preview.nvim {{{3
+  let g:float_preview#docked = 1
+
   " }}}2
 endif
 " }}}1
@@ -138,11 +152,6 @@ if has('nvim')
     set termguicolors
   endif
 endif
-" }}}1
-
-" let {{{1
-let g:loaded_python_provider = 1 " disabled
-let g:python3_host_prog = '/usr/bin/python3'
 " }}}1
 
 " map {{{1
@@ -195,7 +204,14 @@ augroup myFileTypeConfig " {{{1
 
   let g:c_gnu = 1
   let g:tex_flavor = 'latex'
-  let g:tex_noindent_env = 'document\|verbatim\|lstlisting\|refsection\|refsegment'
+  let g:tex_noindent_env = join([
+        \ 'document',
+        \ 'verbatim',
+        \ 'lstlisting',
+        \ 'minted',
+        \ 'refsection',
+        \ 'refsegment',
+        \ ], '\|')
 augroup END " }}}1
 
 augroup myHooks " {{{1
