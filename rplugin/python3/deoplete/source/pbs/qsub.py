@@ -10,7 +10,7 @@ class Source(Base):
         self.filetypes = ["sh"]
         self.input_pattern = r"^\s*#PBS\s+-\w?$"
 
-        directive = {
+        directives = {
             "e": "stderr path",
             "l": "resource list",
             "m": "mail events",
@@ -23,7 +23,7 @@ class Source(Base):
             "word": k,
             "abbr": "-" + k,
             "menu": v,
-        } for k, v in sorted(directive.items())]
+        } for k, v in sorted(directives.items())]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

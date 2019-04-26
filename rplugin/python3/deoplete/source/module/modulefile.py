@@ -29,10 +29,14 @@ class Source(Base):
             "unload",
         ]) + r")\s+"
 
-        p = subprocess.run("modulecmd python avail -t".split(),
-                           stdout=subprocess.DEVNULL,
-                           stderr=subprocess.PIPE, universal_newlines=True)
         self._candidates = []
+        try:
+            p = subprocess.run("modulecmd python avail -t".split(),
+                               stdout=subprocess.DEVNULL,
+                               stderr=subprocess.PIPE, universal_newlines=True)
+        except Exception:
+            return
+
         d = None
         for m in p.stderr.splitlines():
             if m.endswith(":"):

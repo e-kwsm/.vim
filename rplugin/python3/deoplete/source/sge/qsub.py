@@ -10,7 +10,6 @@ class Source(Base):
         self.filetypes = ["sh"]
         prefix = re.escape("#$")
         self.input_pattern = "^" + prefix + r"\s+-\w*$"
-        self.rank = 200
 
         directives = {
             "N": "jobname",

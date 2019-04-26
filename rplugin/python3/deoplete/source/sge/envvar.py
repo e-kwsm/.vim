@@ -8,7 +8,7 @@ class Source(Base):
         self.name = "SGE environment variables"
         self.mark = "[SGE]"
         self.filetypes = ["sh"]
-        self.input_pattern = r"\$[A-Z_]*$"
+        self.input_pattern = r"\$\{?[A-Z_]*$"
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
