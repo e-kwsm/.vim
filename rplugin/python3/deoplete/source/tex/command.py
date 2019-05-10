@@ -636,6 +636,7 @@ class Source(Base):
                 "chemskipalign",
                 "definesubmol",
                 "hflipnext",
+                "polymerdelim",
                 "printatom",
                 "redefinesubmol",
                 "schemestart",
