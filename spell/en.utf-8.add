@@ -29,6 +29,7 @@ El Niño
 Elsevier
 FRM
 Ferrers
+Fock
 Förster
 GGA
 GPG
@@ -48,6 +49,7 @@ IQE
 Ising
 Kavli
 Kitaev
+Kohn
 LDA
 LHC
 LUMO
@@ -68,6 +70,7 @@ Mannich
 Markovnikov
 Mersenne
 Minkowski
+Mulliken
 Møller
 NBO
 NMR
@@ -127,6 +130,7 @@ alkanes
 alkene
 alkenes
 alkenyl
+alkoxide
 alkylation
 alkyne
 alkynes
@@ -257,6 +261,8 @@ electrocatalyst
 electrocatalytic
 electrochemistry
 electroluminescence
+electronegativities
+electronegativity
 electrophile
 electrophilic
 electrophilicity
@@ -306,6 +312,7 @@ heterojunctions
 heterolysis
 heterolytic
 heteronuclear
+hexyl
 hexylthiophene
 homogenous
 homojunction
@@ -338,6 +345,8 @@ isosurfaces
 junctional
 ketones
 kinase
+lactam
+lactone
 lanthanides
 lectin
 levelized
@@ -409,6 +418,7 @@ osmolyte
 ouroboros
 overpotential
 oxazole
+oxonium
 pA/=
 pKa/=
 pathogenicity
@@ -447,6 +457,7 @@ piperidine
 plasmon
 plasmonic
 pluripotent
+polarizability
 polaron
 polyacene
 polyolefin
@@ -528,6 +539,7 @@ templating
 tert/=
 thermochromism
 thiazole
+thienyl
 thiol
 thiophene
 timestamp
@@ -545,6 +557,7 @@ vinylene
 von
 voxel
 wavefunction
+wildcard
 zeolite
 zeolites
 zwitterion
