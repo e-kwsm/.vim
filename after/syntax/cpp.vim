@@ -1,2 +1,14 @@
 syn keyword cConstant __GNUG__ __GNUC_MINOR__ __GNUC_PATCHLEVEL__ __GNUC_STDC_INLINE__
 syn keyword cConstant __clang__ __clang_major__ __clang_minor__ __clang_patchlevel__ __clang_version__
+
+syn keyword tbbConstant TBB_COMPATIBLE_INTERFACE_VERSION
+syn keyword tbbConstant TBB_DEPRECATED
+syn keyword tbbConstant TBB_INTERFACE_VERSION
+syn keyword tbbConstant TBB_INTERFACE_VERSION_MAJOR
+syn keyword tbbConstant TBB_USE_ASSERT
+syn keyword tbbConstant TBB_USE_CAPTURED_EXCEPTION
+syn keyword tbbConstant TBB_USE_DEBUG
+syn keyword tbbConstant TBB_USE_EXCEPTIONS
+syn keyword tbbConstant TBB_USE_GLIBCXX_VERSION
+syn keyword tbbConstant TBB_USE_PERFORMANCE_WARNINGS
+syn keyword tbbConstant TBB_USE_THREADING_TOOLS

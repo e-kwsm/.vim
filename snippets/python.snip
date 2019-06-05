@@ -14,3 +14,9 @@ snippet __main__
 	
 	if __name__ == "__main__":
 		$1()
+
+# argparse {{{1
+snippet argparse_parser
+	parser = argparse.ArgumentParser()
+	parser.add_argument(${1})${0}
+	args = parser.parse_args()

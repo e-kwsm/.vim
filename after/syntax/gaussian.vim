@@ -10,9 +10,9 @@ let b:current_syntax = "gaussian"
 
 syn case ignore
 
-syn match gauComment	"!.*$"
-syn match gauRoute	"^\s*#[^!]*"
-syn match gauLink	"^\s*%[^!]*"
+syn match gauComment	'!.*$'
+syn match gauRoute	'^\s*#[^!]*'
+syn match gauLink	'^\s*%[^!]*'
 
 hi def link gauComment	Comment
 hi def link gauRoute	Statement

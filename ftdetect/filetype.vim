@@ -2,6 +2,7 @@ autocmd BufRead /usr/include/c++/* setf cpp
 
 autocmd BufRead,BufNewFile *.aux     setl filetype=tex
 autocmd BufRead,BufNewFile *.bbx     setl filetype=tex
+autocmd BufRead,BufNewFile *.cbx     setl filetype=tex
 autocmd BufRead,BufNewFile *.cls     setl filetype=tex
 autocmd BufRead,BufNewFile *.csv     setf csv
 autocmd BufRead,BufNewFile *.gjf     setl filetype=gaussian

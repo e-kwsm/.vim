@@ -21,8 +21,12 @@ else
   call dein#add('Shougo/dein.vim')
   " plugins {{{2
   if has('python3')
+    "call dein#add('Shougo/deoplete-lsp')
     call dein#add('Shougo/deoplete.nvim')
+    "call dein#add('arakashic/chromatica.nvim')
+    "call dein#add('davidhalter/jedi-vim')
     call dein#add('lyuts/vim-rtags')
+    "call dein#add('nvie/vim-flake8')
   endif
 
   call dein#add('Shougo/neco-syntax')
@@ -60,6 +64,9 @@ else
     let g:deoplete#enable_at_startup = 1
   endif
 
+  " Shougo/deoplete-lsp {{{3
+  "call lsp#server#add('python', 'pyls')
+
   " Shougo/neosnippet.vim {{{3
   " Plugin key-mappings.
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -92,24 +99,37 @@ else
     autocmd! InsertLeave <buffer> if pumvisible() == 0 | pclose | endif
   augroup END
   let g:LanguageClient_settingsPath = expand('~/.config/LSP/settings.json')
+	"let g:LanguageClient_loggingFile = expand('/tmp/LanguageClient.log')
 
   function LC_maps()
     if has_key(g:LanguageClient_serverCommands, &filetype)
+      "nnoremap <buffer> <F5> :call LanguageClient_contextMenu()<CR>
       nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
       nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
       nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+      "nnoremap <silent> <CTRL-]> :call LanguageClient#textDocument_definition()<CR>
     endif
   endfunction
 
   autocmd FileType * call LC_maps()
+
+  " davidhalter/jedi-vim {{{3
+  let g:jedi#force_py_version = 3
 
   " majutsushi/tagbar {{{3
   let g:tagbar_autofocus=1
   nmap <F8> :TagbarToggle<CR>
   nmap <F9> :TagbarOpen fjc<CR>
 
-  " ncm2/float-preview.nvim {{{3
-  let g:float_preview#docked = 1
+  " nvie/vim-flake8 {{{3
+  "au BufWritePost *.py call Flake8()
+  "au QuitPre *.py cclose | let g:flake8_show_quickfix=0
+
+  " rhysd/vim-clang-format {{{3
+  let g:clang_format#code_style = 'chromium'
+  let g:clang_format#style_options = {
+        \ 'ColumnLimit': 100
+        \ }
 
   " }}}2
 endif
@@ -183,6 +203,7 @@ augroup myFileTypeConfig " {{{1
                           \ | let g:is_posix = 1
   au FileType sshconfig  setl noexpandtab
   au FileType svg        setl iskeyword+=- nowrap shiftwidth=2 softtabstop=2 textwidth=100
+  au FileType text       setl spell
   au FileType tcl        setl iskeyword+=-
   au FileType tex        setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker shiftwidth=2
                           \ spell textwidth=100

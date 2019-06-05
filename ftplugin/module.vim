@@ -4,7 +4,6 @@ endif
 
 let b:did_ftplugin = 1
 
-" Using line continuation here.
 let s:cpo_save = &cpo
 set cpo-=C
 
