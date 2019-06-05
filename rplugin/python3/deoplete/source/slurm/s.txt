@@ -1,0 +1,56 @@
+#import re
+from .base import Base
+
+
+class Source(Base):
+    def __init__(self, vim):
+        super().__init__(vim)
+        self.name = "SLURM directive"
+        self.mark = "[SLURM]"
+        self.filetypes = ["sh"]
+        self.input_pattern = r"^\s*#SBATCH\s+--[^\s=]*$"
+        self._candidates = [
+            "begin=",
+            #{
+            #    "word": "-c",
+            #    "kind": "--cpus-per-task",
+            #},
+            "cpus-per-task=",
+            #{
+            #    "word": "-e",
+            #    "kind": "--error",
+            #},
+            "error=",
+            #{
+            #    "word": "-t",
+            #    "kind": "--time",
+            #},
+            #{
+            #    "word": "-J",
+            #    "kind": "--job-name",
+            #},
+            "job-name=",
+            #{
+            #    "word": "-N",
+            #    "kind": "--nodes",
+            #},
+            "nodes=",
+            #{
+            #    "word": "-o",
+            #    "kind": "--output",
+            #},
+            "output=",
+            #{
+            #    "word": "-p",
+            #    "kind": "--partition",
+            #},
+            "partition=",
+            #{
+            #    "word": "-t",
+            #    "kind": "--time",
+            #},
+            "time=",
+        ]
+
+    def gather_candidates(self, context):
+        return self._candidates
