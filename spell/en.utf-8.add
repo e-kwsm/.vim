@@ -46,6 +46,7 @@ Hartree
 Higgs
 Hund
 IQE
+IRC
 Ising
 Kavli
 Kitaev
@@ -93,6 +94,7 @@ PV
 Perdew
 Plesset
 Pochhammer
+Pople
 QMC
 Queisser
 RHF
@@ -102,12 +104,14 @@ SDD
 SHA1
 STO
 Scharfetter
+Schwarz
 TLS
 TODO
 TrueType
 UTF-8
 VBM
 VLAN
+Verlet
 Wannier
 Warshall
 XeLaTeX/=
@@ -168,6 +172,7 @@ aug-cc-pV6Z/=
 aug-cc-pVDZ/=
 aug-cc-pVQZ/=
 aug-cc-pVTZ/=
+autoionization
 autophagic
 autophagy
 azide
@@ -178,6 +183,7 @@ basicity
 benzo
 benzoic
 benzophenone
+benzyl
 bicontinuous
 bilayered
 biofilm
@@ -237,14 +243,18 @@ cyclooctane
 cyclopentane
 cyclopropane
 cytokine
+de Gennes
 de novo
 debye
+def2-SVP
+def2-SVPD
 delocalization
 dendritic
 deprotonation
 deque
 deuteration
 diabatic
+diagonalization
 diamagnetism
 diastereoselective
 diathermic
@@ -347,6 +357,7 @@ ketones
 kinase
 lactam
 lactone
+lactones
 lanthanides
 lectin
 levelized
@@ -358,8 +369,10 @@ meV/=
 memoize
 memoized
 memoizes
+memorylessness
 mesoporous
 mesoscale
+mesoscopic
 metamaterial
 metamaterials
 methoxide
@@ -460,6 +473,7 @@ pluripotent
 polarizability
 polaron
 polyacene
+polyacetylene
 polyolefin
 polyphenylene
 polythiophene
@@ -564,3 +578,4 @@ zwitterion
 zwitterionic
 μm/=
 μs/=
+ωB97X
