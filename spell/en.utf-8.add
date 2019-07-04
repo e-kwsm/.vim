@@ -253,6 +253,9 @@ debye
 def2-SVP
 def2-SVPD
 delocalization
+delocalize
+delocalized
+delocalizes
 dendritic
 deprotonation
 deque
@@ -306,11 +309,15 @@ ferroelectricity
 ferromagnetism
 formamide
 fullerene
+fumarate
+fumaric
 functionalization
 functionalize
 functionalized
 geminate
 glutamine
+glycolic
+glycolide
 graphene
 guanidine
 haplotype
@@ -360,6 +367,7 @@ junctional
 ketones
 kinase
 lactam
+lactide
 lactone
 lactones
 lanthanides
@@ -367,7 +375,9 @@ lectin
 levelized
 mV/=
 magnon
+malate
 maleic
+malic
 mannan
 meV/=
 memoize
@@ -540,6 +550,8 @@ stereoselectivities
 steric
 sterically
 substituent
+succinate
+succinic
 sulfonate
 sulfonated
 sulfonyl
