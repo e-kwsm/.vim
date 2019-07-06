@@ -20,9 +20,9 @@ class Source(Base):
             "S": "interpreter",
         }
         self._candidates = [{
-            "word": k,
             "abbr": "-" + k,
             "menu": v,
+            "word": k,
         } for k, v in sorted(directives.items())]
 
     def gather_candidates(self, context):

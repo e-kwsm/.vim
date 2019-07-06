@@ -28,6 +28,7 @@ class Source(Base):
             "switch",
             "unload",
         ]) + r")\s+"
+        self.rank = 400
 
         self._candidates = []
         try:

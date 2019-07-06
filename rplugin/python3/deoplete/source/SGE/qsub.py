@@ -23,9 +23,9 @@ class Source(Base):
             "wd": "working dir",
         }
         self._candidates = [{
-            "word": k,
             "abbr": "-" + k,
             "menu": v,
+            "word": k,
         } for k, v in directives.items()]
 
     def gather_candidates(self, context):

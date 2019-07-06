@@ -8,6 +8,7 @@ class Source(Base):
         self.mark = "[bib.field]"
         self.filetypes = ["bib"]
         self.input_pattern = r"^\s*[a-z]*$"
+        self.rank = 400
 
     def gather_candidates(self, context):
         return [

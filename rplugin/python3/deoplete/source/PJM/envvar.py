@@ -9,7 +9,7 @@ class Source(Base):
         self.mark = "[PJM]"
         self.filetypes = ["sh"]
         self.input_pattern = r"\$\{?PJM[A-Z_]*$"
-        # self.rank = 200
+        self.rank = 400
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
