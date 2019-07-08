@@ -54,6 +54,33 @@ snippet \dfrac
 snippet \text
 	\text{${1}}
 
+# array.sty [[[1
+snippet \multicolumn
+	\multicolumn{${1}}{${2}}{${3}}
+
+# article.cls
+delete  figure
+snippet figure
+alias   \begin{figure} \figure
+	\begin{figure}[${1}] % [[[
+		\centering
+		\includegraphics[${2:width=${3\}}]{${4}}
+		\caption{${5}}
+		\label{fg:${6}}
+	\end{figure} % ]]]${0}
+
+delete  table
+snippet table
+alias   \begin{table} \table
+	\begin{table}[${1}] % [[[
+		\centering
+		\caption{${2}}
+		\label{tb:${3}}
+		\begin{tabular}{${4}}
+			${5}
+		\end{tabular}
+	\end{table} % ]]]${0}
+
 # beamer.cls [[[1
 snippet alertblock
 alias   \begin{alertblock} \alertblock
@@ -239,12 +266,12 @@ snippet \foreach
 
 # wrapfig.sty [[[1
 snippet \wrapfigure
-	\begin{wrapfigure}[]{${1:r}}}{${2}${3:\\textwidth}}
+	\begin{wrapfigure}[]{${1:r}}}{${2}${3:\\textwidth}} % [[[
 		\centering
 		\includegraphics[${4}]{${5}}
 		\caption{${6}}
-		\label{${7}}
-	\end{wrapfigure}
+		\label{fg:${7}}
+	\end{wrapfigure} % ]]]
 
 # xcolor.sty [[[1
 snippet \color
