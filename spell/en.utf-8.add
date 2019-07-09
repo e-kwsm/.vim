@@ -1,4 +1,5 @@
 AFM
+AIMD
 ALS
 API
 AST
@@ -10,7 +11,11 @@ BHJ
 BSSE
 Becke
 Brønsted
+CASSCF
 CBM
+CCSD
+CCSDT
+CISD
 CPython/=
 CRISPR
 Cahn
@@ -23,6 +28,7 @@ DHCP
 DMC
 DOI
 Diels
+ECP
 EPBT
 EQE
 Ekman
@@ -47,6 +53,7 @@ Hartree
 Higgs
 Hund
 Hückel
+IPCM
 IQE
 IRC
 Ising
@@ -69,6 +76,8 @@ MD5
 MNDO
 MOF
 MP2
+MP4
+MRCI
 Madelung
 Majorana
 Mannich
@@ -102,6 +111,7 @@ Perdew
 Plesset
 Pochhammer
 Pople
+QCISD
 QMC
 Queisser
 RHF
@@ -135,6 +145,8 @@ actin
 acyl
 adatom
 adenosine
+adipate
+adipic
 agonist
 aldehydes
 aldol
@@ -211,6 +223,7 @@ boronate
 boronic
 buckyball
 butoxy
+butylene
 butyric
 carbene
 carboxyl
@@ -578,6 +591,8 @@ tautomerism
 tautomerization
 templated
 templating
+terephthalate
+terephthalic
 tert/=
 thermochromism
 thiazole
