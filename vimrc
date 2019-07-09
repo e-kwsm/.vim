@@ -24,6 +24,9 @@ else
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('lyuts/vim-rtags')
   endif
+  if has('nvim')
+    call dein#add('ncm2/float-preview.nvim')
+  endif
 
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
@@ -39,7 +42,6 @@ else
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('majutsushi/tagbar')
-  call dein#add('ncm2/float-preview.nvim')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
@@ -85,6 +87,7 @@ else
   " autozimu/LanguageClient-neovim {{{3
   let g:LanguageClient_serverCommands = {
         \ 'cpp': ['clangd'],
+        \ 'fortran': ['fortls'],
         \ 'python': ['pyls'],
         \ }
 
@@ -171,6 +174,7 @@ augroup myFileTypeConfig " {{{1
   au FileType c,cpp      setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType csv        setl cursorline noexpandtab
   au FileType diff       setl cursorline
+  au FileType fortran    setl ignorecase
   au FileType gaussian   setl cursorline
   au FileType gitcommit  setl textwidth=0 spell
   au FileType gitconfig  setl noexpandtab
