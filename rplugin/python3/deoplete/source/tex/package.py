@@ -19,6 +19,7 @@ class Source(Base):
         if re.search(self.input_pattern, context["input"]):
             return [
                 "academicons",
+                "acro",
                 "adjustbox",
                 "amsmath",
                 "amssymb",
