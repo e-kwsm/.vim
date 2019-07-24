@@ -77,6 +77,7 @@ MNDO
 MOF
 MP2
 MP4
+MPI
 MRCI
 Madelung
 Majorana
@@ -197,6 +198,8 @@ aug-cc-pVTZ/=
 autoionization
 autophagic
 autophagy
+azelaic
+azelate
 azide
 azobenzene
 azole
@@ -208,6 +211,7 @@ benzophenone
 benzyl
 bicontinuous
 bilayered
+biodegradation
 biofilm
 biofuel
 bioinformatics
@@ -224,7 +228,9 @@ boronic
 buckyball
 butoxy
 butylene
+butyne
 butyric
+caprolactone
 carbene
 carboxyl
 carboxylic
@@ -551,6 +557,8 @@ rotaxane
 rubrene
 rutile
 scission
+sebacate
+sebacic
 sech
 selenide
 semiconductive
@@ -573,6 +581,8 @@ stereoselective
 stereoselectivities
 steric
 sterically
+suberate
+suberic
 substituent
 succinate
 succinic
