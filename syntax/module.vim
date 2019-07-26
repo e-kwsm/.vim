@@ -1,4 +1,4 @@
-if exists("b:current_syntax")
+if exists('b:current_syntax')
   finish
 endif
 
@@ -70,4 +70,4 @@ hi def link moduleSubCommand Statement
 hi def link moduleVariable Identifier
 hi def link moduleSubroutine Function
 
-let b:current_syntax = "module"
+let b:current_syntax = 'module'
