@@ -6,6 +6,7 @@ autocmd BufRead,BufNewFile *.cls     setl filetype=tex
 autocmd BufRead,BufNewFile *.csv     setf csv
 autocmd BufRead,BufNewFile *.gjf     setl filetype=gaussian
 autocmd BufRead,BufNewFile *.gp      setl filetype=gnuplot
+autocmd BufRead,BufNewFile *.gzmat   setl filetype=gaussian
 autocmd BufRead,BufNewFile *.ipynb   setl filetype=json
 autocmd BufRead,BufNewFile *.pdf_tex setl filetype=tex
 autocmd BufRead,BufNewFile *.plt     setl filetype=gnuplot
