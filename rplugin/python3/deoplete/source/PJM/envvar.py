@@ -20,6 +20,7 @@ class Source(Base):
                 "PJM_NODE",
                 "PJM_NODE_CORE",
                 "PJM_O_LOGNAME",
+                "PJM_O_WORKDIR",
                 "PJM_STEPNUM",
                 "PJM_SUBJOBID",
                 "PJM_TOTAL_CORE",

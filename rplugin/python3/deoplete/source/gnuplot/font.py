@@ -7,14 +7,11 @@ from .base import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "font"
+        self.name = "gnuplot.font"
         self.mark = "[font]"
-        self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            "set(?:main|math|mono|sans)font",
-            "IfFontExistsTF",
-        ]) + r"){\w*$"
-        self.rank = 500
+        self.filetypes = ["gnuplot"]
+        self.input_pattern = r"""\bfont\s+['"]\S*"""
+        self.rank = 200
 
         proc = subprocess.run(split("fc-list --format '%{family[0]}\n'"),
                               stdout=subprocess.PIPE, universal_newlines=True)
