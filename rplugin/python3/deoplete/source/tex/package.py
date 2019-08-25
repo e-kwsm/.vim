@@ -32,7 +32,7 @@ class Source(Base):
                 "expl3",
                 "filecontents",
                 "float",
-                "fontawesome",
+                "fontawesome5",
                 "fontspec",
                 "geometry",
                 "gnuplot-lua-tikz",
