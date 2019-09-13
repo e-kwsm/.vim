@@ -244,15 +244,11 @@ if !exists(':ShowSyntaxGroup')
 endif
 
 if !exists(':Remove')
-  command Remove !rm -f %
+  command Remove execute('!rm -f ' .. shellescape(expand('%')))
 endif
 
 if !exists(':ShExe')
   command -nargs=* ShExe up | !chmod u+x % && %:p <args>
-endif
-
-if !exists(':WrapToNext')
-  command WrapToNext execute 'normal! F<Space>r<CR>J'
 endif
 
 if has('nvim')
