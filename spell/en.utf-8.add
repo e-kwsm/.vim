@@ -31,6 +31,7 @@ DMC
 DOI
 Diels
 ECP
+EOF
 EPBT
 EQE
 Ekman
@@ -61,6 +62,7 @@ Hückel
 IPCM
 IQE
 IRC
+InChI
 Ising
 Kavli
 Kitaev
@@ -110,6 +112,7 @@ P3HT
 PBE
 PBE0
 PBE1PBE
+PCA
 PCBM
 PCE
 PEDOT
@@ -132,6 +135,8 @@ SCF
 SDD
 SHA1
 STO
+SVG
+SVM
 Scharfetter
 Schur
 Schwarz
@@ -347,6 +352,7 @@ epoxide
 ethoxide
 excitons
 exo
+exocyclic
 femtosecond
 ferrimagnetic
 ferrimagnetism
@@ -360,6 +366,7 @@ fumaric
 functionalization
 functionalize
 functionalized
+furan
 geminate
 glutamine
 glycolic
@@ -391,6 +398,7 @@ hydrogel
 hydrogenase
 hypergeometric
 ideality
+imidazole
 imide
 imine
 iminium
@@ -409,6 +417,8 @@ isoprene
 isopropanol
 isosurface
 isosurfaces
+isothiazole
+isoxazole
 junctional
 kDa
 ketones
@@ -420,6 +430,7 @@ lactones
 lanthanides
 lectin
 levelized
+lhs
 mA
 mV/=
 magnon
@@ -548,12 +559,15 @@ postdocs
 prefactor
 prion
 propene
+protonate
 protonated
 protonation
 ps
 pseudogap
 pseudopotential
+pyrazine
 pyrazole
+pyridazine
 pyrrole
 quadruplex
 quasicrystal
@@ -575,6 +589,7 @@ regioselectivity
 reptate
 reptation
 rhodamine
+rhs
 ribose
 rotaxane
 rubrene
