@@ -17,7 +17,9 @@ CBM
 CCSD
 CCSDT
 CGMD
+CIP
 CISD
+CODATA
 CPython/=
 CRISPR
 Cahn
@@ -30,6 +32,7 @@ DHCP
 DMC
 DOI
 Diels
+ECMAScript
 ECP
 EOF
 EPBT
@@ -62,8 +65,11 @@ Hückel
 IPCM
 IQE
 IRC
+IUPAC
+IUPAP
 InChI
 Ising
+JSON
 Kavli
 Kitaev
 Kohn
@@ -81,6 +87,7 @@ LuaLaTeX/=
 LuaTeX/=
 M06
 MD5
+MMFF
 MNDO
 MOF
 MP2
@@ -143,12 +150,14 @@ Schwarz
 TLS
 TODO
 TrueType
+UFF
 UTF-8
 VBM
 VLAN
 Verlet
 Wannier
 Warshall
+XYZ
 XeLaTeX/=
 XeTeX/=
 ZINDO
@@ -224,6 +233,7 @@ bandgap
 barostat
 basicity
 benzo
+benzoate
 benzoic
 benzophenone
 benzyl
@@ -251,6 +261,7 @@ butyric
 caprolactone
 carbene
 carboxyl
+carboxylate
 carboxylic
 cc-pV5Z/=
 cc-pV6Z/=
@@ -287,6 +298,7 @@ cyclobutane
 cyclodecane
 cycloheptane
 cyclohexane
+cyclomatic
 cyclononane
 cyclooctane
 cyclopentane
@@ -323,6 +335,7 @@ dimerization
 dipolar
 diradical
 eV/=
+eigen
 electrocatalysis
 electrocatalyst
 electrocatalytic
@@ -378,6 +391,7 @@ helicene
 hemiacetal
 hetero
 heteroatom
+heteroatoms
 heterocycle
 heterocyclic
 heterogenous
@@ -388,6 +402,7 @@ heterolytic
 heteronuclear
 hexyl
 hexylthiophene
+histidine
 homogenous
 homojunction
 homolysis
@@ -419,8 +434,10 @@ isosurface
 isosurfaces
 isothiazole
 isoxazole
+iterable
 junctional
 kDa
+keto
 ketones
 kinase
 lactam
@@ -455,6 +472,7 @@ miRNA/=
 micelle
 microstructure
 mimetics
+mol
 monocrystalline
 monolayer
 multicrystalline
@@ -487,6 +505,7 @@ nanowires
 niobate
 nitrile
 nitro
+nitroso
 nonadiabatic
 noncanonical
 noncovalent
@@ -601,6 +620,8 @@ sech
 selenide
 semiconductive
 semimetal
+sidechain
+sidechains
 sigmoidal
 silane
 siloxane
@@ -627,16 +648,19 @@ succinic
 sulfonate
 sulfonated
 sulfonyl
+sulfoxide
 superresolution
 supramolecular
 svg/=
 synergetic
 synthetase
 tanh
+tatuomer
 tautomer
 tautomeric
 tautomerism
 tautomerization
+tautomers
 templated
 templating
 terephthalate
