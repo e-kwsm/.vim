@@ -7,7 +7,7 @@ from .base import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "font"
+        self.name = "tex.font"
         self.mark = "[font]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\\(?:" + "|".join([

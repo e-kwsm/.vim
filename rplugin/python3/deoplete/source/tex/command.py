@@ -1190,6 +1190,16 @@ class Source(Base):
                 "RaggedRight",
                 "justifying",
             ],
+            "siunitx": [
+                "DeclareSIQualifier",
+                "DeclareSIUnit",
+                "SI",
+                "ang",
+                "num",
+                "si",
+                "sisetup",
+                "tablenum",
+            ],
             "subfiles": [
                 "subfile",
             ],

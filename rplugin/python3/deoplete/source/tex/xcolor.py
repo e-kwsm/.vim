@@ -7,13 +7,16 @@ class Source(Base):
         self.name = "xcolor"
         self.mark = "[xcolor]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            "color",
-            "colorbox",
-            "fcolorbox",
-            "pagecolor",
-            "textcolor",
-        ]) + r")(?:<.*?>)?(?:\[.*?\])?\{(\w+!\d+!)?\w*$"
+        self.input_pattern = "(?:" + "|".join([
+            r"\\(?:" + "|".join([
+                "color",
+                "colorbox",
+                "fcolorbox",
+                "pagecolor",
+                "textcolor",
+            ]) + r")(?:<.*?>)?(?:\[.*?\])?\{(\w+!\d+!)?\w*$",
+            r"\\?(?:draw|fill|filldraw|node)\[.*?(?:draw|fill|text)=\w*",
+        ]) + ")"
 
         self._candidates = [
             "black",
