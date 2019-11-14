@@ -8,6 +8,17 @@ if has('nvim') " {{{
     if !v:shell_error | break | endif
     unlet g:python3_host_prog
   endfor
+
+  call lsp#add_filetype_config({
+        \ 'filetype': 'cpp',
+        \ 'name': 'clangd',
+        \ 'cmd': 'clangd'
+        \ })
+  call lsp#add_filetype_config({
+        \ 'filetype': 'python',
+        \ 'name': 'pyls',
+        \ 'cmd': 'pyls'
+        \ })
 endif " }}}
 
 " Shougo/dein.vim {{{1
