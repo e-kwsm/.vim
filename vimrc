@@ -8,17 +8,6 @@ if has('nvim') " {{{
     if !v:shell_error | break | endif
     unlet g:python3_host_prog
   endfor
-
-  call lsp#add_filetype_config({
-        \ 'filetype': 'cpp',
-        \ 'name': 'clangd',
-        \ 'cmd': 'clangd'
-        \ })
-  call lsp#add_filetype_config({
-        \ 'filetype': 'python',
-        \ 'name': 'pyls',
-        \ 'cmd': 'pyls'
-        \ })
 endif " }}}
 
 " Shougo/dein.vim {{{1
@@ -33,9 +22,9 @@ else
   " plugins {{{2
   if has('python3')
     call dein#add('Shougo/deoplete.nvim')
-    call dein#add('lyuts/vim-rtags')
   endif
   if has('nvim')
+    call dein#add('neovim/nvim-lsp')
     call dein#add('ncm2/float-preview.nvim')
   endif
 
@@ -44,10 +33,6 @@ else
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Vimjas/vim-python-pep8-indent')
-  call dein#add('autozimu/LanguageClient-neovim', {
-    \ 'rev': 'next',
-    \ 'build': 'bash install.sh',
-    \ })
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
   call dein#add('itchyny/lightline.vim')
@@ -68,6 +53,22 @@ else
   filetype plugin indent on
 
   " plugin config {{{2
+  " neovim/nvim-lsp {{{3
+  call nvim_lsp#setup('clangd', {})
+  call nvim_lsp#setup('pyls', {})
+
+  augroup MyLSP
+    autocmd!
+    autocmd Filetype c,cpp,python setl omnifunc=v:lua.vim.lsp.omnifunc
+  augroup END
+
+  nnoremap <silent> ;dc <cmd>lua vim.lsp.buf.declaration()<CR>
+  nnoremap <silent> ;df <cmd>lua vim.lsp.buf.definition()<CR>
+  nnoremap <silent> ;h  <cmd>lua vim.lsp.buf.hover()<CR>
+  nnoremap <silent> ;i  <cmd>lua vim.lsp.buf.implementation()<CR>
+  nnoremap <silent> ;s  <cmd>lua vim.lsp.buf.signature_help()<CR>
+  nnoremap <silent> ;td <cmd>lua vim.lsp.buf.type_definition()<CR>
+
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
@@ -94,28 +95,6 @@ else
 
   let g:neosnippet#expand_word_boundary = 1
   let g:neosnippet#snippets_directory = '~/.vim/snippets/'
-
-  " autozimu/LanguageClient-neovim {{{3
-  let g:LanguageClient_serverCommands = {
-        \ 'cpp': ['clangd'],
-        \ 'fortran': ['fortls'],
-        \ 'python': ['pyls'],
-        \ }
-
-  augroup LSP_close
-    autocmd! InsertLeave <buffer> if pumvisible() == 0 | pclose | endif
-  augroup END
-  let g:LanguageClient_settingsPath = expand('~/.config/LSP/settings.json')
-
-  function LC_maps()
-    if has_key(g:LanguageClient_serverCommands, &filetype)
-      nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
-      nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
-      nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-    endif
-  endfunction
-
-  autocmd FileType * call LC_maps()
 
   " majutsushi/tagbar {{{3
   let g:tagbar_autofocus=1
