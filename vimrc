@@ -54,8 +54,10 @@ else
 
   " plugin config {{{2
   " neovim/nvim-lsp {{{3
-  call nvim_lsp#setup('clangd', {})
-  call nvim_lsp#setup('pyls', {})
+  lua << EOF
+  require'nvim_lsp'.clangd.setup{}
+  require'nvim_lsp'.pyls.setup{}
+EOF
 
   augroup MyLSP
     autocmd!
