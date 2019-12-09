@@ -20,6 +20,7 @@ class Source(Base):
             "o": "stdout",
             "pe": "parallel env",
             "q": "queue",
+            "v": "environment variable",
             "wd": "working dir",
         }
         self._candidates = [{
