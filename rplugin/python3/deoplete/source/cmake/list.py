@@ -20,6 +20,7 @@ class Source(Base):
                 "FILTER",
                 "FIND",
                 "GET",
+                "INSERT",
                 "JOIN",
                 "LENGTH",
                 "POP_BACK",
@@ -31,4 +32,5 @@ class Source(Base):
                 "REVERSE",
                 "SORT",
                 "SUBLIST",
+                "TRANSFORM",
             ]
