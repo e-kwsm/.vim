@@ -7,10 +7,12 @@ AST
 Ab Initio
 Angewandte Chemie
 B3LYP
+BFGS
 BFS
 BHJ
 BSSE
 Becke
+Broyden
 Brønsted
 CASSCF
 CBM
@@ -74,6 +76,7 @@ Kavli
 Kitaev
 Kohn
 Kroll
+Kutta
 LDA
 LHC
 LJ
@@ -171,6 +174,7 @@ actin
 acyl
 adatom
 adenosine
+adiabaticity
 adipate
 adipic
 agonist
@@ -334,6 +338,7 @@ diketopyrrolopyrrole
 dimerization
 dipolar
 diradical
+dispersity
 eV/=
 eigen
 electrocatalysis
@@ -435,6 +440,7 @@ isosurfaces
 isothiazole
 isoxazole
 iterable
+jellium
 junctional
 kDa
 keto
@@ -569,6 +575,7 @@ polarizability
 polaron
 polyacene
 polyacetylene
+polydispersity
 polyolefin
 polyphenylene
 polythiophene
