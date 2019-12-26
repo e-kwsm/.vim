@@ -27,6 +27,9 @@ else
     call dein#add('neovim/nvim-lsp')
     call dein#add('ncm2/float-preview.nvim')
   endif
+  if has('nvim') && has('python3')
+    call dein#add('Shougo/deoplete-lsp')
+  endif
 
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
@@ -74,6 +77,7 @@ EOF
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
   endif
 
   " Shougo/neosnippet.vim {{{3
@@ -171,9 +175,10 @@ augroup myFileTypeConfig " {{{1
   au FileType gitcommit  setl textwidth=0 spell
   au FileType gitconfig  setl noexpandtab
   au FileType gnuplot    setl shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType hgcommit   setl spell
   au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
-  au FileType python     setl shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType python     setl keywordprg=pydoc3 shiftwidth=4 softtabstop=4 textwidth=100
   au FileType rst        setl foldmethod=manual spell
   au FileType sh         setl shiftwidth=2 softtabstop=2 textwidth=100
                           \ | let g:is_posix = 1
