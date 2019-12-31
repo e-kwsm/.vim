@@ -4,7 +4,7 @@ try:
 except ImportError:
     def get_all_lexers():
         return []
-from .base import Base
+from deoplete.base.source import Base
 
 
 class Source(Base):

@@ -2,7 +2,7 @@
 #from pathlib import Path
 import re
 from collections import OrderedDict
-from .base import Base
+from deoplete.base.source import Base
 
 
 class Source(Base):

@@ -1,5 +1,5 @@
-from .base import Base
 import re
+from deoplete.base.source import Base
 
 
 class Source(Base):

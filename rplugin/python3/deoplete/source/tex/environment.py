@@ -1,6 +1,6 @@
 # vi: fdm=marker fmr=[,]
 import re
-from .base import Base
+from deoplete.base.source import Base
 
 
 class Source(Base):

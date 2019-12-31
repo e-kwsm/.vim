@@ -6,7 +6,7 @@ from typing import Iterator
 
 def main():
     tmpl = r"""import re
-from .base import Base
+from deoplete.base.source import Base
 
 
 class Source(Base):

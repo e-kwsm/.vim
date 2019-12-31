@@ -1,7 +1,7 @@
 import re
 import subprocess
 from shlex import split
-from .base import Base
+from deoplete.base.source import Base
 
 
 class Source(Base):
