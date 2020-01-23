@@ -62,17 +62,20 @@ else
   require'nvim_lsp'.pyls.setup{}
 EOF
 
+  function LSP_maps()
+    nnoremap <silent> ;dc <cmd>lua vim.lsp.buf.declaration()<CR>
+    nnoremap <silent> ;df <cmd>lua vim.lsp.buf.definition()<CR>
+    nnoremap <silent> ;h  <cmd>lua vim.lsp.buf.hover()<CR>
+    nnoremap <silent> ;i  <cmd>lua vim.lsp.buf.implementation()<CR>
+    nnoremap <silent> ;s  <cmd>lua vim.lsp.buf.signature_help()<CR>
+    nnoremap <silent> ;td <cmd>lua vim.lsp.buf.type_definition()<CR>
+    nnoremap <silent> ;r  <cmd>lua vim.lsp.buf.references()<CR>
+  endfunction
+
   augroup MyLSP
     autocmd!
-    autocmd Filetype c,cpp,python setl omnifunc=v:lua.vim.lsp.omnifunc
+    autocmd Filetype c,cpp,python setl omnifunc=v:lua.vim.lsp.omnifunc | call LSP_maps()
   augroup END
-
-  nnoremap <silent> ;dc <cmd>lua vim.lsp.buf.declaration()<CR>
-  nnoremap <silent> ;df <cmd>lua vim.lsp.buf.definition()<CR>
-  nnoremap <silent> ;h  <cmd>lua vim.lsp.buf.hover()<CR>
-  nnoremap <silent> ;i  <cmd>lua vim.lsp.buf.implementation()<CR>
-  nnoremap <silent> ;s  <cmd>lua vim.lsp.buf.signature_help()<CR>
-  nnoremap <silent> ;td <cmd>lua vim.lsp.buf.type_definition()<CR>
 
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
