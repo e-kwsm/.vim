@@ -31,6 +31,7 @@ DFS
 DFT
 DFTB
 DHCP
+DIIS
 DMC
 DOI
 Diels
@@ -39,6 +40,7 @@ ECP
 EOF
 EPBT
 EQE
+Ehrenfest
 Ekman
 El Niño
 Elsevier
@@ -96,6 +98,7 @@ MOF
 MP2
 MP4
 MPI
+MPICH
 MRCI
 Madelung
 Majorana
@@ -117,6 +120,7 @@ OPLS
 OPV
 ORCID
 OTFSC
+OpenMP
 OpenType
 P3HT
 PBE
@@ -150,6 +154,7 @@ SVM
 Scharfetter
 Schur
 Schwarz
+TDDFT
 TLS
 TODO
 TrueType
@@ -571,6 +576,7 @@ piperidine
 plasmon
 plasmonic
 pluripotent
+polarizabilities
 polarizability
 polaron
 polyacene
