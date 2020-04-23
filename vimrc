@@ -38,9 +38,9 @@ else
   call dein#add('Vimjas/vim-python-pep8-indent')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
+  call dein#add('cp2k/vim-cp2k')
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
-  call dein#add('majutsushi/tagbar')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
@@ -57,25 +57,29 @@ else
 
   " plugin config {{{2
   " neovim/nvim-lsp {{{3
-  lua << EOF
-  require'nvim_lsp'.clangd.setup{}
-  require'nvim_lsp'.pyls.setup{}
+  if has('nvim')
+    lua << EOF
+    require'nvim_lsp'.clangd.setup{}
+    require'nvim_lsp'.pyls.setup{}
 EOF
 
-  function LSP_maps()
-    nnoremap <silent> ;dc <cmd>lua vim.lsp.buf.declaration()<CR>
-    nnoremap <silent> ;df <cmd>lua vim.lsp.buf.definition()<CR>
-    nnoremap <silent> ;h  <cmd>lua vim.lsp.buf.hover()<CR>
-    nnoremap <silent> ;i  <cmd>lua vim.lsp.buf.implementation()<CR>
-    nnoremap <silent> ;s  <cmd>lua vim.lsp.buf.signature_help()<CR>
-    nnoremap <silent> ;td <cmd>lua vim.lsp.buf.type_definition()<CR>
-    nnoremap <silent> ;r  <cmd>lua vim.lsp.buf.references()<CR>
-  endfunction
+    function LSP_maps()
+      nnoremap <silent> ;dc <cmd>lua vim.lsp.buf.declaration()<CR>
+      nnoremap <silent> ;df <cmd>lua vim.lsp.buf.definition()<CR>
+      nnoremap <silent> ;h  <cmd>lua vim.lsp.buf.hover()<CR>
+      nnoremap <silent> ;i  <cmd>lua vim.lsp.buf.implementation()<CR>
+      nnoremap <silent> ;s  <cmd>lua vim.lsp.buf.signature_help()<CR>
+      nnoremap <silent> ;td <cmd>lua vim.lsp.buf.type_definition()<CR>
+      nnoremap <silent> ;r  <cmd>lua vim.lsp.buf.references()<CR>
+      nnoremap <silent> ;ds <cmd>lua vim.lsp.buf.document_symbol()<CR>
+      nnoremap <silent> ;rn <cmd>lua vim.lsp.buf.rename()<CR>
+    endfunction
 
-  augroup MyLSP
-    autocmd!
-    autocmd Filetype c,cpp,python setl omnifunc=v:lua.vim.lsp.omnifunc | call LSP_maps()
-  augroup END
+    augroup MyLSP
+      autocmd!
+      autocmd Filetype c,cpp,python setl omnifunc=v:lua.vim.lsp.omnifunc | call LSP_maps()
+    augroup END
+  endif
 
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
