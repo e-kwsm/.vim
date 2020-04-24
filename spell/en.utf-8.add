@@ -1,10 +1,11 @@
 AAMD
+ABI
 AFM
 AIMD
 ALS
 API
 AST
-Ab Initio
+AVX
 Angewandte Chemie
 B3LYP
 BFGS
@@ -24,6 +25,7 @@ CISD
 CODATA
 CPython/=
 CRISPR
+CUDA
 Cahn
 Cholesky
 Condon
@@ -34,6 +36,7 @@ DHCP
 DIIS
 DMC
 DOI
+Debian
 Diels
 ECMAScript
 ECP
@@ -52,6 +55,7 @@ GGA
 GISAXS
 GIWAXS
 GPG
+GPU
 GTO
 Galilei
 Gennes
@@ -60,6 +64,7 @@ GitLab/=
 Grignard
 Grimme
 Gummel
+HPC
 HSE
 HTTPS
 Hartree
@@ -647,6 +652,8 @@ spinel
 spinodal
 spinor
 spintronics
+stderr
+stdout
 stereochemical
 stereochemistry
 stereoselective
@@ -668,6 +675,7 @@ svg/=
 synergetic
 synthetase
 tanh
+tarball
 tatuomer
 tautomer
 tautomeric
