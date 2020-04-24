@@ -1,5 +1,6 @@
 autocmd BufRead /usr/include/c++/* setf cpp
 
+autocmd BufRead,BufNewFile CMakeCache.txt setl filetype=cmakecache
 autocmd BufRead,BufNewFile *.aux     setl filetype=tex
 autocmd BufRead,BufNewFile *.bbx     setl filetype=tex
 autocmd BufRead,BufNewFile *.cif     setl filetype=cif
