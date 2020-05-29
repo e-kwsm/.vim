@@ -64,15 +64,15 @@ else
 EOF
 
     function LSP_maps()
-      nnoremap <silent> ;dc <cmd>lua vim.lsp.buf.declaration()<CR>
-      nnoremap <silent> ;df <cmd>lua vim.lsp.buf.definition()<CR>
-      nnoremap <silent> ;h  <cmd>lua vim.lsp.buf.hover()<CR>
-      nnoremap <silent> ;i  <cmd>lua vim.lsp.buf.implementation()<CR>
-      nnoremap <silent> ;s  <cmd>lua vim.lsp.buf.signature_help()<CR>
-      nnoremap <silent> ;td <cmd>lua vim.lsp.buf.type_definition()<CR>
-      nnoremap <silent> ;r  <cmd>lua vim.lsp.buf.references()<CR>
-      nnoremap <silent> ;ds <cmd>lua vim.lsp.buf.document_symbol()<CR>
-      nnoremap <silent> ;rn <cmd>lua vim.lsp.buf.rename()<CR>
+      nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+      nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+      nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+      nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+      nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+      nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+      nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+      nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+      nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
     endfunction
 
     augroup MyLSP
@@ -132,7 +132,6 @@ set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
 set fileformats=unix,dos,mac
 set hidden
 set laststatus=2
-set makeprg=make\ -j8
 set modeline
 set mouse=a
 set nohlsearch
@@ -174,7 +173,7 @@ augroup myFileTypeConfig " {{{1
   au!
 
   au FileType bib        setl spell
-  au FileType c,cpp      setl shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType c,cpp      setl shiftwidth=2 softtabstop=2 textwidth=100
   au FileType csv        setl cursorline noexpandtab
   au FileType diff       setl cursorline
   au FileType fortran    setl ignorecase
@@ -232,9 +231,9 @@ augroup myHooks " {{{1
   au QuickFixCmdPost *grep* cwindow
 
   " git
-  au BufReadPost ADD_EDIT.patch      :6
+  au BufReadPost ADD_EDIT.patch      :7
   au BufReadPost COMMIT_EDITMSG      :1
-  au BufReadPost addp-hunk-edit.diff :6
+  au BufReadPost addp-hunk-edit.diff :7
   au BufReadPost git-rebase-todo     :1
 
   if has('nvim')
