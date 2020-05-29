@@ -27,6 +27,7 @@ CPython/=
 CRISPR
 CUDA
 Cahn
+Chebyshev
 Cholesky
 Condon
 DFS
@@ -64,6 +65,7 @@ GitLab/=
 Grignard
 Grimme
 Gummel
+HCTH
 HPC
 HSE
 HTTPS
@@ -92,9 +94,11 @@ LYP
 La Niña
 LanL2DZ/=
 Laplacian
+Lebedev
 Levenshtein
 LuaLaTeX/=
 LuaTeX/=
+Löwdin
 M06
 MD5
 MMFF
@@ -149,6 +153,7 @@ QMC
 Queisser
 RDF
 RHF
+ROHF
 Rodrigues
 SCF
 SDD
@@ -532,7 +537,9 @@ nucleophilicity
 nucleoside
 nucleosome
 oligo
+oligomer
 oligomeric
+oligomers
 oligothiophene
 optimizable
 orientational
@@ -583,6 +590,7 @@ plasmonic
 pluripotent
 polarizabilities
 polarizability
+polarizable
 polaron
 polyacene
 polyacetylene
@@ -647,6 +655,8 @@ siloxy
 silyl
 sinh
 soliton
+solvate
+solvated
 solvation
 spinel
 spinodal
