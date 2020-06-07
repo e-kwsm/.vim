@@ -7,16 +7,20 @@ class Source(Base):
         self.name = "xcolor"
         self.mark = "[xcolor]"
         self.filetypes = ["tex"]
-        self.input_pattern = "(?:" + "|".join([
-            r"\\(?:" + "|".join([
-                "color",
-                "colorbox",
-                "fcolorbox",
-                "pagecolor",
-                "textcolor",
-            ]) + r")(?:<.*?>)?(?:\[.*?\])?\{(\w+!\d+!)?\w*$",
-            r"\\?(?:draw|fill|filldraw|node)\[.*?(?:draw|fill|text)=\w*",
-        ]) + ")"
+        self.input_pattern = (
+            "(?:"
+            + "|".join(
+                [
+                    r"\\(?:"
+                    + "|".join(
+                        ["color", "colorbox", "fcolorbox", "pagecolor", "textcolor"]
+                    )
+                    + r")(?:<.*?>)?(?:\[.*?\])?\{(\w+!\d+!)?\w*$",
+                    r"\\?(?:draw|fill|filldraw|node)\[.*?(?:draw|fill|text)=\w*",
+                ]
+            )
+            + ")"
+        )
 
         self._candidates = [
             "black",
@@ -192,10 +196,7 @@ class Source(Base):
             "Yellow",
             "YellowGreen",
         ]:
-            self._candidates += [{
-                "word": svgname,
-                "kind": "svgname",
-            }]
+            self._candidates += [{"word": svgname, "kind": "svgname"}]
 
     def gather_candidates(self, context):
         return self._candidates

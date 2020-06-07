@@ -239,19 +239,18 @@ class Source(Base):
             exclusives[d1].add(re.sub(" .*", "", d2[m.end():]))
 
     for directive, clauses in omp_directives.items():
-        clauses = "\n".join([" " * 16 + "\"" + c + "\"," for c in clauses])
+        clauses = "\n".join([" " * 16 + '"' + c + '",' for c in clauses])
         pattern = directive.replace(" ", r"\s+")
         if directive in exclusives:
             pattern += r"\s+(?!" + "|".join(sorted(exclusives[directive])) + ")"
         else:
             pattern += r"\s+"
         with open("pragma_omp_" + directive.replace(" ", "_") + ".py", "w") as f:
-            f.write(tmpl.format(
-                rank=rank,
-                directive=directive,
-                pattern=pattern,
-                clauses=clauses,
-            ))
+            f.write(
+                tmpl.format(
+                    rank=rank, directive=directive, pattern=pattern, clauses=clauses,
+                )
+            )
 
 
 if __name__ == "__main__":

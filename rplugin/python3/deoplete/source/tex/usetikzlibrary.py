@@ -1,5 +1,5 @@
-#import subprocess
-#from pathlib import Path
+# import subprocess
+# from pathlib import Path
 import re
 from collections import OrderedDict
 from deoplete.base.source import Base
@@ -14,26 +14,35 @@ class Source(Base):
         self.input_pattern = r"\\usetikzlibrary\{[\w.-]*(?:,\s*[\w.-]*)*$"
         self.rank = 800
 
-        #proc = subprocess.run(["kpsewhich", "-var-value=TEXMFDIST"], stdout=subprocess.PIPE,
-        #                      universal_newlines=True)
-        #texmfdist = Path(proc.stdout.replace("\n", ""))
+        # proc = subprocess.run(
+        #     ["kpsewhich", "-var-value=TEXMFDIST"],
+        #     stdout=subprocess.PIPE,
+        #     universal_newlines=True,
+        # )
+        # texmfdist = Path(proc.stdout.replace("\n", ""))
 
         libraries = OrderedDict()
 
-        #libraries["tikz"] = list(l.name.replace("tikzlibrary", "").replace(".code.tex", "")
-        #        for l in texmfdist.glob("**/tikzlibrary*.code.tex"))
-        #libraries["pgf"]  = list(l.name.replace("pgflibrary", "").replace(".code.tex", "")
-        #        for l in texmfdist.glob("**/pgflibrary*.code.tex"))
+        # libraries["tikz"] = list(
+        #     l.name.replace("tikzlibrary", "").replace(".code.tex", "")
+        #     for l in texmfdist.glob("**/tikzlibrary*.code.tex")
+        # )
+        # libraries["pgf"] = list(
+        #     l.name.replace("pgflibrary", "").replace(".code.tex", "")
+        #     for l in texmfdist.glob("**/pgflibrary*.code.tex")
+        # )
 
         libraries["tikz"] = [
             "3d",
             "angles",
+            "animations",
             "arrows",
             "automata",
             "babel",
             "backgrounds",
             "bayesnet",
             "bending",
+            "braids",
             "calc",
             "calendar",
             "calligraphy",
@@ -43,10 +52,13 @@ class Source(Base):
             "circuits",
             "circuits.ee",
             "circuits.ee.IEC",
+            "circuits.ee.IEC.relay",
             "circuits.logic",
             "circuits.logic.CDH",
             "circuits.logic.IEC",
             "circuits.logic.US",
+            "circuits.plc.ladder",
+            "circuits.plc.sfc",
             "colorbrewer",
             "colortol",
             "datavisualization",
@@ -65,9 +77,11 @@ class Source(Base):
             "decorations.shapes",
             "decorations.softclip",
             "decorations.text",
+            "ducks",
             "er",
             "external",
             "fadings",
+            "feynhand",
             "feynman",
             "fillbetween",
             "fit",
@@ -75,20 +89,27 @@ class Source(Base):
             "folding",
             "fpu",
             "graphdrawing",
+            "graphdrawing.evolving",
             "graphs",
             "graphs.standard",
             "hobby",
             "intersections",
+            "karnaugh",
             "knots",
             "lindenmayersystems",
+            "marmots",
             "math",
             "matrix",
+            "matrix.skeleton",
             "mindmap",
+            "nef",
             "ocgx",
             "optics",
             "overlay-beamer-styles",
             "patterns",
             "patterns.meta",
+            "penrose",
+            "perspective",
             "petri",
             "pgfplots.clickable",
             "pgfplots.colormaps",
@@ -107,7 +128,9 @@ class Source(Base):
             "plothandlers",
             "plotmarks",
             "positioning",
+            "quantikz",
             "quotes",
+            "rdf",
             "rulercompass",
             "scopes",
             "shadings",
@@ -130,14 +153,23 @@ class Source(Base):
             "tikzmark",
             "topaths",
             "tqft",
+            "trackschematic",
+            "trackschematic.constructions",
+            "trackschematic.messures",
+            "trackschematic.topology",
+            "trackschematic.trafficcontrol",
+            "trackschematic.vehicles",
             "trees",
             "turtle",
+            "views",
         ]
+
         libraries["pgf"] = [
             "am",
             "arrows",
             "arrows.meta",
             "arrows.spaced",
+            "bbox",
             "curvilinear",
             "datavisualization.barcharts",
             "datavisualization.formats.functions",
@@ -163,8 +195,10 @@ class Source(Base):
             "intersections",
             "lindenmayersystems",
             "luamath",
+            "matrix.skeleton",
             "patterns",
             "patterns.meta",
+            "pgfhan",
             "pgfplots.colorbrewer",
             "pgfplots.colortol",
             "pgfplots.surfshading",
@@ -186,16 +220,14 @@ class Source(Base):
             "shapes.symbols",
             "snakes",
             "svg.path",
+            "timelines",
             "vectorian",
         ]
 
         self._candidates = []
         for kind, libs in libraries.items():
             for lib in libs:
-                self._candidates += [{
-                    "word": lib,
-                    "kind": kind,
-                }]
+                self._candidates += [{"word": lib, "kind": kind}]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

@@ -8,16 +8,22 @@ class Source(Base):
         self.name = "beamer.template"
         self.mark = "[beamer.template]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            r"addtobeamertemplate",
-            r"defbeamertemplate(?:<.*?>)?\*?",
-            r"defbeamertemplatealias",
-            r"defbeamertemplateparent",
-            r"expandbeamertemplate",
-            r"ifbeamertemplateempty",
-            r"setbeamertemplate",
-            r"usebeamertemplate\*{,3}",
-        ]) + r")\{\w*$"
+        self.input_pattern = (
+            r"\\(?:"
+            + "|".join(
+                [
+                    r"addtobeamertemplate",
+                    r"defbeamertemplate(?:<.*?>)?\*?",
+                    r"defbeamertemplatealias",
+                    r"defbeamertemplateparent",
+                    r"expandbeamertemplate",
+                    r"ifbeamertemplateempty",
+                    r"setbeamertemplate",
+                    r"usebeamertemplate\*{,3}",
+                ]
+            )
+            + r")\{\w*$"
+        )
         self.rank = 800
 
     def gather_candidates(self, context):

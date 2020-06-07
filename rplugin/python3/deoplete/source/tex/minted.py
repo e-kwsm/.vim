@@ -1,10 +1,12 @@
+from deoplete.base.source import Base
 import re
+
 try:
     from pygments.lexers import get_all_lexers
 except ImportError:
+
     def get_all_lexers():
         return []
-from deoplete.base.source import Base
 
 
 class Source(Base):
@@ -13,12 +15,13 @@ class Source(Base):
         self.name = "pygments.lexer"
         self.mark = "[pygments.lexer]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            r"begin{minted}",
-            r"mint",
-            r"mintinline",
-            r"inputminted(?:\[.*?\])?",
-        ]) + r"){\S*$"
+        self.input_pattern = (
+            r"\\(?:"
+            + "|".join(
+                ["begin{minted}", r"inputminted(?:\[.*?\])?", "mint", "mintinline"]
+            )
+            + r"){\S*$"
+        )
         self.rank = 800
 
         self._candidates = []

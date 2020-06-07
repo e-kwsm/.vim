@@ -17,19 +17,18 @@ class Source(Base):
             "OpenMP_Fortran_HAVE_OMPLIB_MODULE",
         ]
 
-        for v in [
-                "OpenMP_{lang}_FLAGS",
-                "OpenMP_{lang}_FOUND",
-                "OpenMP_{lang}_INCLUDE_DIRS",
-                "OpenMP_{lang}_LIBRARIES",
-                "OpenMP_{lang}_LIB_NAMES",
-                "OpenMP_{lang}_SPEC_DATE",
-                "OpenMP_{lang}_VERSION",
-                "OpenMP_{lang}_VERSION_MAJOR",
-                "OpenMP_{lang}_VERSION_MINOR",
-        ]:
-            for lang in ["C", "CXX", "Fortran"]:
-                self._candidates += [v.format(lang=lang)]
+        for lang in ["C", "CXX", "Fortran"]:
+            self._candidates += [
+                f"OpenMP_{lang}_FLAGS",
+                f"OpenMP_{lang}_FOUND",
+                f"OpenMP_{lang}_INCLUDE_DIRS",
+                f"OpenMP_{lang}_LIBRARIES",
+                f"OpenMP_{lang}_LIB_NAMES",
+                f"OpenMP_{lang}_SPEC_DATE",
+                f"OpenMP_{lang}_VERSION",
+                f"OpenMP_{lang}_VERSION_MAJOR",
+                f"OpenMP_{lang}_VERSION_MINOR",
+            ]
 
         self._candidates.sort()
 

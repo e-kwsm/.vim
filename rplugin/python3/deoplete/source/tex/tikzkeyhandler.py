@@ -67,11 +67,7 @@ class Source(Base):
             "value forbidden",
             "value required",
         ]:
-            self._candidates += [{
-                "word": h,
-                "kind": "key handler",
-                "abbr": "." + h,
-            }]
+            self._candidates += [{"word": h, "kind": "key handler", "abbr": "." + h}]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

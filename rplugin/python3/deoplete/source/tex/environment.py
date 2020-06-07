@@ -9,11 +9,9 @@ class Source(Base):
         self.name = "env"
         self.mark = "[env]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            "begin",
-            "end",
-            "renewenvironment"
-        ]) + r")\{[A-Za-z]*$"
+        self.input_pattern = (
+            r"\\(?:" + "|".join(["begin", "end", "renewenvironment"]) + r")\{[A-Za-z]*$"
+        )
         self.rank = 800
         pkgenvs = {
             "": [
@@ -153,10 +151,7 @@ class Source(Base):
         self._candidates = []
         for pkg, envs in pkgenvs.items():
             for env in envs:
-                self._candidates += [{
-                    "word": env,
-                    "kind": pkg,
-                }]
+                self._candidates += [{"word": env, "kind": pkg}]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

@@ -8,13 +8,13 @@ class Source(Base):
         self.name = "module env var"
         self.mark = "[env var]"
         self.filetypes = ["module"]
-        self.input_pattern = r"^\s*(?:" + "|".join([
-            "append-path",
-            "prepend-path",
-            "remove-path",
-            "setenv",
-            "unsetenv",
-        ]) + r")\s+\w*$"
+        self.input_pattern = (
+            r"^\s*(?:"
+            + "|".join(
+                ["append-path", "prepend-path", "remove-path"]
+            )
+            + r")\s+\w*$"
+        )
         self.rank = 600
 
     def gather_candidates(self, context):
@@ -29,4 +29,5 @@ class Source(Base):
                 "MANPATH",
                 "PATH",
                 "PKG_CONFIG_PATH",
+                "PYTHONPATH",
             ]

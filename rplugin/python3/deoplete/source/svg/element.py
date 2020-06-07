@@ -12,7 +12,7 @@ class Source(Base):
 
     def gather_candidates(self, context):
         return [
-            "a"
+            "a",
             "animate",
             "animateMotion",
             "animateTransform",

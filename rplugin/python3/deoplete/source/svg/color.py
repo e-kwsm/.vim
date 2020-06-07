@@ -162,10 +162,7 @@ class Source(Base):
         self._candidates = []
         for col, rgb in sorted(colors.items()):
             r, g, b = rgb
-            self._candidates += [{
-                "word": col,
-                "kind": f"#{r:02X}{g:02X}{b:02X}",
-            }]
+            self._candidates += [{"word": col, "kind": f"#{r:02X}{g:02X}{b:02X}"}]
 
     def gather_candidates(self, context):
         return self._candidates

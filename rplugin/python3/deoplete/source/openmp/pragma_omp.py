@@ -37,7 +37,7 @@ class Source(Base):
                 "parallel",
                 "section",
                 "sections",
-                "simd"
+                "simd",
                 "single",
                 "target data",
                 "target enter data",

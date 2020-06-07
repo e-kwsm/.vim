@@ -954,6 +954,9 @@ class Source(Base):
                 "mintinline",
                 "usemintedstyle",
             ],
+            "pdfpages": [
+                "includepdf",
+            ],
             "pgffor": [
                 "foreach",
             ],

@@ -24,20 +24,19 @@ class Source(Base):
             "MPI_VERSION",
         ]
 
-        for v in [
-                "MPI_{lang}_COMPILER",
-                "MPI_{lang}_COMPILE_DEFINITIONS",
-                "MPI_{lang}_COMPILE_OPTIONS",
-                "MPI_{lang}_FOUND",
-                "MPI_{lang}_INCLUDE_DIRS",
-                "MPI_{lang}_LIBRARIES",
-                "MPI_{lang}_LINK_FLAGS",
-                "MPI_{lang}_VERSION",
-                "MPI_{lang}_VERSION_MAJOR",
-                "MPI_{lang}_VERSION_MINOR",
-        ]:
-            for lang in ["C", "CXX", "Fortran"]:
-                self._candidates += [v.format(lang=lang)]
+        for lang in ["C", "CXX", "Fortran"]:
+            self._candidates += [
+                f"MPI_{lang}_COMPILER",
+                f"MPI_{lang}_COMPILE_DEFINITIONS",
+                f"MPI_{lang}_COMPILE_OPTIONS",
+                f"MPI_{lang}_FOUND",
+                f"MPI_{lang}_INCLUDE_DIRS",
+                f"MPI_{lang}_LIBRARIES",
+                f"MPI_{lang}_LINK_FLAGS",
+                f"MPI_{lang}_VERSION",
+                f"MPI_{lang}_VERSION_MAJOR",
+                f"MPI_{lang}_VERSION_MINOR",
+            ]
 
         self._candidates.sort()
 

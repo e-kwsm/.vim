@@ -8,11 +8,17 @@ class Source(Base):
         self.name = "beamer.color"
         self.mark = "[beamer.color]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            r"ifbeamercolorempty(?:\[[bf]g\])?",
-            r"setbeamercolor\*?",
-            r"usebeamercolor\*?(?:\[[bf]g\])?",
-        ]) + r")\{\w*$"
+        self.input_pattern = (
+            r"\\(?:"
+            + "|".join(
+                [
+                    r"ifbeamercolorempty(?:\[[bf]g\])?",
+                    r"setbeamercolor\*?",
+                    r"usebeamercolor\*?(?:\[[bf]g\])?",
+                ]
+            )
+            + r")\{\w*$"
+        )
         self.rank = 800
 
     def gather_candidates(self, context):

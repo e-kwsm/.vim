@@ -23,11 +23,9 @@ class Source(Base):
             "v": "environment variable",
             "wd": "working dir",
         }
-        self._candidates = [{
-            "abbr": "-" + k,
-            "menu": v,
-            "word": k,
-        } for k, v in directives.items()]
+        self._candidates = [
+            {"abbr": "-" + k, "menu": v, "word": k} for k, v in directives.items()
+        ]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

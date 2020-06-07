@@ -8,9 +8,9 @@ class Source(Base):
         self.name = "cmake.list"
         self.mark = "[list]"
         self.filetypes = ["cmake"]
-        self.input_pattern = r"^\s*{}\(\w*$".format("".join(
-            f"[{c}{c.upper()}]" for c in "list"
-        ))
+        self.input_pattern = r"^\s*{}\(\w*$".format(
+            "".join(f"[{c}{c.upper()}]" for c in "list")
+        )
         self.rank = 400
 
     def gather_candidates(self, context):

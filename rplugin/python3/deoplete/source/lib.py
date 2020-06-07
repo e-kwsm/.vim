@@ -25,10 +25,7 @@ class Source(Base):
                 lib = re.sub(r"^lib(\S+?)\.so(?:\.\d+)*$", r"\1", lib.name)
                 libs.add(lib)
 
-        self._candidates = [{
-            "word": "l" + l,
-            "abbr": "-l" + l,
-        } for l in sorted(libs)]
+        self._candidates = [{"word": "l" + l, "abbr": "-l" + l} for l in sorted(libs)]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

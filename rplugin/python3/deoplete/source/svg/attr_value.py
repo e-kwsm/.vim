@@ -21,7 +21,7 @@ class Source(Base):
             "skewX",
             "skewY",
             "spacing",
-            "spacingAndGlyphs"
+            "spacingAndGlyphs",
             "square",
             "translate",
         ]

@@ -19,11 +19,10 @@ class Source(Base):
             "q": "destination queue",
             "S": "interpreter",
         }
-        self._candidates = [{
-            "abbr": "-" + k,
-            "menu": v,
-            "word": k,
-        } for k, v in sorted(directives.items())]
+        self._candidates = [
+            {"abbr": "-" + k, "menu": v, "word": k}
+            for k, v in sorted(directives.items())
+        ]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):

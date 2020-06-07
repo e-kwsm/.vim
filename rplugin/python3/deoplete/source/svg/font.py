@@ -12,8 +12,11 @@ class Source(Base):
         self.input_pattern = r"""font-family=['"]\S*"""
         self.rank = 200
 
-        proc = subprocess.run(split("fc-list --format '%{family[0]}\n'"),
-                              stdout=subprocess.PIPE, universal_newlines=True)
+        proc = subprocess.run(
+            split("fc-list --format '%{family[0]}\n'"),
+            stdout=subprocess.PIPE,
+            universal_newlines=True,
+        )
         self._candidates = sorted(set(proc.stdout.splitlines()))
 
     def gather_candidates(self, context):

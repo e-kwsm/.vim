@@ -10,14 +10,18 @@ class Source(Base):
         self.name = "tex.font"
         self.mark = "[font]"
         self.filetypes = ["tex"]
-        self.input_pattern = r"\\(?:" + "|".join([
-            "set(?:main|math|mono|sans)font",
-            "IfFontExistsTF",
-        ]) + r"){\w*$"
+        self.input_pattern = (
+            r"\\(?:"
+            + "|".join(["set(?:main|math|mono|sans)font", "IfFontExistsTF"])
+            + r"){\w*$"
+        )
         self.rank = 500
 
-        proc = subprocess.run(split("fc-list --format '%{family[0]}\n'"),
-                              stdout=subprocess.PIPE, universal_newlines=True)
+        proc = subprocess.run(
+            split("fc-list --format '%{family[0]}\n'"),
+            stdout=subprocess.PIPE,
+            universal_newlines=True,
+        )
         self._candidates = sorted(set(proc.stdout.splitlines()))
 
     def gather_candidates(self, context):

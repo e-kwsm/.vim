@@ -12,14 +12,17 @@ class Source(Base):
         self.rank = 400
 
         self._candidates = [
-            {
-                "abbr": "--" + d,
-                "word": d + "=",
-            } for d in [
+            {"abbr": "--" + d, "word": d + "="}
+            for d in [
                 "begin",
+                "comment",
                 "cpus-per-task",
+                "dependency",
+                "chdir",
                 "error",
+                "export",
                 "job-name",
+                "mail-type",
                 "nodes",
                 "output",
                 "partition",
