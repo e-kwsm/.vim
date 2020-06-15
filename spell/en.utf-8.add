@@ -11,6 +11,7 @@ B3LYP
 BFGS
 BFS
 BHJ
+BLAS
 BSSE
 Becke
 Broyden
@@ -52,6 +53,7 @@ FRM
 Ferrers
 Fock
 Förster
+GCC
 GGA
 GISAXS
 GIWAXS
@@ -86,9 +88,11 @@ Kitaev
 Kohn
 Kroll
 Kutta
+LAPACK
 LDA
 LHC
 LJ
+LLVM
 LUMO
 LYP
 La Niña
@@ -326,13 +330,13 @@ cytokine
 de Gennes
 de novo
 debye
-def2-SVP
-def2-SVPD
-def2-TZV
-def2-TZVP
-def2-TZVPD
-def2-TZVPP
-def2-TZVPPD
+def2-SVP/=
+def2-SVPD/=
+def2-TZV/=
+def2-TZVP/=
+def2-TZVPD/=
+def2-TZVPP/=
+def2-TZVPPD/=
 delocalization
 delocalize
 delocalized
@@ -498,6 +502,7 @@ monocrystalline
 monolayer
 multicrystalline
 multimodal
+multiscale
 myoglobin
 myosin
 nanocluster
@@ -710,6 +715,7 @@ tunability
 ultrathin
 upconversion
 van der Waals
+vdW
 vibronic
 vibronically
 vicinal
@@ -726,6 +732,7 @@ zwitterion
 zwitterionic
 μm/=
 μs/=
+π-conjugated
 ωB97
 ωB97X
 ωPBE/=
