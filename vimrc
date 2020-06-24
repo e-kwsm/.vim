@@ -11,7 +11,7 @@ if has('nvim') " {{{
 endif " }}}
 
 " Shougo/dein.vim {{{1
-let s:bundle_root = expand('~/.vim/bundle')
+let s:bundle_root = expand('~/.local/share/nvim/site/bundle')
 let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_dir)
   echo 'git clone --depth 1 https://github.com/Shougo/dein.vim ' . s:dein_dir
