@@ -14,11 +14,15 @@ class Source(Base):
         self.input_pattern = r"\\usetikzlibrary\{[\w.-]*(?:,\s*[\w.-]*)*$"
         self.rank = 800
 
-        # proc = subprocess.run(
-        #     ["kpsewhich", "-var-value=TEXMFDIST"],
-        #     stdout=subprocess.PIPE,
-        #     universal_newlines=True,
-        # )
+        self._candidates = []
+        # try:
+        #     proc = subprocess.run(
+        #         ["kpsewhich", "-var-value=TEXMFDIST"],
+        #         stdout=subprocess.PIPE,
+        #         universal_newlines=True,
+        #     )
+        # except Exception:
+        #     return
         # texmfdist = Path(proc.stdout.replace("\n", ""))
 
         libraries = OrderedDict()
@@ -224,7 +228,6 @@ class Source(Base):
             "vectorian",
         ]
 
-        self._candidates = []
         for kind, libs in libraries.items():
             for lib in libs:
                 self._candidates += [{"word": lib, "kind": kind}]

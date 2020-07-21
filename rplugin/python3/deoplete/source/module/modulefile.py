@@ -46,7 +46,7 @@ class Source(Base):
         self._candidates = []
         try:
             p = subprocess.run(
-                "modulecmd python avail -t".split(),
+                ["modulecmd", "python", "avail", "-t"],
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.PIPE,
                 universal_newlines=True,

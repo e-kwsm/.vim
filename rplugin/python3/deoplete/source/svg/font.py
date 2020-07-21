@@ -1,5 +1,4 @@
 import subprocess
-from shlex import split
 from deoplete.base.source import Base
 
 
@@ -12,12 +11,16 @@ class Source(Base):
         self.input_pattern = r"""font-family=['"]\S*"""
         self.rank = 200
 
-        proc = subprocess.run(
-            split("fc-list --format '%{family[0]}\n'"),
-            stdout=subprocess.PIPE,
-            universal_newlines=True,
-        )
-        self._candidates = sorted(set(proc.stdout.splitlines()))
+        try:
+            proc = subprocess.run(
+                ["fc-list", "--format", "%{family[0]}\n"],
+                stdout=subprocess.PIPE,
+                universal_newlines=True,
+            )
+        except Exception:
+            self._candidates = []
+        else:
+            self._candidates = sorted(set(proc.stdout.splitlines()))
 
     def gather_candidates(self, context):
         return self._candidates

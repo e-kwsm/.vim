@@ -14,12 +14,18 @@ class Source(Base):
         )
         self.rank = 400
 
-        proc = subprocess.run(
-            "cmake --help-module-list".split(),
-            stdout=subprocess.PIPE,
-            universal_newlines=True,
-        )
-        self._candidates = [re.sub("^Find", "", p) for p in proc.stdout.splitlines()]
+        try:
+            proc = subprocess.run(
+                ["cmake", "--help-module-list"],
+                stdout=subprocess.PIPE,
+                universal_newlines=True,
+            )
+        except Exception:
+            self._candidates = []
+        else:
+            self._candidates = [
+                re.sub("^Find", "", p) for p in proc.stdout.splitlines()
+            ]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
