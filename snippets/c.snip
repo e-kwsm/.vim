@@ -1,12 +1,4 @@
-delete  main
-snippet main
-	int main(int argc, char** argv)
-	{
-	${0}
-		return 0;
-	}
-
-# OpenMPI
+# MPI
 snippet MPI_Init(
 abbr    MPI_Init(&argc, &argv); MPI_Finalize();
 	MPI_Init(${1:&argc}, ${2:&argv});

@@ -1,9 +1,5 @@
-snippet .PHONY:
-alias	PHONY phony
+snippet PHONY
+alias	phony
 options head
 	.PHONY: ${1:all}
 	$1:
-
-snippet $(wildcard
-alias   wildcard
-	$(wildcard ${0})

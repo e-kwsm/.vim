@@ -1,3 +1,4 @@
+# vim:set fdm=marker:
 # shebang {{{1
 snippet #!
 abbr    #!/usr/bin/env gnuplot
@@ -26,8 +27,8 @@ alias   set_term_pdf
 	${0}
 
 snippet set_terminal_png
-snippet set_term_png
-	 set terminal png \
+alias   set_term_png
+	set terminal png \
 		transparent nointerlace \
 		truecolor \
 		linewidth 1  \
@@ -66,5 +67,3 @@ alias   italic
 
 snippet set_pallette_cubehelix
 	set palette cubehelix start ${1:0.5} cycles ${2:-1.5} saturation ${3:1}
-
-# vim:set fdm=marker:

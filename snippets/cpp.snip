@@ -1,32 +1,15 @@
-delete  main
-snippet main
-	int main(int argc, char** argv)
-	{
-	${0}
-		return 0;
-	}
-
+# vim:set fdm=marker:
 delete      namespace
-options     head
 snippet     namespace
+options     head
 	namespace ${1:#:name} {
 	${0:TARGET}
 	} // namespace $1
-
 
 # namespace {{{1
 snippet std;
 	using namespace std;
 
-# operator
-snippet operator<<
-	std::ostream& operator<<(std::ostream& ${1:os}, ${2})
-	{
-		return $1${0};
-	}
-
 # macro {{{1
 snippet PRETTY_FUNCTION
 	std::cerr << __PRETTY_FUNCTION__ << std::endl;
-
-# vim:set fdm=marker:
