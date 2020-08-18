@@ -83,6 +83,7 @@ IUPAP
 InChI
 Ising
 JSON
+Jahn
 Kavli
 Kitaev
 Kohn
@@ -161,6 +162,7 @@ ROHF
 Rodrigues
 SCF
 SDD
+SDGs
 SHA1
 STO
 SVG
@@ -179,6 +181,7 @@ VLAN
 Verlet
 Wannier
 Warshall
+XRD
 XYZ
 XeLaTeX/=
 XeTeX/=
@@ -214,6 +217,8 @@ allylation
 allylic
 amination
 amyloid
+anharmonic
+anharmonicity
 annulation
 anoxia
 ansatz
@@ -252,6 +257,7 @@ azelate
 azide
 azobenzene
 azole
+azulene
 bandgap
 barostat
 basicity
@@ -269,6 +275,8 @@ bioinformatics
 biomaterial
 biomaterials
 biomimetic
+biopolymer
+biopolymers
 biosensing
 biosynthesis
 biradical
@@ -309,6 +317,7 @@ compostable
 convolutional
 copolymerization
 copyedit
+coronene
 cosh
 coth
 cryo
@@ -563,7 +572,9 @@ perovskites
 peroxidation
 perturbate
 perturbative
+perturbatively
 perylene
+phenanthrene
 phenylene
 phononic
 phosphite
@@ -607,6 +618,8 @@ porphyrin
 postdoc
 postdocs
 prefactor
+prerequirement
+prerequirements
 prion
 propene
 protonate
@@ -617,6 +630,7 @@ pseudogap
 pseudopotential
 pyrazine
 pyrazole
+pyrene
 pyridazine
 pyrrole
 quadruplex
@@ -702,6 +716,7 @@ templating
 terephthalate
 terephthalic
 tert/=
+tetracene
 thermochromism
 thiazole
 thienyl
