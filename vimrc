@@ -14,7 +14,7 @@ endif " }}}
 let s:bundle_root = expand('~/.local/share/nvim/site/bundle')
 let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_dir)
-  echo 'git clone --depth 1 https://github.com/Shougo/dein.vim ' . s:dein_dir
+  echo 'git clone --depth 1 https://github.com/Shougo/dein.vim.git ' . s:dein_dir
 else
   let &runtimepath .= ',' . s:dein_dir
   call dein#begin(s:bundle_root)
@@ -24,17 +24,19 @@ else
     call dein#add('Shougo/deoplete.nvim')
   endif
   if has('nvim')
-    call dein#add('neovim/nvim-lsp')
+    call dein#add('neovim/nvim-lspconfig')
     call dein#add('ncm2/float-preview.nvim')
   endif
   if has('nvim') && has('python3')
     call dein#add('Shougo/deoplete-lsp')
+    call dein#add('Shougo/deoppet.nvim')
+  else
+    call dein#add('Shougo/neosnippet.vim')
   endif
 
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/neosnippet.vim')
   call dein#add('Vimjas/vim-python-pep8-indent')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
@@ -56,7 +58,7 @@ else
   filetype plugin indent on
 
   " plugin config {{{2
-  " neovim/nvim-lsp {{{3
+  " neovim/nvim-lspconfig {{{3
   if has('nvim')
     lua << EOF
     require'nvim_lsp'.clangd.setup{}
@@ -73,6 +75,8 @@ EOF
       nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
       nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
       nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+
+      nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>
     endfunction
 
     augroup MyLSP
@@ -87,32 +91,42 @@ EOF
     autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
   endif
 
-  " Shougo/neosnippet.vim {{{3
-  " Plugin key-mappings.
-  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k>     <Plug>(neosnippet_expand_target)
+  " Shougo/deoppet.nvim {{{3
+  if has('nvim') && has('python3')
+    call deoppet#initialize()
+    call deoppet#custom#option('snippets_dirs',
+          \ globpath(&runtimepath, '*snippets', v:true, v:true))
 
-  " SuperTab like snippets behavior.
-  "imap <expr><TAB>
-  " \ pumvisible() ? "\<C-n>" :
-  " \ neosnippet#expandable_or_jumpable() ?
-  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-        \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-  " For snippet_complete marker.
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
+    imap <C-k>  <Plug>(deoppet_expand)
+    imap <C-f>  <Plug>(deoppet_jump_forward)
+    imap <C-b>  <Plug>(deoppet_jump_backward)
+    smap <C-f>  <Plug>(deoppet_jump_forward)
+    smap <C-b>  <Plug>(deoppet_jump_backward)
   endif
 
-  let g:neosnippet#expand_word_boundary = 1
-  let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+  " Shougo/neosnippet.vim {{{3
+  if !(has('nvim') && has('python3'))
+    " Plugin key-mappings.
+    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-  " majutsushi/tagbar {{{3
-  let g:tagbar_autofocus=1
-  nmap <F8> :TagbarToggle<CR>
-  nmap <F9> :TagbarOpen fjc<CR>
+    " SuperTab like snippets behavior.
+    "imap <expr><TAB>
+    " \ pumvisible() ? "\<C-n>" :
+    " \ neosnippet#expandable_or_jumpable() ?
+    " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+          \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+    " For snippet_complete marker.
+    if has('conceal')
+      set conceallevel=2 concealcursor=niv
+    endif
+
+    let g:neosnippet#expand_word_boundary = 1
+    let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+  endif
 
   " ncm2/float-preview.nvim {{{3
   let g:float_preview#docked = 1
@@ -257,42 +271,6 @@ endif
 if has('nvim')
   if !exists(':Exe')
     command -nargs=* Exe up | te chmod u+x % && %:p <args>
-  endif
-
-  if !exists(':GitAddPatch')
-    command GitAddPatch up | te git add -p %
-  endif
-
-  if !exists(':GitCommitChangesOfFile')
-    command GitCommitChangesOfFile up | te git add % && git commit -m %
-  endif
-
-  if !exists(':GitCommitFilenameAsMsg')
-    command GitCommitFilenameAsMsg te git commit -m %
-  endif
-
-  if !exists(':GitDiff')
-    command -nargs=* GitDiff up | te git diff % <args>
-  endif
-
-  if !exists(':Gnuplot')
-    command -nargs=* Gnuplot te gnuplot <args>
-  endif
-
-  if !exists(':Ipython')
-    command -nargs=* Ipython te ipython <args>
-  endif
-
-  if !exists(':LuaLaTeX')
-    command -nargs=* LuaLaTeX up | te lualatex -output-directory %:h <args> %
-  endif
-
-  if !exists(':SpTe')
-    command -nargs=* SpTe sp | te <args>
-  endif
-
-  if !exists(':XeLaTeX')
-    command -nargs=* XeLaTeX up | te xelatex -output-directory %:h <args> %
   endif
 endif
 " }}}1
