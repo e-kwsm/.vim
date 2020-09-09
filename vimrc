@@ -88,14 +88,15 @@ EOF
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+    autocmd InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
   endif
 
   " Shougo/deoppet.nvim {{{3
   if has('nvim') && has('python3')
     call deoppet#initialize()
     call deoppet#custom#option('snippets_dirs',
-          \ globpath(&runtimepath, '*snippets', v:true, v:true))
+          \ globpath(&runtimepath, 'neosnippets', v:true, v:true)
+          \ + globpath(&runtimepath, 'snippets', v:true, v:true))
 
     imap <C-k>  <Plug>(deoppet_expand)
     imap <C-f>  <Plug>(deoppet_jump_forward)

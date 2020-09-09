@@ -43,6 +43,7 @@ class Source(Base):
                 "mathtools",
                 "mhchem",
                 "minted",
+                "mleftright",
                 "multirow",
                 "nicematrix",
                 "pdfpages",
