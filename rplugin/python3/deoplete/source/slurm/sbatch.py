@@ -5,14 +5,14 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "SLURM directive"
+        self.name = "SLURM.sbatch"
         self.mark = "[SLURM]"
         self.filetypes = ["sh"]
         self.input_pattern = r"^\s*#SBATCH\s+--[a-z]*$"
         self.rank = 400
 
         self._candidates = [
-            {"abbr": "--" + d, "word": d + "="}
+            {"abbr": f"--{d}", "word": f"{d}="}
             for d in [
                 "begin",
                 "comment",

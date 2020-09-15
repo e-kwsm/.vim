@@ -5,7 +5,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "SGE directive"
+        self.name = "SGE.qsub"
         self.mark = "[SGE]"
         self.filetypes = ["sh"]
         prefix = re.escape("#$")
@@ -24,7 +24,7 @@ class Source(Base):
             "wd": "working dir",
         }
         self._candidates = [
-            {"abbr": "-" + k, "menu": v, "word": k} for k, v in directives.items()
+            {"abbr": f"-{k}", "menu": v, "word": k} for k, v in directives.items()
         ]
 
     def gather_candidates(self, context):

@@ -9,9 +9,7 @@ class Source(Base):
         self.filetypes = ["cmake"]
         self.input_pattern = r"\${\w*"
         self.rank = 300
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "Python_COMPILER",
             "Python_COMPILER_ID",
             "Python_Compiler_FOUND",
@@ -36,3 +34,6 @@ class Source(Base):
             "Python_VERSION_MINOR",
             "Python_VERSION_PATCH",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates

@@ -9,12 +9,13 @@ class Source(Base):
         self.filetypes = ["cmake"]
         self.input_pattern = r"\${\w*"
         self.rank = 300
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "LAPACK95_FOUND",
             "LAPACK95_LIBRARIES",
             "LAPACK_FOUND",
             "LAPACK_LIBRARIES",
             "LAPACK_LINKER_FLAGS",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates

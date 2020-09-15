@@ -12,14 +12,22 @@ class Source(Base):
             "".join(f"[{c}{c.upper()}]" for c in "message")
         )
         self.rank = 400
+        self._candidates = [
+            "AUTHOR_WARNING",
+            "CHECK_FAIL",
+            "CHECK_PASS",
+            "CHECK_START",
+            "DEBUG",
+            "DEPRECATION",
+            "FATAL_ERROR",
+            "NOTICE",
+            "SEND_ERROR",
+            "STATUS",
+            "TRACE",
+            "VERBOSE",
+            "WARNING",
+        ]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
-            return [
-                "AUTHOR_WARNING",
-                "DEPRECATION",
-                "FATAL_ERROR",
-                "SEND_ERROR",
-                "STATUS",
-                "WARNING",
-            ]
+            return self._candidates

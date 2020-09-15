@@ -6,7 +6,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "LaTeX cmd"
+        self.name = "tex.command"
         self.mark = "[cmd]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\\[A-Za-z]*$"

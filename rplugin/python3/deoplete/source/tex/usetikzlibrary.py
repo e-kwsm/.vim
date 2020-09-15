@@ -8,7 +8,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "tikzlib"
+        self.name = "tex.usetikzlibrary"
         self.mark = "[tikzlib]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\\usetikzlibrary\{[\w.-]*(?:,\s*[\w.-]*)*$"

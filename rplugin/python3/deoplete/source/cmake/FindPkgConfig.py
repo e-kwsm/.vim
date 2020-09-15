@@ -9,10 +9,11 @@ class Source(Base):
         self.filetypes = ["cmake"]
         self.input_pattern = r"\${\w*"
         self.rank = 300
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "PKG_CONFIG_EXECUTABLE",
             "PKG_CONFIG_FOUND",
             "PKG_CONFIG_VERSION_STRING",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates

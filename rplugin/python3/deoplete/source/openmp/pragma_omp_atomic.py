@@ -5,7 +5,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "#pragma omp atomic"
+        self.name = "openmp.pragma_omp_atomic"
         self.mark = "[omp atomic]"
         self.filetypes = ["c", "cpp"]
         self.input_pattern = r"^\s*#\s*pragma\s+omp\s+atomic\s+"

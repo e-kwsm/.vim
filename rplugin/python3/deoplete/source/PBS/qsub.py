@@ -5,7 +5,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "PBS directive"
+        self.name = "PBS.qsub"
         self.mark = "[PBS]"
         self.filetypes = ["sh"]
         self.input_pattern = r"^\s*#PBS\s+-\w?$"
@@ -20,7 +20,7 @@ class Source(Base):
             "S": "interpreter",
         }
         self._candidates = [
-            {"abbr": "-" + k, "menu": v, "word": k}
+            {"abbr": f"-{k}", "menu": v, "word": f"{k} "}
             for k, v in sorted(directives.items())
         ]
 

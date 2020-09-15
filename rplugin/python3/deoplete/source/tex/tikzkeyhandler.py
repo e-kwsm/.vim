@@ -5,7 +5,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "tikz key handlers"
+        self.name = "tex.tikzkeyhandler"
         self.mark = "[tikz]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\w+/\.[a-z]*$"

@@ -12,25 +12,26 @@ class Source(Base):
             "".join(f"[{c}{c.upper()}]" for c in "list")
         )
         self.rank = 400
+        self._candidates = [
+            "APPEND",
+            "FILTER",
+            "FIND",
+            "GET",
+            "INSERT",
+            "JOIN",
+            "LENGTH",
+            "POP_BACK",
+            "POP_FRONT",
+            "PREPEND",
+            "REMOVE_AT",
+            "REMOVE_DUPLICATES",
+            "REMOVE_ITEM",
+            "REVERSE",
+            "SORT",
+            "SUBLIST",
+            "TRANSFORM",
+        ]
 
     def gather_candidates(self, context):
         if re.search(self.input_pattern, context["input"]):
-            return [
-                "APPEND",
-                "FILTER",
-                "FIND",
-                "GET",
-                "INSERT",
-                "JOIN",
-                "LENGTH",
-                "POP_BACK",
-                "POP_FRONT",
-                "PREPEND",
-                "REMOVE_AT",
-                "REMOVE_DUPLICATES",
-                "REMOVE_ITEM",
-                "REVERSE",
-                "SORT",
-                "SUBLIST",
-                "TRANSFORM",
-            ]
+            return self._candidates

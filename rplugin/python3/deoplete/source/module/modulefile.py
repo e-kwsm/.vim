@@ -7,7 +7,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "modulefile"
+        self.name = "module.modulefile"
         self.mark = "[modulefile]"
         self.filetypes = ["module"]
         self.input_pattern = (

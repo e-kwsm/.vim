@@ -4,7 +4,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "xcolor"
+        self.name = "tex.xcolor"
         self.mark = "[xcolor]"
         self.filetypes = ["tex"]
         self.input_pattern = (

@@ -4,12 +4,10 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "attr"
+        self.name = "svg.attr_name"
         self.mark = "[attr]"
         self.filetypes = ["svg"]
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "accumulate",
             "additive",
             "alignment-baseline",
@@ -329,3 +327,6 @@ class Source(Base):
             "z",
             "zoomAndPan",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates

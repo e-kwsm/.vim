@@ -24,7 +24,9 @@ class Source(Base):
             self._candidates = []
         else:
             self._candidates = [
-                re.sub("^Find", "", p) for p in proc.stdout.splitlines()
+                re.sub("^Find", "", p)
+                for p in proc.stdout.splitlines()
+                if p.startswith("Find")
             ]
 
     def gather_candidates(self, context):

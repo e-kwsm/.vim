@@ -5,8 +5,8 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "beamer.size"
-        self.mark = "[beamer.size]"
+        self.name = "tex.beamersize"
+        self.mark = "[beamersize]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\\setbeamersize\{\w*$"
         self._candidate = [

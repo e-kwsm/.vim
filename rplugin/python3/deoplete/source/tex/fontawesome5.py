@@ -5,7 +5,7 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "fontawesome5"
+        self.name = "tex.fontawesome5"
         self.mark = "[fontawesome5]"
         self.filetypes = ["tex"]
         self.input_pattern = r"\\faIcon(?:\[.*?\])?{[^}]*$"

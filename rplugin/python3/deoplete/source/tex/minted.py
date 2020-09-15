@@ -12,7 +12,7 @@ except ImportError:
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "pygments.lexer"
+        self.name = "tex.minted"
         self.mark = "[pygments.lexer]"
         self.filetypes = ["tex"]
         self.input_pattern = (

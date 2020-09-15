@@ -9,9 +9,7 @@ class Source(Base):
         self.filetypes = ["bib"]
         self.input_pattern = r"^\s*@[a-zA-Z]*$"
         self.rank = 400
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "article",
             "artwork",
             "audio",
@@ -62,3 +60,6 @@ class Source(Base):
             "unpublished",
             "video",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates

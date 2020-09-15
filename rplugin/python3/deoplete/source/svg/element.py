@@ -4,14 +4,12 @@ from deoplete.base.source import Base
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = "elem"
+        self.name = "svg.element"
         self.mark = "[elem]"
         self.filetypes = ["svg"]
         self.rank = 500
         self.pattern = r"</?\w*$"
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "a",
             "animate",
             "animateMotion",
@@ -82,3 +80,6 @@ class Source(Base):
             "video",
             "view",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates

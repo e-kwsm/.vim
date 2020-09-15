@@ -5,28 +5,6 @@ from typing import Iterator
 
 
 def main():
-    tmpl = r"""import re
-from deoplete.base.source import Base
-
-
-class Source(Base):
-    def __init__(self, vim):
-        super().__init__(vim)
-        self.name = "#pragma omp {directive}"
-        self.mark = "[omp {directive}]"
-        self.filetypes = ["c", "cpp"]
-        self.input_pattern = r"^\s*#\s*pragma\s+omp\s+{pattern}"
-        self.rank = {rank}
-
-    def gather_candidates(self, context):
-        if re.search(self.input_pattern, context["input"]):
-            return [
-{clauses}
-            ]
-"""
-
-    rank = 500
-
     omp_directives = {
         "parallel": [
             "copyin",
@@ -220,12 +198,22 @@ class Source(Base):
     for d in ["parallel for", "parallel for simd"]:
         concat_caluses(["distribute", d], [])
 
-    for d in ["distribute", "distribute simd", "distribute parallel for", "distribute parallel for simd"]:
+    for d in [
+        "distribute",
+        "distribute simd",
+        "distribute parallel for",
+        "distribute parallel for simd",
+    ]:
         concat_caluses(["teams", d], [])
 
     for d in ["parallel", "parallel for", "parallel for simd"]:
         concat_caluses(["target", d], ["copyin"])
-    for d in ["simd", "teams", "teams distribute parallel for", "teams distribute parallel for simd"]:
+    for d in [
+        "simd",
+        "teams",
+        "teams distribute parallel for",
+        "teams distribute parallel for simd",
+    ]:
         concat_caluses(["target", d], [])
 
     exclusives = {}
@@ -233,23 +221,42 @@ class Source(Base):
     for d1, d2 in combinations(omp_directives, 2):
         if d1 > d2:
             d1, d2 = d2, d1
-        m = re.search("^" + d1 + " ", d2)
-        if m:
+        if d2.startswith(f"{d1} "):
             exclusives.setdefault(d1, set())
-            exclusives[d1].add(re.sub(" .*", "", d2[m.end():]))
+            exclusives[d1].add(d2[len(d1):].split()[0])
+
+    rank = 500
 
     for directive, clauses in omp_directives.items():
-        clauses = "\n".join([" " * 16 + '"' + c + '",' for c in clauses])
+        clauses = "\n".join([" " * 16 + f'"{c}",' for c in clauses])
         pattern = directive.replace(" ", r"\s+")
         if directive in exclusives:
-            pattern += r"\s+(?!" + "|".join(sorted(exclusives[directive])) + ")"
+            pattern += r"\s+(?!{})".format("|".join(sorted(exclusives[directive])))
         else:
             pattern += r"\s+"
-        with open("pragma_omp_" + directive.replace(" ", "_") + ".py", "w") as f:
+
+        filename = "pragma_omp_{}".format(directive.replace(" ", "_"))
+        with open(f"{filename}.py", "w") as f:
             f.write(
-                tmpl.format(
-                    rank=rank, directive=directive, pattern=pattern, clauses=clauses,
-                )
+                fr"""import re
+from deoplete.base.source import Base
+
+
+class Source(Base):
+    def __init__(self, vim):
+        super().__init__(vim)
+        self.name = "openmp.{filename}"
+        self.mark = "[omp {directive}]"
+        self.filetypes = ["c", "cpp"]
+        self.input_pattern = r"^\s*#\s*pragma\s+omp\s+{pattern}"
+        self.rank = {rank}
+
+    def gather_candidates(self, context):
+        if re.search(self.input_pattern, context["input"]):
+            return [
+{clauses}
+            ]
+"""
             )
 
 

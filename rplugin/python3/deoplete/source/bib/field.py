@@ -9,9 +9,7 @@ class Source(Base):
         self.filetypes = ["bib"]
         self.input_pattern = r"^\s*[a-z]*$"
         self.rank = 400
-
-    def gather_candidates(self, context):
-        return [
+        self._candidates = [
             "abstract",
             "addendum",
             "afterword",
@@ -149,3 +147,6 @@ class Source(Base):
             "xdata",
             "xref",
         ]
+
+    def gather_candidates(self, context):
+        return self._candidates
