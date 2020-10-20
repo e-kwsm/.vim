@@ -15,15 +15,16 @@ class Source(Base):
             {"abbr": f"--{d}", "word": f"{d}="}
             for d in [
                 "begin",
+                "chdir",
                 "comment",
                 "cpus-per-task",
                 "dependency",
-                "chdir",
                 "error",
                 "export",
                 "job-name",
                 "mail-type",
                 "nodes",
+                "ntasks-per-node",
                 "output",
                 "partition",
                 "time",

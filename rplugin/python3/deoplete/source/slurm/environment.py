@@ -1,4 +1,3 @@
-import re
 from deoplete.base.source import Base
 
 
@@ -13,15 +12,14 @@ class Source(Base):
             "SLURMD_NODENAME",
             "SLURM_CLUSTER_NAME",
             "SLURM_CPUS_ON_NODE",
-            "SLURM_JOB_CPUS_PER_NODE",
+            "SLURM_CPUS_PER_TASK",
             "SLURM_JOB_ID",
             "SLURM_JOB_NAME",
-            "SLURM_JOB_NODELIST",
             "SLURM_JOB_NUM_NODES",
+            "SLURM_NTASKS",
+            "SLURM_NTASKS_PER_NODE",
             "SLURM_SUBMIT_DIR",
-            "SLURM_TASKS_PER_NODE",
         ]
 
     def gather_candidates(self, context):
-        if re.search(self.input_pattern, context["input"]):
-            return self._candidates
+        return self._candidates
