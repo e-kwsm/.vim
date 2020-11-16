@@ -3,7 +3,6 @@ snippet \begingroup
 		${0}
 	\endgroup
 
-delete document
 snippet document
 	\begin{document}
 	${0}
@@ -58,8 +57,7 @@ snippet \text
 snippet \multicolumn
 	\multicolumn{${1}}{${2}}{${3}}
 
-# article.cls
-delete  figure
+# article.cls [[[1
 snippet figure
 alias   \begin{figure} \figure
 	\begin{figure}[${1}] % [[[
@@ -69,7 +67,6 @@ alias   \begin{figure} \figure
 		\label{fg:${6}}
 	\end{figure} % ]]]${0}
 
-delete  table
 snippet table
 alias   \begin{table} \table
 	\begin{table}[${1}] % [[[
@@ -94,7 +91,6 @@ alias   \begin{block} \block
 		${0}
 	\end{block}
 
-delete columns
 snippet columns
 	\begin{columns}
 		\begin{column}{${1:0.5}${2:\\textwidth}}
@@ -108,6 +104,13 @@ alias   \begin{exampleblock} \exampleblock
 		${0}
 	\end{exampleblock}
 
+delete frame
+snippet frame
+alias \frame
+	\begin{frame}{${1}} % [[[
+		${0}
+	\end{frame} % ]]]
+
 snippet \overlayarea
 	\begin{overlayarea}{${1}${2:\\\textwidth}}{${3}${4:\\\textheight}}
 		${0}
@@ -119,10 +122,6 @@ snippet setbeamerbackgroundgrid
 snippet \usebeamercolor
 alias   usebeamercolor
 	\usebeamercolor[${1:fg}]{${2:#:structure}} ${3:#:text}
-
-snippet foldmarkerframe
-options head
-	% vim: fmr=\\\\begin{frame},\\\\end{frame}
 
 # expl3.sty [[[1
 snippet \ExplSyntaxOn
