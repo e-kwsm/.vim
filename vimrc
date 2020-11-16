@@ -37,10 +37,8 @@ else
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Vimjas/vim-python-pep8-indent')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
-  call dein#add('cp2k/vim-cp2k')
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
@@ -61,8 +59,8 @@ else
   " neovim/nvim-lspconfig {{{3
   if has('nvim')
     lua << EOF
-    require'nvim_lsp'.clangd.setup{}
-    require'nvim_lsp'.pyls.setup{}
+    require'lspconfig'.clangd.setup{}
+    require'lspconfig'.pyls.setup{}
 EOF
 
     function LSP_maps()
@@ -94,9 +92,10 @@ EOF
   " Shougo/deoppet.nvim {{{3
   if has('nvim') && has('python3')
     call deoppet#initialize()
-    call deoppet#custom#option('snippets_dirs',
-          \ globpath(&runtimepath, 'neosnippets', v:true, v:true)
-          \ + globpath(&runtimepath, 'snippets', v:true, v:true))
+    call deoppet#custom#option('snippets',
+          \ map(globpath(&runtimepath, 'neosnippets', v:true, v:true)
+          \ + globpath(&runtimepath, 'snippets', v:true, v:true),
+          \ "{ 'path': v:val }"))
 
     imap <C-k>  <Plug>(deoppet_expand)
     imap <C-f>  <Plug>(deoppet_jump_forward)
