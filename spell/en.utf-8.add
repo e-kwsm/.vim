@@ -2,16 +2,17 @@ AAMD
 ABI
 AFM
 AIMD
-ALS
 API
 AST
 AVX
-Angewandte Chemie
+B2PLYP
 B3LYP
+B97
 BFGS
 BFS
 BHJ
 BLAS
+BP86
 BSSE
 Becke
 Broyden
@@ -20,12 +21,14 @@ CASSCF
 CBM
 CCSD
 CCSDT
+CCSDTQ
 CGMD
 CIP
 CISD
+CISDT
+CISDTQ
 CODATA
 CPython/=
-CRISPR
 CUDA
 Cahn
 Chebyshev
@@ -36,21 +39,20 @@ DFT
 DFTB
 DHCP
 DIIS
+DK1
+DK2
+DK3
 DMC
 DOI
 Debian
 Diels
-ECMAScript
+ECMAScript/=
 ECP
 EOF
 EPBT
 EQE
 Ehrenfest
-Ekman
-El Niño
-Elsevier
 FRM
-Ferrers
 Fock
 Förster
 GCC
@@ -68,19 +70,25 @@ Grignard
 Grimme
 Gummel
 HCTH
+HCTH120
+HCTH147
+HCTH407
+HCTH93
 HPC
 HSE
+HSE03
+HSE06
 HTTPS
 Hartree
 Higgs
 Hund
 Hückel
+IPCE
 IPCM
 IQE
-IRC
 IUPAC
 IUPAP
-InChI
+InChI/=
 Ising
 JSON
 Jahn
@@ -96,7 +104,6 @@ LJ
 LLVM
 LUMO
 LYP
-La Niña
 LanL2DZ/=
 Laplacian
 Lebedev
@@ -134,12 +141,12 @@ OPLS
 OPV
 ORCID
 OTFSC
-OpenMP
-OpenType
+OpenMP/=
+OpenType/=
 P3HT
 PBE
 PBE0
-PBE1PBE
+PBE0DH
 PCA
 PCBM
 PCE
@@ -147,13 +154,15 @@ PEDOT
 POSIX
 PRNG
 PSS
-PTSD
 PV
+PW91
 Perdew
 Plesset
 Pochhammer
 Pople
 QCISD
+QCISDT
+QCISDTQ
 QMC
 Queisser
 RDF
@@ -162,7 +171,7 @@ ROHF
 Rodrigues
 SCF
 SDD
-SDGs
+SDGs/=
 SHA1
 STO
 SVG
@@ -173,11 +182,14 @@ Schwarz
 TDDFT
 TLS
 TODO
-TrueType
+TPSS
+TrueType/=
 UFF
 UTF-8
 VBM
 VLAN
+VWN3
+VWN5
 Verlet
 Wannier
 Warshall
@@ -192,7 +204,6 @@ acene
 acetophenone
 acetyl
 achiral
-actin
 acyl
 adatom
 adenosine
@@ -208,6 +219,7 @@ alkene
 alkenes
 alkenyl
 alkoxide
+alkoxides
 alkylation
 alkyne
 alkynes
@@ -216,7 +228,6 @@ allyl
 allylation
 allylic
 amination
-amyloid
 anharmonic
 anharmonicity
 annulation
@@ -339,6 +350,10 @@ cytokine
 de Gennes
 de novo
 debye
+def2-QZVP/=
+def2-QZVPD/=
+def2-QZVPP/=
+def2-QZVPPD/=
 def2-SVP/=
 def2-SVPD/=
 def2-TZV/=
@@ -405,7 +420,7 @@ ferrimagnetism
 ferroelectricity
 ferromagnetism
 formamide
-fs
+fs/=
 fullerene
 fumarate
 fumaric
@@ -470,7 +485,7 @@ isoxazole
 iterable
 jellium
 junctional
-kDa
+kDa/=
 keto
 ketones
 kinase
@@ -482,7 +497,7 @@ lanthanides
 lectin
 levelized
 lhs
-mA
+mA/=
 mV/=
 magnon
 malate
@@ -502,7 +517,6 @@ metamaterials
 methoxide
 methoxy
 methylammonium
-miRNA/=
 micelle
 microstructure
 mimetics
@@ -512,8 +526,6 @@ monolayer
 multicrystalline
 multimodal
 multiscale
-myoglobin
-myosin
 nanocluster
 nanocomposite
 nanocrystal
@@ -625,7 +637,7 @@ propene
 protonate
 protonated
 protonation
-ps
+ps/=
 pseudogap
 pseudopotential
 pyrazine
@@ -641,7 +653,6 @@ qubit
 quinoidal
 quinoline
 quinone
-rRNA/=
 redox
 refactor
 regio
@@ -730,7 +741,7 @@ tunability
 ultrathin
 upconversion
 van der Waals
-vdW
+vdW/=
 vibronic
 vibronically
 vicinal
