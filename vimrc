@@ -141,6 +141,7 @@ source $VIMRUNTIME/macros/matchit.vim
 set autowrite
 set cmdheight=1
 set conceallevel=0
+set cursorline
 set expandtab
 set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
 set fileformats=unix,dos,mac
@@ -156,9 +157,8 @@ set scrolloff=1
 set shiftwidth=2
 set showcmd
 set spelllang=en,cjk
-"set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-set suffixes=.bak,~,.o,.info,.swp,.obj
-set suffixes+=.aux,.bbl,.bcf,.blg,.d,.dvi,.log,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv
+set suffixes-=.h
+set suffixes+=.aux,.bbl,.bcf,.blg,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv  " tex
 set title
 set visualbell
 set wildmenu
@@ -195,7 +195,6 @@ augroup myFileTypeConfig " {{{1
   au FileType gitcommit  setl textwidth=0 spell
   au FileType gitconfig  setl noexpandtab
   au FileType gnuplot    setl shiftwidth=4 softtabstop=4 textwidth=100
-  au FileType hgcommit   setl spell
   au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
   au FileType python     setl keywordprg=pydoc3 shiftwidth=4 softtabstop=4 textwidth=100
@@ -211,12 +210,13 @@ augroup myFileTypeConfig " {{{1
   au FileType xyz        setl cursorline
 
   " shebang
-  au BufNewFile *.bash put!='#!/bin/bash'            | :2
-  au BufNewFile *.jl   put!='#!/usr/bin/env julia'   | :2
-  au BufNewFile *.plt  put!='#!/usr/bin/env gnuplot' | :2
-  au BufNewFile *.py   put!='#!/usr/bin/env python3' | :2
-  au BufNewFile *.tlu  put!='#!/usr/bin/env texlua'  | :2
-  au BufNewFile *.sh   put!='#!/bin/sh'              | :2
+  au BufNewFile *.awk  put!='#!/usr/bin/env -S awk -f'	| :2
+  au BufNewFile *.bash put!='#!/bin/bash'	| :2
+  au BufNewFile *.jl   put!='#!/usr/bin/env julia'	| :2
+  au BufNewFile *.plt  put!='#!/usr/bin/env gnuplot'	| :2
+  au BufNewFile *.py   put!='#!/usr/bin/env python3'	| :2
+  au BufNewFile *.tlu  put!='#!/usr/bin/env texlua'	| :2
+  au BufNewFile *.sh   put!='#!/bin/sh'	| :2
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
