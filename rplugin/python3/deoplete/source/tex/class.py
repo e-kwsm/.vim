@@ -26,6 +26,7 @@ class Source(Base):
             "beamer",
             "book",
             "jlreq",
+            "memoir",
             "minimal",
             "report",
             "scrartcl",

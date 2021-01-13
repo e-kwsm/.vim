@@ -20,7 +20,7 @@ class Source(Base):
             + "|".join(
                 ["begin{minted}", r"inputminted(?:\[.*?\])?", "mint", "mintinline"]
             )
-            + r"){\S*$"
+            + "){[^}]*$"
         )
         self.rank = 800
 
