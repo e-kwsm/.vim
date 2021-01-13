@@ -12,20 +12,22 @@ class Source(Base):
 
         # rouge
         self._candidate = [
-            "bash",
+            "awk",
+            "bibtex",
             "c",
             "cmake",
+            "console",
             "cpp",
             "diff",
             "fortran",
-            "ini",
-            "latex",
+            "html",
             "make",
+            "markdown",
             "python",
-            "sh",
             "shell",
             "tex",
             "toml",
+            "viml",
             "xml",
             "yaml",
         ]
