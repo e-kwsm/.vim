@@ -27,10 +27,12 @@ CIP
 CISD
 CISDT
 CISDTQ
+CMake
 CODATA
 CPython/=
 CUDA
 Cahn
+CentOS/=
 Chebyshev
 Cholesky
 Condon
@@ -74,6 +76,7 @@ HCTH120
 HCTH147
 HCTH407
 HCTH93
+HDF5
 HPC
 HSE
 HSE03
@@ -166,6 +169,7 @@ QCISDTQ
 QMC
 Queisser
 RDF
+RHEL
 RHF
 ROHF
 Rodrigues
@@ -186,6 +190,7 @@ TPSS
 TrueType/=
 UFF
 UTF-8
+Ubuntu
 VBM
 VLAN
 VWN3
@@ -292,10 +297,12 @@ biosensing
 biosynthesis
 biradical
 bispherical
+bohr
 borane
 boronate
 boronic
 buckyball
+butadiene
 butoxy
 butylene
 butyne
@@ -338,6 +345,7 @@ csch
 cubane
 cycloalkane
 cyclobutane
+cyclobutene
 cyclodecane
 cycloheptane
 cyclohexane
@@ -347,6 +355,7 @@ cyclooctane
 cyclopentane
 cyclopropane
 cytokine
+d'Alembert
 de Gennes
 de novo
 debye
@@ -368,6 +377,8 @@ delocalizes
 dendritic
 deprotonation
 deque
+deserialization
+deserialize
 deuteration
 diabatic
 diagonalization
@@ -435,6 +446,7 @@ glycolide
 graphene
 guanidine
 haplotype
+hartree
 helicene
 hemiacetal
 hetero
@@ -486,9 +498,11 @@ iterable
 jellium
 junctional
 kDa/=
+kJ/=
 keto
 ketones
 kinase
+l'Hospital
 lactam
 lactide
 lactone
@@ -497,6 +511,8 @@ lanthanides
 lectin
 levelized
 lhs
+lithiated
+lua
 mA/=
 mV/=
 magnon
@@ -512,6 +528,7 @@ memorylessness
 mesoporous
 mesoscale
 mesoscopic
+metadata
 metamaterial
 metamaterials
 methoxide
@@ -525,6 +542,7 @@ monocrystalline
 monolayer
 multicrystalline
 multimodal
+multipole
 multiscale
 nanocluster
 nanocomposite
@@ -556,6 +574,7 @@ nitroso
 nonadiabatic
 noncanonical
 noncovalent
+nonplanar
 nuclearity
 nucleophile
 nucleophilic
@@ -669,6 +688,7 @@ ribose
 rotaxane
 rubrene
 rutile
+rydberg
 scission
 sebacate
 sebacic
@@ -736,12 +756,14 @@ thiophene
 timestamp
 titania
 tribology
+triphenylene
 tryptophan
 tunability
 ultrathin
 upconversion
 van der Waals
 vdW/=
+versioned
 vibronic
 vibronically
 vicinal
