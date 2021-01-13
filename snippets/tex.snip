@@ -62,7 +62,7 @@ snippet figure
 alias   \begin{figure} \figure
 	\begin{figure}[${1}] % [[[
 		\centering
-		\includegraphics[${2:width=${3\}}]{${4}}
+		\includegraphics[${2:width=}${3}]{${4}}
 		\caption{${5}}
 		\label{fg:${6}}
 	\end{figure} % ]]]${0}
@@ -93,7 +93,7 @@ alias   \begin{block} \block
 
 snippet columns
 	\begin{columns}
-		\begin{column}{${1:0.5}${2:\\textwidth}}
+		\begin{column}{${1:0.5}${2:\textwidth}}
 			${0}
 		\end{column}
 	\end{columns}
@@ -112,7 +112,7 @@ alias \frame
 	\end{frame} % ]]]
 
 snippet \overlayarea
-	\begin{overlayarea}{${1}${2:\\\textwidth}}{${3}${4:\\\textheight}}
+	\begin{overlayarea}{${1}${2:\textwidth}}{${3}${4:\textheight}}
 		${0}
 	\end{overlayarea}
 
@@ -269,7 +269,7 @@ snippet \foreach
 
 # wrapfig.sty [[[1
 snippet \wrapfigure
-	\begin{wrapfigure}[]{${1:r}}}{${2}${3:\\textwidth}} % [[[
+	\begin{wrapfigure}[]{${1:r}}}{${2}${3:\textwidth}} % [[[
 		\centering
 		\includegraphics[${4}]{${5}}
 		\caption{${6}}
@@ -285,16 +285,16 @@ snippet \textcolor
 
 # xparse.sty [[[1
 snippet \NewDocumentCommand
-	\NewDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+	\NewDocumentCommand{\${1:#:func}}{${2:#:arg}}{${3:#:code}}
 
 snippet \RenewDocumentCommand
-	\RenewDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+	\RenewDocumentCommand{\${1:#:func}}{${2:#:arg}}{${3:#:code}}
 
 snippet \ProvideDocumentCommand
-	\ProvideDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+	\ProvideDocumentCommand{\${1:#:func}}{${2:#:arg}}{${3:#:code}}
 
 snippet \DeclareDocumentCommand
-	\DeclareDocumentCommand{\\${1:#:func}}{${2:#:arg}}{${3:#:code}}
+	\DeclareDocumentCommand{\${1:#:func}}{${2:#:arg}}{${3:#:code}}
 
 snippet \IfNoValueT
 	\IfNoValueT{${1:#:arg}}{${2:#:true}}
