@@ -2,8 +2,8 @@ filetype plugin indent on
 syntax enable
 
 if has('nvim') " {{{
-  let g:loaded_python_provider = 1 " disabled
-  for s:p in range(8, 5, -1)
+  let g:loaded_python_provider = 0  " disabled
+  for s:p in range(9, 5, -1)
     let g:python3_host_prog = trim(system('which python3.' . string(s:p)))
     if !v:shell_error | break | endif
     unlet g:python3_host_prog
@@ -59,28 +59,24 @@ else
   " neovim/nvim-lspconfig {{{3
   if has('nvim')
     lua << EOF
-    require'lspconfig'.clangd.setup{}
-    require'lspconfig'.pyls.setup{}
+    local custom_lsp_attach = function(client)
+      vim.api.nvim_buf_set_keymap(0, 'n', '1gD', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', '<c-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', 'g0', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', 'gD', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', 'gW', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
+      vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
+
+      vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    end
+
+    require'lspconfig'.clangd.setup{on_attach = custom_lsp_attach}
+    require'lspconfig'.pyls.setup{on_attach = custom_lsp_attach}
 EOF
-
-    function LSP_maps()
-      nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-      nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-      nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-      nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-      nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-      nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-      nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-      nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-      nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-
-      nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>
-    endfunction
-
-    augroup MyLSP
-      autocmd!
-      autocmd Filetype c,cpp,python setl omnifunc=v:lua.vim.lsp.omnifunc | call LSP_maps()
-    augroup END
   endif
 
   " Shougo/deoplete.nvim {{{3
@@ -197,7 +193,7 @@ augroup myFileTypeConfig " {{{1
   au FileType gnuplot    setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType markdown   setl spell textwidth=100
   au FileType neosnippet setl noexpandtab
-  au FileType python     setl keywordprg=pydoc3 shiftwidth=4 softtabstop=4 textwidth=100
+  au FileType python     setl shiftwidth=4 softtabstop=4 textwidth=100
   au FileType rst        setl foldmethod=manual spell
   au FileType sh         setl shiftwidth=2 softtabstop=2 textwidth=100
                           \ | let g:is_posix = 1
