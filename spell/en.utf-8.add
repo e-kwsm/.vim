@@ -46,6 +46,7 @@ DK2
 DK3
 DMC
 DOI
+Dancoff
 Debian
 Diels
 ECMAScript/=
@@ -140,6 +141,7 @@ NVT
 Noether
 Nosé
 ONIOM
+OOM
 OPLS
 OPV
 ORCID
@@ -163,6 +165,7 @@ Perdew
 Plesset
 Pochhammer
 Pople
+Pulay
 QCISD
 QCISDT
 QCISDTQ
@@ -172,6 +175,7 @@ RDF
 RHEL
 RHF
 ROHF
+Raphson
 Rodrigues
 SCF
 SDD
@@ -187,12 +191,14 @@ TDDFT
 TLS
 TODO
 TPSS
+Tamm
 TrueType/=
 UFF
 UTF-8
 Ubuntu
 VBM
 VLAN
+VMC
 VWN3
 VWN5
 Verlet
@@ -203,6 +209,7 @@ XYZ
 XeLaTeX/=
 XeTeX/=
 ZINDO
+a.u./=
 ab initio
 absorbance
 acene
@@ -602,6 +609,7 @@ perovskite
 perovskites
 peroxidation
 perturbate
+perturbated
 perturbative
 perturbatively
 perylene
