@@ -28,6 +28,7 @@ class Source(Base):
             "booktabs",
             "chemfig",
             "cloze",
+            "colorist",
             "datetime2",
             "dirtree",
             "domitian",
@@ -44,6 +45,7 @@ class Source(Base):
             "gnuplot-lua-tikz",
             "graphicx",
             "grffile",
+            "gridpapers",
             "hyperref",
             "luatexja",
             "mathtools",
@@ -71,7 +73,6 @@ class Source(Base):
             "unicode-math",
             "unitconv",
             "xcolor",
-            "xeCJK",
             "xparse",
             "xspace",
         ]
