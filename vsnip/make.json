@@ -1,0 +1,6 @@
+{
+  ".PHONY": {
+    "prefix": ".PHONY",
+    "body": [".PHONY: ${1:all}", "$1:", "\t${0}"]
+  }
+}

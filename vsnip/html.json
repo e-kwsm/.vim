@@ -1,0 +1,15 @@
+{
+  "<html>": {
+    "prefix": "<html",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html>",
+      "\t<head>${1}",
+      "\t</head>",
+      "\t<body>",
+      "\t\t${0}",
+      "\t</body>",
+      "</html>"
+    ]
+  }
+}

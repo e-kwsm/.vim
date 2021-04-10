@@ -1,0 +1,35 @@
+{
+  "function": {
+    "prefix": "FUNCTION",
+    "body": ["${1}FUNCTION ${2}(${3})", "\tIMPLICIT NONE", "\t!${4} :: $3", "\t${0}", "END FUNCTION"]
+  },
+  "module": {
+    "prefix": "MODULE",
+    "body": ["MODULE ${1}", "\tIMPLICIT NONE", "\t${0}", "END MODULE"]
+  },
+  "program": {
+    "prefix": "PROGRAM",
+    "body": ["PROGRAM ${1}", "\tIMPLICIT NONE", "\t${0}", "END PROGRAM"]
+  },
+  "submodule": {
+    "prefix": "SUBMODULE",
+    "body": ["SUBMODULE(${1}) ${2}", "\tIMPLICIT NONE", "\t${0}", "END SUBMODULE"]
+  },
+  "subroutine": {
+    "prefix": "SUBROUTINE",
+    "body": ["SUBROUTINE ${1}(${2})", "\tIMPLICIT NONE", "\t!${3} :: $2", "\t${0}", "END SUBROUTINE"]
+  },
+
+  "MPI_Init; MPI_Finalize": {
+    "prefix": "MPI_Init",
+    "body": ["INTEGER :: ${1:ierror}", "CALL MPI_Init($1)", "CALL MPI_Finalize($1)"]
+  },
+  "MPI_Comm_rank": {
+    "prefix": "MPI_Comm_rank",
+    "body": ["INTEGER :: ${1:rank}", "INTEGER :: ${2:ierror}", "CALL MPI_Comm_rank(${3:MPI_COMM_WORLD}, $1, $2)"]
+  },
+  "MPI_Comm_size": {
+    "prefix": "MPI_Comm_size",
+    "body": ["INTEGER :: ${1:size}", "INTEGER :: ${2:ierror}", "CALL MPI_Comm_size(${3:MPI_COMM_WORLD}, $1, $2)"]
+  }
+}

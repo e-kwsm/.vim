@@ -1,0 +1,67 @@
+{
+  "<svg>": {
+    "prefix": "<svg",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "<svg width=\"${1:100}\" height=\"${2:100}\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">",
+      "\t${0}",
+      "</svg>"
+    ]
+  },
+  "<circle>": {
+    "prefix": "<circle",
+    "body": "<circle cx=\"${1:0}\" cy=\"${2:0}\" r=\"${3:0}\"${4}/>"
+  },
+  "<defs>": {
+    "prefix": "<defs",
+    "body": ["<defs>", "\t${1}", "</defs>"]
+  },
+  "<ellipse>": {
+    "prefix": "<ellipse",
+    "body": "<ellipse cx=\"${1:0}\" cy=\"${2:0}\" rx=\"${3:0}\" ry=\"${4:0}\"${5}/>"
+  },
+  "<g>": {
+    "prefix": "<g",
+    "body": ["<g id=\"${1}\"${2}>", "\t${3}", "</g>"]
+  },
+  "<image>": {
+    "prefix": "<image",
+    "body": "<image x=\"${1:0}\" y=\"${2:0}\" width=\"${3:0}\" height=\"${4:0}\" xlink:href=\"${5}\"/>"
+  },
+  "<line>": {
+    "prefix": "<line",
+    "body": "<line x1=\"${1:0}\" y1=\"${2:0}\" x2=\"${3:0}\" y2=\"${4:0}\"${5}/>"
+  },
+  "<path>": {
+    "prefix": "<path",
+    "body": "<path d=\"${1}\"${2}/>"
+  },
+  "<polygon>": {
+    "prefix": "<polygon",
+    "body": "<polygon points=\"${1}\"${2}/>"
+  },
+  "<polyline>": {
+    "prefix": "<polyline",
+    "body": "<polyline points=\"${1}\"${2}/>"
+  },
+  "<rect>": {
+    "prefix": "<rect",
+    "body": "<rect x=\"${1:0}\" y=\"${2:0}\" width=\"${3:0}\" height=\"${4:0}\"${5}/>"
+  },
+  "<symbol>": {
+    "prefix": "<symbol",
+    "body": ["<symbol id=\"${1}\">", "\t${2}", "</symbol>"]
+  },
+  "<text>": {
+    "prefix": "<text",
+    "body": "<text x=\"${1:0}\" y=\"${2:0}\"${3}>${4}</text>"
+  },
+  "<tspan>": {
+    "prefix": "<tspan",
+    "body": "<tspan ${1}>${2}</tspan>"
+  },
+  "<use>": {
+    "prefix": "<use",
+    "body": "<use x=\"${1:0}\" y=\"${2:0}\" width=\"${3:0}\" height=\"${4:0}\" xlink:href=\"${5}\"${6}/>"
+  }
+}

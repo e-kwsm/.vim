@@ -1,0 +1,44 @@
+{
+  "<cml:cml>": {
+    "prefix": ["<cml:cml", "<cml"],
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "<cml:cml xmlns:cml=\"http://www.xml-cml.org/schema\" xmlns:convention=\"http://www.xml-cml.org/convention/\" convention=\"convention:molecular\">",
+      "\t<cml:molecule${0}",
+      "</cml:cml>"
+    ]
+  },
+  "<cml:molecule>": {
+    "prefix": ["<cml:molecule", "<molecule"],
+    "body": [
+      "<cml:molecule id=\"${1:m0}\" formalCharge=\"${2:0}\">",
+      "\t<cml:atomArray${3}",
+      "\t<cml:bondArray${4}",
+      "</cml:molecule>"
+    ]
+  },
+  "<cml:atomArray>": {
+    "prefix": ["<cml:atomArray", "<atomArray"],
+    "body": [
+      "<cml:atomArray>",
+      "\t<cml:atom${1}",
+      "</cml:atomArray>"
+    ]
+  },
+  "<cml:atom>": {
+    "prefix": ["<cml:atom", "<atom"],
+    "body": "<cml:atom id=\"${1:a0}\" elementType=\"${2:Du}\" x3=\"${3:0}\" y3=\"${4:0}\" z3=\"${5:0}\"/>"
+  },
+  "<cml:bondArray>": {
+    "prefix": ["<cml:bondArray", "<bondArray"],
+    "body": [
+      "<cml:bondArray>",
+      "\t<cml:bond${1}",
+      "</cml:bondArray>"
+    ]
+  },
+  "<cml:bond>": {
+    "prefix": ["<cml:bond", "<bond"],
+    "body": "<cml:bond id=\"${1:b0}\" atomRefs2=\"${2}\" order=\"${3:S}\"/>"
+  }
+}

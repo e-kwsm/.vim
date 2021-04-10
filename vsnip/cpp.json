@@ -1,0 +1,39 @@
+{
+  "include <>": {
+    "prefix": ["#inc", "inc"],
+    "body": "#include <${1:iostream}>"
+  },
+  "include \"\"": {
+    "prefix": ["#inc2", "inc2"],
+    "body": "#include \"${1}\""
+  },
+  "main": {
+    "prefix": "main",
+    "body": ["int main(int argc, char** argv) {", "\t${0}", "}"]
+  },
+  "using namespace std;": {
+    "prefix": "std;",
+    "body": "using namespace std;"
+  },
+  "__PRETTY_FUNCTION__": {
+    "prefix": "PRETTY_FUNCTION",
+    "body": "std::cerr << __PRETTY_FUNCTION__ << '\\n';"
+  },
+
+  "MPI_Init(); MPI_Finalize();": {
+    "prefix": "MPI_Init(",
+    "body": ["MPI_Init(&${1:argc}, &${2:argv});", "${0}", "MPI_Finalize();"]
+  },
+  "MPI_Abort();": {
+    "prefix": "MPI_Abort(",
+    "body": "MPI_Abort(${1:MPI_COMM_WORLD}, ${2:1});"
+  },
+  "MPI_Comm_rank();": {
+    "prefix": "MPI_Comm_rank(",
+    "body": ["int ${1:rank};", "MPI_Comm_rank(${2:MPI_COMM_WORLD}, &$1);"]
+  },
+  "MPI_Comm_size();": {
+    "prefix": "MPI_Comm_size(",
+    "body": ["int ${1:size};", "MPI_Comm_size(${2:MPI_COMM_WORLD}, &$1);"]
+  }
+}

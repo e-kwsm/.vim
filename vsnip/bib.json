@@ -1,0 +1,67 @@
+{
+  "article": {
+    "prefix": "@article",
+    "body": [
+      "@article{${1:${TM_FILENAME_BASE}},",
+      "\tauthor = {${2}},",
+      "\ttitle = {${3}},",
+      "\tjournal = {${4}},",
+      "\tdate = {${5}},",
+      "}"
+    ]
+  },
+  "book": {
+    "prefix": "@book",
+    "body": [
+      "@book{${1:${TM_FILENAME_BASE}},",
+      "\tauthor = {${2}},",
+      "\ttitle = {${3}},",
+      "\tdate = {${4}},",
+      "\tpublisher = {${5}}",
+      "}"
+    ]
+  },
+  "manual": {
+    "prefix": "@manual",
+    "body": [
+      "@manual{${1:${TM_FILENAME_BASE}},",
+      "\tauthor = {${2}},",
+      "\ttitle = {${3}},",
+      "\tdate = {${4}},",
+      "}"
+    ]
+  },
+  "misc": {
+    "prefix": ["@misc"],
+    "body": [
+      "@misc{${1:${TM_FILENAME_BASE}},",
+      "\tauthor = {${2}},",
+      "\ttitle = {${3}},",
+      "\tdate = {${4}},",
+      "}"
+    ]
+  },
+  "online": {
+    "prefix": "@online",
+    "body": [
+      "@online{${1:${TM_FILENAME_BASE}},",
+      "\tauthor = {${2}},",
+      "\ttitle = {${3}},",
+      "\tdate = {${4}},",
+      "\turl = {${5}},",
+      "}"
+    ]
+  },
+  "report": {
+    "prefix": "@report",
+    "body": [
+      "@report{${1:${TM_FILENAME_BASE}},",
+      "\tauthor = {${2}},",
+      "\ttitle = {${3}},",
+      "\ttype = {${4}},",
+      "\tinstitution = {${5}},",
+      "\tdate = {${6}},",
+      "}"
+    ]
+  }
+}
