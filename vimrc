@@ -29,16 +29,14 @@ else
   endif
   if has('nvim') && has('python3')
     call dein#add('Shougo/deoplete-lsp')
-    call dein#add('Shougo/deoppet.nvim')
-  else
-    call dein#add('Shougo/neosnippet.vim')
   endif
 
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
-  call dein#add('Shougo/neosnippet-snippets')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
+  call dein#add('hrsh7th/vim-vsnip')
+  call dein#add('hrsh7th/vim-vsnip-integ')
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
@@ -85,47 +83,31 @@ EOF
     autocmd InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
   endif
 
-  " Shougo/deoppet.nvim {{{3
-  if has('nvim') && has('python3')
-    call deoppet#initialize()
-    call deoppet#custom#option('snippets',
-          \ map(globpath(&runtimepath, 'neosnippets', v:true, v:true)
-          \ + globpath(&runtimepath, 'snippets', v:true, v:true),
-          \ "{ 'path': v:val }"))
-
-    imap <C-k>  <Plug>(deoppet_expand)
-    imap <C-f>  <Plug>(deoppet_jump_forward)
-    imap <C-b>  <Plug>(deoppet_jump_backward)
-    smap <C-f>  <Plug>(deoppet_jump_forward)
-    smap <C-b>  <Plug>(deoppet_jump_backward)
-  endif
-
-  " Shougo/neosnippet.vim {{{3
-  if !(has('nvim') && has('python3'))
-    " Plugin key-mappings.
-    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-    " SuperTab like snippets behavior.
-    "imap <expr><TAB>
-    " \ pumvisible() ? "\<C-n>" :
-    " \ neosnippet#expandable_or_jumpable() ?
-    " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-    smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-          \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-    " For snippet_complete marker.
-    if has('conceal')
-      set conceallevel=2 concealcursor=niv
-    endif
-
-    let g:neosnippet#expand_word_boundary = 1
-    let g:neosnippet#snippets_directory = '~/.vim/snippets/'
-  endif
-
   " ncm2/float-preview.nvim {{{3
   let g:float_preview#docked = 1
+
+  "hrsh7th/vim-vsnip {{{3
+  imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+
+  " Expand or jump
+  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
+  " Jump forward or backward
+  imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+  smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+  imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+  smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
+  " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
+  " See https://github.com/hrsh7th/vim-vsnip/pull/50
+  "nmap        s   <Plug>(vsnip-select-text)
+  "xmap        s   <Plug>(vsnip-select-text)
+  "nmap        S   <Plug>(vsnip-cut-text)
+  "xmap        S   <Plug>(vsnip-cut-text)
+
+  let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
 
   " }}}2
 endif
