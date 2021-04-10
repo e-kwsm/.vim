@@ -135,14 +135,11 @@ source $VIMRUNTIME/macros/matchit.vim
 
 " set {{{1
 set autowrite
-set cmdheight=1
 set conceallevel=0
 set cursorline
 set expandtab
 set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
-set fileformats=unix,dos,mac
 set hidden
-set laststatus=2
 set modeline
 set mouse=a
 set nohlsearch
@@ -151,18 +148,15 @@ set relativenumber
 set ruler
 set scrolloff=1
 set shiftwidth=2
-set showcmd
-set spelllang=en,cjk
+set softtabstop=-1
+set spelllang+=cjk
 set suffixes-=.h
 set suffixes+=.aux,.bbl,.bcf,.blg,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv  " tex
 set title
 set visualbell
-set wildmenu
-set wrap
 
 if has('nvim')
   set inccommand=split
-  set wildoptions+=pum
   if empty($SSH_CONNECTION)
     set termguicolors
   endif
@@ -182,37 +176,33 @@ let &titleold=getcwd()
 augroup myFileTypeConfig " {{{1
   au!
 
-  au FileType bib        setl spell
-  au FileType c,cpp      setl shiftwidth=2 softtabstop=2 textwidth=100
-  au FileType csv        setl cursorline noexpandtab
-  au FileType diff       setl cursorline
-  au FileType fortran    setl ignorecase
-  au FileType gaussian   setl cursorline
-  au FileType gitcommit  setl textwidth=0 spell
-  au FileType gitconfig  setl noexpandtab
-  au FileType gnuplot    setl shiftwidth=4 softtabstop=4 textwidth=100
-  au FileType markdown   setl spell textwidth=100
-  au FileType neosnippet setl noexpandtab
-  au FileType python     setl shiftwidth=4 softtabstop=4 textwidth=100
-  au FileType rst        setl foldmethod=manual spell
-  au FileType sh         setl shiftwidth=2 softtabstop=2 textwidth=100
-                          \ | let g:is_posix = 1
-  au FileType sshconfig  setl noexpandtab
-  au FileType svg        setl iskeyword+=- nowrap shiftwidth=2 softtabstop=2 textwidth=100
-  au FileType tcl        setl iskeyword+=-
-  au FileType tex        setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker shiftwidth=2
-                          \ spell textwidth=100
-  au FileType vim        setl expandtab foldmethod=marker shiftwidth=2
-  au FileType xyz        setl cursorline
+  au FileType bib	setl spell
+  au FileType c,cpp	setl tabstop=2 textwidth=100
+  au FileType csv	setl noexpandtab
+  au FileType fortran	setl ignorecase
+  au FileType gitcommit	setl textwidth=0 spell
+  au FileType gitconfig	setl noexpandtab
+  au FileType gnuplot	setl tabstop=4 textwidth=100
+  au FileType markdown	setl spell textwidth=100
+  au FileType neosnippet	setl noexpandtab
+  au FileType python	setl tabstop=4 textwidth=100
+  au FileType rst	setl foldmethod=manual spell
+  au FileType sh	setl tabstop=2 textwidth=100 | let g:is_posix = 1
+  au FileType sshconfig	setl noexpandtab
+  au FileType svg	setl iskeyword+=- tabstop=2 textwidth=100
+  au FileType tcl	setl iskeyword+=-
+  au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell tabstop=2 textwidth=100
+  au FileType vim	setl expandtab foldmethod=marker
+  au FileType xyz	setl cursorline
 
   " shebang
-  au BufNewFile *.awk  put!='#!/usr/bin/env -S awk -f'	| :2
-  au BufNewFile *.bash put!='#!/bin/bash'	| :2
-  au BufNewFile *.jl   put!='#!/usr/bin/env julia'	| :2
-  au BufNewFile *.plt  put!='#!/usr/bin/env gnuplot'	| :2
-  au BufNewFile *.py   put!='#!/usr/bin/env python3'	| :2
-  au BufNewFile *.tlu  put!='#!/usr/bin/env texlua'	| :2
-  au BufNewFile *.sh   put!='#!/bin/sh'	| :2
+  au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
+  au BufNewFile *.bash	put!='#!/bin/bash' | :2
+  au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
+  au BufNewFile *.plt	put!='#!/usr/bin/env -S gnuplot -p' | :2
+  au BufNewFile *.py	put!='#!/usr/bin/env python3' | :2
+  au BufNewFile *.sh	put!='#!/bin/sh' | :2
+  au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
 
   set cinoptions+=g2,h2
   set cinoptions+=:2,=2
@@ -223,11 +213,11 @@ augroup myFileTypeConfig " {{{1
   let g:tex_flavor = 'latex'
   let g:tex_noindent_env = join([
         \ 'document',
-        \ 'verbatim',
         \ 'lstlisting',
         \ 'minted',
         \ 'refsection',
         \ 'refsegment',
+        \ 'verbatim',
         \ ], '\|')
 augroup END " }}}1
 
