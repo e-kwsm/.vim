@@ -1,3 +1,4 @@
+import re
 from deoplete.base.source import Base
 
 
@@ -7,7 +8,7 @@ class Source(Base):
         self.name = "bib.field"
         self.mark = "[bib.field]"
         self.filetypes = ["bib"]
-        self.input_pattern = r"^\s*[a-z]*$"
+        self.input_pattern = r"^\s*[a-zA-Z]*$"
         self.rank = 400
         self._candidates = [
             "abstract",
@@ -149,4 +150,5 @@ class Source(Base):
         ]
 
     def gather_candidates(self, context):
-        return self._candidates
+        if re.search(self.input_pattern, context["input"]):
+            return self._candidates
