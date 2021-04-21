@@ -8,7 +8,8 @@ class Source(Base):
         self.name = "markdown.gitlab"
         self.mark = "[GitLab]"
         self.filetypes = ["markdown"]
-        self.input_pattern = r"^\s*```"
+        self.input_pattern = r"^\s*```\w*$"
+        self.rank *= 3
 
         # rouge
         self._candidate = [
@@ -31,6 +32,7 @@ class Source(Base):
             "xml",
             "yaml",
         ]
+
         self._candidate += [
             "math",
             "mermaid",

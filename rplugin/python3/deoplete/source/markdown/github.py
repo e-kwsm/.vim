@@ -8,8 +8,12 @@ class Source(Base):
         self.name = "markdown.github"
         self.mark = "[GitHub]"
         self.filetypes = ["markdown"]
-        self.input_pattern = r"^\s*```"
+        self.input_pattern = r"^\s*```\w*$"
+        self.rank *= 3
+
+        # https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
         self._candidate = [
+            "bash",
             "C",
             "C++",
             "CMake",
@@ -18,26 +22,25 @@ class Source(Base):
             "Fortran",
             "Gnuplot",
             "INI",
+            "latex",
             "Makefile",
             "Markdown",
             "Python console",
             "Python",
-            "SVG",
-            "Shell",
-            "ShellSession",
-            "TOML",
-            "TSV",
-            "TeX",
-            "Vim Snippet",
-            "Vim script",
-            "XML",
-            "YAML",
-            "bash",
-            "latex",
             "reStructuredText",
             "rst",
             "sh",
+            "Shell",
+            "ShellSession",
+            "SVG",
+            "TeX",
+            "TOML",
+            "TSV",
+            "Vim script",
+            "Vim Snippet",
             "vim",
+            "XML",
+            "YAML",
         ]
 
     def gather_candidates(self, context):
