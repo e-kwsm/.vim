@@ -7,6 +7,7 @@ autocmd BufRead,BufNewFile *.cif setl filetype=cif
 autocmd BufRead,BufNewFile *.cls setl filetype=tex
 autocmd BufRead,BufNewFile *.cml setf cml
 autocmd BufRead,BufNewFile *.csv setf csv
+autocmd BufRead,BufNewFile .gitattributes setl filetype=gitattributes
 autocmd BufRead,BufNewFile *.gjf setl filetype=gaussian
 autocmd BufRead,BufNewFile *.gp setl filetype=gnuplot
 autocmd BufRead,BufNewFile *.gzmat setl filetype=gaussian
