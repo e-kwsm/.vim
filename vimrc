@@ -35,6 +35,7 @@ else
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
+  call dein#add('cormacrelf/vim-colors-github')
   call dein#add('hrsh7th/vim-vsnip')
   call dein#add('hrsh7th/vim-vsnip-integ')
   call dein#add('itchyny/lightline.vim')
@@ -81,6 +82,15 @@ EOF
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
     autocmd InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
+  endif
+
+  " cormacrelf/vim-colors-github {{{3
+  if $TERM =~ '.\+256color$'
+    colorscheme github
+    let g:airline_theme = 'github'
+    let g:lightline = {'colorscheme': 'github'}
+  else
+    colorscheme desert
   endif
 
   " ncm2/float-preview.nvim {{{3
@@ -139,7 +149,7 @@ set visualbell
 
 if has('nvim')
   set inccommand=split
-  if empty($SSH_CONNECTION)
+  if $TERM =~ '.\+256color$'
     set termguicolors
   endif
 endif
@@ -150,7 +160,6 @@ nnoremap mm :make<CR>
 noremap Q gq
 " }}}1
 
-colorscheme desert
 highlight LineNr ctermfg=darkred
 
 let &titleold=getcwd()
