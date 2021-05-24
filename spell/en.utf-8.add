@@ -30,7 +30,6 @@ CIP
 CISD
 CISDT
 CISDTQ
-CMake
 CODATA
 CPython/=
 CUDA
@@ -50,6 +49,7 @@ DK2
 DK3
 DMC
 DOI
+Da/=
 Dancoff
 Debian
 Diels
@@ -75,7 +75,7 @@ GPU
 GTO
 Galilei
 Gauß
-Gennes
+GiB/=
 GitHub/=
 GitLab/=
 Grignard
@@ -92,7 +92,6 @@ HPC
 HSE
 HSE03
 HSE06
-HTTPS
 Hamprecht
 Hartree
 Hehre
@@ -101,7 +100,6 @@ Hohenberg
 Hund
 Hückel
 IPCE
-IPCM
 IQE
 IUPAC
 IUPAP
@@ -114,6 +112,7 @@ Kitaev
 Kohn
 Kroll
 Kutta
+Kármán
 LAPACK
 LDA
 LHC
@@ -140,12 +139,14 @@ MP2
 MP4
 MPI
 MPICH
+MPa/=
 MRCI
 Madelung
 Majorana
 Mannich
 Markovnikov
 Mersenne
+MiB/=
 Minkowski
 Mulliken
 Møller
@@ -154,6 +155,7 @@ NDDO
 NMR
 NPT
 NVT
+Netlib
 Noether
 Nosé
 ONIOM
@@ -162,7 +164,7 @@ OPLS
 OPV
 ORCID
 OTFSC
-OpenBLAS
+OpenBLAS/=
 OpenMP/=
 OpenType/=
 P3HT
@@ -172,10 +174,8 @@ PBE0DH
 PCA
 PCBM
 PCE
-PEDOT
 POSIX
 PRNG
-PSS
 PV
 PW91
 Perdew
@@ -192,6 +192,7 @@ RDF
 RHEL
 RHF
 ROHF
+RPA
 Raphson
 Rodrigues
 Roothaan
@@ -203,7 +204,7 @@ STO
 SVG
 SVM
 Salpeter
-ScaLAPACK
+ScaLAPACK/=
 Scharfetter
 Schur
 Schwarz
@@ -213,6 +214,7 @@ TLS
 TODO
 TPSS
 Tamm
+TiB/=
 TrueType/=
 Truhlar
 UFF
@@ -226,6 +228,8 @@ VWN5
 Verlet
 Wannier
 Warshall
+Wb/=
+XPath
 XRD
 XYZ
 XeLaTeX/=
@@ -244,7 +248,6 @@ adenosine
 adiabaticity
 adipate
 adipic
-agonist
 aldehydes
 aldol
 alkane
@@ -261,11 +264,9 @@ allosteric
 allyl
 allylation
 allylic
-amination
 anharmonic
 anharmonicity
 annulation
-anoxia
 ansatz
 anthracene
 antiferromagnetic
@@ -295,8 +296,6 @@ aug-cc-pVDZ/=
 aug-cc-pVQZ/=
 aug-cc-pVTZ/=
 autoionization
-autophagic
-autophagy
 azelaic
 azelate
 azide
@@ -314,19 +313,12 @@ benzyl
 bicontinuous
 bilayered
 biodegradation
-biofilm
-biofuel
 bioinformatics
-biomaterial
-biomaterials
-biomimetic
 biopolymer
 biopolymers
-biosensing
-biosynthesis
 biradical
 bispherical
-bohr
+bohr/=
 borane
 boronate
 boronic
@@ -350,7 +342,6 @@ ceria
 chalcogen
 chalcogenide
 chalcogenides
-chemisorption
 chemoinformatics
 chirality
 chromodynamics
@@ -406,7 +397,6 @@ delocalized
 delocalizes
 dendritic
 deprotonation
-deque
 deserialization
 deserialize
 deuteration
@@ -436,7 +426,6 @@ electrophile
 electrophilic
 electrophilicity
 electroreduction
-electrotechnical
 emissive
 enamine
 enantiomer
@@ -475,8 +464,7 @@ glycolic
 glycolide
 graphene
 guanidine
-haplotype
-hartree
+hartree/=
 helicene
 hemiacetal
 hetero
@@ -497,7 +485,6 @@ homogenous
 homojunction
 homolysis
 homolytic
-https/=
 hydrazone
 hydrogel
 hydrogenase
@@ -529,6 +516,7 @@ jellium
 junctional
 kDa/=
 kJ/=
+kPa/=
 keto
 ketones
 kinase
@@ -549,7 +537,6 @@ magnon
 malate
 maleic
 malic
-mannan
 meV/=
 memoize
 memoized
@@ -574,6 +561,7 @@ multicrystalline
 multimodal
 multipole
 multiscale
+namespace
 nanocluster
 nanocomposite
 nanocrystal
@@ -609,8 +597,6 @@ nuclearity
 nucleophile
 nucleophilic
 nucleophilicity
-nucleoside
-nucleosome
 oligo
 oligomer
 oligomeric
@@ -640,33 +626,22 @@ phenanthrene
 phenylene
 phononic
 phosphite
-photocatalysis
-photocatalyst
-photocatalytic
 photochromic
 photochromism
 photocurrent
-photoelectrode
 photoemission
 photoexcitation
 photoexcited
 photoinduced
 photonic
 photonics
-photoredox
-photoreduction
-photosensitized
-photosensitizer
-photosensitizing
 photosystem
 photovoltaics
 phthalocyanine
 picosecond
-piperidine
 plasmon
 plasmonic
 plugin
-pluripotent
 polarizabilities
 polarizability
 polarizable
@@ -683,7 +658,6 @@ postdocs
 prefactor
 prerequirement
 prerequirements
-prion
 propene
 protonate
 protonated
@@ -704,7 +678,7 @@ qubit
 quinoidal
 quinoline
 quinone
-reST
+reST/=
 redox
 refactor
 regio
@@ -715,7 +689,6 @@ regioselective
 regioselectivity
 reptate
 reptation
-rhodamine
 rhs
 ribose
 rotaxane
@@ -764,7 +737,6 @@ sulfonyl
 sulfoxide
 superresolution
 supramolecular
-svg/=
 synergetic
 synthetase
 tanh/=
@@ -813,9 +785,9 @@ zeolite
 zeolites
 zwitterion
 zwitterionic
+ångström
 μm/=
 μs/=
-π-conjugated
 ωB97
 ωB97X
 ωPBE/=
