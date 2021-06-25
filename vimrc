@@ -39,6 +39,7 @@ else
   call dein#add('hrsh7th/vim-vsnip')
   call dein#add('hrsh7th/vim-vsnip-integ')
   call dein#add('itchyny/lightline.vim')
+  call dein#add('jacoborus/tender.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('tpope/vim-endwise')
@@ -101,14 +102,9 @@ EOF
     autocmd InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
   endif
 
-  " cormacrelf/vim-colors-github {{{3
-  if $TERM =~ '.\+256color$'
-    colorscheme github
-    let g:airline_theme = 'github'
-    let g:lightline = {'colorscheme': 'github'}
-  else
-    colorscheme desert
-  endif
+  " jacoborus/tender.vim {{{3
+  colorscheme tender
+  let g:lightline = { 'colorscheme': 'tender' }
 
   " ncm2/float-preview.nvim {{{3
   let g:float_preview#docked = 1
@@ -189,7 +185,7 @@ augroup myFileTypeConfig " {{{1
   au FileType csv	setl noexpandtab
   au FileType fortran	setl ignorecase
   au FileType gitcommit	setl textwidth=0 spell
-  au FileType gitconfig	setl noexpandtab
+  au FileType gitconfig	setl noexpandtab shiftwidth=8
   au FileType gnuplot	setl tabstop=4 textwidth=100
   au FileType markdown	setl spell textwidth=100
   au FileType neosnippet	setl noexpandtab
@@ -239,9 +235,9 @@ augroup myHooks " {{{1
   au QuickFixCmdPost *grep* cwindow
 
   " git
-  au BufReadPost ADD_EDIT.patch      :7
+  au BufReadPost ADD_EDIT.patch      :3
   au BufReadPost COMMIT_EDITMSG      :1
-  au BufReadPost addp-hunk-edit.diff :7
+  au BufReadPost addp-hunk-edit.diff :3
   au BufReadPost git-rebase-todo     :1
 
   if has('nvim')
