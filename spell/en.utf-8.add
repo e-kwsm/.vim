@@ -30,6 +30,7 @@ CIP
 CISD
 CISDT
 CISDTQ
+CMake
 CODATA
 CPython/=
 CUDA
@@ -95,6 +96,7 @@ HSE06
 Hamprecht
 Hartree
 Hehre
+Hellmann
 Higgs
 Hohenberg
 Hund
@@ -107,6 +109,7 @@ InChI/=
 Ising
 JSON
 Jahn
+Jastrow
 Kavli
 Kitaev
 Kohn
@@ -504,12 +507,16 @@ ionically
 ionicity
 irradiance
 irrotational
+isenthalpic
+isochoric
+isoenthalpic
 isomerization
 isoprene
 isopropanol
 isosurface
 isosurfaces
 isothiazole
+isovolumetric
 isoxazole
 iterable
 jellium
@@ -552,6 +559,7 @@ methoxide
 methoxy
 methylammonium
 micelle
+microcanonical
 microstructure
 mimetics
 mol/=
@@ -593,6 +601,7 @@ nonadiabatic
 noncanonical
 noncovalent
 nonplanar
+nonrelativistic
 nuclearity
 nucleophile
 nucleophilic
@@ -604,6 +613,8 @@ oligomers
 oligothiophene
 optimizable
 orientational
+orthonormalization
+orthonormalized
 osmolyte
 ouroboros
 overpotential
@@ -687,6 +698,8 @@ regiorandom
 regioregular
 regioselective
 regioselectivity
+renormalization
+renormalize
 reptate
 reptation
 rhs
