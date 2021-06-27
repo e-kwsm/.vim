@@ -44,6 +44,11 @@ prefix = "SUPERSCRIPT_THREE"
 body = "³"
 description = "U+00B3"
 
+["Pilcrow Sign"]
+prefix = "PILCROW_SIGN"
+body = "¶"
+description = "U+00B6"
+
 ["Superscript One"]
 prefix = "SUPERSCRIPT_ONE"
 body = "¹"
