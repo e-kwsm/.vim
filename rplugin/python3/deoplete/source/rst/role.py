@@ -7,7 +7,7 @@ class Source(Base):
         super().__init__(vim)
         self.name = "rst.role"
         self.mark = "[rst.role]"
-        self.input_pattern = r"(?:^|[^A-Za-z0-9]):[A-Za-z]*$"
+        self.input_pattern = r"(?:^|[^A-Za-z0-9:]):[A-Za-z]*$"
         self.rank = 500
 
         roles = {

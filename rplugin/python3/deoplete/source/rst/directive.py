@@ -10,12 +10,6 @@ class Source(Base):
         self.input_pattern = r"^\.\. (?:[A-Za-z]+:)?[A-Za-z]*$"
         self.rank = 500
 
-        def d(directive, arguments):
-            if arguments:
-                return {"abbr": directive, "word": f"{directive}:: ", "menu": arguments}
-            else:
-                return {"abbr": directive, "word": f"{directive}::"}
-
         directives = {
             # https://docutils.sourceforge.io/docs/ref/rst/directives.html
             "attention": None,
@@ -126,10 +120,15 @@ class Source(Base):
             "rst:role": "name",
         }
 
-        self._candidates = []
-        for directive, arguments in directives.items():
-            self._candidates += [d(directive, arguments)]
+        def d(directive, arguments):
+            if arguments:
+                return {"abbr": directive, "word": f"{directive}:: ", "menu": arguments}
+            else:
+                return {"abbr": directive, "word": f"{directive}::"}
 
+        self._candidates = [
+            d(directive, arguments) for directive, arguments in directives.items()
+        ]
         self._candidates.sort(key=lambda x: x["abbr"])
 
     def gather_candidates(self, context):
