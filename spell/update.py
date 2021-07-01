@@ -17,6 +17,7 @@ def update(vim: str = "nvim", check: bool = False, casesensitive: bool = True):
         "set spell",
         f"e {add}",
         "sort u",
+        "sort i",
         "up",
         "mkspell! %",
         "%bw",
