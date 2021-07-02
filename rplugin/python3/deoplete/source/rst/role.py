@@ -8,7 +8,7 @@ class Source(Base):
         self.name = "rst.role"
         self.mark = "[rst.role]"
         self.input_pattern = r"(?:^|[^A-Za-z0-9:]):[A-Za-z]*$"
-        self.rank = 500
+        self.rank = 200
 
         roles = {
             # https://docutils.sourceforge.io/docs/ref/rst/roles.html

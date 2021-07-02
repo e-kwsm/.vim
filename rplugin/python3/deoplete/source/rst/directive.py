@@ -121,10 +121,11 @@ class Source(Base):
         }
 
         def d(directive, arguments):
+            r = {"abbr": directive, "word": f"{directive}::"}
             if arguments:
-                return {"abbr": directive, "word": f"{directive}:: ", "menu": arguments}
-            else:
-                return {"abbr": directive, "word": f"{directive}::"}
+                r["word"] += " "
+                r["kind"] = arguments
+            return r
 
         self._candidates = [
             d(directive, arguments) for directive, arguments in directives.items()
