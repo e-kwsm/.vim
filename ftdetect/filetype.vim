@@ -14,6 +14,7 @@ autocmd BufRead,BufNewFile *.gjf setl filetype=gaussian
 autocmd BufRead,BufNewFile *.gp setl filetype=gnuplot
 autocmd BufRead,BufNewFile *.gzmat setl filetype=gaussian
 autocmd BufRead,BufNewFile *.ipynb setl filetype=json
+autocmd BufRead,BufNewFile *.mtx setf matrixmarket
 autocmd BufRead,BufNewFile *.plt setl filetype=gnuplot
 autocmd BufRead,BufNewFile *.tlu setf lua
 autocmd BufRead,BufNewFile *.tsv setf csv
