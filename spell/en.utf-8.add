@@ -3,6 +3,7 @@ A64FX
 AAMD
 AArch64
 ab initio
+abelian
 ABI
 acene
 acetophenone
@@ -15,6 +16,7 @@ adiabaticity
 adipate
 adjoint
 AFM
+Aharonov
 Ahlrichs
 AIMD
 aldol
@@ -82,11 +84,15 @@ BHJ
 bicontinuous
 bilayered
 Binet
+Biot
 biradical
 bispherical
 BLAS
 BLYP
+Bogolyubov
+Bohm
 bohr/=
+Borel
 boronate
 boronic
 BP86
@@ -161,7 +167,10 @@ cytokine
 d'Alembert
 Da/=
 Dancoff
+de Broglie
+de Dominicis
 de Gennes
+de Moivre
 de novo
 debye
 def2-QZVP/=
@@ -207,6 +216,7 @@ DOI
 ECP
 Ehrenfest
 eigen
+Ekman
 electrocatalysis
 electrocatalyst
 electrocatalytic
@@ -238,10 +248,14 @@ exo
 exocyclic
 Eyring
 FFTW
+filesystem
 Fock
 formamide
 Fraunhofer
+Friedmann
 FRM
+Frobenius
+Fubini
 fullerene
 fumarate
 fumaric
@@ -252,17 +266,21 @@ furan
 Förster
 Galilei
 Gauß
+Gegenbauer
 geminate
 GGA
+Ginzburg
 GISAXS
 GitLab/=
 GIWAXS
 glycolide
+Goursat
 GPG
 graphene
 Grignard
 Grimme
 Groß
+Gröbner
 GTO
 guanidine
 Gummel
@@ -291,6 +309,7 @@ heteronuclear
 hexyl
 hexylthiophene
 Higgs
+HMAC
 Hohenberg
 homogenous
 homojunction
@@ -304,6 +323,7 @@ Hund
 hydrazone
 hydrogenase
 hypergeometric
+Hölder
 Hückel
 ideality
 imidazole
@@ -346,9 +366,12 @@ kinase
 Kitaev
 kJ/=
 Kohn
+Kolmogorov
 Koster
 kPa/=
 Kroll
+Krylov
+Kullback
 Kutta
 Kármán
 l'Hospital
@@ -365,10 +388,14 @@ Laplacian
 LDA
 Lebedev
 lectin
+Leibler
 levelized
 Levenshtein
 LHC
 lhs
+Lifshitz
+Lindemann
+Liouville
 lithiated
 LJ
 LLVM
@@ -377,10 +404,12 @@ lua
 LuaLaTeX/=
 LuaTeX/=
 LUMO
+Lyapunov
 LYP
 Löwdin
 M06
 mA/=
+Maclaurin
 Madelung
 magnon
 Majorana
@@ -390,6 +419,8 @@ malic
 Mannich
 Markovnikov
 MD5
+Meissner
+Meißner
 memoize
 memoized
 memoizes
@@ -411,6 +442,8 @@ MMFF
 MNDO
 MOF
 mol/=
+monic
+Morera
 MP2
 MP4
 MPa/=
@@ -434,6 +467,7 @@ nanoribbon
 nanorod
 nanosheet
 nanosieve
+Navier
 NBO
 NDDO
 Netlib
@@ -460,6 +494,7 @@ oligomeric
 oligomers
 oligothiophene
 ONIOM
+Onnes
 OOM
 OpenACC/=
 OpenBLAS/=
@@ -480,6 +515,8 @@ oxazole
 oxonium
 P3HT
 pA/=
+Padé
+Painlevé
 pathogenicity
 PBE
 PBE0
@@ -487,6 +524,7 @@ PBE0DH
 PCA
 PCBM
 PCE
+Peano
 pentacene
 Perdew
 permittivities
@@ -513,6 +551,8 @@ plasmon
 plasmonic
 Plesset
 Pochhammer
+Poincaré
+Poiseuille
 polarizabilities
 polarizability
 polarizable
@@ -526,6 +566,7 @@ Pople
 porphyrin
 POSIX
 prefactor
+preprocess
 prerequirement
 prerequirements
 PRNG
@@ -574,6 +615,7 @@ RHEL
 RHF
 rhs
 ribose
+Riccati
 Rodrigues
 ROHF
 Roothaan
@@ -583,6 +625,7 @@ rubrene
 rutile
 rydberg
 Salpeter
+Savart
 ScaLAPACK/=
 SCF
 Scharfetter
@@ -609,6 +652,7 @@ soliton
 solvate
 solvated
 solvation
+Sommerfeld
 spinel
 spinodal
 spinor
@@ -665,6 +709,7 @@ UFF
 ultrathin
 upconversion
 van der Waals
+Vandermonde
 VBM
 vdW/=
 Verlet
@@ -675,6 +720,7 @@ vinylene
 VLAN
 VMC
 voltammetry
+Voronoi
 voxel
 VWN3
 VWN5
@@ -683,7 +729,10 @@ Warshall
 wavefunction
 wavefunctions
 Wb/=
+Weierstraß
 wildcard
+Wronski
+Wronskian
 X3LYP
 XeLaTeX/=
 XeTeX/=
