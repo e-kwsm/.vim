@@ -146,6 +146,7 @@ coronene
 cosh/=
 coth/=
 covalency
+CPMD
 CPython/=
 cryo
 crystallinity
@@ -247,6 +248,7 @@ excitons
 exo
 exocyclic
 Eyring
+FFT
 FFTW
 filesystem
 Fock
@@ -365,6 +367,7 @@ keto
 kinase
 Kitaev
 kJ/=
+KMC
 Kohn
 Kolmogorov
 Koster
@@ -443,6 +446,7 @@ MNDO
 MOF
 mol/=
 monic
+Monkhorst
 Morera
 MP2
 MP4
@@ -577,6 +581,7 @@ protonation
 ps/=
 pseudogap
 pseudopotential
+pseudopotentials
 Pulay
 PV
 PW86
@@ -658,6 +663,7 @@ spinodal
 spinor
 spintronics
 stderr
+stdin
 stdout
 stereoselective
 stereoselectivities
