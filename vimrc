@@ -3,10 +3,9 @@ syntax enable
 
 if has('nvim') " {{{
   let g:loaded_python_provider = 0  " disabled
-  for s:p in range(9, 5, -1)
-    let g:python3_host_prog = trim(system('which python3.' . string(s:p)))
-    if !v:shell_error | break | endif
-    unlet g:python3_host_prog
+  for s:m in range(9, 6, -1)
+    let g:python3_host_prog = exepath('python3.' . string(s:m))
+    if len(g:python3_host_prog) | break | endif
   endfor
 endif " }}}
 
@@ -92,6 +91,7 @@ else
     end
 
     require'lspconfig'.clangd.setup{on_attach = on_attach}
+    require'lspconfig'.denols.setup{on_attach = on_attach}
     require'lspconfig'.pylsp.setup{on_attach = on_attach}
 EOF
   endif
@@ -99,7 +99,10 @@ EOF
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
-    autocmd InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
+    augroup deoplete-pum
+      au!
+      au InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
+    augroup END
   endif
 
   " jacoborus/tender.vim {{{3
@@ -136,16 +139,12 @@ EOF
 endif
 " }}}1
 
-source $VIMRUNTIME/macros/matchit.vim
-
 " set {{{1
 set autowrite
-set conceallevel=0
 set cursorline
 set expandtab
 set fileencodings=ucs-bom,utf-8,cp932,euc-jp,default,latin1
 set hidden
-set modeline
 set mouse=a
 set nohlsearch
 set number
@@ -157,6 +156,7 @@ set softtabstop=-1
 set spelllang+=cjk
 set suffixes-=.h
 set suffixes+=.aux,.bbl,.bcf,.blg,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv  " tex
+set suffixes+=.mod,.smod  " fortran
 set title
 set visualbell
 
@@ -186,17 +186,16 @@ augroup myFileTypeConfig " {{{1
   au FileType fortran	setl ignorecase
   au FileType gitcommit	setl textwidth=0 spell
   au FileType gitconfig	setl noexpandtab shiftwidth=8
-  au FileType gnuplot	setl tabstop=4 textwidth=100
+  au FileType gnuplot	setl shiftwidth=4 textwidth=100
   au FileType markdown	setl spell textwidth=100
-  au FileType neosnippet	setl noexpandtab
-  au FileType python	setl tabstop=4 textwidth=100
+  au FileType python	setl textwidth=88
   au FileType rst	setl foldmethod=manual spell
   au FileType sh	setl tabstop=2 textwidth=100 | let g:is_posix = 1
   au FileType sshconfig	setl noexpandtab
   au FileType svg	setl iskeyword+=- tabstop=2 textwidth=100
   au FileType tcl	setl iskeyword+=-
-  au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell tabstop=2 textwidth=100
-  au FileType vim	setl expandtab foldmethod=marker
+  au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell textwidth=100
+  au FileType vim	setl foldmethod=marker
   au FileType xyz	setl cursorline
 
   " shebang
@@ -207,11 +206,6 @@ augroup myFileTypeConfig " {{{1
   au BufNewFile *.py	put!='#!/usr/bin/env python3' | :2
   au BufNewFile *.sh	put!='#!/bin/sh' | :2
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
-
-  set cinoptions+=g2,h2
-  set cinoptions+=:2,=2
-  set cinoptions+=N-s
-  let &path .= ',' . substitute($CPLUS_INCLUDE_PATH, ':', ',', 'g')
 
   let g:c_gnu = 1
   let g:tex_flavor = 'latex'
@@ -235,10 +229,10 @@ augroup myHooks " {{{1
   au QuickFixCmdPost *grep* cwindow
 
   " git
-  au BufReadPost ADD_EDIT.patch      :3
-  au BufReadPost COMMIT_EDITMSG      :1
-  au BufReadPost addp-hunk-edit.diff :3
-  au BufReadPost git-rebase-todo     :1
+  au BufReadPost ADD_EDIT.patch		:3
+  au BufReadPost COMMIT_EDITMSG		:1
+  au BufReadPost addp-hunk-edit.diff	:3
+  au BufReadPost git-rebase-todo	:1
 
   if has('nvim')
     au TermOpen term://* startinsert
