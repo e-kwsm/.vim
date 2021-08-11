@@ -34,31 +34,36 @@ else
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
-  call dein#add('cormacrelf/vim-colors-github')
   call dein#add('hrsh7th/vim-vsnip')
   call dein#add('hrsh7th/vim-vsnip-integ')
   call dein#add('itchyny/lightline.vim')
-  call dein#add('jacoborus/tender.vim')
+  call dein#add('joshdick/onedark.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
   call dein#add('ujihisa/neco-look')
+  call dein#add('vim-denops/denops.vim')
   " }}}2
   call dein#end()
+
+  filetype plugin indent on
+  syntax enable
 
   let g:dein#types#git#clone_depth = 1
   if dein#check_install()
     call dein#install()
   endif
 
-  filetype plugin indent on
-
   " plugin config {{{2
   " neovim/nvim-lspconfig {{{3
   if has('nvim')
     lua << EOF
-  local nvim_lsp = require('lspconfig')
+  local ok, nvim_lsp = pcall(require, 'lspconfig')
+  if (not ok) then
+    vim.api.nvim_command('echom "module lspconfig not found"')
+    return nil
+  end
   local on_attach = function(_, bufnr)
     local function buf_set_keymap(...)
       vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -109,13 +114,6 @@ EOF
     augroup END
   endif
 
-  " jacoborus/tender.vim {{{3
-  colorscheme tender
-  let g:lightline = { 'colorscheme': 'tender' }
-
-  " ncm2/float-preview.nvim {{{3
-  let g:float_preview#docked = 1
-
   "hrsh7th/vim-vsnip {{{3
   imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
   smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
@@ -138,6 +136,12 @@ EOF
   "xmap        S   <Plug>(vsnip-cut-text)
 
   let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
+
+  " joshdick/onedark.vim {{{3
+  try | colorscheme onedark | let g:lightline = {'colorscheme': 'onedark'} | catch | colorscheme desert | endtry
+
+  " ncm2/float-preview.nvim {{{3
+  let g:float_preview#docked = 1
 
   " }}}2
 endif
@@ -191,6 +195,7 @@ augroup myFileTypeConfig " {{{1
   au FileType gitcommit	setl textwidth=0 spell
   au FileType gitconfig	setl noexpandtab shiftwidth=8
   au FileType gnuplot	setl shiftwidth=4 textwidth=100
+        \ keywordprg=gnuplot\ -e\ help\\
   au FileType markdown	setl spell textwidth=100
   au FileType python	setl textwidth=88
   au FileType rst	setl foldmethod=manual spell
