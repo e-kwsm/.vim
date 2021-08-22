@@ -5,6 +5,7 @@ AArch64
 ab initio
 abelian
 ABI
+accessor
 acene
 acetophenone
 acetyl
@@ -287,6 +288,7 @@ GTO
 guanidine
 Gummel
 Hamprecht
+Hankel
 Hartree
 hartree/=
 HCTH
@@ -299,6 +301,7 @@ Hehre
 helicene
 Hellmann
 hemiacetal
+Hessenberg
 heteroatom
 heteroatoms
 heterocycle
@@ -706,6 +709,7 @@ TODO
 toml
 TPSS
 tribology
+tridiagonal
 triphenylene
 TrueType/=
 Truhlar
