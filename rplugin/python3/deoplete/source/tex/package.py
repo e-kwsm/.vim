@@ -72,6 +72,7 @@ class Source(Base):
             "typicons",
             "unicode-math",
             "unitconv",
+            "utfsym",
             "xcolor",
             "xparse",
             "xspace",
