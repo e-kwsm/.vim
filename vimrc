@@ -30,16 +30,16 @@ else
     call dein#add('Shougo/deoplete-lsp')
   endif
 
-  call dein#add('Shougo/neco-syntax')
-  call dein#add('Shougo/neoinclude.vim')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('cespare/vim-toml')
+  call dein#add('cocopon/iceberg.vim')
   call dein#add('hrsh7th/vim-vsnip')
   call dein#add('hrsh7th/vim-vsnip-integ')
   call dein#add('itchyny/lightline.vim')
-  call dein#add('joshdick/onedark.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
+  call dein#add('Shougo/neco-syntax')
+  call dein#add('Shougo/neoinclude.vim')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
   call dein#add('ujihisa/neco-look')
@@ -56,6 +56,35 @@ else
   endif
 
   " plugin config {{{2
+  " cocopon/iceberg.vim {{{3
+  try | colorscheme iceberg | let g:lightline = {'colorscheme': 'iceberg'} | catch | colorscheme desert | endtry
+
+  "hrsh7th/vim-vsnip {{{3
+  imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+
+  " Expand or jump
+  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
+  " Jump forward or backward
+  imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+  smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+  imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+  smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
+  " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
+  " See https://github.com/hrsh7th/vim-vsnip/pull/50
+  "nmap        s   <Plug>(vsnip-select-text)
+  "xmap        s   <Plug>(vsnip-select-text)
+  "nmap        S   <Plug>(vsnip-cut-text)
+  "xmap        S   <Plug>(vsnip-cut-text)
+
+  let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
+
+  " ncm2/float-preview.nvim {{{3
+  let g:float_preview#docked = 1
+
   " neovim/nvim-lspconfig {{{3
   if has('nvim')
     lua << EOF
@@ -114,35 +143,6 @@ EOF
     augroup END
   endif
 
-  "hrsh7th/vim-vsnip {{{3
-  imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
-  smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
-
-  " Expand or jump
-  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-
-  " Jump forward or backward
-  imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-  smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-  imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-  smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-
-  " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
-  " See https://github.com/hrsh7th/vim-vsnip/pull/50
-  "nmap        s   <Plug>(vsnip-select-text)
-  "xmap        s   <Plug>(vsnip-select-text)
-  "nmap        S   <Plug>(vsnip-cut-text)
-  "xmap        S   <Plug>(vsnip-cut-text)
-
-  let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
-
-  " joshdick/onedark.vim {{{3
-  try | colorscheme onedark | let g:lightline = {'colorscheme': 'onedark'} | catch | colorscheme desert | endtry
-
-  " ncm2/float-preview.nvim {{{3
-  let g:float_preview#docked = 1
-
   " }}}2
 endif
 " }}}1
@@ -196,7 +196,7 @@ augroup myFileTypeConfig " {{{1
   au FileType gitconfig	setl noexpandtab shiftwidth=8
   au FileType gnuplot	setl shiftwidth=4 textwidth=100
         \ keywordprg=gnuplot\ -e\ help\\
-  au FileType markdown	setl spell textwidth=100
+  au FileType markdown	setl shiftwidth=4 spell textwidth=100
   au FileType python	setl textwidth=88
   au FileType rst	setl foldmethod=manual spell
   au FileType sh	setl tabstop=2 textwidth=100 | let g:is_posix = 1
