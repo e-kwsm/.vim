@@ -972,6 +972,37 @@ prefix = "DOT_OPERATOR"
 body = "⋅"
 description = "U+22C5"
 
+# Miscellaneous Technical Block {{{1
+["Left Ceiling"]
+prefix = "LEFT_CEILING"
+body = "⌈"
+description = "U+2308"
+
+["Right Ceiling"]
+prefix = "RIGHT_CEILING"
+body = "⌉"
+description = "U+2309"
+
+["Left Floor"]
+prefix = "LEFT_FLOOR"
+body = "⌊"
+description = "U+230A"
+
+["Right Floor"]
+prefix = "RIGHT_FLOOR"
+body = "⌋"
+description = "U+230B"
+
+["Left-Pointing Angle Bracket"]
+prefix = "LEFT_POINTING_ANGLE_BRACKET"
+body = "〈"
+description = "U+2329"
+
+["Right-Pointing Angle Bracket"]
+prefix = "RIGHT_POINTING_ANGLE_BRACKET"
+body = "〉"
+description = "U+232A"
+
 # Control Pictures Block {{{1
 ["Open Box"]
 prefix = "OPEN_BOX"
