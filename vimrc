@@ -23,15 +23,10 @@ else
   call dein#begin(s:bundle_root)
   call dein#add('Shougo/dein.vim')
   " plugins {{{2
-  if has('python3')
-    call dein#add('Shougo/deoplete.nvim')
-  endif
   if has('nvim')
     call dein#add('neovim/nvim-lspconfig')
     call dein#add('ncm2/float-preview.nvim')
-  endif
-  if has('nvim') && has('python3')
-    call dein#add('Shougo/deoplete-lsp')
+    call dein#add('Shougo/ddc-nvim-lsp')
   endif
 
   call dein#add('bronson/vim-trailing-whitespace')
@@ -42,6 +37,10 @@ else
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
+  call dein#add('Shougo/ddc-around')
+  call dein#add('Shougo/ddc-matcher_head')
+  call dein#add('Shougo/ddc-sorter_rank')
+  call dein#add('Shougo/ddc.vim')
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('tpope/vim-endwise')
@@ -138,12 +137,100 @@ else
 EOF
   endif
 
-  " Shougo/deoplete.nvim {{{3
-  if has('nvim') && has('python3')
-    let g:deoplete#enable_at_startup = 1
-    au myvimrc InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
-  endif
+  " Shougo/ddc.vim {{{3
+  au myvimrc CompleteDone * pclose
 
+  let s:sources = [
+        \ 'nvim-lsp',
+        \ 'vsnip',
+        \ 'around',
+        \ ]
+  call ddc#custom#patch_global('sources', s:sources)
+
+  call ddc#custom#patch_global('sourceOptions', {
+        \ '_': {
+        \   'matchers': ['matcher_head'],
+        \   'sorters': ['sorter_rank'],
+        \ },
+        \ 'around': {'mark': 'A'},
+        \ 'nvim-lsp': {
+        \     'mark': 'lsp',
+        \     'forceCompletionPattern': '(?:\.|->)\w*',
+        \ },
+        \ })
+
+  call ddc#custom#patch_global('sourceParams', {
+        \ 'around': {'maxSize': 500},
+        \ })
+
+  call ddc#custom#patch_filetype('bib', 'sources', [
+        \ 'bib.field',
+        \ 'bib.type',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
+        \ 'c.doxygen',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('cmake', 'sources', [
+        \ 'cmake.FindBLAS',
+        \ 'cmake.FindBoost',
+        \ 'cmake.FindLAPACK',
+        \ 'cmake.FindMPI',
+        \ 'cmake.FindOpenMP',
+        \ 'cmake.FindPython',
+        \ 'cmake.FindPython3',
+        \ 'cmake.GNUInstallDirs',
+        \ 'cmake.configure_file',
+        \ 'cmake.find_package',
+        \ 'cmake.generator_expressions',
+        \ 'cmake.include',
+        \ 'cmake.list',
+        \ 'cmake.message',
+        \ 'cmake.string',
+        \ 'cmake.variable',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('gnuplot', 'sources', [
+        \ 'gnuplot.colornames',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('markdown', 'sources', [
+        \ 'markdown.github',
+        \ 'markdown.gitlab',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('module', 'sources', [
+        \ 'module.path',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('rst', 'sources', [
+        \ 'rst.directive',
+        \ 'rst.pygments',
+        \ 'rst.role',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('sh', 'sources', [
+        \ 'sh.pbs.environment',
+        \ 'sh.pbs.qsub',
+        \ 'sh.slurm.environment',
+        \ 'sh.slurm.sbatch',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('svg', 'sources', [
+        \ 'svg.attr_name',
+        \ 'svg.color',
+        \ 'svg.element',
+        \ 'svg.font',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('tex', 'sources', [
+        \ 'tex.beamercolor',
+        \ 'tex.beamerfont',
+        \ 'tex.beamersize',
+        \ 'tex.beamertemplate',
+        \ 'tex.class',
+        \ 'tex.command',
+        \ 'tex.environment',
+        \ 'tex.font',
+        \ 'tex.minted',
+        \ 'tex.package',
+        \ 'tex.usetikzlibrary',
+        \ 'tex.xcolor',
+        \ ] + s:sources)
+
+  call ddc#enable()
   " }}}2
 endif
 " }}}1
