@@ -1,3 +1,7 @@
+augroup myvimrc
+  au!
+augroup END
+
 filetype plugin indent on
 syntax enable
 
@@ -137,10 +141,7 @@ EOF
   " Shougo/deoplete.nvim {{{3
   if has('nvim') && has('python3')
     let g:deoplete#enable_at_startup = 1
-    augroup deoplete-pum
-      au!
-      au InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
-    augroup END
+    au myvimrc InsertLeave,CompleteDone * if getcmdwintype() == '' && pumvisible() == 0 | pclose | endif
   endif
 
   " }}}2
@@ -185,9 +186,7 @@ highlight LineNr ctermfg=darkred
 
 let &titleold=getcwd()
 
-augroup myFileTypeConfig " {{{1
-  au!
-
+augroup myvimrc " {{{1
   au FileType bib	setl spell
   au FileType c,cpp	setl tabstop=2 textwidth=100
   au FileType csv	setl noexpandtab
@@ -226,10 +225,7 @@ augroup myFileTypeConfig " {{{1
         \ 'refsegment',
         \ 'verbatim',
         \ ], '\|')
-augroup END " }}}1
 
-augroup myHooks " {{{1
-  au!
   au BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
         \   exe 'normal g`"' |
@@ -244,6 +240,10 @@ augroup myHooks " {{{1
   au BufReadPost git-rebase-todo	:1
 
   if has('nvim')
+    if $TERM =~ '.\+256color$'
+      au TermEnter * set notermguicolors
+      au TermLeave * set termguicolors
+    endif
     au TermOpen term://* startinsert
   endif
 augroup END " }}}1
