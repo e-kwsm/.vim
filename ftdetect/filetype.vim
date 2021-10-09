@@ -1,11 +1,14 @@
 autocmd BufRead /usr/include/c++/* setf cpp
 autocmd BufRead CMakeCache.txt setl filetype=cmakecache
+autocmd BufRead config.cache setf sh
+
+autocmd BufNewFile deno://*.ts%23%5E setf typescript
 
 autocmd BufRead,BufNewFile .clang-format setf yaml
 autocmd BufRead,BufNewFile .clang-tidy setf yaml
 autocmd BufRead,BufNewFile *.cif setl filetype=cif
 autocmd BufRead,BufNewFile *.cls setl filetype=tex
-autocmd BufRead,BufNewFile *.cml setf cml
+autocmd BufRead,BufNewFile *.cml setl filetype=cml
 autocmd BufRead,BufNewFile *.csv setf csv
 autocmd BufRead,BufNewFile *.gjf setl filetype=gaussian
 autocmd BufRead,BufNewFile *.gp setl filetype=gnuplot
