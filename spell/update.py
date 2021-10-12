@@ -7,49 +7,49 @@ from tempfile import NamedTemporaryFile
 
 
 def update(vim: str = "nvim", check: bool = False, casesensitive: bool = True):
-    add = "en.utf-8.add"
-    ref = NamedTemporaryFile(delete=False)
+    if not vim:
+        raise ValueError
 
-    cmd = [vim, "-u", "NONE"]
+    cmd = [vim, "--clean"]
     if Path(vim).name == "nvim":
         cmd.append("--headless")
-    cmd.append("-c{}".format("|".join([
-        "set spell",
-        f"e {add}",
-        "sort u",
-        "sort i",
-        "up",
-        "mkspell! %",
-        "%bw",
-        "spelldump",
-        "keepp 0;2/^#/d",
-        f"w! {ref.name}",
-        "qa",
-    ])))
-    subprocess.run(cmd)
+    add = "en.utf-8.add"
 
-    if not check:
-        Path(ref.name).unlink()
-        return
+    with NamedTemporaryFile() as ref:
+        cmd.append("-c{}".format("|".join([
+            "set spell",
+            f"e {add}",
+            "sort u",
+            "sort i",
+            "up",
+            "mkspell! %",
+            "%bw",
+            "spelldump",
+            "keepp 0;2/^#/d",
+            f"w! {ref.name}",
+            "qa",
+        ])))
+        subprocess.run(cmd)
 
-    pat = re.compile("/[^/]+$")
+        if not check:
+            return
 
-    newwords = set()
-    with open(add) as f:
-        for w in f:
-            if not w.startswith("#") and not w.startswith("/"):
+        pat = re.compile("/[^/]+$")
+
+        newwords = set()
+        with open(add) as f:
+            for w in f:
+                if not w.startswith("#") and not w.startswith("/"):
+                    w = pat.sub("", w.strip())
+                    newwords.add(w if casesensitive else w.lower())
+
+        with open(ref.name) as f:
+            for w in f:
                 w = pat.sub("", w.strip())
-                newwords.add(w if casesensitive else w.lower())
-
-    with open(ref.name) as f:
-        for w in f:
-            w = pat.sub("", w.strip())
-            if not casesensitive:
-                w = w.lower()
-            if w in newwords:
-                print(w)
-
-    Path(ref.name).unlink()
+                if not casesensitive:
+                    w = w.lower()
+                if w in newwords:
+                    print(w)
 
 
 def main():
