@@ -6,8 +6,8 @@ filetype plugin indent on
 syntax enable
 
 if has('nvim') " {{{
-  let g:loaded_python_provider = 0  " disabled
-  for s:m in range(9, 6, -1)
+  let g:loaded_python_provider = v:false
+  for s:m in range(10, 6, -1)
     let g:python3_host_prog = exepath('python3.' . string(s:m))
     if len(g:python3_host_prog) | break | endif
   endfor
@@ -178,8 +178,9 @@ endif
 " }}}1
 
 " map {{{1
+nnoremap m <Nop>
 nnoremap mm :make<CR>
-noremap Q gq
+nnoremap Q gq
 " }}}1
 
 highlight LineNr ctermfg=darkred
@@ -193,12 +194,15 @@ augroup myvimrc " {{{1
   au FileType fortran	setl ignorecase
   au FileType gitcommit	setl textwidth=0 spell
   au FileType gitconfig	setl noexpandtab shiftwidth=8
-  au FileType gnuplot	setl shiftwidth=4 textwidth=100
+  au FileType gnuplot	setl
         \ keywordprg=gnuplot\ -e\ help\\
+        \ shiftwidth=4 textwidth=100
   au FileType markdown	setl shiftwidth=4 spell textwidth=100
   au FileType python	setl textwidth=88
   au FileType rst	setl foldmethod=manual spell
-  au FileType sh	setl tabstop=2 textwidth=100 | let g:is_posix = 1
+  au FileType sh	setl
+        \ makeprg=shellcheck\ -f\ gcc\ %
+        \ tabstop=2 textwidth=100
   au FileType sshconfig	setl noexpandtab
   au FileType svg	setl iskeyword+=- tabstop=2 textwidth=100
   au FileType tcl	setl iskeyword+=-
@@ -215,7 +219,8 @@ augroup myvimrc " {{{1
   au BufNewFile *.sh	put!='#!/bin/sh' | :2
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
 
-  let g:c_gnu = 1
+  let g:c_gnu = v:true
+  let g:is_posix = v:true
   let g:tex_flavor = 'latex'
   let g:tex_noindent_env = join([
         \ 'document',
