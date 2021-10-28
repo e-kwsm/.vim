@@ -9,5 +9,13 @@
       "if __name__ == \"__main__\":",
       "\t$1()"
     ]
+  },
+  "argparse.ArgumentParser": {
+    "prefix": "_ArgumentParser",
+    "body": [
+      "${1:parser} = argparse.ArgumentParser()",
+      "$1.add_argument(${2})",
+      "args = $1.parse_args()"
+    ]
   }
 }

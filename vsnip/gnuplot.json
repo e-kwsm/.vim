@@ -3,7 +3,7 @@
     "prefix": "set_terminal_svg",
     "body": [
       "set terminal svg size ${1:300}, ${2:300} enhanced font '${3:Arial}, ${4:10}'",
-      "set output '${5:a}.svg'",
+      "set output '${5:${TM_FILENAME_BASE}}.svg'",
       ""
     ]
   }
