@@ -652,6 +652,11 @@ prefix = "FOR_ALL"
 body = "∀"
 description = "U+2200"
 
+["Complement"]
+prefix = "COMPLEMENT"
+body = "∁"
+description = "U+2201"
+
 ["Partial Differential"]
 prefix = "PARTIAL_DIFFERENTIAL"
 body = "∂"

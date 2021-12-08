@@ -36,6 +36,12 @@ body = "\\left${1:(} ${3} \\right${2:)}"
 prefix = "\\makeatletter"
 body = ["\\makeatletter", "${1}", "\\makeatother"]
 
+# adjustbox.sty {{{1
+["adjustbox environment"]
+prefix = "\\adjustbox"
+#body = ["\\adjustbox{${1|max,min|} ${2|width,height,totalheight,size,totalsize|}=${3}}{${4}}"]
+body = ["\\begin{adjustbox}{${1|max,min|} ${2|width,height,totalheight,size,totalsize|}=${3}}", "\t${4}", "\\end{adjustbox}"]
+
 # amsmath.sty {{{1
 ["align environment"]
 prefix = "\\align"
@@ -189,7 +195,7 @@ body = "\\mleft${1:(} ${3} \\mright${2:)}"
 # pgffor.sty {{{1
 ["\\foreach"]
 prefix = "\\foreach"
-body = "\\foreach \\\\${1} in {${2}} "
+body = ["\\foreach \\\\${1} in {${2}} {", "\t${3}", "}"]
 
 # tikz.sty {{{1
 ["\\tikz"]
