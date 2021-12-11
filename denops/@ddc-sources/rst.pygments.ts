@@ -1,11 +1,11 @@
 import {
   BaseSource,
   Candidate,
-} from "https://deno.land/x/ddc_vim@v0.18.0/types.ts#^";
+} from "https://deno.land/x/ddc_vim@v1.1.0/types.ts#^";
 import {
   GatherCandidatesArguments,
   OnInitArguments,
-} from "https://deno.land/x/ddc_vim@v0.18.0/base/source.ts#^";
+} from "https://deno.land/x/ddc_vim@v1.1.0/base/source.ts#^";
 
 type Params = Record<string, never>;
 export class Source extends BaseSource<Params> {
