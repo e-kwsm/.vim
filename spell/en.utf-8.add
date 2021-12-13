@@ -308,8 +308,16 @@ emissive
 enamine
 enantiomer
 enantiomeric
+enantiomerically
+enantiomerisation/4
+enantiomerism
+enantiomerization
+enantiomers
+enantiomorph
 enantioselective
 enantioselectivity
+enantiotopic
+enantiotropic
 endo
 endocyclic
 endohedral
@@ -320,6 +328,7 @@ enthalpic
 EOF
 EPBT
 EQE
+equimolar
 erf/=
 erfc/=
 Ernzerhof
@@ -798,6 +807,10 @@ Queisser
 quinoidal
 quinoline
 quinone
+racemate
+racemic
+racemisation/4
+racemization
 radiobutton
 Raman
 Raphson
