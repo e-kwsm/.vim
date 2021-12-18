@@ -50,6 +50,7 @@ anisole
 ansatz
 antiferromagnetism
 AO
+AOs/=
 arccos/=
 arccot/=
 arccsc/=
@@ -603,6 +604,7 @@ MongoDB/=
 monic
 Monkhorst
 Morera
+MOs/=
 MP2
 MP4
 MPa/=
@@ -723,6 +725,7 @@ perturbated
 perturbative
 perturbatively
 perylene
+PFLOPS
 phenanthrene
 phenoxide
 phenylene
@@ -785,6 +788,7 @@ ps/=
 pseudogap
 pseudopotential
 pseudopotentials
+pseudospectral
 Pulay
 PV
 PW86
