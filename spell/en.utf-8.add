@@ -51,6 +51,8 @@ ansatz
 antiferromagnetism
 AO
 AOs/=
+approximant
+approximants
 arccos/=
 arccot/=
 arccsc/=
@@ -66,6 +68,7 @@ Arnoldi
 arsech/=
 arsinh/=
 artanh/=
+arXiv/=
 arylation
 AST
 atm/=
@@ -102,6 +105,7 @@ benzo
 benzoate
 benzonitrile
 benzophenone
+benzoquinone
 benzyl
 BFGS
 BFS
@@ -182,6 +186,7 @@ CODATA
 coenzyme
 colinear
 Condon
+copernicium
 copolymerisation/4
 copolymerization
 copyedit
@@ -216,6 +221,7 @@ cytokine
 d'Alembert
 Da/=
 Dancoff
+darmstadtium
 de Broglie
 de Dominicis
 de Gennes
@@ -233,6 +239,7 @@ def2-TZVP/=
 def2-TZVPD/=
 def2-TZVPP/=
 def2-TZVPPD/=
+Delaunay
 delocalisation/4
 delocalise/4
 delocalised/4
@@ -291,6 +298,8 @@ discretizes
 dispersity
 DMC
 DOI
+Drude
+dubnium
 Duhem
 ECP
 Ehrenfest
@@ -298,6 +307,7 @@ eigen
 eigendecomposition
 eigenmode
 eigenmodes
+eigensolver
 Ekman
 electrocatalysis
 electrocatalyst
@@ -350,6 +360,8 @@ Faddeeva
 FFT
 FFTW
 filesystem
+Firebird
+flerovium
 Fock
 formamide
 formamidine
@@ -401,6 +413,7 @@ Hamprecht
 Hankel
 Hartree
 hartree/=
+hassium
 HCTH
 HCTH120
 HCTH147
@@ -506,7 +519,9 @@ Kolmogorov
 Koopmans
 Koster
 kPa/=
+Kramers
 Kroll
+Kronig
 Krylov
 Kullback
 Kutta
@@ -526,6 +541,7 @@ LANL2DZ
 lanthanides
 LAPACK
 Laplacian
+LC-ωPBE/=
 LCAO
 LDA
 Lebedev
@@ -543,10 +559,12 @@ linter
 linters
 Liouville
 lithiated
+livermorium
 LJ
 LLVM
 ln/=
 LSDA
+LSP
 lua
 LuaLaTeX/=
 LuaTeX/=
@@ -569,6 +587,7 @@ Markovnikov
 Mauguin
 MD5
 Meissner
+meitnerium
 Meißner
 memoisation/4
 memoise/4
@@ -584,6 +603,7 @@ mesoporous
 mesoscale
 mesoscopic
 metadynamics
+metallicity
 methanethiol
 methanoate
 methoxide
@@ -605,6 +625,7 @@ monic
 Monkhorst
 Morera
 MOs/=
+moscovium
 MP2
 MP4
 MPa/=
@@ -637,6 +658,8 @@ Navier
 NBO
 NDDO
 Netlib
+Niggli
+nihonium
 niobate
 NIST
 nitramine
@@ -647,12 +670,14 @@ NoDerivatives/=
 Noether
 nonadiabatic
 noncanonical
+noncollinear
 NonCommercial/=
 noncovalent
 nonnegative
 nonplanar
 nonpositive
 nonrelativistic
+NoSQL/=
 Nosé
 NPH
 NPT
@@ -664,7 +689,9 @@ NVE
 NVT
 O3LYP
 OAuth/=
+OCaml/=
 octupole
+oganesson
 oligo
 oligomer
 oligomeric
@@ -686,6 +713,7 @@ ORCID
 orientational
 orthonormalisation/4
 orthonormalised/4
+orthonormality
 orthonormalization
 orthonormalized
 osmolyte
@@ -705,7 +733,8 @@ pathogenicity
 PBE
 PBE0
 PBE0DH
-PBEsol
+PBEP86
+PBEsol/=
 PCA
 PCBM
 PCE
@@ -789,16 +818,19 @@ pseudogap
 pseudopotential
 pseudopotentials
 pseudospectral
+PTPSS
 Pulay
 PV
 PW86
 PW91
 PW92
+PWPB95
 pyrazine
 pyrazole
 pyridazine
 pyridinium
 pyrrole
+PZ81
 QCISD
 QCISDT
 QCISDTQ
@@ -818,13 +850,16 @@ racemization
 radiobutton
 Raman
 Raphson
+RDBMS
 RDF
+Redis
 regio
 regiocontrollable
 regiorandom
 regioregular
 regioselective
 regioselectivity
+ReLU/=
 renormalisation/4
 renormalization
 renormalize
@@ -832,6 +867,7 @@ reptate
 reptation
 reST/=
 reStructuredText/=
+revPBE/=
 RHEL
 RHF
 rhombohedral
@@ -843,6 +879,7 @@ RMS
 RMSD
 RMSE
 Rodrigues
+roentgenium
 ROHF
 Roothaan
 rotaxane
@@ -865,6 +902,7 @@ SCRF
 Scuseria
 SDD
 SDGs/=
+seaborgium
 sebacate
 sebacic
 sech/=
@@ -875,12 +913,14 @@ ShareAlike/=
 sidechain
 sidechains
 sigmoidal
+signum
 siloxy
 silyl
 sinc
 sinh/=
 Smirnov
 SOGGA
+SOGGA11
 soliton
 solvate
 solvated
@@ -900,6 +940,7 @@ stereoselective
 stereoselectivities
 steric
 sterically
+Sternheimer
 STO
 suberate
 suberic
@@ -917,6 +958,8 @@ superresolution
 SVD
 SVG
 SVM
+symmetrisation/4
+symmetrization
 synthetase
 Tamm
 tanh/=
@@ -928,6 +971,7 @@ tautomerism
 tautomerization
 tautomers
 TDDFT
+tennessine
 terephthalate
 terephthalic
 tert/=
@@ -957,6 +1001,7 @@ Truhlar
 tryptophan
 tunability
 UFF
+ultrasoft
 ultrathin
 unpolarised/4
 unpolarized
@@ -972,6 +1017,7 @@ vibronic
 vibronically
 vicinal
 vinylene
+virial
 VLAN
 VMC
 Voigt
@@ -979,12 +1025,15 @@ voltammetry
 Voronoi
 voxel
 VSEPR
+VWN
 VWN3
 VWN5
 Wannier
 Warshall
 wavefunction
 wavefunctions
+wavevector
+wavevectors
 Wb/=
 Weierstraß
 Weizsäcker
@@ -1017,6 +1066,7 @@ zwitterionic
 μm/=
 μs/=
 τ-HCTH/=
+τ-HCTHh/=
 ωB97
+ωB97M
 ωB97X
-ωPBE/=
