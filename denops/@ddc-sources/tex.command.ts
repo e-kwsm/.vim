@@ -1300,6 +1300,9 @@ export class Source extends BaseSource<Params> {
         "StrRight",
         "StrSplit",
         "StrSubstitute",
+        //"StrEq",//
+        //"StrGobbleleft",//
+        //"StringDel",//
       ]),
     );
 
