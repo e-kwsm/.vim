@@ -29,6 +29,7 @@ export class Source extends BaseSource<Params> {
       "bookmark",
       "booktabs",
       "chemfig",
+      "clistmap",
       "cloze",
       "colorist",
       "datetime2",
@@ -80,6 +81,12 @@ export class Source extends BaseSource<Params> {
       "xparse",
       "xspace",
       "xstring",
+
+      "functional",
+      "jmsdelim",
+      "liftarm",
+      "messagepassing",
+      "robotarm",
     ].map(
       (word) => Promise.resolve({ menu: "sty", word: word }),
     ));
