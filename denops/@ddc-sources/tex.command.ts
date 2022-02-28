@@ -1,11 +1,12 @@
 // vi:foldmethod=marker
 import {
   BaseSource,
-  Candidate,
-} from "https://deno.land/x/ddc_vim@v1.4.0/types.ts#^";
-import { GatherCandidatesArguments } from "https://deno.land/x/ddc_vim@v1.4.0/base/source.ts#^";
+  DdcGatherItems,
+  Item,
+} from "https://deno.land/x/ddc_vim@v2.1.0/types.ts#^";
+import { GatherArguments } from "https://deno.land/x/ddc_vim@v2.1.0/base/source.ts#^";
 
-async function _generate(pkg: string, cmds: string[]): Promise<Candidate[]> {
+async function _generate(pkg: string, cmds: string[]): Promise<Item[]> {
   return await Promise.all(
     cmds.map(
       (cmd) =>
@@ -22,14 +23,14 @@ async function _generate(pkg: string, cmds: string[]): Promise<Candidate[]> {
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gatherCandidates(
-    args: GatherCandidatesArguments<Params>,
-  ): Promise<Candidate[]> {
+  async gather(
+    args: GatherArguments<Params>,
+  ): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\\[A-Za-z]*$/)) {
       return [];
     }
 
-    let cs: Candidate[] = [];
+    let cs: DdcGatherItems = [];
 
     cs = cs.concat(
       await _generate("", [ // {{{1
