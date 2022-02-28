@@ -5,14 +5,6 @@ augroup END
 filetype plugin indent on
 syntax enable
 
-if has('nvim') " {{{
-  let g:loaded_python_provider = v:false
-  for s:m in range(10, 6, -1)
-    let g:python3_host_prog = exepath('python3.' . string(s:m))
-    if len(g:python3_host_prog) | break | endif
-  endfor
-endif " }}}
-
 " Shougo/dein.vim {{{1
 let s:bundle_root = expand('~/.local/share/nvim/site/bundle')
 let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
@@ -281,6 +273,7 @@ augroup myvimrc " {{{1
   au FileType fortran	setl ignorecase
   au FileType gitcommit	setl textwidth=0 spell
   au FileType gitconfig	setl noexpandtab shiftwidth=8
+  au FileType gitrebase	setl keywordprg=git\ show
   au FileType gnuplot	setl
         \ keywordprg=gnuplot\ -e\ help\\
         \ shiftwidth=4 textwidth=100
