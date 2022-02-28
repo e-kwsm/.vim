@@ -1,11 +1,11 @@
 import {
   BaseSource,
-  Candidate,
-} from "https://deno.land/x/ddc_vim@v1.4.0/types.ts#^";
+  DdcGatherItems,
+} from "https://deno.land/x/ddc_vim@v2.1.0/types.ts#^";
 import {
-  GatherCandidatesArguments,
+  GatherArguments,
   OnInitArguments,
-} from "https://deno.land/x/ddc_vim@v1.4.0/base/source.ts#^";
+} from "https://deno.land/x/ddc_vim@v2.1.0/base/source.ts#^";
 
 type Params = Record<string, never>;
 
@@ -25,9 +25,9 @@ export class Source extends BaseSource<Params> {
       .map((word) => word.replace(/^Find/, ""));
   }
 
-  async gatherCandidates(
-    args: GatherCandidatesArguments<Params>,
-  ): Promise<Candidate[]> {
+  async gather(
+    args: GatherArguments<Params>,
+  ): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\bfind_package\s*\(\w*$/i)) {
       return [];
     }
