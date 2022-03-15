@@ -10,6 +10,7 @@
       "\t$1()"
     ]
   },
+
   "argparse.ArgumentParser": {
     "prefix": "_ArgumentParser",
     "body": [

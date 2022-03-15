@@ -7,5 +7,14 @@
       "\t${0}",
       "</$4>"
     ]
+  },
+
+  "xmlns:dc": {
+    "prefix": "xmlns:dc",
+    "body": "xmlns:dc=\"http://purl.org/dc/elements/1.1/\""
+  },
+  "http://purl.org/dc/elements/1.1/": {
+    "prefix": "<dc:",
+    "body": "<dc:${1|contributor,coverage,creator,date,description,format,identifier,language,publisher,relation,rights,source,subject,title,type|}>${2}</dc:$1>"
   }
 }
