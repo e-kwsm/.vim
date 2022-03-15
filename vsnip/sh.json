@@ -13,7 +13,7 @@
     "prefix": "mktempfile",
     "body": [
       "${1:tmp}=\\$(mktemp ${2:tmp.XXXXXXXXXX})",
-      "trap 'rm -f \\$$1' 0 1 2 15",
+      "trap 'rm -f \"\\$$1\"' 0 1 2 15",
       ""
     ]
   },
@@ -21,7 +21,7 @@
     "prefix": "mktempdir",
     "body": [
       "${1:tmp}=\\$(mktemp -d ${2:tmp.XXXXXXXXXX})",
-      "trap 'rm -rf \\$$1' 0 1 2 15",
+      "trap 'rm -rf \"\\$$1\"' 0 1 2 15",
       ""
     ]
   }
