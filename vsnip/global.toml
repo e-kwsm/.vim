@@ -1008,6 +1008,11 @@ prefix = "RIGHT_POINTING_ANGLE_BRACKET"
 body = "〉"
 description = "U+232A"
 
+["Return Symbol"]
+prefix = "RETURN_SYMBOL"
+body = "⏎"
+description = "U+23CE"
+
 # Control Pictures Block {{{1
 ["Open Box"]
 prefix = "OPEN_BOX"

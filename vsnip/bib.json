@@ -4,9 +4,9 @@
     "body": [
       "@article{${1:${TM_FILENAME_BASE}},",
       "\tauthor = {${2}},",
-      "\ttitle = {${3}},",
+      "\tdate = {${3}},",
       "\tjournal = {${4}},",
-      "\tdate = {${5}},",
+      "\ttitle = {${5}},",
       "}\n"
     ]
   },
@@ -15,9 +15,9 @@
     "body": [
       "@book{${1:${TM_FILENAME_BASE}},",
       "\tauthor = {${2}},",
-      "\ttitle = {${3}},",
-      "\tdate = {${4}},",
-      "\tpublisher = {${5}},",
+      "\tdate = {${3}},",
+      "\tpublisher = {${4}},",
+      "\ttitle = {${5}},",
       "}\n"
     ]
   },
@@ -26,8 +26,8 @@
     "body": [
       "@manual{${1:${TM_FILENAME_BASE}},",
       "\tauthor = {${2}},",
-      "\ttitle = {${3}},",
-      "\tdate = {${4}},",
+      "\tdate = {${3}},",
+      "\ttitle = {${4}},",
       "}\n"
     ]
   },
@@ -36,8 +36,8 @@
     "body": [
       "@misc{${1:${TM_FILENAME_BASE}},",
       "\tauthor = {${2}},",
-      "\ttitle = {${3}},",
-      "\tdate = {${4}},",
+      "\tdate = {${3}},",
+      "\ttitle = {${4}},",
       "}\n"
     ]
   },
@@ -46,8 +46,8 @@
     "body": [
       "@online{${1:${TM_FILENAME_BASE}},",
       "\tauthor = {${2}},",
-      "\ttitle = {${3}},",
-      "\tdate = {${4}},",
+      "\tdate = {${3}},",
+      "\ttitle = {${4}},",
       "\turl = {${5}},",
       "}\n"
     ]
@@ -57,10 +57,10 @@
     "body": [
       "@report{${1:${TM_FILENAME_BASE}},",
       "\tauthor = {${2}},",
-      "\ttitle = {${3}},",
-      "\ttype = {${4}},",
-      "\tinstitution = {${5}},",
-      "\tdate = {${6}},",
+      "\tdate = {${3}},",
+      "\tinstitution = {${4}},",
+      "\ttitle = {${5}},",
+      "\ttype = {${6}},",
       "}\n"
     ]
   }
