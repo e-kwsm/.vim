@@ -1317,6 +1317,42 @@ export class Source extends BaseSource<Params> {
       ]),
     );
 
+    cs = cs.concat(
+      await _generate("xstring", [ // {{{1
+        "IfBeginWith",
+        "IfDecimal",
+        "IfEndWith",
+        "IfEq",
+        "IfEqCase",
+        "IfInteger",
+        "IfStrEq",
+        "IfStrEqCase",
+        "IfSubStr",
+        "IfSubStrBefore",
+        "IfSubStrBehind",
+        "StrBefore",
+        "StrBehind",
+        "StrBetween",
+        "StrChar",
+        "StrCompare",
+        "StrCount",
+        "StrCut",
+        "StrDel",
+        "StrExpand",
+        "StrFindGroup",
+        "StrGobbleLeft",
+        "StrGobbleRight",
+        "StrLeft",
+        "StrLen",
+        "StrMid",
+        "StrPosition",
+        "StrRemoveBraces",
+        "StrRight",
+        "StrSplit",
+        "StrSubstitute",
+      ]),
+    );
+
     // }}}1
     return cs;
   }
