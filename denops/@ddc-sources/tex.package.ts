@@ -80,6 +80,7 @@ export class Source extends BaseSource<Params> {
       "xcolor",
       "xparse",
       "xspace",
+      "xstring",
     ].map(
       (word) => Promise.resolve({ menu: "sty", word: word }),
     ));
