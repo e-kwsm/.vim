@@ -25,12 +25,12 @@ export class Source extends BaseSource<Params> {
     ];
 
     return await Promise.all(options.map(
-      (word) =>
+      (option) =>
         Promise.resolve({
           menu: "PBS",
-          abbr: `#PBS -${word.word}`,
-          word: `PBS -${word.word} `,
-          kind: word.kind,
+          abbr: `#PBS -${option.word}`,
+          word: `PBS -${option.word} `,
+          kind: option.kind,
         }),
     ));
   }

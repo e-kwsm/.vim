@@ -10,7 +10,7 @@ export class Source extends BaseSource<Params> {
   async gather(
     args: GatherArguments<Params>,
   ): Promise<DdcGatherItems> {
-    if (!args.context.input.match(/\bmessage\s*\(\w*$/i)) {
+    if (!args.context.input.match(/\bmessage\(\w*$/i)) {
       return [];
     }
 
@@ -30,7 +30,7 @@ export class Source extends BaseSource<Params> {
       "WARNING",
     ].map(
       (word) =>
-        Promise.resolve({ menu: "message", word: `${word} `, abbr: word }),
+        Promise.resolve({ menu: "message", word: word, abbr: word }),
     ));
   }
 

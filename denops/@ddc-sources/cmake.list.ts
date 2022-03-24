@@ -10,7 +10,7 @@ export class Source extends BaseSource<Params> {
   async gather(
     args: GatherArguments<Params>,
   ): Promise<DdcGatherItems> {
-    if (!args.context.input.match(/\blist\s*\(\w*$/i)) {
+    if (!args.context.input.match(/\blist\(\w*$/i)) {
       return [];
     }
 
@@ -33,7 +33,7 @@ export class Source extends BaseSource<Params> {
       "SUBLIST",
       "TRANSFORM",
     ].map(
-      (word) => Promise.resolve({ menu: "list", word: `${word} `, abbr: word }),
+      (word) => Promise.resolve({ menu: "list", word: word, abbr: word }),
     ));
   }
 

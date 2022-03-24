@@ -10,7 +10,7 @@ export class Source extends BaseSource<Params> {
   async gather(
     args: GatherArguments<Params>,
   ): Promise<DdcGatherItems> {
-    if (!args.context.input.match(/\bstring\s*\(\w*$/i)) {
+    if (!args.context.input.match(/\bstring\(\w*$/i)) {
       return [];
     }
 
@@ -48,7 +48,7 @@ export class Source extends BaseSource<Params> {
       "UUID",
     ].map(
       (word) =>
-        Promise.resolve({ menu: "string", word: `${word} `, abbr: word }),
+        Promise.resolve({ menu: "string", word: word, abbr: word }),
     ));
   }
 

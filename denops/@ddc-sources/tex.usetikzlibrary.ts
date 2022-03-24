@@ -220,7 +220,7 @@ export class Source extends BaseSource<Params> {
       "tex/latex/tikzmarmots/tikzlibrarymarmots.code.tex",
       "tex/latex/tqft/tikzlibrarytqft.code.tex",
       "tex/latex/zx-calculus/tikzlibraryzx-calculus.code.tex",
-    ].map((word) => word.replace(/^.+\//, "").replace(".code.tex", ""));
+    ].map((word) => word.replace(/^.+\//, "").replace(".code.tex$", ""));
 
     return;
 
@@ -250,7 +250,7 @@ export class Source extends BaseSource<Params> {
     await find.status();
     const lines = new TextDecoder().decode(await find.output()).split(/\n/);
     this.candidates = lines
-      .map((word) => word.replace(/^.+\//, "").replace(".code.tex", ""));
+      .map((word) => word.replace(/^.+\//, "").replace(".code.tex$", ""));
   }
 
   async gather(

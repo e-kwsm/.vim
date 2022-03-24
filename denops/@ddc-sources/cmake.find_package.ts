@@ -28,7 +28,7 @@ export class Source extends BaseSource<Params> {
   async gather(
     args: GatherArguments<Params>,
   ): Promise<DdcGatherItems> {
-    if (!args.context.input.match(/\bfind_package\s*\(\w*$/i)) {
+    if (!args.context.input.match(/\bfind_package\(\w*$/i)) {
       return [];
     }
     return await Promise.all(this.candidates
