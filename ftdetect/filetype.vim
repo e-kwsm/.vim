@@ -2,8 +2,6 @@ autocmd BufRead /usr/include/c++/* setf cpp
 autocmd BufRead CMakeCache.txt setl filetype=cmakecache
 autocmd BufRead config.cache setf sh
 
-autocmd BufNewFile deno://*.ts%23%5E setf typescript
-
 autocmd BufRead,BufNewFile .clang-format setf yaml
 autocmd BufRead,BufNewFile .clang-tidy setf yaml
 autocmd BufRead,BufNewFile *.cif setl filetype=cif
@@ -19,5 +17,7 @@ autocmd BufRead,BufNewFile *.plt setl filetype=gnuplot
 autocmd BufRead,BufNewFile *.tlu setf lua
 autocmd BufRead,BufNewFile *.tsv setf csv
 autocmd BufRead,BufNewFile *.xyz setf xyz
+
+autocmd BufRead,BufNewFile deno:/*.ts%23%5E setf typescript
 
 autocmd BufNewFile,BufRead * if getline(1) =~ '^#%Module' | setf module | endif
