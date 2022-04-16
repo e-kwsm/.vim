@@ -132,6 +132,12 @@ export class Source extends BaseSource<Params> {
     );
 
     cs = cs.concat(
+      await _generate("koma-script", [ // {{{1
+        "labeling",
+      ]),
+    );
+
+    cs = cs.concat(
       await _generate("listings", [ // {{{1
         "lstlisting",
       ]),
