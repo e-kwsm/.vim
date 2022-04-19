@@ -305,9 +305,14 @@ ECP
 Ehrenfest
 eigen
 eigendecomposition
+eigenenergies
+eigenenergy
 eigenmode
 eigenmodes
+eigenproblem
+eigenproblems
 eigensolver
+eigensolvers
 Ekman
 electrocatalysis
 electrocatalyst
@@ -456,6 +461,8 @@ Hund
 hydrazone
 hydrogenase
 hypergeometric
+hyperparameter
+hyperparameters
 hyperpolarisabilities/4
 hyperpolarisability/4
 hyperpolarizabilities
@@ -490,6 +497,7 @@ isoenthalpic
 isomerisation/4
 isomerization
 isopropanol
+isosteric
 isosurface
 isosurfaces
 isothiazole
@@ -541,6 +549,7 @@ LANL2DZ
 lanthanides
 LAPACK
 Laplacian
+Larmor
 LC-ωPBE/=
 LCAO
 LDA
@@ -576,6 +585,8 @@ M06
 mA/=
 Maclaurin
 Madelung
+magnetisabilities/4
+magnetizabilities
 magnon
 Majorana
 malate
@@ -620,6 +631,7 @@ MMFF
 MNDO
 MOF
 mol/=
+molality
 MongoDB/=
 monic
 Monkhorst
@@ -730,6 +742,7 @@ Padé
 Painlevé
 Parrinello
 pathogenicity
+PBC
 PBE
 PBE0
 PBE0DH
@@ -773,6 +786,7 @@ picosecond
 pinacol
 pKa/=
 planewave
+planewaves
 plasmon
 plasmonic
 Plesset
@@ -825,6 +839,7 @@ PW86
 PW91
 PW92
 PWPB95
+PyPI/=
 pyrazine
 pyrazole
 pyridazine
@@ -866,6 +881,7 @@ renormalize
 reptate
 reptation
 reST/=
+RESTful/=
 reStructuredText/=
 revPBE/=
 RHEL
@@ -908,6 +924,7 @@ sebacic
 sech/=
 Seitz
 semiconductive
+semidefinite
 SHA1
 ShareAlike/=
 sidechain
@@ -926,6 +943,7 @@ solvate
 solvated
 solvation
 Sommerfeld
+SPDX
 spinel
 spinodal
 spinor
@@ -1032,6 +1050,7 @@ Wannier
 Warshall
 wavefunction
 wavefunctions
+wavenumber
 wavevector
 wavevectors
 Wb/=
