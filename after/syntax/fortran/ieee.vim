@@ -1,0 +1,120 @@
+" IEEE_ARITHMETIC {{{1
+syn keyword fortranIntrinsic IEEE_ARITHMETIC
+
+syn keyword fortranIntrinsic ieee_class
+syn keyword fortranIntrinsic ieee_class_type
+syn keyword fortranIntrinsic ieee_copy_sign
+syn keyword fortranIntrinsic ieee_down
+syn keyword fortranIntrinsic ieee_get_rounding_mode
+syn keyword fortranIntrinsic ieee_get_underflow_mode
+syn keyword fortranIntrinsic ieee_is_finite
+syn keyword fortranIntrinsic ieee_is_nan
+syn keyword fortranIntrinsic ieee_is_negative
+syn keyword fortranIntrinsic ieee_is_normal
+syn keyword fortranIntrinsic ieee_logb
+syn keyword fortranIntrinsic ieee_nearest
+syn keyword fortranIntrinsic ieee_negative_denormal
+syn keyword fortranIntrinsic ieee_negative_inf
+syn keyword fortranIntrinsic ieee_negative_normal
+syn keyword fortranIntrinsic ieee_negative_subnormal
+syn keyword fortranIntrinsic ieee_negative_zero
+syn keyword fortranIntrinsic ieee_next_after
+syn keyword fortranIntrinsic ieee_other
+syn keyword fortranIntrinsic ieee_other_value
+syn keyword fortranIntrinsic ieee_positive_denormal
+syn keyword fortranIntrinsic ieee_positive_inf
+syn keyword fortranIntrinsic ieee_positive_normal
+syn keyword fortranIntrinsic ieee_positive_subnormal
+syn keyword fortranIntrinsic ieee_positive_zero
+syn keyword fortranIntrinsic ieee_quiet_nan
+syn keyword fortranIntrinsic ieee_rem
+syn keyword fortranIntrinsic ieee_rint
+syn keyword fortranIntrinsic ieee_round_type
+syn keyword fortranIntrinsic ieee_scalb
+syn keyword fortranIntrinsic ieee_selected_real_kind
+syn keyword fortranIntrinsic ieee_set_rounding_mode
+syn keyword fortranIntrinsic ieee_set_underflow_mode
+syn keyword fortranIntrinsic ieee_signaling_nan
+syn keyword fortranIntrinsic ieee_support_datatype
+syn keyword fortranIntrinsic ieee_support_denormal
+syn keyword fortranIntrinsic ieee_support_divide
+syn keyword fortranIntrinsic ieee_support_inf
+syn keyword fortranIntrinsic ieee_support_io
+syn keyword fortranIntrinsic ieee_support_nan
+syn keyword fortranIntrinsic ieee_support_rounding
+syn keyword fortranIntrinsic ieee_support_sqrt
+syn keyword fortranIntrinsic ieee_support_standard
+syn keyword fortranIntrinsic ieee_support_subnormal
+syn keyword fortranIntrinsic ieee_support_underflow_control
+syn keyword fortranIntrinsic ieee_to_zero
+syn keyword fortranIntrinsic ieee_unordered
+syn keyword fortranIntrinsic ieee_up
+syn keyword fortranIntrinsic ieee_value
+
+syn keyword fortranIntrinsic ieee_away
+syn keyword fortranIntrinsic ieee_fma
+syn keyword fortranIntrinsic ieee_int
+syn keyword fortranIntrinsic ieee_max_num
+syn keyword fortranIntrinsic ieee_max_num_mag
+syn keyword fortranIntrinsic ieee_min_num
+syn keyword fortranIntrinsic ieee_min_num_mag
+syn keyword fortranIntrinsic ieee_next_down
+syn keyword fortranIntrinsic ieee_next_up
+syn keyword fortranIntrinsic ieee_quiet_eq
+syn keyword fortranIntrinsic ieee_quiet_ge
+syn keyword fortranIntrinsic ieee_quiet_gt
+syn keyword fortranIntrinsic ieee_quiet_le
+syn keyword fortranIntrinsic ieee_quiet_lt
+syn keyword fortranIntrinsic ieee_quiet_ne
+syn keyword fortranIntrinsic ieee_real
+syn keyword fortranIntrinsic ieee_signaling_eq
+syn keyword fortranIntrinsic ieee_signaling_ge
+syn keyword fortranIntrinsic ieee_signaling_gt
+syn keyword fortranIntrinsic ieee_signaling_le
+syn keyword fortranIntrinsic ieee_signaling_lt
+syn keyword fortranIntrinsic ieee_signaling_ne
+syn keyword fortranIntrinsic ieee_signbit
+
+
+" IEEE_EXCEPTIONS {{{1
+syn keyword fortranIntrinsic IEEE_EXCEPTIONS
+
+syn keyword fortranIntrinsic ieee_all
+syn keyword fortranIntrinsic ieee_divide_by_zero
+syn keyword fortranIntrinsic ieee_flag_type
+syn keyword fortranIntrinsic ieee_get_flag
+syn keyword fortranIntrinsic ieee_get_halting_mode
+syn keyword fortranIntrinsic ieee_get_status
+syn keyword fortranIntrinsic ieee_inexact
+syn keyword fortranIntrinsic ieee_invalid
+syn keyword fortranIntrinsic ieee_overflow
+syn keyword fortranIntrinsic ieee_set_flag
+syn keyword fortranIntrinsic ieee_set_halting_mode
+syn keyword fortranIntrinsic ieee_set_status
+syn keyword fortranIntrinsic ieee_status_type
+syn keyword fortranIntrinsic ieee_support_flag
+syn keyword fortranIntrinsic ieee_support_halting
+syn keyword fortranIntrinsic ieee_underflow
+syn keyword fortranIntrinsic ieee_usual
+
+syn keyword fortranIntrinsic ieee_get_modes
+syn keyword fortranIntrinsic ieee_modes_type
+syn keyword fortranIntrinsic ieee_set_modes
+
+
+" IEEE_FEATURES {{{1
+syn keyword fortranIntrinsic IEEE_FEATURES
+
+syn keyword fortranIntrinsic ieee_datatype
+syn keyword fortranIntrinsic ieee_denormal
+syn keyword fortranIntrinsic ieee_divide
+syn keyword fortranIntrinsic ieee_features_type
+syn keyword fortranIntrinsic ieee_halting
+syn keyword fortranIntrinsic ieee_inexact_flag
+syn keyword fortranIntrinsic ieee_inf
+syn keyword fortranIntrinsic ieee_invalid_flag
+syn keyword fortranIntrinsic ieee_nan
+syn keyword fortranIntrinsic ieee_rounding
+syn keyword fortranIntrinsic ieee_sqrt
+syn keyword fortranIntrinsic ieee_subnormal
+syn keyword fortranIntrinsic ieee_underflow_flag
