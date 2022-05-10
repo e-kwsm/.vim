@@ -1,0 +1,3 @@
+syn keyword fortranConstant c_ptrdiff_t c_int128_t c_int_least128_t c_int_fast128_t c_float128 c_float128_complex
+
+syn keyword fortranIntrinsic c_sizeof
