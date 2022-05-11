@@ -15,10 +15,18 @@ else
   call dein#begin(s:bundle_root)
   call dein#add('Shougo/dein.vim')
   " plugins {{{2
+  let s:_denops_available = has('nvim') || v:version > 802
+
   if has('nvim')
     call dein#add('neovim/nvim-lspconfig')
     call dein#add('ncm2/float-preview.nvim')
+  endif
+  if s:_denops_available
+    call dein#add('Shougo/ddc-around')
+    call dein#add('Shougo/ddc-matcher_head')
     call dein#add('Shougo/ddc-nvim-lsp')
+    call dein#add('Shougo/ddc-sorter_rank')
+    call dein#add('Shougo/ddc.vim')
   endif
 
   call dein#add('bronson/vim-trailing-whitespace')
@@ -29,10 +37,6 @@ else
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
-  call dein#add('Shougo/ddc-around')
-  call dein#add('Shougo/ddc-matcher_head')
-  call dein#add('Shougo/ddc-sorter_rank')
-  call dein#add('Shougo/ddc.vim')
   call dein#add('Shougo/neco-syntax')
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('tpope/vim-endwise')
@@ -55,12 +59,12 @@ else
   try | colorscheme iceberg | let g:lightline = {'colorscheme': 'iceberg'} | catch | colorscheme desert | endtry
 
   "hrsh7th/vim-vsnip {{{3
-  imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
-  smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  snoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 
   " Expand or jump
-  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  inoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  snoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
 
   " Jump forward or backward
   imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
@@ -129,99 +133,101 @@ EOF
   endif
 
   " Shougo/ddc.vim {{{3
-  au myvimrc CompleteDone * pclose
+  if s:_denops_available
+    au myvimrc CompleteDone * pclose
 
-  let s:sources = [
-        \ 'nvim-lsp',
-        \ 'vsnip',
-        \ 'around',
-        \ ]
-  call ddc#custom#patch_global('sources', s:sources)
+    let s:sources = [
+          \ 'nvim-lsp',
+          \ 'vsnip',
+          \ 'around',
+          \ ]
+    call ddc#custom#patch_global('sources', s:sources)
 
-  call ddc#custom#patch_global('sourceOptions', {
-        \ '_': {
-        \   'matchers': ['matcher_head'],
-        \   'sorters': ['sorter_rank'],
-        \ },
-        \ 'around': {'mark': 'A'},
-        \ 'nvim-lsp': {
-        \     'mark': 'lsp',
-        \     'forceCompletionPattern': '(?:\.|->)\w*',
-        \ },
-        \ })
+    call ddc#custom#patch_global('sourceOptions', {
+          \ '_': {
+          \   'matchers': ['matcher_head'],
+          \   'sorters': ['sorter_rank'],
+          \ },
+          \ 'around': {'mark': 'A'},
+          \ 'nvim-lsp': {
+          \   'mark': 'lsp',
+          \   'forceCompletionPattern': '(?:\.|->)\w*',
+          \ },
+          \ })
 
-  call ddc#custom#patch_global('sourceParams', {
-        \ 'around': {'maxSize': 500},
-        \ })
+    call ddc#custom#patch_global('sourceParams', {
+          \ 'around': {'maxSize': 500},
+          \ })
 
-  call ddc#custom#patch_filetype('bib', 'sources', [
-        \ 'bib.field',
-        \ 'bib.type',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
-        \ 'c.doxygen',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('cmake', 'sources', [
-        \ 'cmake.FindBLAS',
-        \ 'cmake.FindBoost',
-        \ 'cmake.FindLAPACK',
-        \ 'cmake.FindMPI',
-        \ 'cmake.FindOpenMP',
-        \ 'cmake.FindPython',
-        \ 'cmake.FindPython3',
-        \ 'cmake.GNUInstallDirs',
-        \ 'cmake.configure_file',
-        \ 'cmake.find_package',
-        \ 'cmake.generator_expressions',
-        \ 'cmake.include',
-        \ 'cmake.list',
-        \ 'cmake.message',
-        \ 'cmake.string',
-        \ 'cmake.variable',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('gnuplot', 'sources', [
-        \ 'gnuplot.colornames',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('markdown', 'sources', [
-        \ 'markdown.github',
-        \ 'markdown.gitlab',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('module', 'sources', [
-        \ 'module.path',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('rst', 'sources', [
-        \ 'rst.directive',
-        \ 'rst.pygments',
-        \ 'rst.role',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('sh', 'sources', [
-        \ 'sh.pbs.environment',
-        \ 'sh.pbs.qsub',
-        \ 'sh.slurm.environment',
-        \ 'sh.slurm.sbatch',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('svg', 'sources', [
-        \ 'svg.attr_name',
-        \ 'svg.color',
-        \ 'svg.element',
-        \ 'svg.font',
-        \ ] + s:sources)
-  call ddc#custom#patch_filetype('tex', 'sources', [
-        \ 'tex.beamercolor',
-        \ 'tex.beamerfont',
-        \ 'tex.beamersize',
-        \ 'tex.beamertemplate',
-        \ 'tex.class',
-        \ 'tex.command',
-        \ 'tex.environment',
-        \ 'tex.font',
-        \ 'tex.minted',
-        \ 'tex.package',
-        \ 'tex.usetikzlibrary',
-        \ 'tex.xcolor',
-        \ ] + s:sources)
+    call ddc#custom#patch_filetype('bib', 'sources', [
+          \ 'bib.field',
+          \ 'bib.type',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
+          \ 'c.doxygen',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('cmake', 'sources', [
+          \ 'cmake.FindBLAS',
+          \ 'cmake.FindBoost',
+          \ 'cmake.FindLAPACK',
+          \ 'cmake.FindMPI',
+          \ 'cmake.FindOpenMP',
+          \ 'cmake.FindPython',
+          \ 'cmake.FindPython3',
+          \ 'cmake.GNUInstallDirs',
+          \ 'cmake.configure_file',
+          \ 'cmake.find_package',
+          \ 'cmake.generator_expressions',
+          \ 'cmake.include',
+          \ 'cmake.list',
+          \ 'cmake.message',
+          \ 'cmake.string',
+          \ 'cmake.variable',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('gnuplot', 'sources', [
+          \ 'gnuplot.colornames',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('markdown', 'sources', [
+          \ 'markdown.github',
+          \ 'markdown.gitlab',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('module', 'sources', [
+          \ 'module.path',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('rst', 'sources', [
+          \ 'rst.directive',
+          \ 'rst.pygments',
+          \ 'rst.role',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('sh', 'sources', [
+          \ 'sh.pbs.environment',
+          \ 'sh.pbs.qsub',
+          \ 'sh.slurm.environment',
+          \ 'sh.slurm.sbatch',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('svg', 'sources', [
+          \ 'svg.attr_name',
+          \ 'svg.color',
+          \ 'svg.element',
+          \ 'svg.font',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('tex', 'sources', [
+          \ 'tex.beamercolor',
+          \ 'tex.beamerfont',
+          \ 'tex.beamersize',
+          \ 'tex.beamertemplate',
+          \ 'tex.class',
+          \ 'tex.command',
+          \ 'tex.environment',
+          \ 'tex.font',
+          \ 'tex.minted',
+          \ 'tex.package',
+          \ 'tex.usetikzlibrary',
+          \ 'tex.xcolor',
+          \ ] + s:sources)
 
-  call ddc#enable()
+    call ddc#enable()
+  endif
   " }}}2
 endif
 " }}}1
