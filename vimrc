@@ -196,6 +196,7 @@ EOF
           \ 'cmake.FindPython3',
           \ 'cmake.GNUInstallDirs',
           \ 'cmake.configure_file',
+          \ 'cmake.file',
           \ 'cmake.find_package',
           \ 'cmake.generator_expressions',
           \ 'cmake.include',
