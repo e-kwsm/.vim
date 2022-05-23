@@ -228,6 +228,8 @@ de Gennes
 de Moivre
 de novo
 debye
+decoherence
+decoherent
 def2-QZVP/=
 def2-QZVPD/=
 def2-QZVPP/=
@@ -467,6 +469,9 @@ hyperpolarisabilities/4
 hyperpolarisability/4
 hyperpolarizabilities
 hyperpolarizability
+hyperspheres
+hypersurface
+hypersurfaces
 hypochlorous
 Hölder
 Hückel
@@ -482,6 +487,7 @@ in silico
 in situ
 InChI/=
 infectivity
+InfiniBand/=
 interfacial
 intersystem
 ionically
@@ -698,6 +704,7 @@ nuclearity
 nucleophilicity
 NUMA
 NVE
+NVIDIA
 NVT
 O3LYP
 OAuth/=
@@ -709,6 +716,7 @@ oligomer
 oligomeric
 oligomers
 oligothiophene
+oneAPI/=
 ONIOM
 onium
 Onnes
