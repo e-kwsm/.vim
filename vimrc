@@ -312,10 +312,13 @@ augroup myvimrc " {{{1
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
   au BufNewFile *.bash	put!='#!/bin/bash' | :2
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
+  au BufNewFile *.lua	put!='#!/usr/bin/env lua' | :2
   au BufNewFile *.plt	put!='#!/usr/bin/env -S gnuplot -p' | :2
   au BufNewFile *.py	put!='#!/usr/bin/env python3' | :2
+  au BufNewFile *.sed	put!='#!/usr/bin/env -S sed -f' | :2
   au BufNewFile *.sh	put!='#!/bin/sh' | :2
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
+  au BufNewFile *.zsh	put!='#!/usr/bin/env zsh' | :2
 
   let g:c_gnu = v:true
   let g:is_posix = v:true
