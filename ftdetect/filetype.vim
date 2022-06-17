@@ -1,23 +1,27 @@
 autocmd BufRead /usr/include/c++/* setf cpp
 autocmd BufRead CMakeCache.txt setl filetype=cmakecache
 autocmd BufRead config.cache setf sh
+autocmd BufRead * if getline(1) =~ '^#%Module' | setf module | endif
 
-autocmd BufRead,BufNewFile .clang-format setf yaml
-autocmd BufRead,BufNewFile .clang-tidy setf yaml
-autocmd BufRead,BufNewFile *.cif setl filetype=cif
-autocmd BufRead,BufNewFile *.cls setl filetype=tex
-autocmd BufRead,BufNewFile *.cml setl filetype=cml
-autocmd BufRead,BufNewFile *.csv setf csv
-autocmd BufRead,BufNewFile *.gjf setl filetype=gaussian
-autocmd BufRead,BufNewFile *.gp setl filetype=gnuplot
-autocmd BufRead,BufNewFile *.gzmat setl filetype=gaussian
-autocmd BufRead,BufNewFile *.ipynb setl filetype=json
-autocmd BufRead,BufNewFile *.mtx setf matrixmarket
-autocmd BufRead,BufNewFile *.plt setl filetype=gnuplot
-autocmd BufRead,BufNewFile *.tlu setf lua
-autocmd BufRead,BufNewFile *.tsv setf csv
-autocmd BufRead,BufNewFile *.xyz setf xyz
+autocmd BufNewFile,BufRead .clang-format setf yaml
+autocmd BufNewFile,BufRead .clang-tidy setf yaml
+autocmd BufNewFile,BufRead .clangd setf yaml
+autocmd BufNewFile,BufRead .flake8 setf dosini
+autocmd BufNewFile,BufRead .gitattributes setl filetype=gitattributes
+autocmd BufNewFile,BufRead .pylintrc setf dosini
+autocmd BufNewFile,BufRead .style.yapf setf dosini
+autocmd BufNewFile,BufRead *.cif setl filetype=cif
+autocmd BufNewFile,BufRead *.cls setl filetype=tex
+autocmd BufNewFile,BufRead *.cml setl filetype=cml
+autocmd BufNewFile,BufRead *.csv setf csv
+autocmd BufNewFile,BufRead *.gjf setl filetype=gaussian
+autocmd BufNewFile,BufRead *.gp setl filetype=gnuplot
+autocmd BufNewFile,BufRead *.gzmat setl filetype=gaussian
+autocmd BufNewFile,BufRead *.ipynb setl filetype=json
+autocmd BufNewFile,BufRead *.mtx setf matrixmarket
+autocmd BufNewFile,BufRead *.plt setl filetype=gnuplot
+autocmd BufNewFile,BufRead *.tlu setf lua
+autocmd BufNewFile,BufRead *.tsv setf csv
+autocmd BufNewFile,BufRead *.xyz setf xyz
 
-autocmd BufRead,BufNewFile deno:/*.ts%23%5E setf typescript
-
-autocmd BufNewFile,BufRead * if getline(1) =~ '^#%Module' | setf module | endif
+autocmd BufNewFile deno:/*.ts%23{%3C,%3D,%5E,\~} setf typescript
