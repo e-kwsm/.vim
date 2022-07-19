@@ -14,7 +14,7 @@ export class Source extends BaseSource<Params> {
 
   async onInit(_args: OnInitArguments<Params>): Promise<void> {
     const p = Deno.run({
-      cmd: ["fc-list", "--format", "%{family[0]}\n"],
+      cmd: ["env", "LANG=C", "fc-list", "--format", "%{family[0]}\n"],
       stdin: "null",
       stdout: "piped",
     });
