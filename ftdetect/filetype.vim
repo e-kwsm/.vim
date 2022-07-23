@@ -11,6 +11,7 @@ autocmd BufNewFile,BufRead .gitattributes setl filetype=gitattributes
 autocmd BufNewFile,BufRead .pylintrc setf dosini
 autocmd BufNewFile,BufRead .style.yapf setf dosini
 autocmd BufNewFile,BufRead *.cif setl filetype=cif
+autocmd BufNewFile,BufRead *.cjson setf json
 autocmd BufNewFile,BufRead *.cls setl filetype=tex
 autocmd BufNewFile,BufRead *.cml setl filetype=cml
 autocmd BufNewFile,BufRead *.csv setf csv
