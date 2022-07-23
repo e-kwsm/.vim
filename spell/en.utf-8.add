@@ -364,6 +364,7 @@ exocyclic
 extremum
 Eyring
 Faddeeva
+falsy
 FFT
 FFTW
 filesystem
@@ -462,6 +463,7 @@ HSE12
 Hund
 hydrazone
 hydrogenase
+hydrogens
 hypergeometric
 hyperparameter
 hyperparameters
@@ -507,6 +509,7 @@ isosteric
 isosurface
 isosurfaces
 isothiazole
+isovalue
 isovolumetric
 isoxazole
 iterable
@@ -682,6 +685,7 @@ niobate
 NIST
 nitramine
 nitrile
+nitrogens
 nitroso
 NMR
 NoDerivatives/=
@@ -743,6 +747,7 @@ overpotential
 oxazole
 oxime
 oxonium
+oxygens
 ozonide
 P3HT
 pA/=
@@ -908,6 +913,7 @@ ROHF
 Roothaan
 rotaxane
 RPA
+RPC
 rubrene
 Runge
 rutile
@@ -1003,6 +1009,9 @@ terephthalic
 tert/=
 tetracene
 tetramethylammonium
+thermochemistry
+thermochmical
+thermochmically
 thermochromism
 thiazole
 thienyl
@@ -1024,6 +1033,7 @@ triphenylene
 tropylium
 TrueType/=
 Truhlar
+truthy
 tryptophan
 tunability
 UFF
@@ -1059,6 +1069,8 @@ Warshall
 wavefunction
 wavefunctions
 wavenumber
+wavepacket
+wavepackets
 wavevector
 wavevectors
 Wb/=
