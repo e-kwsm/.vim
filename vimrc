@@ -6,7 +6,12 @@ filetype plugin indent on
 syntax enable
 
 " Shougo/dein.vim {{{1
-let s:bundle_root = expand('~/.local/share/nvim/site/bundle')
+if exists('*stdpath')
+  let s:data_dir = stdpath('data')
+else
+  let s:data_dir = get(environ(), 'XDG_DATA_HOME', expand('~/.local/share')) . '/nvim'
+endif
+let s:bundle_root = s:data_dir . '/site/bundle'
 let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_dir)
   echo 'git clone --depth 1 https://github.com/Shougo/dein.vim.git ' . s:dein_dir
@@ -289,7 +294,7 @@ augroup myvimrc " {{{1
   au FileType c,cpp	setl tabstop=2 textwidth=100
   au FileType csv	setl noexpandtab
   au FileType fortran	setl ignorecase
-  au FileType gitcommit	setl textwidth=0 spell
+  au FileType gitcommit	setl keywordprg=git\ show textwidth=0 spell
   au FileType gitconfig	setl noexpandtab shiftwidth=8
   au FileType gitrebase	setl keywordprg=git\ show
   au FileType gnuplot	setl
