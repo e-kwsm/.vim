@@ -75,6 +75,7 @@ atm/=
 aufbau
 aug-cc-pV5Z/=
 aug-cc-pV6Z/=
+aug-cc-pV7Z/=
 aug-cc-pVDZ/=
 aug-cc-pVQZ/=
 aug-cc-pVTZ/=
@@ -95,6 +96,7 @@ B97
 backend
 Bader
 bandgap
+Banquo
 barostat
 barostats
 basisset
@@ -154,6 +156,9 @@ CASSCF
 CBM
 cc-pV5Z/=
 cc-pV6Z/=
+cc-pV7Z/=
+cc-pV8Z/=
+cc-pV9Z/=
 cc-pVDZ/=
 cc-pVQZ/=
 cc-pVTZ/=
@@ -186,6 +191,7 @@ CODATA
 coenzyme
 colinear
 Condon
+conformant
 copernicium
 copolymerisation/4
 copolymerization
@@ -299,6 +305,7 @@ discretized
 discretizes
 dispersity
 DMC
+DNN
 DOI
 Drude
 dubnium
@@ -380,6 +387,7 @@ FRM
 Frobenius
 frontend
 Fubini
+fugacity
 fullerene
 fumarate
 fumaric
@@ -562,6 +570,7 @@ Larmor
 LC-ωPBE/=
 LCAO
 LDA
+Le Chatelier
 Lebedev
 lectin
 Leibler
@@ -597,6 +606,7 @@ Madelung
 magnetisabilities/4
 magnetizabilities
 magnon
+Mahalanobis
 Majorana
 malate
 maleic
@@ -694,6 +704,7 @@ nonadiabatic
 noncanonical
 noncollinear
 NonCommercial/=
+nonconformant
 noncovalent
 nonnegative
 nonplanar
@@ -766,6 +777,7 @@ PCBM
 PCE
 PDOS
 Peano
+Peltier
 pentacene
 per se
 perchloric
@@ -978,6 +990,8 @@ suberate
 suberic
 subgraph
 subgraphs
+subshell
+subshells
 succinate
 succinic
 sulfonate
@@ -1039,6 +1053,7 @@ tunability
 UFF
 ultrasoft
 ultrathin
+uncontracted
 unpolarised/4
 unpolarized
 upconversion
