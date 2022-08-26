@@ -20,6 +20,28 @@
     "body": ["SUBROUTINE ${1}(${2})", "\tIMPLICIT NONE", "\t!${3} :: $2", "\t${0}", "END SUBROUTINE"]
   },
 
+  "SHEBANG": {
+    "prefix": "SHEBANG",
+    "body": [
+      "#if 0",
+      "set -eu",
+      "cd \"\\$(dirname \"\\$(realpath \"\\$0\")\")\"",
+      "b=\\$(basename \"\\${0%.*}\")",
+      ": \"\\${FC:=gfortran}\"",
+      ": \"\\${FFLAGS=-Wall -Wextra -Wpedantic}\"",
+      ": \"\\${CPPFLAGS=}\"",
+      ": \"\\${LDFLAGS=}\"",
+      ": \"\\${LDLIBS=}\"",
+      "set -x",
+      "\\$FC \\$FFLAGS \\$CPPFLAGS -c -o \"\\$b.o\" \"\\$0\"",
+      "\\$FC -o \"\\$b.out\" \"\\$b.o\" \\$LDFLAGS \\$LDLIBS",
+      "\"./\\$b.out\"",
+      "exit",
+      "#endif",
+      "\n"
+    ]
+  },
+
   "MPI_Init; MPI_Finalize": {
     "prefix": "MPI_Init",
     "body": ["INTEGER :: ${1:ierror}", "CALL MPI_Init($1)", "CALL MPI_Finalize($1)"]
