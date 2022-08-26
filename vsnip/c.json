@@ -12,6 +12,30 @@
     "body": ["int main(int argc, char** argv) {", "\t${0}", "}"]
   },
 
+  "/usr/bin/env true": {
+    "prefix": "SHEBANG",
+    "body": [
+      "////usr/bin/env true << EOF",
+      "/*",
+      "EOF",
+      "set -eu",
+      "cd \"\\$(dirname \"\\$(realpath \"\\$0\")\")\"",
+      "b=\\$(basename \"\\${0%.*}\")",
+      ": \"\\${CC:=gcc}\"",
+      ": \"\\${CFLAGS=-Wall -Wextra -Wpedantic}\"",
+      ": \"\\${CPPFLAGS=}\"",
+      ": \"\\${LDFLAGS=}\"",
+      ": \"\\${LDLIBS=}\"",
+      "set -x",
+      "\\$CC \\$CFLAGS \\$CPPFLAGS -c -o \"\\$b.o\" \"\\$0\"",
+      "\\$CC -o \"\\$b.out\" \"\\$b.o\" \\$LDFLAGS \\$LDLIBS",
+      "\"./\\$b.out\"",
+      "exit",
+      " */",
+      "\n"
+    ]
+  },
+
   "MPI_Init(); MPI_Finalize();": {
     "prefix": "MPI_Init(",
     "body": ["MPI_Init(&${1:argc}, &${2:argv});", "${0}", "MPI_Finalize();"]
