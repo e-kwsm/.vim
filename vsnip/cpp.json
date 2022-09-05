@@ -24,6 +24,20 @@
     ]
   },
 
+  "pragma-clang-diagnostic-ignored": {
+    "prefix": "pragma-clang-diagnostic-ignored",
+    "body": [
+      "#ifdef __clang__",
+      "#pragma clang diagnostic push",
+      "#pragma clang diagnostic ignored \"${1}\"",
+      "#endif",
+      "${0}",
+      "#ifdef __clang__",
+      "#pragma clang diagnostic pop",
+      "#endif"
+    ]
+  },
+
   "SIGSEGV": {
     "prefix": "_SIGSEGV_",
     "body": "*((int*)nullptr) = 0;"
