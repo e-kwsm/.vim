@@ -194,6 +194,7 @@ EOF
           \ 'bib.type',
           \ ] + s:sources)
     call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
+          \ 'c.clang',
           \ 'c.doxygen',
           \ ] + s:sources)
     call ddc#custom#patch_filetype('cmake', 'sources', [
