@@ -2,5 +2,20 @@
   ".PHONY": {
     "prefix": ".PHONY",
     "body": [".PHONY: ${1:all}", "$1:", "\t${0}"]
+  },
+
+  "CMAKE_CXX_CLANG_TIDY": {
+    "prefix": "CMAKE_CXX_CLANG_TIDY",
+    "body": [
+      "%.o: %.cpp",
+      "\tcmake -E __run_co_compile --tidy='clang-tidy;--use-color;--extra-arg-before=--driver-mode=g++' --source=\\$< -- \\$(CXX) \\$(CPPFLAGS) \\$(CXXFLAGS) -o \\$@ -c \\$<"
+    ]
+  },
+  "CMAKE_C_CLANG_TIDY": {
+    "prefix": "CMAKE_C_CLANG_TIDY",
+    "body": [
+      "%.o: %.c",
+      "\tcmake -E __run_co_compile --tidy='clang-tidy;--use-color;--extra-arg-before=--driver-mode=gcc' --source=\\$< -- \\$(CC) \\$(CPPFLAGS) \\$(CFLAGS) -o \\$@ -c \\$<"
+    ]
   }
 }
