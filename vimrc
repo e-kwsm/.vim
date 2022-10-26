@@ -188,6 +188,7 @@ EOF
           \ 'c.doxygen',
           \ ] + s:sources)
     call ddc#custom#patch_filetype('cmake', 'sources', [
+          \ 'cmake.Doxygen',
           \ 'cmake.FindBLAS',
           \ 'cmake.FindBoost',
           \ 'cmake.FindLAPACK',
