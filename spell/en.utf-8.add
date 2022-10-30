@@ -99,6 +99,7 @@ bandgap
 Banquo
 barostat
 barostats
+base64
 basisset
 basissets
 Becke
@@ -268,6 +269,7 @@ deserialization
 deserialize
 deserialized
 deserializes
+desorbed
 deuteration
 DFS
 DFT
@@ -384,6 +386,7 @@ Fock
 formamide
 formamidine
 formamidinium
+FQDN
 Fraunhofer
 Friedmann
 FRM
@@ -466,6 +469,8 @@ homojunction
 homolysis
 homolytic
 homonuclear
+hostname
+hostnames
 HPC
 HSE
 HSE03
@@ -538,6 +543,7 @@ kDa/=
 ketene
 keto
 ketose
+Khinchin
 kinase
 Kitaev
 kJ/=
@@ -593,6 +599,7 @@ livermorium
 LJ
 LLVM
 ln/=
+localhost/=
 LSDA
 LSP
 lua
@@ -605,6 +612,7 @@ Löwdin
 M06
 mA/=
 Maclaurin
+macOS/=
 Madelung
 magnetisabilities/4
 magnetizabilities
@@ -782,6 +790,7 @@ PDOS
 Peano
 Peltier
 pentacene
+PEP8
 per se
 perchloric
 Perdew
@@ -813,6 +822,7 @@ phthalocyanine
 physisorbed
 physisorption
 picosecond
+PID
 pinacol
 pKa/=
 planewave
@@ -960,8 +970,19 @@ SHA1
 ShareAlike/=
 sidechain
 sidechains
+SIGABRT
+SIGBUS
+SIGHUP
+SIGILL
+SIGINT
+SIGKILL
 sigmoidal
 signum
+SIGPIPE
+SIGQUIT
+SIGSEGV
+SIGTERM
+SIGXCPU
 siloxy
 silyl
 sinc
@@ -999,6 +1020,7 @@ subshell
 subshells
 succinate
 succinic
+sudo/=
 sulfonate
 sulfonated
 sulfone
@@ -1084,6 +1106,7 @@ VSEPR
 VWN
 VWN3
 VWN5
+walltime
 Wannier
 Warshall
 wavefunction
