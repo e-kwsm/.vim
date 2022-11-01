@@ -27,10 +27,11 @@ else
     call dein#add('ncm2/float-preview.nvim')
   endif
   if s:_denops_available
-    call dein#add('Shougo/ddc-around')
     call dein#add('Shougo/ddc-matcher_head')
-    call dein#add('Shougo/ddc-nvim-lsp')
     call dein#add('Shougo/ddc-sorter_rank')
+    call dein#add('Shougo/ddc-source-around')
+    call dein#add('Shougo/ddc-source-nvim-lsp')
+    call dein#add('Shougo/ddc-ui-native')
     call dein#add('Shougo/ddc.vim')
   endif
 
@@ -151,6 +152,8 @@ EOF
   " Shougo/ddc.vim {{{3
   if s:_denops_available
     au myvimrc CompleteDone * pclose
+
+    call ddc#custom#patch_global('ui', 'native')
 
     let s:sources = [
           \ 'nvim-lsp',
