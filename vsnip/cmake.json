@@ -1,0 +1,6 @@
+{
+  "SHEBANG": {
+    "prefix": "SHEBANG",
+    "body": "#!/usr/bin/env -S cmake -P\n"
+  }
+}
