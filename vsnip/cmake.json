@@ -1,4 +1,9 @@
 {
+  "SHEBANG": {
+    "prefix": "SHEBANG",
+    "body": "#!/usr/bin/env -S cmake -P\n"
+  },
+
   "PYTHONINTERP_FOUND": {
     "prefix": "PYTHONINTERP_FOUND",
     "body": "${1|Python_Interpreter_FOUND,Python3_Interpreter_FOUND|}"
