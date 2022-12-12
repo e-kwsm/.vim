@@ -208,6 +208,8 @@ counterions
 covalency
 CPMD
 CPython/=
+CRENBL
+CRENBS
 cresol
 cryo
 crystallinity
@@ -947,6 +949,7 @@ rutile
 rydberg
 Salpeter
 Savart
+SBKJC
 ScaLAPACK/=
 SCF
 Scharfetter
@@ -995,6 +998,8 @@ solvate
 solvated
 solvation
 Sommerfeld
+spacegroup
+spacegroups
 SPDX
 spinel
 spinodal
@@ -1144,7 +1149,10 @@ zwitterionic
 Å
 ångström
 Γ point
+Γ points
 Γ-point
+Γ-points
+ΔSCF
 μm/=
 μs/=
 τ-HCTH/=
