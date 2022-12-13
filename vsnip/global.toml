@@ -1019,6 +1019,17 @@ prefix = "OPEN_BOX"
 body = "␣"
 description = "U+2423"
 
+# Dingbats Block {{{1
+["Check Mark"]
+prefix = "CHECK_MARK"
+body = "✓"
+description = "U+2713"
+
+["Ballot X"]
+prefix = "BALLOT_X"
+body = "✗"
+description = "U+2717"
+
 # Miscellaneous Mathematical Symbols-A Block {{{1
 ["Perpendicular"]
 prefix = "PERPENDICULAR"
