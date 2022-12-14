@@ -304,6 +304,7 @@ EOF
           \ 'rst.role',
           \ ] + s:sources)
     call ddc#custom#patch_filetype('sh', 'sources', [
+          \ 'sh.openmp',
           \ 'sh.pbs.environment',
           \ 'sh.pbs.qsub',
           \ 'sh.slurm.environment',
