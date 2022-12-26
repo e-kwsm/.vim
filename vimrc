@@ -2,8 +2,10 @@ augroup myvimrc
   au!
 augroup END
 
-filetype plugin indent on
-syntax enable
+if !has('nvim')
+  filetype plugin indent on
+  syntax enable
+endif
 
 " Shougo/dein.vim {{{1
 if exists('*stdpath')
@@ -151,7 +153,7 @@ EOF
 
   " Shougo/ddc.vim {{{3
   if s:_denops_available
-    au myvimrc CompleteDone * pclose
+    au myvimrc CompleteDone * if getcmdwintype() | pclose | endif
 
     call ddc#custom#patch_global('ui', 'native')
 
