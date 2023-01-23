@@ -153,7 +153,7 @@ EOF
 
   " Shougo/ddc.vim {{{3
   if s:_denops_available
-    au myvimrc CompleteDone * if getcmdwintype() | pclose | endif
+    au myvimrc CompleteDone * silent! pclose!
 
     call ddc#custom#patch_global('ui', 'native')
 
@@ -320,15 +320,23 @@ augroup myvimrc " {{{1
 
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
-  au BufNewFile *.bash	put!='#!/bin/bash' | :2
+  au BufNewFile *.bash	call setline(1, ['#!/bin/bash', 'set -eux']) | :2
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
   au BufNewFile *.lua	put!='#!/usr/bin/env lua' | :2
   au BufNewFile *.plt	put!='#!/usr/bin/env -S gnuplot -p' | :2
-  au BufNewFile *.py	put!='#!/usr/bin/env python3' | :2
+  au BufNewFile *.py	call setline(1, [
+        \ '#!/usr/bin/env python3',
+        \ 'def main():',
+        \ '    pass',
+        \ '',
+        \ '',
+        \ 'if __name__ == "__main__":',
+        \ '    main()'
+        \ ]) | :3
   au BufNewFile *.sed	put!='#!/usr/bin/env -S sed -f' | :2
-  au BufNewFile *.sh	put!='#!/bin/sh' | :2
+  au BufNewFile *.sh	call setline(1, ['#!/bin/sh', 'set -eux']) | :2
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
-  au BufNewFile *.zsh	put!='#!/usr/bin/env zsh' | :2
+  au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux']) | :2
 
   let g:c_gnu = v:true
   let g:is_posix = v:true
