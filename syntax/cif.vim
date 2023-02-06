@@ -820,6 +820,9 @@ syn keyword cif_coreCIF	_valence_param_Ro
 syn keyword cif_coreCIF	_valence_ref_id
 syn keyword cif_coreCIF	_valence_ref_reference
 
+" TODO
+syn keyword cif_coreCIFDeprecated _atom_site_symmetry_multiplicity
+
 " Symmetry dictionary (symCIF) version 1.0.1 definitions {{{1
 " https://www.iucr.org/__data/iucr/cifdic_html/2/cif_sym.dic/index.html
 " _space_group.name_H-M_ref {{{2
