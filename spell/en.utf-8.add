@@ -379,6 +379,8 @@ extremum
 Eyring
 Faddeeva
 falsy
+fatband
+fatbands
 FFT
 FFTW
 filesystem
@@ -421,6 +423,7 @@ GISAXS
 GitLab/=
 GIWAXS
 glycolide
+GmbH/=
 Goursat
 GPG
 graphene
@@ -458,6 +461,7 @@ heterojunctions
 heterolysis
 heterolytic
 heteronuclear
+hexahedra
 hexahedral
 hexahedron
 hexyl
@@ -737,6 +741,7 @@ NVT
 O3LYP
 OAuth/=
 OCaml/=
+octahedra
 octupole
 oganesson
 oligo
@@ -811,6 +816,7 @@ phenanthrene
 phenoxide
 phenylene
 phononic
+phonons
 phosphane
 phosphinic
 phosphite
