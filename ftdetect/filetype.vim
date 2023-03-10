@@ -1,6 +1,7 @@
 autocmd BufRead /usr/include/c++/* setf cpp
 autocmd BufRead CMakeCache.txt setl filetype=cmakecache
 autocmd BufRead config.cache setf sh
+autocmd BufRead poetry.lock setf toml
 autocmd BufRead * if getline(1) =~ '^#%Module' | setf module | endif
 
 autocmd BufNewFile,BufRead .clang-format setf yaml
