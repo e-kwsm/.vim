@@ -47,6 +47,7 @@ anharmonic
 anharmonicity
 anilide
 anisole
+ANOVA
 ansatz
 antiferromagnetism
 AO
@@ -426,6 +427,7 @@ glycolide
 GmbH/=
 Goursat
 GPG
+GPGPU
 graphene
 Grignard
 Grimme
@@ -546,6 +548,7 @@ junctional
 Karplus
 Kavli
 kDa/=
+Keras
 ketene
 keto
 ketose
@@ -893,6 +896,7 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+PyTorch
 PZ81
 QCISD
 QCISDT
@@ -997,6 +1001,7 @@ silyl
 sinc
 sinh/=
 Smirnov
+Sobol
 SOGGA
 SOGGA11
 soliton
@@ -1056,6 +1061,7 @@ tautomerization
 tautomers
 TDDFT
 tennessine
+TensorFlow
 terephthalate
 terephthalic
 tert/=
