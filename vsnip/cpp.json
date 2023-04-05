@@ -19,6 +19,18 @@
     "prefix": "PRETTY_FUNCTION",
     "body": "std::cerr << __PRETTY_FUNCTION__ << '\\n';"
   },
+  "extern C" : {
+    "prefix": "extern-C",
+    "body": [
+      "#ifdef __cplusplus",
+      "extern \"C\" {",
+      "#endif",
+      "${0}",
+      "#ifdef __cplusplus",
+      "}",
+      "#endif"
+    ]
+  },
 
   "MPI_Init(); MPI_Finalize();": {
     "prefix": "MPI_Init(",
