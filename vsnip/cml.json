@@ -39,6 +39,6 @@
   },
   "<cml:bond>": {
     "prefix": ["<cml:bond", "<bond"],
-    "body": "<cml:bond id=\"${1:b0}\" atomRefs2=\"${2}\" order=\"${3:S}\"/>"
+    "body": "<cml:bond id=\"${1:b0}\" atomRefs2=\"${2}\" order=\"${3|S,D,T|}\"/>"
   }
 }

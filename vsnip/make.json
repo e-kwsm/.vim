@@ -1,7 +1,7 @@
 {
   ".PHONY": {
     "prefix": ".PHONY",
-    "body": [".PHONY: ${1:all}", "$1:", "\t${0}"]
+    "body": [".PHONY: ${1:all}", "$1:${0}"]
   },
 
   "CMAKE_CXX_CLANG_TIDY": {
