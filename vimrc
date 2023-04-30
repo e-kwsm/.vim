@@ -356,6 +356,7 @@ augroup myvimrc " {{{1
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
         \   exe 'normal g`"' |
         \ endif
+  au BufReadPost git-rebase-todo exe 'normal! 0gg'
   au BufReadPost * if &diff | set foldmethod=diff | endif
   au QuickFixCmdPost *grep* cwindow
 
