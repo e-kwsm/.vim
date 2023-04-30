@@ -12,14 +12,14 @@ export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
   async onInit(_args: OnInitArguments<Params>): Promise<void> {
-    const p = Deno.run({
-      cmd: ["pygmentize", "-L", "lexers"],
+    const command = new Deno.Command("pygmentize", {
+      args: ["-L", "lexers"],
       stdin: "null",
       stdout: "piped",
     });
-    await p.status();
+    const { _code, stdout, _stderr } = await command.output();
 
-    const lines = new TextDecoder().decode(await p.output()).split(/\n/);
+    const lines = new TextDecoder().decode(stdout).split(/\n/);
     this.candidates = lines
       .filter((line) => line.match(/^\*/))
       .flatMap((word) =>

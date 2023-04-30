@@ -13,13 +13,13 @@ export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
   async onInit(_args: OnInitArguments<Params>): Promise<void> {
-    const p = Deno.run({
-      cmd: ["cmake", "--help-module-list"],
+    const command = new Deno.Command("cmake", {
+      args: ["--help-module-list"],
       stdin: "null",
       stdout: "piped",
     });
-    await p.status();
-    const lines = new TextDecoder().decode(await p.output()).split(/\n/);
+    const { _code, stdout, _stderr } = await command.output();
+    const lines = new TextDecoder().decode(stdout).split(/\n/);
     this.candidates = lines
       .filter((line) => line.match(/^Find\S+/))
       .map((word) => word.replace(/^Find/, ""));

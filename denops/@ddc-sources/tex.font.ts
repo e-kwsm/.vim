@@ -13,13 +13,15 @@ export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
   async onInit(_args: OnInitArguments<Params>): Promise<void> {
-    const p = Deno.run({
-      cmd: ["env", "LANG=C", "fc-list", "--format", "%{family[0]}\n"],
+    const command = new Deno.Command("fc-list", {
+      args: ["--format", "%{family[0]}\n"],
+      env: { "LANG": "C" },
       stdin: "null",
       stdout: "piped",
     });
-    await p.status();
-    this.candidates = new TextDecoder().decode(await p.output()).split(/\n/);
+    const { _code, stdout, _stderr } = await command.output();
+    this.candidates = new TextDecoder().decode(stdout)
+      .split(/\n/).filter(Boolean);
   }
 
   async gather(

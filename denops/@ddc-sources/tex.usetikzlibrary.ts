@@ -256,17 +256,19 @@ export class Source extends BaseSource<Params> {
         ]);
       }
 
-      const kpsewhich = Deno.run({
-        cmd: ["kpsewhich", "-var-value=TEXMFDIST"],
-        stdin: "null",
-        stdout: "piped",
-      });
-      await kpsewhich.status();
-      const texmfdist = new TextDecoder().decode(await kpsewhich.output())
-        .replace(/\n/, "");
-      const find = Deno.run({
-        cmd: [
-          "find",
+      async function kpsewhich() {
+        const command = new Deno.Command("kpsewhich", {
+          args: ["-var-value=TEXMFDIST"],
+          stdin: "null",
+          stdout: "piped",
+        });
+        const { _code, stdout, _stderr } = await command.output();
+        const texmfdist = new TextDecoder().decode(stdout).replace(/\n/, "");
+        return texmfdist;
+      }
+      const texmfdist = await kpsewhich();
+      const find = new Deno.Command("find", {
+        args: [
           `${texmfdist}/tex/generic`,
           `${texmfdist}/tex/latex`,
           "-type",
@@ -279,9 +281,8 @@ export class Source extends BaseSource<Params> {
         stdin: "null",
         stdout: "piped",
       });
-      await find.status();
-      const lines = new TextDecoder().decode(await find.output()).split(/\n/);
-      return lines.filter((w) => w);
+      const { _code, stdout, _stderr } = await find.output();
+      return new TextDecoder().decode(stdout).split(/\n/).filter(Boolean);
     }
 
     this.candidates = await candidates().then((cs) =>
