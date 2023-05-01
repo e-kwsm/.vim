@@ -27,9 +27,7 @@ export class Source extends BaseSource<Params> {
       );
   }
 
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (
       !args.context.input.match(
         /^\.\. (?:code|code-block|highlight):: [A-Za-z]*$/,
@@ -37,8 +35,9 @@ export class Source extends BaseSource<Params> {
     ) {
       return [];
     }
-    return await Promise.all(this.candidates
-      .map((word) => Promise.resolve({ menu: "pygments", word: word })));
+    return await Promise.all(this.candidates.map(
+      (word) => Promise.resolve({ menu: "pygments", word: word }),
+    ));
   }
 
   params(): Params {

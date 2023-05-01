@@ -7,17 +7,13 @@ import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.4.0/base/source.
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     const langs = ["C", "CXX", "Fortran"];
     if (args.context.input.match(/\bOpenMP::\w*$/)) {
-      return await Promise.all(
-        langs.map(
-          (lang) =>
-            Promise.resolve({ menu: "FindOpenMP", word: `OpenMP_${lang}` }),
-        ),
-      );
+      return await Promise.all(langs.map(
+        (lang) =>
+          Promise.resolve({ menu: "FindOpenMP", word: `OpenMP_${lang}` }),
+      ));
     }
 
     let vars = [

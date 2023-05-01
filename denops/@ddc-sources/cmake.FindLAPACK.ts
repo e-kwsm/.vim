@@ -7,9 +7,7 @@ import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.4.0/base/source.
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     return await Promise.all(
       [
         "LAPACK95_FOUND",
@@ -19,14 +17,10 @@ export class Source extends BaseSource<Params> {
         "LAPACK_LINKER_FLAGS",
         //
         "LAPACK::LAPACK",
-      ].filter(
-        (word) => {
-          if (args.context.input.match(/\$\{\w*$/)) {
-            return !word.includes("::");
-          }
-          return !args.context.input.match(/::\w*$/);
-        },
-      ).map(
+      ].filter((word) => {
+        if (args.context.input.match(/\$\{\w*$/)) return !word.includes("::");
+        return !args.context.input.match(/::\w*$/);
+      }).map(
         (word) => Promise.resolve({ menu: "FindLAPACK", word: word }),
       ),
     );
