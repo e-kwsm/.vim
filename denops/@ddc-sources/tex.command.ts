@@ -8,14 +8,8 @@ import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.4.0/base/source.
 
 async function _generate(pkg: string, cmds: string[]): Promise<Item[]> {
   return await Promise.all(
-    cmds.map(
-      (cmd) =>
-        Promise.resolve({
-          menu: "cmd",
-          kind: pkg,
-          word: cmd,
-          abbr: `\\${cmd}`,
-        }),
+    cmds.map((cmd) =>
+      Promise.resolve({ menu: "cmd", kind: pkg, word: cmd, abbr: `\\${cmd}` })
     ),
   );
 }
@@ -23,9 +17,7 @@ async function _generate(pkg: string, cmds: string[]): Promise<Item[]> {
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\\[A-Za-z]*$/)) {
       return [];
     }

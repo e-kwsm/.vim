@@ -6,24 +6,15 @@ import {
 import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.4.0/base/source.ts#^";
 
 async function _generate(pkg: string, envs: string[]): Promise<DdcGatherItems> {
-  return await Promise.all(
-    envs.map(
-      (env) =>
-        Promise.resolve({
-          menu: "env",
-          kind: pkg,
-          word: env,
-        }),
-    ),
-  );
+  return await Promise.all(envs.map(
+    (env) => Promise.resolve({ menu: "env", kind: pkg, word: env }),
+  ));
 }
 
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (
       !args.context.input.match(/\\(?:begin|end|renewenvironment)\{[A-Za-z]*$/)
     ) {

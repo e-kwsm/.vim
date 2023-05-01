@@ -7,9 +7,7 @@ import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.4.0/base/source.
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     let imported = [
       "Compiler",
       "Interpreter",
@@ -55,9 +53,7 @@ export class Source extends BaseSource<Params> {
     return await Promise.all(
       [...vars, ...imported].filter(
         (word) => {
-          if (args.context.input.match(/\$\{\w*$/)) {
-            return !word.includes("::");
-          }
+          if (args.context.input.match(/\$\{\w*$/)) return !word.includes("::");
           return !args.context.input.match(/::\w*$/);
         },
       ).map(

@@ -23,14 +23,13 @@ export class Source extends BaseSource<Params> {
     this.candidates = new TextDecoder().decode(stdout).split(/\n/);
   }
 
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\bfont-\w+\b.*/)) {
       return [];
     }
-    return await Promise.all(this.candidates
-      .map((word) => Promise.resolve({ menu: "font", word: word })));
+    return await Promise.all(this.candidates.map(
+      (word) => Promise.resolve({ menu: "font", word: word }),
+    ));
   }
 
   params(): Params {

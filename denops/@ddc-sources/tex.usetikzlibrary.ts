@@ -290,9 +290,7 @@ export class Source extends BaseSource<Params> {
     );
   }
 
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\\usetikzlibrary\b/)) {
       return [];
     }

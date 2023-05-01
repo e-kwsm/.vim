@@ -23,14 +23,13 @@ export class Source extends BaseSource<Params> {
     this.candidates = lines;
   }
 
-  async gather(
-    args: GatherArguments<Params>,
-  ): Promise<DdcGatherItems> {
+  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\binclude\(\w*$/i)) {
       return [];
     }
-    return await Promise.all(this.candidates
-      .map((word) => Promise.resolve({ menu: "include", word: word })));
+    return await Promise.all(this.candidates.map(
+      (word) => Promise.resolve({ menu: "include", word: word }),
+    ));
   }
 
   params(): Params {
