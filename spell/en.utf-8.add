@@ -138,6 +138,7 @@ barostats
 base64
 basisset
 basissets
+BaTiO₃/=
 Becke
 benzaldehyde
 benzo
@@ -242,6 +243,7 @@ chirality
 chloric
 chlorous
 Cholesky
+CH₄
 CIF
 CIP
 CISD
@@ -267,6 +269,7 @@ Coulombic
 counterion
 counterions
 covalency
+CO₂
 CPMD
 CPython/=
 CRENBL
@@ -573,6 +576,7 @@ hexylthiophene
 Higgs
 Hirshfeld
 HMAC
+HNO₃
 Hohenberg
 homogenous
 homojunction
@@ -605,6 +609,8 @@ hypersurfaces
 hypochlorous
 Hölder
 Hückel
+H₂O
+H₂SO₄
 ideality
 imidazole
 imidazolium
@@ -913,6 +919,7 @@ oxime
 oxonium
 oxygens
 ozonide
+O₃
 P3HT
 pA/=
 Padé
