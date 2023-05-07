@@ -43,6 +43,7 @@ allylic
 amidine
 aminal
 Ampère
+anatase
 anharmonic
 anharmonicity
 anilide
@@ -102,6 +103,8 @@ B2PLYP
 B3LYP
 B88
 B97
+B97M-rV
+B97M-V
 backend
 Bader
 bandgap
@@ -121,6 +124,7 @@ benzoquinone
 benzyl
 BFGS
 BFS
+Bh/=
 BHandH/=
 BHandHLYP/=
 BHJ
@@ -144,6 +148,7 @@ BP86
 Bravais
 Breit
 Brillouin
+brookite
 Broyden
 Brønsted
 BSSE
@@ -193,6 +198,7 @@ CCSDT
 CCSDTQ
 CDF
 CdS/=
+CdTe/=
 CentOS/=
 ceria
 CGMD
@@ -215,6 +221,7 @@ CISDT
 CISDTQ
 CMake/=
 cmake/=
+Cn/=
 CODATA
 coenzyme
 colinear
@@ -342,6 +349,7 @@ DMC
 DNN
 DOI
 Drude
+Ds/=
 dubnium
 Duhem
 ECP
@@ -408,6 +416,7 @@ Faddeeva
 falsy
 fatband
 fatbands
+FET
 FFT
 FFTW
 filesystem
@@ -438,8 +447,10 @@ functionalized
 functionalizes
 furan
 Förster
+GaAs/=
 Galilei
 GAMESS
+GaN/=
 Gauß
 Gay-Lussac
 Gegenbauer
@@ -506,6 +517,7 @@ homonuclear
 hostname
 hostnames
 HPC
+Hs/=
 HSE
 HSE03
 HSE06
@@ -641,10 +653,12 @@ lua
 LuaLaTeX/=
 LuaTeX/=
 LUMO
+Lv/=
 Lyapunov
 LYP
 Löwdin
-M06
+M06-2X
+M06-HF
 mA/=
 Maclaurin
 macOS/=
@@ -661,6 +675,7 @@ Mannich
 MariaDB/=
 Markovnikov
 Mauguin
+Mc/=
 MD5
 Meissner
 meitnerium
@@ -693,6 +708,7 @@ mimetics
 Minkowski
 MKL
 MMFF
+MN15
 MNDO
 MOF
 mol/=
@@ -703,11 +719,13 @@ Monkhorst
 Morera
 MOs/=
 moscovium
+MOSFET
 MP2
 MP4
 MPa/=
 MPI
 MPICH
+mPW91
 MRCI
 Mulliken
 multiconfiguration
@@ -736,6 +754,7 @@ Navier
 NBO
 NDDO
 Netlib
+Nh/=
 Niggli
 nihonium
 niobate
@@ -773,6 +792,7 @@ OAuth/=
 OCaml/=
 octahedra
 octupole
+Og/=
 oganesson
 oligo
 oligomer
@@ -822,6 +842,8 @@ PBE0DH
 PBEP86
 PBEsol/=
 PbS/=
+PbSe/=
+PbTe/=
 PCA
 PCBM
 PCE
@@ -909,6 +931,8 @@ protonated
 protonation
 ps/=
 pseudogap
+pseudohydrogen
+pseudohydrogens
 pseudopotential
 pseudopotentials
 pseudospectral
@@ -965,6 +989,10 @@ reST/=
 RESTful/=
 reStructuredText/=
 revPBE/=
+revPBE0/=
+revTPSS/=
+revTPSSh/=
+Rg/=
 RHEL
 RHF
 rhombohedral
@@ -1008,6 +1036,7 @@ sech/=
 Seitz
 semiconductive
 semidefinite
+Sg/=
 SHA1
 ShareAlike/=
 sidechain
@@ -1045,6 +1074,7 @@ spinel
 spinodal
 spinor
 spintronics
+SPW92
 SQLite/=
 stderr
 stdin
@@ -1104,10 +1134,13 @@ thienyl
 thiol
 thiophene
 timestamp
+titanate
 titania
 TODO
 toml
 TPSS
+TPSS0
+TPSSh/=
 trapezohedral
 trapezohedron
 tribology
@@ -1177,12 +1210,15 @@ XeLaTeX/=
 XeTeX/=
 XPath/=
 XRD
+XYG3
+XYGJ-OS
 XYZ
 xyz/=
 Xα/=
 YAML
 ylide
 ZINDO
+ZnO/=
 ZnS/=
 zwitterion
 zwitterionic
@@ -1200,4 +1236,10 @@ zwitterionic
 τ-HCTHh/=
 ωB97
 ωB97M
+ωB97M-rV
+ωB97M-V
 ωB97X
+ωB97X-2
+ωB97X-D
+ωB97X-rV
+ωB97X-V
