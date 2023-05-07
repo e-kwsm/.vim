@@ -143,6 +143,7 @@ barostats
 base64
 basisset
 basissets
+BaTiO₃/=
 Becke
 benzaldehyde
 benzimidazole
@@ -260,6 +261,7 @@ chirality
 chloric
 chlorous
 Cholesky
+CH₄
 CIF
 CIP
 CISD
@@ -285,6 +287,7 @@ Coulombic
 counterion
 counterions
 covalency
+CO₂
 CPython/=
 CRENBL
 CRENBS
@@ -609,6 +612,7 @@ hexylthiophene
 Higgs
 Hirshfeld
 HMAC
+HNO₃
 Hohenberg
 homogenous
 homolysis
@@ -616,6 +620,7 @@ homolytic
 homonuclear
 hostname
 hostnames
+HO⁻
 HPC
 Hs/=
 HSE
@@ -640,6 +645,10 @@ hypersurfaces
 hypochlorous
 Hölder
 Hückel
+H₂O
+H₂SO₄
+H₃O⁺
+H₄N⁺
 ideality
 imidazole
 imidazolium
@@ -924,6 +933,7 @@ NumPy/=
 NVE
 NVIDIA
 NVT
+N⁺H₄
 O3LYP
 OAuth/=
 OCaml/=
@@ -974,6 +984,7 @@ oxime
 oxonium
 oxygens
 ozonide
+O₃
 P3HT
 pA/=
 Padé
@@ -1232,6 +1243,7 @@ silyl
 sinc
 sinh/=
 Smirnov
+SnO₂
 Sobol
 softmax
 SOGGA
@@ -1346,6 +1358,7 @@ thiophene
 threadwise
 threonine
 timestamp
+TiO₂/=
 titanate
 titania
 tmp/=?
