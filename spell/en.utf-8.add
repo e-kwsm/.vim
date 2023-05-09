@@ -65,7 +65,11 @@ arcsec/=
 arcsin/=
 arctan/=
 arene
+arg max/=
+arg min/=
 arginine
+argmax/=
+argmin/=
 Arnoldi
 arsech/=
 arsinh/=
@@ -108,6 +112,7 @@ B97M-V
 backend
 Bader
 bandgap
+bandstructure
 Banquo
 barostat
 barostats
@@ -422,6 +427,7 @@ FFTW
 filesystem
 Firebird
 flerovium
+fluoronium
 Fock
 formamide
 formamidine
@@ -522,6 +528,7 @@ HSE
 HSE03
 HSE06
 HSE12
+Hueckel/?
 Hund
 hydrazone
 hydrogenase
@@ -563,6 +570,7 @@ isenthalpic
 Ising
 isochoric
 isodesmic
+isoelectronicity
 isoenthalpic
 isomerisation/4
 isomerization
@@ -834,6 +842,10 @@ pA/=
 Padé
 Painlevé
 Parrinello
+passivate
+passivates
+passivating
+passivation
 pathogenicity
 PBC
 PBE
@@ -954,6 +966,7 @@ PZ81
 QCISD
 QCISDT
 QCISDTQ
+QD
 QMC
 quadruplex
 quasicrystal
