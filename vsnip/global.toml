@@ -12,6 +12,14 @@ body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 prefix = ["angstrom", "aangstroem"]
 body = "ångström"
 
+["Hückel"]
+prefix = "Hueckel"
+body = "Hückel"
+
+["Löwdin"]
+prefix = "Loewdin"
+body = "Löwdin"
+
 ["Møller"]
 prefix = "Moeller"
 body = "Møller"
@@ -60,6 +68,11 @@ description = "U+00B3"
 prefix = "PILCROW_SIGN"
 body = "¶"
 description = "U+00B6"
+
+["Middle Dot"]
+prefix = "MIDDLE_DOT"
+body = "·"
+description = "U+00B7"
 
 ["Superscript One"]
 prefix = "SUPERSCRIPT_ONE"
@@ -880,22 +893,22 @@ body = "≢"
 description = "U+2262"
 
 ["Less-Than Or Equal To"]
-prefix = "LESS_THAN_OR_EQUAL_TO"
+prefix = ["LESS_THAN_OR_EQUAL_TO", "<="]
 body = "≤"
 description = "U+2264"
 
 ["Greater-Than Or Equal To"]
-prefix = "GREATER_THAN_OR_EQUAL_TO"
+prefix = ["GREATER_THAN_OR_EQUAL_TO", ">="]
 body = "≥"
 description = "U+2265"
 
 ["Much Less-Than"]
-prefix = "MUCH_LESS_THAN"
+prefix = ["MUCH_LESS_THAN", "<<"]
 body = "≪"
 description = "U+226A"
 
 ["Much Greater-Than"]
-prefix = "MUCH_GREATER_THAN"
+prefix = ["MUCH_GREATER_THAN", ">>"]
 body = "≫"
 description = "U+226B"
 
