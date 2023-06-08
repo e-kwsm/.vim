@@ -71,6 +71,7 @@ arginine
 argmax/=
 argmin/=
 Arnoldi
+Aronszajn
 arsech/=
 arsinh/=
 artanh/=
@@ -301,6 +302,7 @@ delocalization
 delocalize
 delocalized
 delocalizes
+denormal
 deprotonation
 deserialisation/4
 deserialise/4
@@ -337,6 +339,7 @@ diketopyrrolopyrrole
 dimerisation/4
 dimerization
 dimethylamine
+dimethylaminium
 dimethylammonium
 diol
 dipolar
@@ -422,6 +425,7 @@ falsy
 fatband
 fatbands
 FET
+FFI
 FFT
 FFTW
 filesystem
@@ -809,6 +813,7 @@ oligomers
 oligothiophene
 oneAPI/=
 oneMKL/=
+oneTBB/=
 ONIOM
 onium
 Onnes
@@ -917,6 +922,8 @@ polaron
 polyacene
 polyacetylene
 polydispersity
+polyene
+polyenes
 polygamma
 polyphenylene
 polythiophene
@@ -1130,6 +1137,7 @@ tautomerisation/4
 tautomerism
 tautomerization
 tautomers
+TBB
 TDDFT
 tennessine
 TensorFlow
@@ -1168,6 +1176,7 @@ Truhlar
 truthy
 tryptophan
 tunability
+TypeScript/=
 UFF
 ultrasoft
 ultrathin
