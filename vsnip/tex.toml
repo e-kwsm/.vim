@@ -197,6 +197,11 @@ body = "\\mleft${1:(} ${3} \\mright${2:)}"
 prefix = "\\foreach"
 body = ["\\foreach \\\\${1} in {${2}} {", "\t${3}", "}"]
 
+# tcolorbox.sty {{{1
+["\\tcolorbox"]
+prefix = "\\tcolorbox"
+body = ["\\begin{tcolorbox}{${1}}", "\t${0}", "\\end{tcolorbox}"]
+
 # tikz.sty {{{1
 ["\\tikz"]
 prefix = "\\tikz"
