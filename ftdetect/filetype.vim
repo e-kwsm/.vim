@@ -5,6 +5,8 @@ autocmd BufRead mpif.h setl filetype=fortran
 autocmd BufRead poetry.lock setf toml
 autocmd BufRead * if getline(1) =~ '^#%Module' | setf module | endif
 
+autocmd BufNewFile,BufRead *.bbx setf tex
+autocmd BufNewFile,BufRead *.cbx setf tex
 autocmd BufNewFile,BufRead *.cif setl filetype=cif
 autocmd BufNewFile,BufRead *.cjson setf json
 autocmd BufNewFile,BufRead *.cls setl filetype=tex
@@ -27,5 +29,6 @@ autocmd BufNewFile,BufRead .flake8 setf dosini
 autocmd BufNewFile,BufRead .gitattributes setl filetype=gitattributes
 autocmd BufNewFile,BufRead .pylintrc setf dosini
 autocmd BufNewFile,BufRead .style.yapf setf dosini
+autocmd BufNewFile,BufRead mongodb.conf setf yaml
 
 autocmd BufNewFile deno:/*.ts%23{%3C,%3D,%5E,\~} setf typescript
