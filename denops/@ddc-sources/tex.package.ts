@@ -34,6 +34,7 @@ export class Source extends BaseSource<Params> {
       "colorist",
       "datetime2",
       "derivative",
+      "diffcoeff",
       "dirtree",
       "domitian",
       "endiagram",
