@@ -3,8 +3,8 @@ import {
   BaseSource,
   DdcGatherItems,
   Item,
-} from "https://deno.land/x/ddc_vim@v3.8.1/types.ts#^";
-import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.8.1/base/source.ts#^";
+} from "https://deno.land/x/ddc_vim@v3.8.2/types.ts#^";
+import { GatherArguments } from "https://deno.land/x/ddc_vim@v3.8.2/base/source.ts#^";
 
 async function _generate(pkg: string, cmds: string[]): Promise<Item[]> {
   return await Promise.all(
