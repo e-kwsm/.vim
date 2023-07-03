@@ -42,7 +42,6 @@ else
   call dein#add('cespare/vim-toml')
   call dein#add('cocopon/iceberg.vim')
   call dein#add('hrsh7th/vim-vsnip')
-  call dein#add('hrsh7th/vim-vsnip-integ')
   call dein#add('itchyny/lightline.vim')
   call dein#add('lambdalisue/vim-unified-diff')
   call dein#add('rhysd/vim-clang-format')
@@ -50,6 +49,7 @@ else
   call dein#add('Shougo/neoinclude.vim')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
+  call dein#add('uga-rosa/ddc-source-vsnip')
   call dein#add('ujihisa/neco-look')
   call dein#add('vim-denops/denops.vim')
   " }}}2
