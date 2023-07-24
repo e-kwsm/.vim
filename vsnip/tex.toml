@@ -47,7 +47,7 @@ body = ["\\begin{adjustbox}{${1|max,min|} ${2|width,height,totalheight,size,tota
 prefix = "\\align"
 body = ["\\begin{align}", "\t${1}", "\\end{align}"]
 
-["align environment*"]
+["align* environment"]
 prefix = "\\align*"
 body = ["\\begin{align*}", "\t${1}", "\\end{align*}"]
 
@@ -58,6 +58,14 @@ body = ["\\begin{bmatrix}", "\t${1}", "\\end{bmatrix}"]
 ["Bmatrix environment"]
 prefix = "\\Bmatrix"
 body = ["\\begin{Bmatrix}", "\t${1}", "\\end{Bmatrix}"]
+
+["equation environment"]
+prefix = "\\equation"
+body = ["\\begin{equation}", "\t${1}", "\\end{equation}"]
+
+["equation* environment"]
+prefix = "\\equation*"
+body = ["\\begin{equation*}", "\t${1}", "\\end{equation*}"]
 
 ["matrix environment"]
 prefix = "\\matrix"
@@ -196,6 +204,11 @@ body = "\\mleft${1:(} ${3} \\mright${2:)}"
 ["\\foreach"]
 prefix = "\\foreach"
 body = ["\\foreach \\\\${1} in {${2}} {", "\t${3}", "}"]
+
+# tcolorbox.sty {{{1
+["\\tcolorbox"]
+prefix = "\\tcolorbox"
+body = ["\\begin{tcolorbox}[${1}]", "\t${0}", "\\end{tcolorbox}"]
 
 # tikz.sty {{{1
 ["\\tikz"]
