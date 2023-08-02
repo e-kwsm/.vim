@@ -273,6 +273,7 @@ counterion
 counterions
 covalency
 CO₂
+CP2K
 CPMD
 CPython/=
 CRENBL
@@ -392,6 +393,7 @@ dispersity
 DMC
 DMRG
 DNN
+Dockerfile
 DOI
 dopants
 Drude
