@@ -286,6 +286,7 @@ Coulombic
 counterion
 counterions
 covalency
+CP2K
 CPython/=
 CRENBL
 CRENBS
@@ -411,6 +412,7 @@ dispersity
 DMC
 DMRG
 DNN
+Dockerfile
 DOI
 dopants
 Drude
