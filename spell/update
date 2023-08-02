@@ -1,34 +1,43 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import re
 import subprocess
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
 
-def update(vim: str = "nvim", check: bool = False, casesensitive: bool = True):
-    if not vim:
-        raise ValueError
-
+def update(
+    vim: str = "nvim",
+    *,
+    add: str = "en.utf-8.add",
+    check: bool = False,
+    casesensitive: bool = True,
+):
     cmd = [vim, "--clean"]
     if Path(vim).name == "nvim":
         cmd.append("--headless")
-    add = "en.utf-8.add"
 
     with NamedTemporaryFile() as ref:
-        cmd.append("-c{}".format("|".join([
-            "set spell",
-            f"e {add}",
-            "sort u",
-            "sort i",
-            "up",
-            "mkspell! %",
-            "%bw",
-            "spelldump",
-            "keepp 0;2/^#/d",
-            f"w! {ref.name}",
-            "qa",
-        ])))
+        cmd += [
+            "-c",
+            "|".join(
+                [
+                    "set spell",
+                    f"e {add}",
+                    "sort u",
+                    "sort i",
+                    "up",
+                    "mkspell! %",
+                    "%bw",
+                    "spelldump",
+                    "keepp 0;2/^#/d",
+                    f"w! {ref.name}",
+                    "qa",
+                ]
+            ),
+        ]
+        os.putenv("LANG", "C")
         subprocess.run(cmd)
 
         if not check:
@@ -55,10 +64,7 @@ def update(vim: str = "nvim", check: bool = False, casesensitive: bool = True):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("vim", nargs="?", default="nvim", help="vim/nvim")
-    parser.add_argument("-c",
-                        "--check",
-                        action="store_true",
-                        help="check duplicates")
+    parser.add_argument("--check", "-c", action="store_true", help="check duplicates")
     args = parser.parse_args()
     update(vim=args.vim, check=args.check)
 
