@@ -97,6 +97,7 @@ aug-cc-pwCVTZ/=
 autoionisation/4
 autoionization
 AVX
+AWS
 azelaic
 azelate
 azetidine
@@ -128,6 +129,7 @@ benzonitrile
 benzophenone
 benzoquinone
 benzyl
+Berny
 BFGS
 BFS
 Bh/=
@@ -354,6 +356,7 @@ discretized
 discretizes
 dispersity
 DMC
+DMRG
 DNN
 DOI
 Drude
@@ -438,6 +441,7 @@ formamidine
 formamidinium
 FQDN
 Fraunhofer
+Frenet
 Friedmann
 FRM
 Frobenius
@@ -606,6 +610,7 @@ Khinchin
 kinase
 Kitaev
 kJ/=
+klassengleiche/?
 KMC
 Kohn
 Kolmogorov
@@ -661,6 +666,7 @@ ln/=
 localhost/=
 LSDA
 LSP
+LTO
 lua
 LuaLaTeX/=
 LuaTeX/=
@@ -747,6 +753,7 @@ multiscale
 mV/=
 MVAPICH
 MySQL/=
+Mössbauer
 Møller
 namelist
 namelists
@@ -911,6 +918,8 @@ plasmonic
 Plesset
 Pochhammer
 Poincaré
+pointgroup
+pointgroups
 Poiseuille
 polarisabilities/4
 polarisability/4
@@ -1056,6 +1065,9 @@ sech/=
 Seitz
 semiconductive
 semidefinite
+serialisable/4
+serializable
+Serret
 Sg/=
 SHA1
 ShareAlike/=
@@ -1128,6 +1140,8 @@ SVG
 SVM
 symmetrisation/4
 symmetrization
+synthesisable/4
+synthesizable
 synthetase
 Tamm
 tanh/=
@@ -1162,6 +1176,7 @@ toml
 TPSS
 TPSS0
 TPSSh/=
+translationengleiche/?
 trapezohedral
 trapezohedron
 tribology
