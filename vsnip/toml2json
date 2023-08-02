@@ -2,7 +2,10 @@
 import argparse
 import json
 
-import toml
+try:
+    import tomllib
+except ImportError:
+    import toml as tomllib
 
 
 def main():
@@ -11,7 +14,7 @@ def main():
     parser.add_argument("json", type=argparse.FileType("w"))
     args = parser.parse_args()
     with args.toml:
-        snip = toml.load(args.toml)
+        snip = tomllib.loads(args.toml.read())
     with args.json:
         json.dump(snip, args.json)
 
