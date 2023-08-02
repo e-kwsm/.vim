@@ -217,6 +217,9 @@ EOF
     call ddc#custom#patch_filetype('module', 'sources', [
           \ 'module.path',
           \ ] + s:sources)
+    call ddc#custom#patch_filetype('python', 'sources', [
+          \ 'python.doctest',
+          \ ] + s:sources)
     call ddc#custom#patch_filetype('rst', 'sources', [
           \ 'rst.directive',
           \ 'rst.pygments',
