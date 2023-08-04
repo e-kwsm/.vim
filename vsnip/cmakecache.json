@@ -1,7 +1,7 @@
 {
   "BLA_VENDOR": {
     "prefix": "BLA_VENDOR",
-    "body": "BLA_VENDOR:STRING=${1|Intel10_64lp,Intel10_64lp_seq,OpenBLAS|}"
+    "body": "BLA_VENDOR:STRING=${1|FLAME,Generic,Intel10_64lp,Intel10_64lp_seq,OpenBLAS|}"
   },
   "CMAKE_CXX_CLANG_TIDY": {
     "prefix": "CMAKE_CXX_CLANG_TIDY",
