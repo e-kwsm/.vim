@@ -657,12 +657,12 @@ body = "⇌"
 description = "U+21CC"
 
 ["Leftwards Double Arrow"]
-prefix = ["LEFTWARDS_DOUBLE_ARROW", "<="]
+prefix = ["LEFTWARDS_DOUBLE_ARROW", "<--"]
 body = "⇐"
 description = "U+21D0"
 
 ["Rightwards Double Arrow"]
-prefix = ["RIGHTWARDS_DOUBLE_ARROW", "=>"]
+prefix = ["RIGHTWARDS_DOUBLE_ARROW", "-->"]
 body = "⇒"
 description = "U+21D2"
 
