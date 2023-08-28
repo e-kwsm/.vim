@@ -30,6 +30,8 @@ Aharonov
 Ahlrichs
 AIMD
 aldol
+aldose
+aldoses
 alkenyl
 alkoxide
 alkoxides
@@ -48,6 +50,11 @@ anharmonic
 anharmonicity
 anilide
 anisole
+anomer
+anomeric
+anomerisation/4
+anomerization
+anomers
 ANOVA
 ansatz
 antiferromagnetism
@@ -305,6 +312,9 @@ delocalize
 delocalized
 delocalizes
 denormal
+deprotonate
+deprotonated
+deprotonates
 deprotonation
 deserialisation/4
 deserialise/4
@@ -346,6 +356,8 @@ dimethylammonium
 diol
 dipolar
 diradical
+disaccharide
+disaccharides
 discretisation/4
 discretise/4
 discretised/4
@@ -405,6 +417,10 @@ enone
 enthalpic
 EOF
 EPBT
+epimer
+epimerisation/4
+epimerization
+epimers
 EQE
 equimolar
 erf/=
@@ -460,6 +476,8 @@ functionalize
 functionalized
 functionalizes
 furan
+furanose
+furanoses
 Förster
 GaAs/=
 Galilei
@@ -474,7 +492,16 @@ Ginzburg
 GISAXS
 GitLab/=
 GIWAXS
+glycan
+glycans
+glycoconjugate
+glycoconjugates
 glycolide
+glycosidic
+glycosyl
+glycosylamine
+glycosylamines
+glycosylation
 GmbH/=
 Goursat
 GPG
@@ -517,6 +544,8 @@ heteronuclear
 hexahedra
 hexahedral
 hexahedron
+hexose
+hexoses
 hexyl
 hexylthiophene
 Higgs
@@ -606,6 +635,7 @@ Keras
 ketene
 keto
 ketose
+ketoses
 Khinchin
 kinase
 Kitaev
@@ -817,6 +847,8 @@ oligo
 oligomer
 oligomeric
 oligomers
+oligosaccharide
+oligosaccharides
 oligothiophene
 oneAPI/=
 oneMKL/=
@@ -875,6 +907,8 @@ PDOS
 Peano
 Peltier
 pentacene
+pentose
+pentoses
 PEP8
 per se
 perchloric
@@ -956,6 +990,7 @@ propyl
 propyne
 protonate
 protonated
+protonates
 protonation
 ps/=
 pseudogap
@@ -972,6 +1007,8 @@ PW91
 PW92
 PWPB95
 PyPI/=
+pyranose
+pyranoses
 pyrazine
 pyrazole
 pyridazine
@@ -1166,7 +1203,18 @@ thermochmically
 thermochromism
 thiazole
 thienyl
+thioacetal
+thioacetals
+thioaldehyde
+thioaldehydes
+thioglycoside
+thioglycosides
+thiohemiacetal
+thiohemiacetals
+thioketone
+thioketones
 thiol
+thiols
 thiophene
 timestamp
 titanate
