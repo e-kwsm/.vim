@@ -84,6 +84,7 @@ export class Source extends BaseSource<Params> {
       "xstring",
 
       "functional",
+      "highlightx",
       "jmsdelim",
       "liftarm",
       "messagepassing",
