@@ -57,6 +57,10 @@ anomerization
 anomers
 ANOVA
 ansatz
+anthocyanidin
+anthocyanidins
+anthocyanin
+anthocyanins
 antiferromagnetism
 AO
 AOs/=
@@ -134,6 +138,7 @@ benzo
 benzoate
 benzonitrile
 benzophenone
+benzopyrylium
 benzoquinone
 benzyl
 Berny
@@ -312,6 +317,7 @@ delocalize
 delocalized
 delocalizes
 denormal
+deoxyribose
 deprotonate
 deprotonated
 deprotonates
@@ -694,6 +700,8 @@ LJ
 LLVM
 ln/=
 localhost/=
+locant
+locants
 LSDA
 LSP
 LTO
@@ -1059,6 +1067,7 @@ revPBE0/=
 revTPSS/=
 revTPSSh/=
 Rg/=
+rhamnose
 RHEL
 RHF
 rhombohedral
@@ -1079,6 +1088,7 @@ RPC
 rubrene
 Runge
 rutile
+rutinose
 rydberg
 Salpeter
 Savart
@@ -1227,6 +1237,7 @@ TPSSh/=
 translationengleiche/?
 trapezohedral
 trapezohedron
+trehalose
 tribology
 tridiagonal
 trigonal
