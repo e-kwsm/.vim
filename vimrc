@@ -324,7 +324,7 @@ augroup myvimrc " {{{1
 
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
-  au BufNewFile *.bash	call setline(1, ['#!/bin/bash', 'set -eux']) | :2
+  au BufNewFile *.bash	call setline(1, ['#!/bin/bash', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.dash	call setline(1, ['#!/usr/bin/env dash', 'set -eux']) | :2
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
   au BufNewFile *.lua	put!='#!/usr/bin/env lua' | :2
