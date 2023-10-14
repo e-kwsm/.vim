@@ -300,7 +300,7 @@ let &titleold=getcwd()
 
 augroup myvimrc " {{{1
   au FileType bib	setl spell
-  au FileType c,cpp	setl tabstop=2 textwidth=100
+  au FileType c,cpp	setl shiftwidth=2 textwidth=100
   au FileType csv	setl noexpandtab
   au FileType fortran	setl ignorecase
   au FileType gitcommit	setl keywordprg=git\ show spell
@@ -314,9 +314,9 @@ augroup myvimrc " {{{1
   au FileType rst	setl foldmethod=manual spell
   au FileType sh	setl
         \ makeprg=shellcheck\ -f\ gcc\ %
-        \ tabstop=2 textwidth=100
+        \ shiftwidth=2 textwidth=100
   au FileType sshconfig	setl noexpandtab
-  au FileType svg	setl iskeyword+=- tabstop=2 textwidth=100
+  au FileType svg	setl iskeyword+=- shiftwidth=2 textwidth=100
   au FileType tcl	setl iskeyword+=-
   au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell textwidth=100
   au FileType vim	setl foldmethod=marker
