@@ -252,6 +252,7 @@ CIP
 CISD
 CISDT
 CISDTQ
+classmethod/?
 Clebsch
 CMake/=
 cmake/=
@@ -259,6 +260,7 @@ Cn/=
 CODATA
 coenzyme
 colinear
+conda
 Condon
 conformant
 copernicium
@@ -394,6 +396,8 @@ DMC
 DMRG
 DNN
 Dockerfile
+docstring/?
+docstrings/?
 DOI
 dopants
 Drude
@@ -630,6 +634,7 @@ iminium
 imino
 in silico
 in situ
+INCAR/?
 InChI/=
 infectivity
 InfiniBand/=
@@ -695,6 +700,7 @@ Kolmogorov
 Koopmans
 Koster
 kPa/=
+KPOINTS/?
 Kramers
 Kroll
 Kronig
@@ -1039,8 +1045,10 @@ polyphenylene
 polythiophene
 Pople
 porphyrin
+POSCAR/?
 POSIX
 PostgreSQL/=
+POTCAR/?
 Pourbaix
 prefactor
 preprocess
@@ -1073,6 +1081,7 @@ PW86
 PW91
 PW92
 PWPB95
+pymatgen/?
 PyPI/=
 pyranose
 pyranoses
@@ -1152,6 +1161,7 @@ rutile
 rutinose
 rydberg
 Ryzen
+S3
 Salpeter
 Savart
 SBKJC
@@ -1366,6 +1376,7 @@ wavevector
 wavevectors
 Wb/=
 Weierstraß
+Weisfeiler/?
 Weizsäcker
 Wien
 wildcard
