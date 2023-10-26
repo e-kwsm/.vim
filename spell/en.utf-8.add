@@ -126,6 +126,7 @@ backend
 Bader
 bandgap
 bandstructure
+bandstructures
 Banquo
 barostat
 barostats
@@ -149,6 +150,7 @@ BHandH/=
 BHandHLYP/=
 BHJ
 BibTeX/=
+bibtex/=
 bicontinuous
 bilayered
 Binet
@@ -770,6 +772,7 @@ MOF
 mol/=
 molality
 MongoDB/=
+mongodb/=
 monic
 Monkhorst
 Morera
@@ -866,6 +869,7 @@ onium
 Onnes
 OOM
 OpenACC/=
+OpenAPI/=
 OpenBLAS/=
 OpenMP/=
 OpenType/=
@@ -915,6 +919,8 @@ PDOS
 Peano
 Peltier
 pentacene
+pentamer
+pentamers
 pentose
 pentoses
 PEP8
@@ -951,6 +957,7 @@ physisorbed
 physisorption
 picosecond
 PID
+piezoluminescence
 pinacol
 pKa/=
 planewave
@@ -1100,6 +1107,7 @@ Schoenflies
 Schur
 Schwarz
 Schönflies
+SciPy
 scission
 SCRF
 Scuseria
@@ -1206,6 +1214,8 @@ terephthalate
 terephthalic
 tert/=
 tetracene
+tetramer
+tetramers
 tetramethylammonium
 thermochemistry
 thermochmical
@@ -1241,6 +1251,8 @@ trehalose
 tribology
 tridiagonal
 trigonal
+trimer
+trimers
 trimethylamine
 trimethylammonium
 triphenylene
