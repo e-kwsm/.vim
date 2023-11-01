@@ -7,62 +7,38 @@ if !has('nvim')
   syntax enable
 endif
 
-" Shougo/dein.vim {{{1
-if exists('*stdpath')
+" lazy.nvim {{{1
+if has('nvim')
   let s:data_dir = stdpath('data')
-else
-  let s:data_dir = get(environ(), 'XDG_DATA_HOME', expand('~/.local/share')) . '/nvim'
-endif
-let s:bundle_root = s:data_dir . '/site/bundle'
-let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
-if !isdirectory(s:dein_dir)
-  echo 'git clone --depth 1 https://github.com/Shougo/dein.vim.git ' . s:dein_dir
-else
-  let &runtimepath .= ',' . s:dein_dir
-  call dein#begin(s:bundle_root)
-  call dein#add('Shougo/dein.vim')
-  " plugins {{{2
-  let s:_denops_available = has('nvim') || v:version > 802
-
-  if has('nvim')
-    call dein#add('neovim/nvim-lspconfig')
-    call dein#add('ncm2/float-preview.nvim')
-    "call dein#add('nvim-treesitter/nvim-treesitter')
-  endif
-  if s:_denops_available
-    call dein#add('Shougo/ddc-matcher_head')
-    call dein#add('Shougo/ddc-sorter_rank')
-    call dein#add('Shougo/ddc-source-around')
-    call dein#add('Shougo/ddc-source-lsp')
-    call dein#add('Shougo/ddc-ui-native')
-    call dein#add('Shougo/ddc.vim')
-  endif
-
-  call dein#add('bronson/vim-trailing-whitespace')
-  call dein#add('cespare/vim-toml')
-  call dein#add('cocopon/iceberg.vim')
-  call dein#add('hrsh7th/vim-vsnip')
-  call dein#add('itchyny/lightline.vim')
-  call dein#add('lambdalisue/vim-unified-diff')
-  call dein#add('rhysd/vim-clang-format')
-  call dein#add('Shougo/neco-syntax')
-  call dein#add('Shougo/neoinclude.vim')
-  call dein#add('tpope/vim-endwise')
-  call dein#add('tpope/vim-surround')
-  call dein#add('uga-rosa/ddc-source-vsnip')
-  call dein#add('ujihisa/neco-look')
-  call dein#add('vim-denops/denops.vim')
-  " }}}2
-  call dein#end()
-
-  filetype plugin indent on
-  syntax enable
-
-  let g:dein#types#git#clone_depth = 1
-  if dein#check_install()
-    call dein#install()
-  endif
-
+  let s:bundle_root = s:data_dir . '/site/bundle'
+  let &runtimepath .= ',' . s:bundle_root . '/repos/github.com/folke/lazy.nvim'
+  lua << EOF
+require('lazy').setup({
+  'bronson/vim-trailing-whitespace',
+  'cespare/vim-toml',
+  'cocopon/iceberg.vim',
+  'hrsh7th/vim-vsnip',
+  'itchyny/lightline.vim',
+  'lambdalisue/vim-unified-diff',
+  'ncm2/float-preview.nvim',
+  'neovim/nvim-lspconfig',
+  'rhysd/vim-clang-format',
+  'Shougo/ddc-matcher_head',
+  'Shougo/ddc-sorter_rank',
+  'Shougo/ddc-source-around',
+  'Shougo/ddc-source-lsp',
+  'Shougo/ddc-ui-native',
+  'Shougo/ddc.vim',
+  'Shougo/neco-syntax',
+  'Shougo/neoinclude.vim',
+  'tpope/vim-endwise',
+  'tpope/vim-endwise',
+  'tpope/vim-surround',
+  'uga-rosa/ddc-source-vsnip',
+  'ujihisa/neco-look',
+  'vim-denops/denops.vim',
+})
+EOF
   " plugin config {{{2
   " cocopon/iceberg.vim {{{3
   try | colorscheme iceberg | let g:lightline = #{colorscheme: 'iceberg'} | catch | colorscheme desert | endtry
@@ -94,8 +70,7 @@ else
   let g:float_preview#docked = 1
 
   " neovim/nvim-lspconfig {{{3
-  if has('nvim')
-    lua << EOF
+  lua << EOF
 local ok, lspconfig = pcall(require, "lspconfig")
 if not ok then
   vim.api.nvim_command('echom "module lspconfig not found"')
@@ -106,18 +81,15 @@ lspconfig.clangd.setup {}
 lspconfig.denols.setup {}
 lspconfig.pylsp.setup {}
 EOF
-  endif
 
   " Shougo/ddc.vim {{{3
-  if s:_denops_available
-    if has('nvim')
-      lua << EOF
+  if v:true
+    lua << EOF
 local capabilities = require("ddc_source_lsp").make_client_capabilities()
 require("lspconfig").denols.setup({
   capabilities = capabilities,
 })
 EOF
-    endif
     au myvimrc CompleteDone * silent! pclose!
 
     call ddc#custom#patch_global('ui', 'native')
@@ -227,8 +199,72 @@ EOF
 
     call ddc#enable()
   endif
-  " }}}2
-endif
+
+endif " }}}1
+
+"let s:bundle_root = s:data_dir . '/site/bundle'
+"let s:dein_dir = s:bundle_root . '/repos/github.com/Shougo/dein.vim'
+"let s:dpp_dir = s:bundle_root . '/repos/github.com/Shougo/dpp.vim'
+"let s:denops_dir = s:bundle_root . '/repos/github.com/denops/denops.vim'
+"if !isdirectory(s:dpp_dir)
+"  echo 'git clone --depth 1 https://github.com/Shougo/dpp.vim.git ' . s:dpp_dir
+"else
+"  let &runtimepath .= ',' . s:dpp_dir
+"  if dpp#min#load_state(s:bundle_root)
+"    let &runtimepath .= ',' . s:denops_dir
+"    autocmd User DenopsReady call dpp#make_state(s:dpp_base, '{TypeScript config file path}')
+"  endif
+"endif
+
+"if !isdirectory(s:dein_dir)
+"  echo 'git clone --depth 1 https://github.com/Shougo/dpp.vim.git ' . s:dein_dir
+"else
+"  let &runtimepath .= ',' . s:dein_dir
+"  call dein#begin(s:bundle_root)
+"  call dein#add('Shougo/dein.vim')
+"  " plugins {{{2
+"  let s:_denops_available = has('nvim') || v:version > 802
+"
+"  if has('nvim')
+"    call dein#add('neovim/nvim-lspconfig')
+"    call dein#add('ncm2/float-preview.nvim')
+"    "call dein#add('nvim-treesitter/nvim-treesitter')
+"  endif
+"  if s:_denops_available
+"    call dein#add('Shougo/ddc-matcher_head')
+"    call dein#add('Shougo/ddc-sorter_rank')
+"    call dein#add('Shougo/ddc-source-around')
+"    call dein#add('Shougo/ddc-source-lsp')
+"    call dein#add('Shougo/ddc-ui-native')
+"    call dein#add('Shougo/ddc.vim')
+"  endif
+"
+"  call dein#add('bronson/vim-trailing-whitespace')
+"  call dein#add('cespare/vim-toml')
+"  call dein#add('cocopon/iceberg.vim')
+"  call dein#add('hrsh7th/vim-vsnip')
+"  call dein#add('itchyny/lightline.vim')
+"  call dein#add('lambdalisue/vim-unified-diff')
+"  call dein#add('rhysd/vim-clang-format')
+"  call dein#add('Shougo/neco-syntax')
+"  call dein#add('Shougo/neoinclude.vim')
+"  call dein#add('tpope/vim-endwise')
+"  call dein#add('tpope/vim-surround')
+"  call dein#add('uga-rosa/ddc-source-vsnip')
+"  call dein#add('ujihisa/neco-look')
+"  call dein#add('vim-denops/denops.vim')
+"  " }}}2
+"  call dein#end()
+"
+"  filetype plugin indent on
+"  syntax enable
+"
+"  let g:dein#types#git#clone_depth = 1
+"  if dein#check_install()
+"    call dein#install()
+"  endif
+"
+"endif
 " }}}1
 
 " set {{{1
