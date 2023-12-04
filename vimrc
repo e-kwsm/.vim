@@ -64,7 +64,7 @@ else
 
   " plugin config {{{2
   " cocopon/iceberg.vim {{{3
-  try | colorscheme iceberg | let g:lightline = {'colorscheme': 'iceberg'} | catch | colorscheme desert | endtry
+  try | colorscheme iceberg | let g:lightline = #{colorscheme: 'iceberg'} | catch | colorscheme desert | endtry
 
   "hrsh7th/vim-vsnip {{{3
   inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
@@ -164,20 +164,20 @@ EOF
           \ ]
     call ddc#custom#patch_global('sources', s:sources)
 
-    call ddc#custom#patch_global('sourceOptions', {
-          \ '_': {
-          \   'matchers': ['matcher_head'],
-          \   'sorters': ['sorter_rank'],
+    call ddc#custom#patch_global('sourceOptions', #{
+          \ _: #{
+          \   matchers: ['matcher_head'],
+          \   sorters: ['sorter_rank'],
           \ },
-          \ 'around': {'mark': 'A'},
-          \ 'nvim-lsp': {
-          \   'mark': 'lsp',
-          \   'forceCompletionPattern': '(?:\.|->)\w*',
+          \ around: #{mark: 'A'},
+          \ nvim-lsp: #{
+          \   mark: 'lsp',
+          \   forceCompletionPattern: '(?:\.|->)\w*',
           \ },
           \ })
 
-    call ddc#custom#patch_global('sourceParams', {
-          \ 'around': {'maxSize': 500},
+    call ddc#custom#patch_global('sourceParams', #{
+          \ around: #{maxSize: 500},
           \ })
 
     call ddc#custom#patch_filetype('bib', 'sources', [
