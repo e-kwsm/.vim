@@ -241,6 +241,7 @@ CIP
 CISD
 CISDT
 CISDTQ
+Clebsch
 CMake/=
 cmake/=
 Cn/=
@@ -511,6 +512,7 @@ glycosylamine
 glycosylamines
 glycosylation
 GmbH/=
+Gordan
 Goursat
 GPG
 GPGPU
@@ -628,6 +630,7 @@ isovalue
 isovolumetric
 isoxazole
 iterable
+IUCr/=
 IUPAC
 IUPAP
 Jahn
