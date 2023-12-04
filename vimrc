@@ -32,7 +32,7 @@ else
     call dein#add('Shougo/ddc-matcher_head')
     call dein#add('Shougo/ddc-sorter_rank')
     call dein#add('Shougo/ddc-source-around')
-    call dein#add('Shougo/ddc-source-nvim-lsp')
+    call dein#add('Shougo/ddc-source-lsp')
     call dein#add('Shougo/ddc-ui-native')
     call dein#add('Shougo/ddc.vim')
   endif
@@ -153,12 +153,20 @@ EOF
 
   " Shougo/ddc.vim {{{3
   if s:_denops_available
+    if has('nvim')
+      lua << EOF
+local capabilities = require("ddc_source_lsp").make_client_capabilities()
+require("lspconfig").denols.setup({
+  capabilities = capabilities,
+})
+EOF
+    endif
     au myvimrc CompleteDone * silent! pclose!
 
     call ddc#custom#patch_global('ui', 'native')
 
     let s:sources = [
-          \ 'nvim-lsp',
+          \ 'lsp',
           \ 'vsnip',
           \ 'around',
           \ ]
@@ -170,7 +178,7 @@ EOF
           \   sorters: ['sorter_rank'],
           \ },
           \ around: #{mark: 'A'},
-          \ nvim-lsp: #{
+          \ lsp: #{
           \   mark: 'lsp',
           \   forceCompletionPattern: '(?:\.|->)\w*',
           \ },
@@ -178,6 +186,11 @@ EOF
 
     call ddc#custom#patch_global('sourceParams', #{
           \ around: #{maxSize: 500},
+          \ lsp: #{
+          \   snippetEngine: denops#callback#register({body -> vsnip#anonymous(body)}),
+          \   enableResolveItem: v:true,
+          \   enableAdditionalTextEdit: v:true,
+          \ },
           \ })
 
     call ddc#custom#patch_filetype('bib', 'sources', [
