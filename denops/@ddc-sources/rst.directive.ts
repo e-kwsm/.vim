@@ -2,8 +2,8 @@ import {
   BaseSource,
   DdcGatherItems,
   Item,
-} from "https://deno.land/x/ddc_vim@v4.2.0/types.ts#^";
-import { GatherArguments } from "https://deno.land/x/ddc_vim@v4.2.0/base/source.ts#^";
+} from "https://deno.land/x/ddc_vim@v4.3.1/types.ts#^";
+import { GatherArguments } from "https://deno.land/x/ddc_vim@v4.3.1/base/source.ts#^";
 
 type Params = Record<string, never>;
 
