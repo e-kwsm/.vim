@@ -1,0 +1,1293 @@
+# vi:foldmethod=marker
+{
+  "DOI": {
+    "prefix": "DOI",
+    "body": "https://doi.org/",
+  },
+
+  "Lorem ipsum": {
+    "prefix": "loremipsum",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+
+  "ångström": {
+    "prefix": ["angstrom", "aangstroem"],
+    "body": "ångström",
+  },
+
+  "Hückel": {
+    "prefix": "Hueckel",
+    "body": "Hückel",
+  },
+
+  "Löwdin": {
+    "prefix": "Loewdin",
+    "body": "Löwdin",
+  },
+
+  "Møller": {
+    "prefix": "Moeller",
+    "body": "Møller",
+  },
+
+  "Schrödinger": {
+    "prefix": "Schroedinger",
+    "body": "Schrödinger",
+  },
+
+  # Latin-1 Supplement Block {{{1
+  "Section Sign": {
+    "prefix": "SECTION_SIGN",
+    "body": "§",
+    "description": "U+00A7"
+  },
+
+  "Left-Pointing Double Angle Quotation Mark": {
+    "prefix": "LEFT_POINTING_DOUBLE_ANGLE_QUOTATION_MARK",
+    "body": "«",
+    "description": "U+00AB"
+  },
+
+  "Not Sign": {
+    "prefix": "NOT_SIGN",
+    "body": "¬",
+    "description": "U+00AC"
+  },
+
+  "Degree Sign": {
+    "prefix": "DEGREE_SIGN",
+    "body": "°",
+    "description": "U+00B0"
+  },
+
+  "Plus-Minus Sign": {
+    "prefix": "PLUS_MINUS_SIGN",
+    "body": "±",
+    "description": "U+00B1"
+  },
+
+  "Superscript Two": {
+    "prefix": "SUPERSCRIPT_TWO",
+    "body": "²",
+    "description": "U+00B2"
+  },
+
+  "Superscript Three": {
+    "prefix": "SUPERSCRIPT_THREE",
+    "body": "³",
+    "description": "U+00B3"
+  },
+
+  "Pilcrow Sign": {
+    "prefix": "PILCROW_SIGN",
+    "body": "¶",
+    "description": "U+00B6"
+  },
+
+  "Middle Dot": {
+    "prefix": "MIDDLE_DOT",
+    "body": "·",
+    "description": "U+00B7"
+  },
+
+  "Superscript One": {
+    "prefix": "SUPERSCRIPT_ONE",
+    "body": "¹",
+    "description": "U+00B9"
+  },
+
+  "Right-Pointing Double Angle Quotation Mark": {
+    "prefix": "RIGHT_POINTING_DOUBLE_ANGLE_QUOTATION_MARK",
+    "body": "»",
+    "description": "U+00BB"
+  },
+
+  "Latin Capital Letter A with Diaeresis": {
+    "prefix": ["LATIN_CAPITAL_LETTER_A_WITH_DIAERESIS", "Auml"],
+    "body": "Ä",
+    "description": "U+00C4"
+  },
+
+  "Latin Capital Letter A with Ring Above": {
+    "prefix": ["LATIN_CAPITAL_LETTER_A_WITH_RING_ABOVE", "Aring"],
+    "body": "Å",
+    "description": "U+00C5"
+  },
+
+  "Latin Capital Letter O with Diaeresis": {
+    "prefix": ["LATIN_CAPITAL_LETTER_O_WITH_DIAERESIS", "Ouml"],
+    "body": "Ö",
+    "description": "U+00D6"
+  },
+
+  "Multiplication Sign": {
+    "prefix": "MULTIPLICATION_SIGN",
+    "body": "×",
+    "description": "U+00D7"
+  },
+
+  "Latin Capital Letter O with Stroke": {
+    "prefix": ["LATIN_CAPITAL_LETTER_O_WITH_STROKE", "Oslash"],
+    "body": "Ø",
+    "description": "U+00D8"
+  },
+
+  "Latin Capital Letter U with Diaeresis": {
+    "prefix": ["LATIN_CAPITAL_LETTER_U_WITH_DIAERESIS", "Uuml"],
+    "body": "Ü",
+    "description": "U+00DC"
+  },
+
+  "Latin Small Letter Sharp S": {
+    "prefix": ["LATIN_SMALL_LETTER_SHARP_S", "eszett"],
+    "body": "ß",
+    "description": "U+00DF"
+  },
+
+  "Latin Small Letter A with Diaeresis": {
+    "prefix": ["LATIN_SMALL_LETTER_A_WITH_DIAERESIS", "auml"],
+    "body": "ä",
+    "description": "U+00E4"
+  },
+
+  "Latin Small Letter A with Ring Above": {
+    "prefix": ["LATIN_SMALL_LETTER_A_WITH_RING_ABOVE", "aring"],
+    "body": "å",
+    "description": "U+00E5"
+  },
+
+  "Latin Small Letter O with Diaeresis": {
+    "prefix": ["LATIN_SMALL_LETTER_O_WITH_DIAERESIS", "ouml"],
+    "body": "ö",
+    "description": "U+00F6"
+  },
+
+  "Latin Small Letter O with Stroke": {
+    "prefix": ["LATIN_SMALL_LETTER_O_WITH_STROKE", "oslash"],
+    "body": "ø",
+    "description": "U+00F8"
+  },
+
+  "Latin Small Letter U with Diaeresis": {
+    "prefix": ["LATIN_SMALL_LETTER_U_WITH_DIAERESIS", "uuml"],
+    "body": "ü",
+    "description": "U+00FC"
+  },
+
+  # Latin Extended-A Block {{{1
+  "Latin Small Letter H with Stroke": {
+    "prefix": "LATIN_SMALL_LETTER_H_WITH_STROKE",
+    "body": "ħ",
+    "description": "U+0127"
+  },
+
+  # Greek and Coptic Block {{{1
+  "Greek Capital Letter Alpha": {
+    "prefix": ["GREEK_CAPITAL_LETTER_ALPHA", "_Alpha"],
+    "body": "Α",
+    "description": "U+0391"
+  },
+
+  "Greek Capital Letter Beta": {
+    "prefix": ["GREEK_CAPITAL_LETTER_BETA", "_Beta"],
+    "body": "Β",
+    "description": "U+0392"
+  },
+
+  "Greek Capital Letter Gamma": {
+    "prefix": ["GREEK_CAPITAL_LETTER_GAMMA", "_Gamma"],
+    "body": "Γ",
+    "description": "U+0393"
+  },
+
+  "Greek Capital Letter Delta": {
+    "prefix": ["GREEK_CAPITAL_LETTER_DELTA", "_Delta"],
+    "body": "Δ",
+    "description": "U+0394"
+  },
+
+  "Greek Capital Letter Epsilon": {
+    "prefix": ["GREEK_CAPITAL_LETTER_EPSILON", "_Epsilon"],
+    "body": "Ε",
+    "description": "U+0395"
+  },
+
+  "Greek Capital Letter Zeta": {
+    "prefix": ["GREEK_CAPITAL_LETTER_ZETA", "_Zeta"],
+    "body": "Ζ",
+    "description": "U+0396"
+  },
+
+  "Greek Capital Letter Eta": {
+    "prefix": ["GREEK_CAPITAL_LETTER_ETA", "_Eta"],
+    "body": "Η",
+    "description": "U+0397"
+  },
+
+  "Greek Capital Letter Theta": {
+    "prefix": ["GREEK_CAPITAL_LETTER_THETA", "_Theta"],
+    "body": "Θ",
+    "description": "U+0398"
+  },
+
+  "Greek Capital Letter Iota": {
+    "prefix": ["GREEK_CAPITAL_LETTER_IOTA", "_Iota"],
+    "body": "Ι",
+    "description": "U+0399"
+  },
+
+  "Greek Capital Letter Kappa": {
+    "prefix": ["GREEK_CAPITAL_LETTER_KAPPA", "_Kappa"],
+    "body": "Κ",
+    "description": "U+039A"
+  },
+
+  "Greek Capital Letter Lambda": {
+    "prefix": ["GREEK_CAPITAL_LETTER_LAMBDA", "_Lambda"],
+    "body": "Λ",
+    "description": "U+039B"
+  },
+
+  "Greek Capital Letter Mu": {
+    "prefix": ["GREEK_CAPITAL_LETTER_MU", "_Mu"],
+    "body": "Μ",
+    "description": "U+039C"
+  },
+
+  "Greek Capital Letter Nu": {
+    "prefix": ["GREEK_CAPITAL_LETTER_NU", "_Nu"],
+    "body": "Ν",
+    "description": "U+039D"
+  },
+
+  "Greek Capital Letter Xi": {
+    "prefix": ["GREEK_CAPITAL_LETTER_XI", "_Xi"],
+    "body": "Ξ",
+    "description": "U+039E"
+  },
+
+  "Greek Capital Letter Omicron": {
+    "prefix": ["GREEK_CAPITAL_LETTER_OMICRON", "_Omicron"],
+    "body": "Ο",
+    "description": "U+039F"
+  },
+
+  "Greek Capital Letter Pi": {
+    "prefix": ["GREEK_CAPITAL_LETTER_PI", "_Pi"],
+    "body": "Π",
+    "description": "U+03A0"
+  },
+
+  "Greek Capital Letter Rho": {
+    "prefix": ["GREEK_CAPITAL_LETTER_RHO", "_Rho"],
+    "body": "Ρ",
+    "description": "U+03A1"
+  },
+
+  "Greek Capital Letter Sigma": {
+    "prefix": ["GREEK_CAPITAL_LETTER_SIGMA", "_Sigma"],
+    "body": "Σ",
+    "description": "U+03A3"
+  },
+
+  "Greek Capital Letter Tau": {
+    "prefix": ["GREEK_CAPITAL_LETTER_TAU", "_Tau"],
+    "body": "Τ",
+    "description": "U+03A4"
+  },
+
+  "Greek Capital Letter Upsilon": {
+    "prefix": ["GREEK_CAPITAL_LETTER_UPSILON", "_Upsilon"],
+    "body": "Υ",
+    "description": "U+03A5"
+  },
+
+  "Greek Capital Letter Phi": {
+    "prefix": ["GREEK_CAPITAL_LETTER_PHI", "_Phi"],
+    "body": "Φ",
+    "description": "U+03A6"
+  },
+
+  "Greek Capital Letter Chi": {
+    "prefix": ["GREEK_CAPITAL_LETTER_CHI", "_Chi"],
+    "body": "Χ",
+    "description": "U+03A7"
+  },
+
+  "Greek Capital Letter Psi": {
+    "prefix": ["GREEK_CAPITAL_LETTER_PSI", "_Psi"],
+    "body": "Ψ",
+    "description": "U+03A8"
+  },
+
+  "Greek Capital Letter Omega": {
+    "prefix": ["GREEK_CAPITAL_LETTER_OMEGA", "_Omega"],
+    "body": "Ω",
+    "description": "U+03A9"
+  },
+
+  "Greek Small Letter Alpha": {
+    "prefix": ["GREEK_SMALL_LETTER_ALPHA", "_alpha"],
+    "body": "α",
+    "description": "U+03B1"
+  },
+
+  "Greek Small Letter Beta": {
+    "prefix": ["GREEK_SMALL_LETTER_BETA", "_beta"],
+    "body": "β",
+    "description": "U+03B2"
+  },
+
+  "Greek Small Letter Gamma": {
+    "prefix": ["GREEK_SMALL_LETTER_GAMMA", "_gamma"],
+    "body": "γ",
+    "description": "U+03B3"
+  },
+
+  "Greek Small Letter Delta": {
+    "prefix": ["GREEK_SMALL_LETTER_DELTA", "_delta"],
+    "body": "δ",
+    "description": "U+03B4"
+  },
+
+  "Greek Small Letter Epsilon": {
+    "prefix": ["GREEK_SMALL_LETTER_EPSILON", "_epsilon"],
+    "body": "ε",
+    "description": "U+03B5"
+  },
+
+  "Greek Small Letter Zeta": {
+    "prefix": ["GREEK_SMALL_LETTER_ZETA", "_zeta"],
+    "body": "ζ",
+    "description": "U+03B6"
+  },
+
+  "Greek Small Letter Eta": {
+    "prefix": ["GREEK_SMALL_LETTER_ETA", "_eta"],
+    "body": "η",
+    "description": "U+03B7"
+  },
+
+  "Greek Small Letter Theta": {
+    "prefix": ["GREEK_SMALL_LETTER_THETA", "_theta"],
+    "body": "θ",
+    "description": "U+03B8"
+  },
+
+  "Greek Small Letter Iota": {
+    "prefix": ["GREEK_SMALL_LETTER_IOTA", "_iota"],
+    "body": "ι",
+    "description": "U+03B9"
+  },
+
+  "Greek Small Letter Kappa": {
+    "prefix": ["GREEK_SMALL_LETTER_KAPPA", "_kappa"],
+    "body": "κ",
+    "description": "U+03BA"
+  },
+
+  "Greek Small Letter Lambda": {
+    "prefix": ["GREEK_SMALL_LETTER_LAMBDA", "_lambda"],
+    "body": "λ",
+    "description": "U+03BB"
+  },
+
+  "Greek Small Letter Mu": {
+    "prefix": ["GREEK_SMALL_LETTER_MU", "_mu"],
+    "body": "μ",
+    "description": "U+03BC"
+  },
+
+  "Greek Small Letter Nu": {
+    "prefix": ["GREEK_SMALL_LETTER_NU", "_nu"],
+    "body": "ν",
+    "description": "U+03BD"
+  },
+
+  "Greek Small Letter Xi": {
+    "prefix": ["GREEK_SMALL_LETTER_XI", "_xi"],
+    "body": "ξ",
+    "description": "U+03BE"
+  },
+
+  "Greek Small Letter Omicron": {
+    "prefix": ["GREEK_SMALL_LETTER_OMICRON", "_omicron"],
+    "body": "ο",
+    "description": "U+03BF"
+  },
+
+  "Greek Small Letter Pi": {
+    "prefix": ["GREEK_SMALL_LETTER_PI", "_pi"],
+    "body": "π",
+    "description": "U+03C0"
+  },
+
+  "Greek Small Letter Rho": {
+    "prefix": ["GREEK_SMALL_LETTER_RHO", "_rho"],
+    "body": "ρ",
+    "description": "U+03C1"
+  },
+
+  "Greek Small Letter Final Sigma": {
+    "prefix": ["GREEK_SMALL_LETTER_FINAL_SIGMA", "_sigmaf"],
+    "body": "ς",
+    "description": "U+03C2"
+  },
+
+  "Greek Small Letter Sigma": {
+    "prefix": ["GREEK_SMALL_LETTER_SIGMA", "_sigma"],
+    "body": "σ",
+    "description": "U+03C3"
+  },
+
+  "Greek Small Letter Tau": {
+    "prefix": ["GREEK_SMALL_LETTER_TAU", "_tau"],
+    "body": "τ",
+    "description": "U+03C4"
+  },
+
+  "Greek Small Letter Upsilon": {
+    "prefix": ["GREEK_SMALL_LETTER_UPSILON", "_upsilon"],
+    "body": "υ",
+    "description": "U+03C5"
+  },
+
+  "Greek Small Letter Phi": {
+    "prefix": ["GREEK_SMALL_LETTER_PHI", "_phi"],
+    "body": "φ",
+    "description": "U+03C6"
+  },
+
+  "Greek Small Letter Chi": {
+    "prefix": ["GREEK_SMALL_LETTER_CHI", "_chi"],
+    "body": "χ",
+    "description": "U+03C7"
+  },
+
+  "Greek Small Letter Psi": {
+    "prefix": ["GREEK_SMALL_LETTER_PSI", "_psi"],
+    "body": "ψ",
+    "description": "U+03C8"
+  },
+
+  "Greek Small Letter Omega": {
+    "prefix": ["GREEK_SMALL_LETTER_OMEGA", "_omega"],
+    "body": "ω",
+    "description": "U+03C9"
+  },
+
+  "Greek Phi Symbol": {
+    "prefix": ["GREEK_PHI_SYMBOL", "_phi_sym"],
+    "body": "ϕ",
+    "description": "U+03D5"
+  },
+
+  # Latin Extended Additional Block {{{1
+  "Latin Capital Letter Sharp S": {
+    "prefix": ["LATIN_CAPITAL_LETTER_SHARP_S", "Eszett"],
+    "body": "ẞ",
+    "description": "U+1E9E"
+  },
+
+  # General Punctuation Block {{{1
+  "En Dash": {
+    "prefix": ["EN_DASH", "ndash", "--"],
+    "body": "–",
+    "description": "U+2013"
+  },
+
+  "Em Dash": {
+    "prefix": ["EM_DASH", "mdash", "---"],
+    "body": "—",
+    "description": "U+2014"
+  },
+
+  "Left Single Quotation Mark": {
+    "prefix": "LEFT_SINGLE_QUOTATION_MARK",
+    "body": "‘",
+    "description": "U+2018"
+  },
+
+  "Right Single Quotation Mark": {
+    "prefix": "RIGHT_SINGLE_QUOTATION_MARK",
+    "body": "’",
+    "description": "U+2019"
+  },
+
+  "Left Double Quotation Mark": {
+    "prefix": "LEFT_DOUBLE_QUOTATION_MARK",
+    "body": "“",
+    "description": "U+201C"
+  },
+
+  "Right Double Quotation Mark": {
+    "prefix": "RIGHT_DOUBLE_QUOTATION_MARK",
+    "body": "”",
+    "description": "U+201D"
+  },
+
+  "Dagger": {
+    "prefix": ["DAGGER", "dagger"],
+    "body": "†",
+    "description": "U+2020"
+  },
+
+  "Double Dagger": {
+    "prefix": ["DOUBLE_DAGGER", "Dagger"],
+    "body": "‡",
+    "description": "U+2021"
+  },
+
+  "Bullet": {
+    "prefix": "BULLET",
+    "body": "•",
+    "description": "U+2022"
+  },
+
+  "Horizontal Ellipsis": {
+    "prefix": "HORIZONTAL_ELLIPSIS",
+    "body": "…",
+    "description": "U+2026"
+  },
+
+  "Prime": {
+    "prefix": ["PRIME", "prime"],
+    "body": "′",
+    "description": "U+2032"
+  },
+
+  "Double Prime": {
+    "prefix": ["DOUBLE_PRIME", "Prime"],
+    "body": "″",
+    "description": "U+2033"
+  },
+
+  "Single Left-Pointing Angle Quotation Mark": {
+    "prefix": "SINGLE_LEFT_POINTING_ANGLE_QUOTATION_MARK",
+    "body": "‹",
+    "description": "U+2039"
+  },
+
+  "Single Right-Pointing Angle Quotation Mark": {
+    "prefix": "SINGLE_RIGHT_POINTING_ANGLE_QUOTATION_MARK",
+    "body": "›",
+    "description": "U+203A"
+  },
+
+  # Superscripts and Subscripts Block {{{1
+  "Superscript Zero": {
+    "prefix": "SUPERSCRIPT_ZERO",
+    "body": "⁰",
+    "description": "U+2070"
+  },
+
+  "Superscript Four": {
+    "prefix": "SUPERSCRIPT_FOUR",
+    "body": "⁴",
+    "description": "U+2074"
+  },
+
+  "Superscript Five": {
+    "prefix": "SUPERSCRIPT_FIVE",
+    "body": "⁵",
+    "description": "U+2075"
+  },
+
+  "Superscript Six": {
+    "prefix": "SUPERSCRIPT_SIX",
+    "body": "⁶",
+    "description": "U+2076"
+  },
+
+  "Superscript Seven": {
+    "prefix": "SUPERSCRIPT_SEVEN",
+    "body": "⁷",
+    "description": "U+2077"
+  },
+
+  "Superscript Eight": {
+    "prefix": "SUPERSCRIPT_EIGHT",
+    "body": "⁸",
+    "description": "U+2078"
+  },
+
+  "Superscript Nine": {
+    "prefix": "SUPERSCRIPT_NINE",
+    "body": "⁹",
+    "description": "U+2079"
+  },
+
+  "Superscript Plus Sign": {
+    "prefix": "SUPERSCRIPT_PLUS_SIGN",
+    "body": "⁺",
+    "description": "U+207A"
+  },
+
+  "Superscript Minus": {
+    "prefix": "SUPERSCRIPT_MINUS",
+    "body": "⁻",
+    "description": "U+207B"
+  },
+
+  "Subscript Zero": {
+    "prefix": "SUBSCRIPT_ZERO",
+    "body": "₀",
+    "description": "U+2080"
+  },
+
+  "Subscript One": {
+    "prefix": "SUBSCRIPT_ONE",
+    "body": "₁",
+    "description": "U+2081"
+  },
+
+  "Subscript Two": {
+    "prefix": "SUBSCRIPT_TWO",
+    "body": "₂",
+    "description": "U+2082"
+  },
+
+  "Subscript Three": {
+    "prefix": "SUBSCRIPT_THREE",
+    "body": "₃",
+    "description": "U+2083"
+  },
+
+  "Subscript Four": {
+    "prefix": "SUBSCRIPT_FOUR",
+    "body": "₄",
+    "description": "U+2084"
+  },
+
+  "Subscript Five": {
+    "prefix": "SUBSCRIPT_FIVE",
+    "body": "₅",
+    "description": "U+2085"
+  },
+
+  "Subscript Six": {
+    "prefix": "SUBSCRIPT_SIX",
+    "body": "₆",
+    "description": "U+2086"
+  },
+
+  "Subscript Seven": {
+    "prefix": "SUBSCRIPT_SEVEN",
+    "body": "₇",
+    "description": "U+2087"
+  },
+
+  "Subscript Eight": {
+    "prefix": "SUBSCRIPT_EIGHT",
+    "body": "₈",
+    "description": "U+2088"
+  },
+
+  "Subscript Nine": {
+    "prefix": "SUBSCRIPT_NINE",
+    "body": "₉",
+    "description": "U+2089"
+  },
+
+  # Letterlike Symbols Block {{{1
+  "Double-Struck Capital C": {
+    "prefix": "DOUBLE_STRUCK_CAPITAL_C",
+    "body": "ℂ",
+    "description": "U+2102"
+  },
+
+  "Degree Celsius": {
+    "prefix": "DEGREE_CELSIUS",
+    "body": "℃",
+    "description": "U+2103"
+  },
+
+  "Euler Constant": {
+    "prefix": "EULER_CONSTANT",
+    "body": "ℇ",
+    "description": "U+2107"
+  },
+
+  "Planck Constant": {
+    "prefix": "PLANCK_CONSTANT",
+    "body": "ℎ",
+    "description": "U+210E"
+  },
+
+  "Planck Constant Over Two Pi": {
+    "prefix": "PLANCK_CONSTANT_OVER_TWO_PI",
+    "body": "ℏ",
+    "description": "U+210F"
+  },
+
+  "Double-Struck Capital N": {
+    "prefix": "DOUBLE_STRUCK_CAPITAL_N",
+    "body": "ℕ",
+    "description": "U+2115"
+  },
+
+  "Double-Struck Capital Q": {
+    "prefix": "DOUBLE_STRUCK_CAPITAL_Q",
+    "body": "ℚ",
+    "description": "U+211A"
+  },
+
+  "Double-Struck Capital R": {
+    "prefix": "DOUBLE_STRUCK_CAPITAL_R",
+    "body": "ℝ",
+    "description": "U+211D"
+  },
+
+  "Double-Struck Capital Z": {
+    "prefix": "DOUBLE_STRUCK_CAPITAL_Z",
+    "body": "ℤ",
+    "description": "U+2124"
+  },
+
+  # Arrows Block {{{1
+  "Leftwards Arrow": {
+    "prefix": ["LEFTWARDS_ARROW", "<-"],
+    "body": "←",
+    "description": "U+2190"
+  },
+
+  "Rightwards Arrow": {
+    "prefix": ["RIGHTWARDS_ARROW", "->"],
+    "body": "→",
+    "description": "U+2192"
+  },
+
+  "Left Right Arrow": {
+    "prefix": ["LEFT_RIGHT_ARROW", "<->"],
+    "body": "↔",
+    "description": "U+2194"
+  },
+
+  "Leftwards Arrow From Bar": {
+    "prefix": "LEFTWARDS_ARROW_FROM_BAR",
+    "body": "↤",
+    "description": "U+21A4"
+  },
+
+  "Rightwards Arrow From Bar": {
+    "prefix": "RIGHTWARDS_ARROW_FROM_BAR",
+    "body": "↦",
+    "description": "U+21A6"
+  },
+
+  "Rightwards Arrow Over Leftwards Arrow": {
+    "prefix": "RIGHTWARDS_ARROW_OVER_LEFTWARDS_ARROW",
+    "body": "⇄",
+    "description": "U+21C4"
+  },
+
+  "Rightwards Harpoon Over Leftwards Harpoon": {
+    "prefix": "RIGHTWARDS_HARPOON_OVER_LEFTWARDS_HARPOON",
+    "body": "⇌",
+    "description": "U+21CC"
+  },
+
+  "Leftwards Double Arrow": {
+    "prefix": ["LEFTWARDS_DOUBLE_ARROW", "<--"],
+    "body": "⇐",
+    "description": "U+21D0"
+  },
+
+  "Rightwards Double Arrow": {
+    "prefix": ["RIGHTWARDS_DOUBLE_ARROW", "-->"],
+    "body": "⇒",
+    "description": "U+21D2"
+  },
+
+  "Left Right Double Arrow": {
+    "prefix": "LEFT_RIGHT_DOUBLE_ARROW",
+    "body": "⇔",
+    "description": "U+21D4"
+  },
+
+  # Mathematical Operators Block {{{1
+  "For All": {
+    "prefix": "FOR_ALL",
+    "body": "∀",
+    "description": "U+2200"
+  },
+
+  "Complement": {
+    "prefix": "COMPLEMENT",
+    "body": "∁",
+    "description": "U+2201"
+  },
+
+  "Partial Differential": {
+    "prefix": "PARTIAL_DIFFERENTIAL",
+    "body": "∂",
+    "description": "U+2202"
+  },
+
+  "There Exists": {
+    "prefix": "THERE_EXISTS",
+    "body": "∃",
+    "description": "U+2203"
+  },
+
+  "There Does Not Exist": {
+    "prefix": "THERE_DOES_NOT_EXIST",
+    "body": "∄",
+    "description": "U+2204"
+  },
+
+  "Empty Set": {
+    "prefix": "EMPTY_SET",
+    "body": "∅",
+    "description": "U+2205"
+  },
+
+  "Increment": {
+    "prefix": "INCREMENT",
+    "body": "∆",
+    "description": "U+2206"
+  },
+
+  "Nabla": {
+    "prefix": "NABLA",
+    "body": "∇",
+    "description": "U+2207"
+  },
+
+  "Element Of": {
+    "prefix": "ELEMENT_OF",
+    "body": "∈",
+    "description": "U+2208"
+  },
+
+  "Not An Element Of": {
+    "prefix": "NOT_AN_ELEMENT_OF",
+    "body": "∉",
+    "description": "U+2209"
+  },
+
+  "Contains As Member": {
+    "prefix": "CONTAINS_AS_MEMBER",
+    "body": "∋",
+    "description": "U+220B"
+  },
+
+  "Does Not Contain As Member": {
+    "prefix": "DOES_NOT_CONTAIN_AS_MEMBER",
+    "body": "∌",
+    "description": "U+220C"
+  },
+
+  "N-Ary Product": {
+    "prefix": "N_ARY_PRODUCT",
+    "body": "∏",
+    "description": "U+220F"
+  },
+
+  "N-Ary Summation": {
+    "prefix": "N_ARY_SUMMATION",
+    "body": "∑",
+    "description": "U+2211"
+  },
+
+  "Minus Sign": {
+    "prefix": "MINUS_SIGN",
+    "body": "−",
+    "description": "U+2212"
+  },
+
+  "Minus-or-Plus Sign": {
+    "prefix": "MINUS_OR_PLUS_SIGN",
+    "body": "∓",
+    "description": "U+2213"
+  },
+
+  "Ring Operator": {
+    "prefix": "RING_OPERATOR",
+    "body": "∘",
+    "description": "U+2218"
+  },
+
+  "Bullet Operator": {
+    "prefix": "BULLET_OPERATOR",
+    "body": "∙",
+    "description": "U+2219"
+  },
+
+  "Proportional To": {
+    "prefix": "PROPORTIONAL_TO",
+    "body": "∝",
+    "description": "U+221D"
+  },
+
+  "Infinity": {
+    "prefix": "INFINITY",
+    "body": "∞",
+    "description": "U+221E"
+  },
+
+  "Angle": {
+    "prefix": "ANGLE",
+    "body": "∠",
+    "description": "U+2220"
+  },
+
+  "Divides": {
+    "prefix": "DIVIDES",
+    "body": "∣",
+    "description": "U+2223"
+  },
+
+  "Does Not Divide": {
+    "prefix": "DOES_NOT_DIVIDE",
+    "body": "∤",
+    "description": "U+2224"
+  },
+
+  "Parallel To": {
+    "prefix": "PARALLEL_TO",
+    "body": "∥",
+    "description": "U+2225"
+  },
+
+  "Not Parallel To": {
+    "prefix": "NOT_PARALLEL_TO",
+    "body": "∦",
+    "description": "U+2226"
+  },
+
+  "Logical And": {
+    "prefix": "LOGICAL_AND",
+    "body": "∧",
+    "description": "U+2227"
+  },
+
+  "Logical Or": {
+    "prefix": "LOGICAL_OR",
+    "body": "∨",
+    "description": "U+2228"
+  },
+
+  "Intersection": {
+    "prefix": "INTERSECTION",
+    "body": "∩",
+    "description": "U+2229"
+  },
+
+  "Union": {
+    "prefix": "UNION",
+    "body": "∪",
+    "description": "U+222A"
+  },
+
+  "Integral": {
+    "prefix": "INTEGRAL",
+    "body": "∫",
+    "description": "U+222B"
+  },
+
+  "Doble Integral": {
+    "prefix": "DOBLE_INTEGRAL",
+    "body": "∬",
+    "description": "U+222C"
+  },
+
+  "Triple Integral": {
+    "prefix": "TRIPLE_INTEGRAL",
+    "body": "∭",
+    "description": "U+222D"
+  },
+
+  "Contour Integral": {
+    "prefix": "CONTOUR_INTEGRAL",
+    "body": "∮",
+    "description": "U+222E"
+  },
+
+  "Surface Integral": {
+    "prefix": "SURFACE_INTEGRAL",
+    "body": "∯",
+    "description": "U+222F"
+  },
+
+  "Volume Integral": {
+    "prefix": "VOLUME_INTEGRAL",
+    "body": "∰",
+    "description": "U+2230"
+  },
+
+  "Therefore": {
+    "prefix": "THEREFORE",
+    "body": "∴",
+    "description": "U+2234"
+  },
+
+  "Because": {
+    "prefix": "BECAUSE",
+    "body": "∵",
+    "description": "U+2235"
+  },
+
+  "Asymptotically Equal To": {
+    "prefix": "ASYMPTOTICALLY_EQUAL_TO",
+    "body": "≃",
+    "description": "U+2243"
+  },
+
+  "Approximately Equal To": {
+    "prefix": "APPROXIMATELY_EQUAL_TO",
+    "body": "≅",
+    "description": "U+2245"
+  },
+
+  "Almost Equal To": {
+    "prefix": "ALMOST_EQUAL_TO",
+    "body": "≈",
+    "description": "U+2248"
+  },
+
+  "Not Almost Equal To": {
+    "prefix": "NOT_ALMOST_EQUAL_TO",
+    "body": "≉",
+    "description": "U+2249"
+  },
+
+  "Not Equal To": {
+    "prefix": "NOT_EQUAL_TO",
+    "body": "≠",
+    "description": "U+2260"
+  },
+
+  "Identical To": {
+    "prefix": "IDENTICAL_TO",
+    "body": "≡",
+    "description": "U+2261"
+  },
+
+  "Not Identical To": {
+    "prefix": "NOT_IDENTICAL_TO",
+    "body": "≢",
+    "description": "U+2262"
+  },
+
+  "Less-Than Or Equal To": {
+    "prefix": ["LESS_THAN_OR_EQUAL_TO", "<="],
+    "body": "≤",
+    "description": "U+2264"
+  },
+
+  "Greater-Than Or Equal To": {
+    "prefix": ["GREATER_THAN_OR_EQUAL_TO", ">="],
+    "body": "≥",
+    "description": "U+2265"
+  },
+
+  "Much Less-Than": {
+    "prefix": ["MUCH_LESS_THAN", "<<"],
+    "body": "≪",
+    "description": "U+226A"
+  },
+
+  "Much Greater-Than": {
+    "prefix": ["MUCH_GREATER_THAN", ">>"],
+    "body": "≫",
+    "description": "U+226B"
+  },
+
+  "Less-Than Or Greater-Than": {
+    "prefix": "LESS_THAN_OR_GREATER_THAN",
+    "body": "≶",
+    "description": "U+2276"
+  },
+
+  "Greater-Than Or Less-Than": {
+    "prefix": "GREATER_THAN_OR_LESS_THAN",
+    "body": "≷",
+    "description": "U+2277"
+  },
+
+  "Subset Of": {
+    "prefix": "SUBSET_OF",
+    "body": "⊂",
+    "description": "U+2282"
+  },
+
+  "Superset Of": {
+    "prefix": "SUPERSET_OF",
+    "body": "⊃",
+    "description": "U+2283"
+  },
+
+  "Not A Subset Of": {
+    "prefix": "NOT_A_SUBSET_OF",
+    "body": "⊄",
+    "description": "U+2284"
+  },
+
+  "Not A Superset Of": {
+    "prefix": "NOT_A_SUPERSET_OF",
+    "body": "⊅",
+    "description": "U+2285"
+  },
+
+  "Subset of or Equal To": {
+    "prefix": "SUBSET_OF_OR_EQUAL_TO",
+    "body": "⊆",
+    "description": "U+2286"
+  },
+
+  "Superset of or Equal To": {
+    "prefix": "SUPERSET_OF_OR_EQUAL_TO",
+    "body": "⊇",
+    "description": "U+2287"
+  },
+
+  "Neither A Subset of Nor Equal To": {
+    "prefix": "NEITHER_A_SUBSET_OF_NOR_EQUAL_TO",
+    "body": "⊈",
+    "description": "U+2288"
+  },
+
+  "Neither A Superset of Nor Equal To": {
+    "prefix": "NEITHER_A_SUPERSET_OF_NOR_EQUAL_TO",
+    "body": "⊉",
+    "description": "U+2289"
+  },
+
+  "Circled Plus": {
+    "prefix": "CIRCLED_PLUS",
+    "body": "⊕",
+    "description": "U+2295"
+  },
+
+  "Circled Minus": {
+    "prefix": "CIRCLED_MINUS",
+    "body": "⊖",
+    "description": "U+2296"
+  },
+
+  "Circled Times": {
+    "prefix": "CIRCLED_TIMES",
+    "body": "⊗",
+    "description": "U+2297"
+  },
+
+  "N-Ary Logical And": {
+    "prefix": "N_ARY_LOGICAL_AND",
+    "body": "⋀",
+    "description": "U+22C0"
+  },
+
+  "N-Ary Logical Or": {
+    "prefix": "N_ARY_LOGICAL_OR",
+    "body": "⋁",
+    "description": "U+22C1"
+  },
+
+  "N-Ary Intersection": {
+    "prefix": "N_ARY_INTERSECTION",
+    "body": "⋂",
+    "description": "U+22C2"
+  },
+
+  "N-Ary Union": {
+    "prefix": "N_ARY_UNION",
+    "body": "⋃",
+    "description": "U+22C3"
+  },
+
+  "Dot Operator": {
+    "prefix": "DOT_OPERATOR",
+    "body": "⋅",
+    "description": "U+22C5"
+  },
+
+  # Miscellaneous Technical Block {{{1
+  "Left Ceiling": {
+    "prefix": "LEFT_CEILING",
+    "body": "⌈",
+    "description": "U+2308"
+  },
+
+  "Right Ceiling": {
+    "prefix": "RIGHT_CEILING",
+    "body": "⌉",
+    "description": "U+2309"
+  },
+
+  "Left Floor": {
+    "prefix": "LEFT_FLOOR",
+    "body": "⌊",
+    "description": "U+230A"
+  },
+
+  "Right Floor": {
+    "prefix": "RIGHT_FLOOR",
+    "body": "⌋",
+    "description": "U+230B"
+  },
+
+  "Left-Pointing Angle Bracket": {
+    "prefix": "LEFT_POINTING_ANGLE_BRACKET",
+    "body": "〈",
+    "description": "U+2329"
+  },
+
+  "Right-Pointing Angle Bracket": {
+    "prefix": "RIGHT_POINTING_ANGLE_BRACKET",
+    "body": "〉",
+    "description": "U+232A"
+  },
+
+  "Return Symbol": {
+    "prefix": "RETURN_SYMBOL",
+    "body": "⏎",
+    "description": "U+23CE"
+  },
+
+  # Control Pictures Block {{{1
+  "Open Box": {
+    "prefix": "OPEN_BOX",
+    "body": "␣",
+    "description": "U+2423"
+  },
+
+  # Dingbats Block {{{1
+  "Check Mark": {
+    "prefix": "CHECK_MARK",
+    "body": "✓",
+    "description": "U+2713"
+  },
+
+  "Ballot X": {
+    "prefix": "BALLOT_X",
+    "body": "✗",
+    "description": "U+2717"
+  },
+
+  # Miscellaneous Mathematical Symbols-A Block {{{1
+  "Perpendicular": {
+    "prefix": "PERPENDICULAR",
+    "body": "⟂",
+    "description": "U+27C2"
+  },
+
+  "Mathematical Left Angle Bracket": {
+    "prefix": "MATHEMATICAL_LEFT_ANGLE_BRACKET",
+    "body": "⟨",
+    "description": "U+27E8"
+  },
+
+  "Mathematical Right Angle Bracket": {
+    "prefix": "MATHEMATICAL_RIGHT_ANGLE_BRACKET",
+    "body": "⟩",
+    "description": "U+27E9"
+  },
+
+  # Miscellaneous Mathematical Symbols-B Block {{{1
+  "Thermodynamic": {
+    "prefix": "THERMODYNAMIC",
+    "body": "⧧",
+    "description": "U+29E7"
+  },
+}
