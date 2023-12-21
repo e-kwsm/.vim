@@ -4,6 +4,7 @@ autocmd BufRead config.cache setf sh
 autocmd BufRead mpif.h setl filetype=fortran
 autocmd BufRead poetry.lock setf toml
 autocmd BufRead * if getline(1) =~ '^#%Module' | setf module | endif
+autocmd BufRead *.har setf json
 
 autocmd BufNewFile,BufRead *.bbx setf tex
 autocmd BufNewFile,BufRead *.cbx setf tex
