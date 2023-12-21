@@ -1,6 +1,7 @@
 autocmd BufRead config.cache setf sh
 autocmd BufRead mpif.h setl filetype=fortran
 autocmd BufRead poetry.lock setf toml
+autocmd BufRead *.har setf json
 
 autocmd BufNewFile,BufRead *.cjson setf json
 autocmd BufNewFile,BufRead *.cuf setf fortran
