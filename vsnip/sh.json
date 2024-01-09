@@ -24,6 +24,16 @@
       ""
     ]
   },
+  "mktempfifo": {
+    "prefix": "mktempfifo",
+    "body": [
+      "${1:tmp}=\\$(mktemp -d ${2:tmp.XXXXXXXXXX})",
+      "trap 'rm -rf \"\\$$1\"' 0",
+      "${3:fifo}=\\$tmp/${4:fifo}",
+      "mkfifo \"\\$fifo\"",
+      ""
+    ]
+  },
   "mktempfile": {
     "prefix": "mktempfile",
     "body": [
