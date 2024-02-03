@@ -286,7 +286,12 @@ cubane
 cubature
 cuBLAS/=
 CUDA
+cuDNN/=
+cuFFT/=
 cumulant
+cuRAND/=
+cuSOLVER/=
+cuSPARSE/=
 cycloalkane
 cyclobutane
 cyclobutene
@@ -297,6 +302,7 @@ cyclononane
 cyclooctane
 cyclopentane
 cyclopropane
+Cython
 cytokine
 d'Alembert
 Da/=
@@ -511,6 +517,7 @@ GaN/=
 Gasteiger
 Gauß
 Gay-Lussac
+GeForce/=
 Gegenbauer
 geminate
 Gershgorin
@@ -876,6 +883,7 @@ nuclearity
 nucleophilicity
 NUMA
 NumPy
+numpy
 NVE
 NVIDIA
 NVT
@@ -1071,6 +1079,7 @@ pyridazine
 pyridinium
 pyrrole
 PyTorch
+pytorch
 PZ81
 QCISD
 QCISDT
@@ -1140,6 +1149,8 @@ rutinose
 rydberg
 S3
 Salpeter
+SAscore/=
+SAscores/=
 Savart
 SBKJC
 ScaLAPACK/=
