@@ -82,9 +82,12 @@ arctan/=
 arene
 arg max/=
 arg min/=
+arg/=?
 arginine
 argmax/=
 argmin/=
+args/=?
+argv/=?
 arity
 Arnoldi
 Aronszajn
@@ -110,8 +113,10 @@ aug-cc-pwCV5Z/=
 aug-cc-pwCVDZ/=
 aug-cc-pwCVQZ/=
 aug-cc-pwCVTZ/=
+autoconf/=?
 autoionisation/4
 autoionization
+automake/=?
 AVX
 AWS
 azelaic
@@ -129,7 +134,9 @@ B97M-rV
 B97M-V
 backend
 Bader
+bak/=?
 bandedge
+bandedges
 bandgap
 bandgaps
 bandstructure
@@ -165,6 +172,7 @@ Binet
 Biot
 biradical
 bispherical
+bitmask
 BLAS
 BLYP
 BNF
@@ -262,7 +270,9 @@ coenzyme
 colinear
 conda
 Condon
+config/=?
 conformant
+const/=?
 copernicium
 copolymerisation/4
 copolymerization
@@ -290,7 +300,12 @@ cubane
 cubature
 cuBLAS/=
 CUDA
+cuDNN/=
+cuFFT/=
 cumulant
+cuRAND/=
+cuSOLVER/=
+cuSPARSE/=
 cycloalkane
 cyclobutane
 cyclobutene
@@ -301,6 +316,7 @@ cyclononane
 cyclooctane
 cyclopentane
 cyclopropane
+Cython
 cytokine
 d'Alembert
 Da/=
@@ -380,6 +396,7 @@ dimethylaminium
 dimethylammonium
 diol
 dipolar
+dir/=?
 diradical
 disaccharide
 disaccharides
@@ -393,6 +410,7 @@ discretized
 discretizes
 dispersity
 DMC
+dmesg/=?
 DMRG
 DNN
 Dockerfile
@@ -400,6 +418,7 @@ docstring/?
 docstrings/?
 DOI
 dopants
+doxygen/=
 Drude
 Ds/=
 dubnium
@@ -444,6 +463,7 @@ endosome
 enol
 enone
 enthalpic
+env/=?
 EOF
 EPBT
 epimer
@@ -464,6 +484,7 @@ ethylamine
 ethylammonium
 ethyne
 Ewald
+exascale
 excitons
 exo
 exocyclic
@@ -555,6 +576,7 @@ guanidinium
 Gummel
 Hamprecht
 Hankel
+hardcoded
 Hartree
 hartree/=
 hassium
@@ -582,6 +604,7 @@ heteronuclear
 hexahedra
 hexahedral
 hexahedron
+hexcode
 hexose
 hexoses
 hexyl
@@ -641,6 +664,7 @@ INCAR/?
 InChI/=
 infectivity
 InfiniBand/=
+init/=?
 interfacial
 intersystem
 ionically
@@ -672,6 +696,7 @@ Jahn
 Jastrow
 jellium
 JIT
+Jsc/=
 JSON
 json/=
 junctional
@@ -687,7 +712,7 @@ kekulize
 kekulized
 kekulizes
 Kekulé
-Keras
+keras
 ketene
 keto
 ketose
@@ -733,6 +758,7 @@ Larmor
 LC-ωPBE/=
 LCAO
 LDA
+LDAP
 Le Chatelier
 Lebedev
 lectin
@@ -759,6 +785,7 @@ locants
 LSDA
 LSP
 LTO
+LTS/?
 lua
 LuaLaTeX/=
 LuaTeX/=
@@ -845,6 +872,7 @@ multiconfiguration
 multicrystalline
 multireference
 multiscale
+mutex/=?
 mV/=
 MVAPICH
 MySQL/=
@@ -866,12 +894,15 @@ nanosheet
 nanosieve
 Navier
 NBO
+nbsp/=?
 NDDO
 Netlib
+nginx/?
 Nh/=
 Niggli
 nihonium
 niobate
+NIS
 NIST
 nitramine
 nitrile
@@ -894,10 +925,12 @@ NoSQL/=
 Nosé
 NPH
 NPT
+NREL
 NST
 nuclearity
 nucleophilicity
 NUMA
+numpy
 NumPy/=
 NVE
 NVIDIA
@@ -906,6 +939,7 @@ N⁺H₄
 O3LYP
 OAuth/=
 OCaml/=
+OCSR
 octahedra
 octupole
 Og/=
@@ -935,6 +969,7 @@ optimizable
 OPV
 ORCID
 orientational
+ORNL
 orthonormalisation/4
 orthonormalised/4
 orthonormality
@@ -957,11 +992,13 @@ P3HT
 pA/=
 Padé
 Painlevé
+param/=?
 Parrinello
 passivate
 passivates
 passivating
 passivation
+passwd/=?
 pathogenicity
 PBC
 PBE
@@ -997,6 +1034,7 @@ perturbated
 perturbative
 perturbatively
 perylene
+petascale
 PFLOPS
 phenanthrene
 phenoxide
@@ -1027,6 +1065,7 @@ plasmon
 plasmonic
 Plesset
 PLSR
+PNG
 Pochhammer
 Poincaré
 pointgroup
@@ -1084,6 +1123,7 @@ PV
 PW86
 PW91
 PW92
+PWD/?
 PWPB95
 pymatgen/?
 PyPI/=
@@ -1094,6 +1134,8 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+PYTHONPATH/?
+pytorch
 PyTorch/=
 PZ81
 QCISD
@@ -1117,8 +1159,10 @@ Radeon
 radiobutton
 Raman
 Raphson
+rcp/=?
 RDBMS
 RDF
+readline/=?
 Redis
 regio
 regiocontrollable
@@ -1159,6 +1203,7 @@ Roothaan
 rotaxane
 RPA
 RPC
+rsync/=?
 rubrene
 Runge
 rutile
@@ -1167,7 +1212,10 @@ rydberg
 Ryzen
 S3
 Salpeter
+SAscore/=
+SAscores/=
 Savart
+sbin/=?
 SBKJC
 ScaLAPACK/=
 SCF
@@ -1178,6 +1226,7 @@ Schwarz
 Schönflies
 SciPy
 scission
+scp/=?
 SCRF
 Scuseria
 SDD
@@ -1227,6 +1276,7 @@ Sommerfeld
 SO₄²⁻
 spacegroup
 spacegroups
+spack/=?
 SPDX
 spinel
 spinodal
@@ -1245,6 +1295,7 @@ steric
 sterically
 Sternheimer
 STO
+str/=?
 suberate
 suberic
 subgraph
@@ -1270,6 +1321,8 @@ symmetrization
 synthesisable/4
 synthesizable
 synthetase
+sys/=?
+systemd/=
 Tamm
 tanh/=
 tautomer
@@ -1315,11 +1368,14 @@ titanate
 titania
 tmp/=?
 TODO
+tokenizer
+tokenizers
 TOML
 toml/=
 TPSS
 TPSS0
 TPSSh/=
+traceback/=?
 translationengleiche/?
 trapezohedral
 trapezohedron
@@ -1343,10 +1399,12 @@ TypeScript/=
 UFF
 ultrasoft
 ultrathin
+umask/=?
 uncontracted
 unpolarised/4
 unpolarized
 upconversion
+usr/=?
 UUID
 valent
 van der Waals
@@ -1362,6 +1420,7 @@ vinylene
 virial
 VLAN
 VMC
+Voc/=
 Voigt
 voltammetry
 Voronoi
@@ -1406,6 +1465,7 @@ Xα/=
 YAML
 yaml/=
 ylide
+zenodo
 ZINDO
 ZnO/=
 ZnS/=
