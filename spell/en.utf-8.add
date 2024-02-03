@@ -84,9 +84,12 @@ arctan/=
 arene
 arg max/=
 arg min/=
+arg/=?
 arginine
 argmax/=
 argmin/=
+args/=?
+argv/=?
 arity
 Arnoldi
 Aronszajn
@@ -113,8 +116,10 @@ aug-cc-pwCV5Z/=
 aug-cc-pwCVDZ/=
 aug-cc-pwCVQZ/=
 aug-cc-pwCVTZ/=
+autoconf/=?
 autoionisation/4
 autoionization
+automake/=?
 AVX
 AWS
 azelaic
@@ -132,7 +137,9 @@ B97M-rV
 B97M-V
 backend
 Bader
+bak/=?
 bandedge
+bandedges
 bandgap
 bandgaps
 bandstructure
@@ -174,6 +181,7 @@ biphenyl
 bipyramidal
 biradical
 bispherical
+bitmask
 BLAS
 blockwise
 BLYP
@@ -276,7 +284,9 @@ coenzyme
 colinear
 conda
 Condon
+config/=?
 conformant
+const/=?
 copernicium
 copolymerisation/4
 copolymerization
@@ -302,8 +312,13 @@ cubane
 cubature
 cuBLAS/=
 CUDA
+cuDNN/=
+cuFFT/=
 cumulant
 cumulants
+cuRAND/=
+cuSOLVER/=
+cuSPARSE/=
 cycloalkane
 cyclobutane
 cyclobutene
@@ -315,6 +330,7 @@ cyclooctane
 cyclopentadienyl
 cyclopentane
 cyclopropane
+Cython
 cytokine
 d'Alembert
 Da/=
@@ -399,6 +415,7 @@ dimethylaminium
 dimethylammonium
 diol
 dipolar
+dir/=?
 diradical
 disaccharide
 disaccharides
@@ -412,6 +429,7 @@ discretized
 discretizes
 dispersity
 DMC
+dmesg/=?
 DMRG
 DNN
 Dockerfile
@@ -419,6 +437,7 @@ docstring/?
 docstrings/?
 DOI
 dopants
+doxygen/=
 Drude
 Ds/=
 DTD
@@ -466,6 +485,7 @@ endosome
 enol
 enone
 enthalpic
+env/=?
 EOF
 EPBT
 epimer
@@ -583,6 +603,7 @@ Hamprecht
 Hankel
 haptic
 hapticity
+hardcoded
 Hartree
 hartree/=
 hassium
@@ -610,6 +631,7 @@ hexadentate
 hexahedra
 hexahedral
 hexahedron
+hexcode
 hexose
 hexoses
 hexyl
@@ -666,6 +688,7 @@ indazole
 indole
 infectivity
 InfiniBand/=
+init/=?
 interfacial
 intersystem
 ionically
@@ -761,6 +784,7 @@ Larmor
 LC-ωPBE/=
 LCAO
 LDA
+LDAP
 Le Chatelier
 Lebedev
 lectin
@@ -879,6 +903,7 @@ multiconfiguration
 multicrystalline
 multireference
 multiscale
+mutex/=?
 mV/=
 MVAPICH
 MySQL/=
@@ -898,8 +923,10 @@ nanosheet
 nanosieve
 Navier
 NBO
+nbsp/=?
 NDDO
 Netlib
+nginx/?
 Nh/=
 Niggli
 nihonium
@@ -929,11 +956,13 @@ NoSQL/=
 Nosé
 NPH
 NPT
+NREL
 NST
 nuclearity
 nucleophilicity
 nullary
 NUMA
+numpy
 NumPy/=
 NVE
 NVIDIA
@@ -941,6 +970,7 @@ NVT
 O3LYP
 OAuth/=
 OCaml/=
+OCSR
 octahedra
 octupole
 octyl
@@ -994,11 +1024,13 @@ Padé
 Painlevé
 parallelogramic
 parallelogrammic
+param/=?
 Parrinello
 passivate
 passivates
 passivating
 passivation
+passwd/=?
 pathogenicity
 PBC
 PBE
@@ -1130,6 +1162,7 @@ PV
 PW86
 PW91
 PW92
+PWD/?
 PWPB95
 pymatgen/?
 PyPI/=
@@ -1140,6 +1173,8 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+PYTHONPATH/?
+pytorch
 PyTorch/=
 PZ81
 QCISD
@@ -1164,8 +1199,10 @@ Radeon
 radiobutton
 Raman
 Raphson
+rcp/=?
 RDBMS
 RDF
+readline/=?
 Redis
 ReLU/=
 renormalisation/4
@@ -1200,6 +1237,7 @@ Rosenbrock
 rotaxane
 RPA
 RPC
+rsync/=?
 rubrene
 Runge
 rutile
@@ -1209,6 +1247,7 @@ Ryzen
 S3
 Salpeter
 Savart
+sbin/=?
 SBKJC
 ScaLAPACK/=
 SCF
@@ -1219,6 +1258,7 @@ Schwarz
 Schönflies
 SciPy
 scission
+scp/=?
 SCRF
 Scuseria
 SDD
@@ -1274,6 +1314,7 @@ Sommerfeld
 SOMO
 spacegroup
 spacegroups
+spack/=?
 SPDX
 spinel
 spinodal
@@ -1300,6 +1341,7 @@ sterically
 Sternheimer
 Stieltjes
 STO
+str/=?
 suberate
 suberic
 subgraph
@@ -1331,6 +1373,8 @@ symmetrization
 synthesisable/4
 synthesizable
 synthetase
+sys/=?
+systemd/=
 Tamm
 tanh/=
 tautomer
@@ -1382,6 +1426,8 @@ titania
 tmp/=?
 TODO
 Toeplitz
+tokenizer
+tokenizers
 TOML
 toml/=
 toolchain
@@ -1389,6 +1435,7 @@ tosyl
 TPSS
 TPSS0
 TPSSh/=
+traceback/=?
 translationengleiche/?
 trapezohedral
 trapezohedron
@@ -1415,11 +1462,13 @@ TypeScript/=
 UFF
 ultrasoft
 ultrathin
+umask/=?
 uncontracted
 ungerade
 unpolarised/4
 unpolarized
 upconversion
+usr/=?
 UUID
 valent
 valine
@@ -1490,6 +1539,7 @@ YAML
 yaml/=
 ylide
 YYYY
+zenodo
 ZINDO
 zirconia
 ZnO/=
