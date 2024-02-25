@@ -19,6 +19,8 @@ acetyl
 acetylide
 achiral
 acrylonitrile
+actinoid
+actinoids
 acyl
 adatom
 adenosine
@@ -169,6 +171,7 @@ boronic
 BP86
 Bravais
 Breit
+BRICS
 Brillouin
 brookite
 Broyden
@@ -380,6 +383,7 @@ DMC
 DMRG
 DNN
 DOI
+dopants
 Drude
 Ds/=
 dubnium
@@ -492,10 +496,12 @@ GaAs/=
 Galilei
 GAMESS
 GaN/=
+Gasteiger
 Gauß
 Gay-Lussac
 Gegenbauer
 geminate
+Gershgorin
 GGA
 Ginzburg
 GISAXS
@@ -515,8 +521,10 @@ GmbH/=
 Goldschmidt
 Gordan
 Goursat
+GPC
 GPG
 GPGPU
+GPR
 graphene
 Grignard
 Grimme
@@ -679,6 +687,8 @@ Landauer
 Langevin
 LANL2DZ
 lanthanides
+lanthanoid
+lanthanoids
 LAPACK
 Laplacian
 Larmor
@@ -972,6 +982,7 @@ planewaves
 plasmon
 plasmonic
 Plesset
+PLSR
 Pochhammer
 Poincaré
 pointgroup
@@ -1200,6 +1211,7 @@ superresolution
 SVD
 SVG
 SVM
+SVR
 symmetrisation/4
 symmetrization
 synthesisable/4
@@ -1221,6 +1233,7 @@ terephthalate
 terephthalic
 tert/=
 tetracene
+tetrakis-/=
 tetramer
 tetramers
 tetramethylammonium
@@ -1263,6 +1276,7 @@ trimers
 trimethylamine
 trimethylammonium
 triphenylene
+tris-/=
 tropylium
 TrueType/=
 Truhlar
