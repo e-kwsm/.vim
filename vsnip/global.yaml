@@ -562,6 +562,12 @@
     "description": "U+2033"
   },
 
+  "Triple Prime": {
+    "prefix": ["TRIPLE_PRIME", "tprime"],
+    "body": "‴",
+    "description": "U+2034"
+  },
+
   "Single Left-Pointing Angle Quotation Mark": {
     "prefix": "SINGLE_LEFT_POINTING_ANGLE_QUOTATION_MARK",
     "body": "‹",
