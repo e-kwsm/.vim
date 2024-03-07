@@ -580,6 +580,12 @@
     "description": "U+203A"
   },
 
+  "Asterism": {
+    "prefix": "ASTERISM",
+    "body": "⁂",
+    "description": "U+2042",
+  },
+
   # Superscripts and Subscripts Block {{{1
   "Superscript Zero": {
     "prefix": "SUPERSCRIPT_ZERO",
