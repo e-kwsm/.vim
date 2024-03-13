@@ -44,6 +44,8 @@ allosteric
 allyl
 allylation
 allylic
+AM0
+AM1.5
 amidine
 aminal
 Ampère
@@ -83,6 +85,7 @@ arg min/=
 arginine
 argmax/=
 argmin/=
+arity
 Arnoldi
 Aronszajn
 arsech/=
@@ -964,6 +967,7 @@ phosphane
 phosphinic
 phosphite
 phosphonic
+photoenergy
 photoexcitation
 photoexcited
 photoinduced
