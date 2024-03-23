@@ -82,9 +82,12 @@ arctan/=
 arene
 arg max/=
 arg min/=
+arg/=?
 arginine
 argmax/=
 argmin/=
+args/=?
+argv/=?
 arity
 Arnoldi
 Aronszajn
@@ -259,7 +262,9 @@ coenzyme
 colinear
 conda
 Condon
+config/=?
 conformant
+const/=?
 copernicium
 copolymerisation/4
 copolymerization
@@ -382,6 +387,7 @@ dimethylaminium
 dimethylammonium
 diol
 dipolar
+dir/=?
 diradical
 disaccharide
 disaccharides
@@ -446,6 +452,7 @@ endosome
 enol
 enone
 enthalpic
+env/=?
 EOF
 EPBT
 epimer
@@ -638,6 +645,7 @@ INCAR/?
 InChI/=
 infectivity
 InfiniBand/=
+init/=?
 interfacial
 intersystem
 ionically
@@ -941,6 +949,7 @@ P3HT
 pA/=
 Padé
 Painlevé
+param/=?
 Parrinello
 passivate
 passivates
@@ -1227,6 +1236,7 @@ steric
 sterically
 Sternheimer
 STO
+str/=?
 suberate
 suberic
 subgraph
@@ -1252,6 +1262,8 @@ symmetrization
 synthesisable/4
 synthesizable
 synthetase
+sys/=?
+systemd/=
 Tamm
 tanh/=
 tautomer
