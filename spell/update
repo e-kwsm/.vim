@@ -38,7 +38,7 @@ def update(
             ),
         ]
         os.putenv("LANG", "C")
-        subprocess.run(cmd)
+        subprocess.run(cmd, check=True)
 
         if not check:
             return
