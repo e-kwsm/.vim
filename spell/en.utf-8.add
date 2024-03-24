@@ -401,6 +401,7 @@ discretized
 discretizes
 dispersity
 DMC
+dmesg/?
 DMRG
 DNN
 Dockerfile
@@ -753,6 +754,7 @@ locants
 LSDA
 LSP
 LTO
+LTS/?
 lua
 LuaLaTeX/=
 LuaTeX/=
@@ -860,6 +862,7 @@ Navier
 NBO
 NDDO
 Netlib
+nginx/?
 Nh/=
 Niggli
 nihonium
@@ -1077,6 +1080,7 @@ PV
 PW86
 PW91
 PW92
+PWD/?
 PWPB95
 pymatgen/?
 PyPI/=
@@ -1087,6 +1091,7 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+PYTHONPATH/?
 PyTorch
 pytorch
 PZ81
@@ -1112,6 +1117,7 @@ Raman
 Raphson
 RDBMS
 RDF
+readline/=?
 Redis
 regio
 regiocontrollable
@@ -1311,6 +1317,7 @@ toml
 TPSS
 TPSS0
 TPSSh/=
+traceback/=?
 translationengleiche/?
 trapezohedral
 trapezohedron
@@ -1334,6 +1341,7 @@ TypeScript/=
 UFF
 ultrasoft
 ultrathin
+umask/=?
 uncontracted
 unpolarised/4
 unpolarized
