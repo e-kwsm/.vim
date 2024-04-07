@@ -383,7 +383,7 @@ augroup myvimrc " {{{1
       au TermEnter * set notermguicolors
       au TermLeave * set termguicolors
     endif
-    au TermOpen term://* startinsert
+    au TermOpen term://* set nonumber norelativenumber | startinsert
   endif
 augroup END " }}}1
 
