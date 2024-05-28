@@ -341,7 +341,7 @@ augroup myvimrc " {{{1
   au BufNewFile *.py	call setline(1, [
         \ '#!/usr/bin/env python3',
         \ 'def main():',
-        \ '    pass',
+        \ '    ...',
         \ '',
         \ '',
         \ 'if __name__ == "__main__":',

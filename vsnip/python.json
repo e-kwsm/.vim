@@ -3,7 +3,7 @@
     "prefix": "__main__",
     "body": [
       "def ${1:main}():",
-      "\tpass${0}",
+      "\t...${0}",
       "",
       "",
       "if __name__ == \"__main__\":",
