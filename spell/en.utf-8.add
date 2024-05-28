@@ -129,7 +129,9 @@ B97M-rV
 B97M-V
 backend
 Bader
+bandedge
 bandgap
+bandgaps
 bandstructure
 bandstructures
 Banquo
@@ -437,6 +439,7 @@ epimer
 epimerisation/4
 epimerization
 epimers
+EPYC
 EQE
 equimolar
 erf/=
@@ -502,6 +505,7 @@ GaN/=
 Gasteiger
 Gauß
 Gay-Lussac
+GeForce/=
 Gegenbauer
 geminate
 Gershgorin
@@ -674,6 +678,7 @@ Kramers
 Kroll
 Kronig
 Krylov
+kubernetes
 Kullback
 Kutta
 Kármán
@@ -1070,6 +1075,7 @@ racemate
 racemic
 racemisation/4
 racemization
+Radeon
 radiobutton
 Raman
 Raphson
@@ -1107,6 +1113,7 @@ Riccati
 RMS
 RMSD
 RMSE
+ROCm/=
 Rodrigues
 roentgenium
 ROHF
@@ -1119,6 +1126,7 @@ Runge
 rutile
 rutinose
 rydberg
+Ryzen
 Salpeter
 Savart
 SBKJC
@@ -1263,6 +1271,7 @@ thiophene
 timestamp
 titanate
 titania
+tmp/=?
 TODO
 toml
 TPSS
@@ -1295,6 +1304,7 @@ uncontracted
 unpolarised/4
 unpolarized
 upconversion
+UUID
 valent
 van der Waals
 Vandermonde
