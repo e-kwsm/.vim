@@ -31,5 +31,6 @@ autocmd BufNewFile,BufRead .gitattributes setl filetype=gitattributes
 autocmd BufNewFile,BufRead .pylintrc setf dosini
 autocmd BufNewFile,BufRead .style.yapf setf dosini
 autocmd BufNewFile,BufRead mongodb.conf setf yaml
+autocmd BufNewFile,BufRead pycodestyle setf dosini
 
 autocmd BufNewFile deno:/*.ts%23{%3C,%3D,%5E,\~} setf typescript
