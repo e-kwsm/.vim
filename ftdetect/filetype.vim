@@ -20,6 +20,7 @@ autocmd BufNewFile,BufRead *.gzmat setl filetype=gaussian
 autocmd BufNewFile,BufRead *.ipynb setl filetype=json
 autocmd BufNewFile,BufRead *.mtx setf matrixmarket
 autocmd BufNewFile,BufRead *.plt setl filetype=gnuplot
+autocmd BufNewFile,BufRead *.smi set filetype=
 autocmd BufNewFile,BufRead *.tlu setf lua
 autocmd BufNewFile,BufRead *.tsv setf csv
 autocmd BufNewFile,BufRead *.xyz setf xyz
