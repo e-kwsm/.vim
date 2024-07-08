@@ -335,6 +335,8 @@ augroup myvimrc " {{{1
   au FileType vim	setl foldmethod=marker
   au FileType xyz	setl cursorline
 
+  au BufReadPost git-rebase-todo setl nowrap
+
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
   au BufNewFile *.bash	call setline(1, ['#!/bin/bash', 'set -eux', 'set -o pipefail']) | :3
