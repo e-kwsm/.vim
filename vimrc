@@ -341,6 +341,28 @@ augroup myvimrc " {{{1
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
   au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux']) | :2
 
+  au BufNewFile .editorconfig	call setline(1, [
+        \ 'root = true',
+        \ '',
+        \ '[*]',
+        \ 'insert_final_newline = true',
+        \ 'trim_trailing_whitespace = true',
+        \ '#indent_style = space',
+        \ '#indent_size = 4',
+        \ '#max_line_length = 100',
+        \ '',
+        \ '[*.md]',
+        \ 'trim_trailing_whitespace = false',
+        \ '',
+        \ '[Makefile,makefile,GNUmakefile]',
+        \ 'indent_style = tab',
+        \ ])
+  au BufNewFile .gitattributes	call setline(1, [
+        \ '* text=auto',
+        \ '.gitattributes export-ignore',
+        \ '.gitignore export-ignore',
+        \ ])
+
   let g:c_gnu = v:true
   let g:is_posix = v:true
   let g:tex_flavor = 'latex'
