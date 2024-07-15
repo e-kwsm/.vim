@@ -209,6 +209,8 @@ butanoic
 butoxy
 butylene
 butyne
+bz2/=
+bzip2/=
 Cahn
 caprolactone
 carbamide
@@ -305,6 +307,7 @@ CPython/=
 CRENBL
 CRENBS
 cresol
+crontab/=
 cryo
 crystallinity
 csc/=
@@ -489,6 +492,7 @@ enone
 enthalpic
 env/=?
 EOF
+EOM
 EPBT
 epimer
 epimerisation/4
@@ -507,6 +511,7 @@ ethoxy
 ethylamine
 ethylammonium
 ethyne
+eval/?
 Ewald
 excitons
 exo
@@ -582,6 +587,7 @@ glycosylamine
 glycosylamines
 glycosylation
 GmbH/=
+gnuplot/=
 Goldschmidt
 Gordan
 Goursat
@@ -601,6 +607,7 @@ GTO
 guanidine
 guanidinium
 Gummel
+gz/=
 Hamprecht
 Hankel
 haptic
@@ -726,6 +733,7 @@ jellium
 JIT
 JSON
 json/=
+jupyter
 Karplus
 Kavli
 kDa/=
@@ -1546,6 +1554,8 @@ ZINDO
 zirconia
 ZnO/=
 ZnS/=
+zstandard
+zstd/=
 zwitterion
 zwitterionic
 Å
