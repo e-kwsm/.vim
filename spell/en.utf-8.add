@@ -371,6 +371,9 @@ deserialize
 deserialized
 deserializes
 desorbed
+deuterate
+deuterated
+deuterates
 deuteration
 DFS
 DFT
@@ -667,6 +670,7 @@ in silico
 in situ
 INCAR/?
 InChI/=
+InChIKey/=
 infectivity
 InfiniBand/=
 init/=?
