@@ -267,8 +267,6 @@ CMake/=
 cmake/=
 cm²/=
 cm³/=
-cm⁻²/=
-cm⁻³/=
 Cn/=
 CODATA
 coenzyme
@@ -629,7 +627,6 @@ homolytic
 homonuclear
 hostname
 hostnames
-HO⁻
 HPC
 Hs/=
 HSE
@@ -946,7 +943,6 @@ NumPy/=
 NVE
 NVIDIA
 NVT
-N⁺H₄
 O3LYP
 OAuth/=
 OCaml/=
@@ -1285,7 +1281,6 @@ solvate
 solvated
 solvation
 Sommerfeld
-SO₄²⁻
 spacegroup
 spacegroups
 spack/=?
