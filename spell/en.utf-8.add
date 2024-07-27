@@ -264,8 +264,6 @@ CMake/=
 cmake/=
 cm²/=
 cm³/=
-cm⁻²/=
-cm⁻³/=
 Cn/=
 CODATA
 coenzyme
@@ -629,7 +627,6 @@ homolytic
 homonuclear
 hostname
 hostnames
-HO⁻
 HPC
 Hs/=
 HSE
@@ -656,8 +653,6 @@ Hölder
 Hückel
 H₂O
 H₂SO₄
-H₃O⁺
-H₄N⁺
 ideality
 imidazole
 imidazolium
@@ -943,7 +938,6 @@ NumPy/=
 NVE
 NVIDIA
 NVT
-N⁺H₄
 O3LYP
 OAuth/=
 OCaml/=
@@ -1274,7 +1268,6 @@ solvate
 solvated
 solvation
 Sommerfeld
-SO₄²⁻
 spacegroup
 spacegroups
 spack/=?
