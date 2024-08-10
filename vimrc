@@ -366,6 +366,20 @@ augroup myvimrc " {{{1
         \ '.gitattributes export-ignore',
         \ '.gitignore export-ignore',
         \ ])
+  au BufNewFile CMake{,User}Presets.json	call setline(1, [
+        \ '{',
+        \ '  "version": 3,',
+        \ '  "configurePresets": [',
+        \ '    {',
+        \ '      "name": "",',
+        \ '      "displayName": "",',
+        \ '      "description": "",',
+        \ '      "cacheVariables": {},',
+        \ '      "environment": {}',
+        \ '    }',
+        \ '  ]',
+        \ '}',
+        \ ])
 
   let g:c_gnu = v:true
   let g:is_posix = v:true
