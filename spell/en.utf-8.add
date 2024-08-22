@@ -40,6 +40,8 @@ alkoxides
 alkylation
 alkyne
 alkynes
+allene
+allenes
 allosteric
 allyl
 allylation
@@ -195,6 +197,7 @@ carbanion
 carbene
 carbocation
 carboxylate
+CAS
 Casida
 CASPT2
 CASSCF
@@ -343,6 +346,9 @@ deserialize
 deserialized
 deserializes
 desorbed
+deuterate
+deuterated
+deuterates
 deuteration
 DFS
 DFT
@@ -360,6 +366,7 @@ diastereomers
 diastereoselective
 diathermic
 dibenzo
+dichroism
 Diels
 diene
 digamma
@@ -509,6 +516,7 @@ Gay-Lussac
 GeForce/=
 Gegenbauer
 geminate
+gerade
 Gershgorin
 GGA
 Ginzburg
@@ -622,6 +630,7 @@ imino
 in silico
 in situ
 InChI/=
+InChIKey/=
 infectivity
 InfiniBand/=
 interfacial
@@ -741,6 +750,7 @@ locants
 LSDA
 LSP
 LTO
+LTS/?
 lua
 LuaLaTeX/=
 LuaTeX/=
@@ -768,6 +778,7 @@ MariaDB/=
 Markovnikov
 Mauguin
 Mc/=
+MCMC
 MD5
 Meissner
 meitnerium
@@ -854,6 +865,7 @@ Nh/=
 Niggli
 nihonium
 niobate
+NIS
 NIST
 nitramine
 nitrile
@@ -916,6 +928,7 @@ optimizable
 OPV
 ORCID
 orientational
+ORNL
 orthonormalisation/4
 orthonormalised/4
 orthonormality
@@ -991,6 +1004,7 @@ photoenergy
 photoexcitation
 photoexcited
 photoinduced
+photostability
 photovoltaics
 phthalein
 phthalocyanine
@@ -1029,6 +1043,7 @@ polyphenylene
 polythiophene
 Pople
 porphyrin
+positronic
 POSIX
 PostgreSQL/=
 Pourbaix
@@ -1218,6 +1233,7 @@ stereoselectivities
 steric
 sterically
 Sternheimer
+Stieltjes
 STO
 suberate
 suberic
@@ -1317,6 +1333,7 @@ UFF
 ultrasoft
 ultrathin
 uncontracted
+ungerade
 unpolarised/4
 unpolarized
 upconversion
