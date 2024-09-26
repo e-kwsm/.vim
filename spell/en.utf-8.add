@@ -1,8 +1,6 @@
 /regions=usaucagbnz
 a.u./=
 A64FX
-AAMD
-AArch64
 Ab Initio
 ab initio
 abelian
@@ -30,7 +28,6 @@ adjoint
 AFM
 Aharonov
 Ahlrichs
-AIMD
 aldol
 aldose
 aldoses
@@ -61,7 +58,6 @@ anomeric
 anomerisation/4
 anomerization
 anomers
-ANOVA
 ansatz
 anthocyanidin
 anthocyanidins
@@ -157,7 +153,6 @@ BFS
 Bh/=
 BHandH/=
 BHandHLYP/=
-BHJ
 BibTeX/=
 bibtex/=
 bicontinuous
@@ -234,7 +229,6 @@ CdS/=
 CdTe/=
 CentOS/=
 ceria
-CGMD
 Chai
 chalcogen
 chalcogenide
@@ -272,7 +266,6 @@ Coulombic
 counterion
 counterions
 covalency
-CPMD
 CPython/=
 CRENBL
 CRENBS
@@ -448,7 +441,6 @@ epimerisation/4
 epimerization
 epimers
 EPYC
-EQE
 equimolar
 erf/=
 erfc/=
@@ -486,7 +478,6 @@ FQDN
 Fraunhofer
 Frenet
 Friedmann
-FRM
 Frobenius
 frontend
 Fubini
@@ -520,9 +511,7 @@ gerade
 Gershgorin
 GGA
 Ginzburg
-GISAXS
 GitLab/=
-GIWAXS
 glycan
 glycans
 glycoconjugate
@@ -572,8 +561,6 @@ heteroatom
 heteroatoms
 heterocycle
 heterogenous
-heterojunction
-heterojunctions
 heterolysis
 heterolytic
 heteronuclear
@@ -589,7 +576,6 @@ Hirshfeld
 HMAC
 Hohenberg
 homogenous
-homojunction
 homolysis
 homolytic
 homonuclear
@@ -637,8 +623,6 @@ interfacial
 intersystem
 ionically
 ionicity
-IPCE
-IQE
 irrotational
 isenthalpic
 Ising
@@ -666,7 +650,6 @@ jellium
 JIT
 JSON
 json/=
-junctional
 Karplus
 Kavli
 kDa/=
@@ -812,10 +795,7 @@ microcanonical
 mimetics
 Minkowski
 MKL
-MMFF
 MN15
-MNDO
-MOF
 mol/=
 molality
 MongoDB/=
@@ -825,7 +805,6 @@ Monkhorst
 Morera
 MOs/=
 moscovium
-MOSFET
 MP2
 MP4
 MPa/=
@@ -843,8 +822,6 @@ MVAPICH
 MySQL/=
 Mössbauer
 Møller
-namelist
-namelists
 nanocluster
 nanocrystal
 nanocrystalline
@@ -922,10 +899,8 @@ OpenAPI/=
 OpenBLAS/=
 OpenMP/=
 OpenType/=
-OPLS
 optimisable/4
 optimizable
-OPV
 ORCID
 orientational
 ORNL
@@ -935,7 +910,6 @@ orthonormality
 orthonormalization
 orthonormalized
 osmolyte
-OTFSC
 ouroboros
 overfit
 overfits
@@ -967,7 +941,6 @@ PbSe/=
 PbTe/=
 PCA
 PCBM
-PCE
 PDOS
 Peano
 Peltier
@@ -990,7 +963,6 @@ perturbated
 perturbative
 perturbatively
 perylene
-PFLOPS
 phenanthrene
 phenoxide
 phenylene
@@ -1091,7 +1063,6 @@ PZ81
 QCISD
 QCISDT
 QCISDTQ
-QD
 QMC
 quadruplex
 quasicrystal
@@ -1112,18 +1083,10 @@ Raphson
 RDBMS
 RDF
 Redis
-regio
-regiocontrollable
-regiorandom
-regioregular
-regioselective
-regioselectivity
 ReLU/=
 renormalisation/4
 renormalization
 renormalize
-reptate
-reptation
 reST/=
 RESTful/=
 reStructuredText/=
