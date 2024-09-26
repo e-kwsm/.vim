@@ -150,7 +150,6 @@ barostats
 base64
 basisset
 basissets
-BaTiO₃/=
 Becke
 benzaldehyde
 benzimidazole
@@ -271,7 +270,6 @@ chirality
 chloric
 chlorous
 Cholesky
-CH₄
 CIF
 CIP
 CISD
@@ -303,7 +301,6 @@ Coulombic
 counterion
 counterions
 covalency
-CO₂
 CP2K
 CPython/=
 CRENBL
@@ -650,7 +647,6 @@ hexylthiophene
 Higgs
 Hirshfeld
 HMAC
-HNO₃
 Hohenberg
 homogenous
 homolysis
@@ -682,8 +678,6 @@ hypersurfaces
 hypochlorous
 Hölder
 Hückel
-H₂O
-H₂SO₄
 ideality
 imidazole
 imidazolium
@@ -736,7 +730,6 @@ Jahn
 Jastrow
 jellium
 JIT
-Jsc/=
 JSON
 json/=
 jupyter
@@ -983,7 +976,6 @@ NVT
 O3LYP
 OAuth/=
 OCaml/=
-OCSR
 octahedra
 octupole
 octyl
@@ -1031,7 +1023,6 @@ oxime
 oxonium
 oxygens
 ozonide
-O₃
 P3HT
 pA/=
 Padé
@@ -1491,7 +1482,6 @@ vinylene
 virial
 VLAN
 VMC
-Voc/=
 Voigt
 voltammetry
 Voronoi
