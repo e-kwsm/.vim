@@ -189,6 +189,8 @@ brookite
 Broyden
 Brønsted
 BSSE
+bugfix
+bugfixes
 butadiene
 butanal
 butanoate
@@ -246,9 +248,12 @@ chalcogen
 chalcogenide
 chalcogenides
 Chebyshev
+ChEMBL/=
+ChemDraw/=
 chemisorbed
 chemisorption
 chemoinformatics
+ChemSpider/=
 chirality
 chloric
 chlorous
@@ -413,6 +418,7 @@ discretize
 discretized
 discretizes
 dispersity
+dll/=
 DMC
 dmesg/=?
 DMRG
@@ -420,6 +426,7 @@ DNN
 Dockerfile
 docstring/?
 docstrings/?
+DOCTYPE
 DOI
 dopants
 doxygen/=
@@ -430,6 +437,7 @@ dubnium
 Duhem
 EBNF
 ECP
+EditorConfig
 Ehrenfest
 eigen
 eigendecomposition
@@ -493,6 +501,7 @@ eval/?
 Ewald
 exascale
 excitons
+exe/=
 exo
 exocyclic
 extremum
@@ -857,6 +866,7 @@ miniconda
 Minkowski
 MKL
 MN15
+MOL
 mol/=
 molality
 MongoDB/=
@@ -1095,6 +1105,7 @@ POSIX
 PostgreSQL/=
 POTCAR/?
 Pourbaix
+precompiled
 prefactor
 prefactors
 preprocess
@@ -1121,6 +1132,7 @@ pseudopotential
 pseudopotentials
 pseudospectral
 PTPSS
+PubChem/=
 Pulay
 PV
 PW86
@@ -1222,6 +1234,7 @@ scp/=?
 SCRF
 Scuseria
 SDD
+SDF
 SDGs/=
 seaborgium
 sebacate
@@ -1454,6 +1467,7 @@ wildcard
 WIP
 Wronski
 Wronskian
+www/=
 Wyckoff
 X3LYP
 XAFS
