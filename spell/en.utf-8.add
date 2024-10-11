@@ -394,6 +394,7 @@ Drude
 Ds/=
 dubnium
 Duhem
+EBNF
 ECP
 Ehrenfest
 eigen
@@ -504,11 +505,14 @@ GaN/=
 Gasteiger
 Gauß
 Gay-Lussac
+gcc/=
+gdb/=
 GeForce/=
 Gegenbauer
 geminate
 gerade
 Gershgorin
+gfortran/=
 GGA
 Ginzburg
 GitLab/=
@@ -530,6 +534,7 @@ GPC
 GPG
 GPGPU
 GPR
+gprof/=
 graphene
 Grignard
 Grimme
@@ -542,6 +547,7 @@ guanidinium
 Gummel
 Hamprecht
 Hankel
+hapticity
 Hartree
 hartree/=
 hassium
@@ -662,7 +668,7 @@ kekulize
 kekulized
 kekulizes
 Kekulé
-Keras
+keras
 ketene
 keto
 ketose
@@ -698,6 +704,7 @@ Lanczos
 Landauer
 Langevin
 LANL2DZ
+LANL2DZdp
 lanthanides
 lanthanoid
 lanthanoids
@@ -725,6 +732,7 @@ Liouville
 lithiated
 livermorium
 LJ
+lldb/=
 LLVM
 ln/=
 localhost/=
@@ -1191,6 +1199,13 @@ stdin
 stdout
 stereocenter
 stereocenters
+stereocentre/4
+stereocentres/4
+stereoconfiguration
+stereogenic
+stereoisomer
+stereoisomerism
+stereoisomers
 stereoselective
 stereoselectivities
 steric
