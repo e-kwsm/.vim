@@ -395,6 +395,7 @@ deuterate
 deuterated
 deuterates
 deuteration
+devel/=?
 DFS
 DFT
 DFT-D2
@@ -511,6 +512,7 @@ equimolar
 erf/=
 erfc/=
 Ernzerhof
+ETH
 ethanal
 ethanoate
 ethene
@@ -1490,6 +1492,7 @@ ungerade
 unpolarised/4
 unpolarized
 upconversion
+uplo/=
 usr/=?
 UUID
 valent
