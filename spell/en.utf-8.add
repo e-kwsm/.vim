@@ -806,6 +806,7 @@ LC-ωPBE/=
 LCAO
 LDA
 LDAP
+LDFLAGS
 Le Chatelier
 Lebedev
 lectin
@@ -859,6 +860,7 @@ Majorana
 malate
 maleic
 malic
+malloc/=
 Mannich
 MariaDB/=
 Markovnikov
