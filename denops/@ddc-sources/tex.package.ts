@@ -89,6 +89,7 @@ export class Source extends BaseSource<Params> {
       "liftarm",
       "messagepassing",
       "robotarm",
+      "subpath",
     ].map(
       (word) => Promise.resolve({ menu: "sty", word: word }),
     ));
