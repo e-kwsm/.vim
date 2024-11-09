@@ -1,4 +1,8 @@
 /regions=usaucagbnz
+-diol
+-ene
+-ol
+-yne
 a.u./=
 A64FX
 Ab Initio
@@ -540,6 +544,7 @@ FFTW
 filesystem
 Firebird
 flerovium
+fluorene
 fluoronium
 FMA
 Fock
@@ -555,6 +560,7 @@ frontend
 Fubini
 fugacity
 fullerene
+fullerenes
 fumarate
 fumaric
 functionalisation/4
@@ -602,6 +608,7 @@ gnuplot/=
 Goldschmidt
 Gordan
 Goursat
+GPa/=
 GPC
 GPG
 GPGPU
@@ -782,6 +789,7 @@ Krylov
 kubernetes
 Kullback
 Kutta
+kwargs/=?
 Kármán
 l'Hospital
 lactam
@@ -851,6 +859,8 @@ M06-HF
 mA/=
 Maclaurin
 macOS/=
+macrocycle
+macrocycles
 Madelung
 magnetisabilities/4
 magnetizabilities
@@ -985,6 +995,7 @@ NST
 nuclearity
 nucleophilicity
 nullary
+num/?
 NUMA
 numpy
 NumPy/=
@@ -1153,6 +1164,7 @@ POSIX
 PostgreSQL/=
 POTCAR/?
 Pourbaix
+pragma/=?
 precompiled
 prefactor
 prefactors
@@ -1348,6 +1360,7 @@ spinor
 spintronics
 SPW92
 SQLite/=
+src/=?
 stderr
 stdin
 stdout
