@@ -1,4 +1,8 @@
 /regions=usaucagbnz
+-diol
+-ene
+-ol
+-yne
 a.u./=
 A64FX
 Ab Initio
@@ -8,6 +12,7 @@ ABI
 accessor
 acene
 acetal
+acetamide
 acetamidine
 acetamidinium
 acetonide
@@ -21,6 +26,7 @@ actinoid
 actinoids
 acyl
 ad hoc
+adamantane
 adatom
 adenosine
 adiabaticity
@@ -95,6 +101,7 @@ arsinh/=
 artanh/=
 arXiv/=
 arylation
+aspartic
 AST
 atm/=
 aufbau
@@ -148,12 +155,17 @@ basisset
 basissets
 Becke
 benzaldehyde
+benzimidazole
 benzo
 benzoate
+benzofuran
 benzonitrile
 benzophenone
 benzopyrylium
 benzoquinone
+benzothiophene
+benzoxazole
+benzoyl
 benzyl
 Berny
 BFGS
@@ -202,7 +214,10 @@ bz2/=
 bzip2/=
 Cahn
 caprolactone
+carbamide
+carbamides
 carbanion
+carbazole
 carbene
 carbocation
 carboxylate
@@ -319,6 +334,7 @@ cycloheptane
 cyclomatic
 cyclononane
 cyclooctane
+cyclopentadienyl
 cyclopentane
 cyclopropane
 Cython
@@ -518,6 +534,7 @@ FFTW
 filesystem
 Firebird
 flerovium
+fluorene
 fluoronium
 FMA
 Fock
@@ -533,6 +550,7 @@ frontend
 Fubini
 fugacity
 fullerene
+fullerenes
 fumarate
 fumaric
 functionalisation/4
@@ -580,6 +598,7 @@ gnuplot/=
 Goldschmidt
 Gordan
 Goursat
+GPa/=
 GPC
 GPG
 GPGPU
@@ -615,6 +634,7 @@ Hellmann
 hemiacetal
 Hessenberg
 heteroaromatic
+heteroaromatics
 heteroatom
 heteroatoms
 heterocycle
@@ -678,6 +698,8 @@ INCAR/?
 InChI/=
 InChIKey/=
 InChIKeys/=
+indazole
+indole
 infectivity
 InfiniBand/=
 init/=?
@@ -688,10 +710,13 @@ ionicity
 irrotational
 isenthalpic
 Ising
+isobenzofuran
 isochoric
 isodesmic
 isoelectronicity
 isoenthalpic
+isoindole
+isoleucine
 isomerisation/4
 isomerization
 isopropanol
@@ -749,6 +774,7 @@ Krylov
 kubernetes
 Kullback
 Kutta
+kwargs/?=
 Kármán
 l'Hospital
 lactam
@@ -779,6 +805,7 @@ Lebedev
 lectin
 Leibler
 Lennard-Jones
+leucine
 levelised/4
 levelized
 Levenshtein
@@ -817,6 +844,8 @@ M06-HF
 mA/=
 Maclaurin
 macOS/=
+macrocycle
+macrocycles
 Madelung
 magnetisabilities/4
 magnetizabilities
@@ -922,6 +951,7 @@ NIS
 NIST
 nitramine
 nitrile
+nitriles
 nitrogens
 nitroso
 NMR
@@ -945,6 +975,7 @@ NREL
 NST
 nuclearity
 nucleophilicity
+num/?
 NUMA
 numpy
 NumPy/=
@@ -1045,6 +1076,7 @@ perturbatively
 perylene
 petascale
 phenanthrene
+phenanthroline
 phenoxide
 phenylene
 phononic
@@ -1104,6 +1136,7 @@ POSIX
 PostgreSQL/=
 POTCAR/?
 Pourbaix
+pragma/=?
 precompiled
 prefactor
 preprocess
@@ -1285,6 +1318,7 @@ spinor
 spintronics
 SPW92
 SQLite/=
+src/?=
 stderr
 stdin
 stdout
@@ -1322,6 +1356,9 @@ sulfone
 sulfonic
 sulfonyl
 sulfoxide
+sulfoxides
+sulphoxide/4
+sulphoxides/4
 superresolution
 SVD
 SVG
@@ -1373,6 +1410,7 @@ thioketones
 thiol
 thiols
 thiophene
+threonine
 timestamp
 titanate
 titania
@@ -1420,6 +1458,7 @@ uplo/=
 usr/=?
 UUID
 valent
+valine
 van der Waals
 Vandermonde
 VASP
