@@ -2,7 +2,6 @@ autocmd BufRead /usr/include/c++/* setf cpp
 autocmd BufRead config.cache setf sh
 autocmd BufRead mpif.h setl filetype=fortran
 autocmd BufRead poetry.lock setf toml
-autocmd BufRead *.ipp setf cpp	" boost
 
 autocmd BufNewFile,BufRead *.cjson setf json
 autocmd BufNewFile,BufRead *.cuf setf fortran
