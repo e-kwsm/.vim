@@ -330,6 +330,10 @@ endif
 " }}}1
 
 " map {{{1
+nnoremap [S [s
+nnoremap [s [S
+nnoremap ]S ]s
+nnoremap ]s ]S
 nnoremap m <Nop>
 nnoremap mm :make<CR>
 nnoremap Q gq
