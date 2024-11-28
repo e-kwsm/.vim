@@ -291,6 +291,10 @@ endif
 " }}}1
 
 " map {{{1
+nnoremap [S [s
+nnoremap [s [S
+nnoremap ]S ]s
+nnoremap ]s ]S
 nnoremap m <Nop>
 nnoremap mm :make<CR>
 nnoremap Q gq
@@ -321,6 +325,7 @@ augroup myvimrc " {{{1
   au FileType svg	setl iskeyword+=- shiftwidth=2 textwidth=100
   au FileType tcl	setl iskeyword+=-
   au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell textwidth=100
+  au FileType text	setl spell
   au FileType vim	setl foldmethod=marker
   au FileType xyz	setl cursorline
 
