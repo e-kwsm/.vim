@@ -72,6 +72,7 @@ anthocyanin
 anthocyanins
 antiferromagnetism
 AO
+AOCL
 AOs/=
 approximant
 approximants
@@ -151,6 +152,7 @@ Banquo
 barostat
 barostats
 base64
+bashrc
 basisset
 basissets
 Becke
@@ -449,6 +451,7 @@ dopants
 doxygen/=
 Drude
 Ds/=
+DTD
 dubnium
 Duhem
 EBNF
@@ -493,8 +496,10 @@ endosome
 enol
 enone
 enthalpic
+enum/=?
 env/=?
 EOF
+EOL
 EOM
 EPBT
 epimer
@@ -577,6 +582,8 @@ gdb/=
 GeForce/=
 Gegenbauer
 geminate
+GEMM
+gemm/=
 gerade
 Gershgorin
 gfortran/=
@@ -594,6 +601,7 @@ glycosylamine
 glycosylamines
 glycosylation
 GmbH/=
+GMP
 gnuplot/=
 Goldschmidt
 Gordan
@@ -892,6 +900,7 @@ methylammonium
 meV/=
 micelle
 microcanonical
+microkernel
 mimetics
 miniconda
 Minkowski
@@ -910,6 +919,7 @@ moscovium
 MP2
 MP4
 MPa/=
+MPFR
 MPI
 MPICH
 mPW91
@@ -957,6 +967,7 @@ nitroso
 NMR
 NoDerivatives/=
 Noether
+noexcept
 nonadiabatic
 noncanonical
 noncollinear
@@ -997,6 +1008,7 @@ oligosaccharide
 oligosaccharides
 oligothiophene
 oneAPI/=
+oneDNN/=
 oneMKL/=
 oneTBB/=
 ONIOM
@@ -1006,6 +1018,7 @@ OOM
 OpenACC/=
 OpenAPI/=
 OpenBLAS/=
+OpenCL
 OpenMP/=
 OpenType/=
 optimisable/4
@@ -1232,6 +1245,7 @@ Riccati
 RMS
 RMSD
 RMSE
+rocBLAS/=
 ROCm/=
 Rodrigues
 roentgenium
@@ -1339,6 +1353,7 @@ Sternheimer
 Stieltjes
 STO
 str/=?
+struct
 suberate
 suberic
 subgraph
@@ -1364,6 +1379,7 @@ SVD
 SVG
 SVM
 SVR
+SYCL
 symmetrisation/4
 symmetrization
 synthesisable/4
@@ -1451,6 +1467,7 @@ ultrathin
 umask/=?
 uncontracted
 ungerade
+unittest
 unpolarised/4
 unpolarized
 upconversion
@@ -1461,6 +1478,7 @@ valent
 valine
 van der Waals
 Vandermonde
+variadic
 VASP
 VBM
 vdW/=
@@ -1494,6 +1512,8 @@ Wb/=
 Weierstraß
 Weisfeiler/?
 Weizsäcker
+whitespace
+whitespaces
 Wien
 wildcard
 WIP
