@@ -73,6 +73,7 @@ anthocyanins
 antiferromagnetism
 antiprism
 AO
+AOCL
 AOs/=
 approximant
 approximants
@@ -152,6 +153,7 @@ Banquo
 barostat
 barostats
 base64
+bashrc
 basisset
 basissets
 Becke
@@ -501,8 +503,10 @@ endosome
 enol
 enone
 enthalpic
+enum/=?
 env/=?
 EOF
+EOL
 EOM
 EPBT
 epimer
@@ -586,6 +590,8 @@ gdb/=
 GeForce/=
 Gegenbauer
 geminate
+GEMM
+gemm/=
 gerade
 Gershgorin
 gfortran/=
@@ -603,6 +609,7 @@ glycosylamine
 glycosylamines
 glycosylation
 GmbH/=
+GMP
 gnuplot/=
 Goldschmidt
 Gordan
@@ -906,6 +913,7 @@ methylammonium
 meV/=
 micelle
 microcanonical
+microkernel
 mimetics
 miniconda
 Minkowski
@@ -925,6 +933,7 @@ moscovium
 MP2
 MP4
 MPa/=
+MPFR
 MPI
 MPICH
 mPW91
@@ -973,6 +982,7 @@ nitroso
 NMR
 NoDerivatives/=
 Noether
+noexcept
 nonadiabatic
 noncanonical
 noncollinear
@@ -1256,6 +1266,7 @@ Riccati
 RMS
 RMSD
 RMSE
+rocBLAS/=
 ROCm/=
 Rodrigues
 roentgenium
@@ -1366,6 +1377,7 @@ Sternheimer
 Stieltjes
 STO
 str/=?
+struct
 suberate
 suberic
 subgraph
@@ -1487,6 +1499,7 @@ ultrathin
 umask/=?
 uncontracted
 ungerade
+unittest
 unpolarised/4
 unpolarized
 upconversion
