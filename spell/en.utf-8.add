@@ -303,6 +303,7 @@ Condon
 config/=?
 conformant
 const/=?
+constexpr/=?
 copernicium
 copolymerisation/4
 copolymerization
