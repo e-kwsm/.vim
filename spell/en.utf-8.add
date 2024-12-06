@@ -296,6 +296,7 @@ Condon
 config/=?
 conformant
 const/=?
+constexpr/=?
 copernicium
 copolymerisation/4
 copolymerization
@@ -784,7 +785,7 @@ Krylov
 kubernetes
 Kullback
 Kutta
-kwargs/?=
+kwargs/=?
 Kármán
 l'Hospital
 lactam
@@ -1336,7 +1337,7 @@ spinor
 spintronics
 SPW92
 SQLite/=
-src/?=
+src/=?
 stderr
 stdin
 stdout
