@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@shougo/ddc-vim": "jsr:@shougo/ddc-vim@^9.1.0"
+  }
+}
