@@ -3,6 +3,7 @@
 -ene
 -ol
 -yne
+:func:/=
 a.u./=
 A64FX
 Ab Initio
@@ -1157,6 +1158,7 @@ Pourbaix
 pragma/=?
 precompiled
 prefactor
+prefactors
 preprocess
 prerequirement
 prerequirements
@@ -1257,6 +1259,7 @@ Rodrigues
 roentgenium
 ROHF
 Roothaan
+Rosenbrock
 rotaxane
 RPA
 RPC
@@ -1438,6 +1441,7 @@ titanate
 titania
 tmp/=?
 TODO
+Toeplitz
 tokenizer
 tokenizers
 TOML
