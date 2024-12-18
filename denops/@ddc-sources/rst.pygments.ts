@@ -18,10 +18,11 @@ export class Source extends BaseSource<Params> {
     });
     const { stdout } = await command.output();
     const lines = new TextDecoder().decode(stdout);
-    this.candidates = lines.split(/\n/)
+    this.candidates = lines
+      .split(/\n/)
       .filter((line) => line.match(/^\*/))
-      .flatMap((word) =>
-        word
+      .flatMap((line) =>
+        line
           .replace(/^\* */, "")
           .replace(/:$/, "")
           .split(/, */)
@@ -37,9 +38,12 @@ export class Source extends BaseSource<Params> {
     ) {
       return [];
     }
-    return await Promise.all(this.candidates.map(
-      (word) => Promise.resolve({ menu: "pygments", word: word }),
-    ));
+    const items: Item[] = await Promise.all(
+      this.candidates.map(
+        (word) => Promise.resolve({ menu: "pygments", word: word }),
+      ),
+    );
+    return items;
   }
 
   override params(): Params {
