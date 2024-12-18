@@ -10,7 +10,7 @@ type Params = Record<string, never>;
 export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
-  async onInit(_args: OnInitArguments<Params>): Promise<void> {
+  override async onInit(_args: OnInitArguments<Params>): Promise<void> {
     const command = new Deno.Command("cmake", {
       args: ["--help-module-list"],
       stdin: "null",
