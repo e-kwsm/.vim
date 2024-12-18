@@ -17,10 +17,11 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-    const lines = new TextDecoder().decode(stdout).split(/\n/);
+    const lines = new TextDecoder().decode(stdout);
     this.candidates = lines
+      .split(/\n/)
       .filter((line) => line.match(/^Find\S+/))
-      .map((word) => word.replace(/^Find/, ""));
+      .map((line) => line.replace(/^Find/, ""));
   }
 
   override async gather(args: GatherArguments<Params>): Promise<Item[]> {
