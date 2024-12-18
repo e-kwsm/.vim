@@ -1,18 +1,16 @@
+import { Item } from "jsr:@shougo/ddc-vim@^9.1.0/types";
 import {
   BaseSource,
-  DdcGatherItems,
-} from "https://deno.land/x/ddc_vim@v6.0.0/types.ts#^";
-import {
   GatherArguments,
   OnInitArguments,
-} from "https://deno.land/x/ddc_vim@v6.0.0/base/source.ts#^";
+} from "jsr:@shougo/ddc-vim@^9.1.0/source";
 
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
-  async onInit(_args: OnInitArguments<Params>): Promise<void> {
+  override async onInit(_args: OnInitArguments<Params>): Promise<void> {
     async function candidates(cached = true) {
       if (cached) {
         return await Promise.all([
@@ -268,7 +266,7 @@ export class Source extends BaseSource<Params> {
           stdin: "null",
           stdout: "piped",
         });
-        const { _code, stdout, _stderr } = await command.output();
+        const { stdout } = await command.output();
         const texmfdist = new TextDecoder().decode(stdout).replace(/\n/, "");
         return texmfdist;
       }
@@ -287,7 +285,7 @@ export class Source extends BaseSource<Params> {
         stdin: "null",
         stdout: "piped",
       });
-      const { _code, stdout, _stderr } = await find.output();
+      const { stdout } = await find.output();
       return new TextDecoder().decode(stdout).split(/\n/).filter(Boolean);
     }
 
@@ -296,7 +294,7 @@ export class Source extends BaseSource<Params> {
     );
   }
 
-  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
+  override async gather(args: GatherArguments<Params>): Promise<Item[]> {
     if (!args.context.input.match(/\\usetikzlibrary\b/)) {
       return [];
     }
@@ -314,7 +312,7 @@ export class Source extends BaseSource<Params> {
       ));
   }
 
-  params(): Params {
+  override params(): Params {
     return {};
   }
 }
