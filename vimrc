@@ -10,8 +10,8 @@ endif
 " lazy.nvim {{{1
 if has('nvim')
   let s:data_dir = stdpath('data')
-  let s:bundle_root = s:data_dir . '/site/bundle'
-  let &runtimepath .= ',' . s:bundle_root . '/repos/github.com/folke/lazy.nvim'
+  let s:lazy_path = s:data_dir .. '/lazy/lazy.nvim'
+  let &runtimepath .= ',' . s:lazy_path
   lua << EOF
 require('lazy').setup({
   'bronson/vim-trailing-whitespace',
