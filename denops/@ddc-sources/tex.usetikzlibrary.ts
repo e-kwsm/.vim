@@ -10,7 +10,7 @@ type Params = Record<string, never>;
 export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
-  async onInit(_args: OnInitArguments<Params>): Promise<void> {
+  override async onInit(_args: OnInitArguments<Params>): Promise<void> {
     async function candidates(cached = true) {
       if (cached) {
         return await Promise.all([
@@ -266,7 +266,7 @@ export class Source extends BaseSource<Params> {
           stdin: "null",
           stdout: "piped",
         });
-        const { _code, stdout, _stderr } = await command.output();
+        const { stdout } = await command.output();
         const texmfdist = new TextDecoder().decode(stdout).replace(/\n/, "");
         return texmfdist;
       }
