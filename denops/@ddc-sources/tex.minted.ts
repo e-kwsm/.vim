@@ -1,33 +1,36 @@
+import { Item } from "jsr:@shougo/ddc-vim@^9.1.0/types";
 import {
   BaseSource,
-  DdcGatherItems,
-} from "https://deno.land/x/ddc_vim@v6.0.0/types.ts#^";
-import {
   GatherArguments,
   OnInitArguments,
-} from "https://deno.land/x/ddc_vim@v6.0.0/base/source.ts#^";
+} from "jsr:@shougo/ddc-vim@^9.1.0/source";
 
 type Params = Record<string, never>;
+
 export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
-  async onInit(_args: OnInitArguments<Params>): Promise<void> {
+  override async onInit(_args: OnInitArguments<Params>): Promise<void> {
     const command = new Deno.Command("pygmentize", {
       args: ["-L", "lexers"],
       stdin: "null",
       stdout: "piped",
     });
-    const { _code, stdout, _stderr } = await command.output();
+    const { stdout } = await command.output();
 
-    const lines = new TextDecoder().decode(stdout).split(/\n/);
-    this.candidates = lines
+    this.candidates = new TextDecoder().decode(stdout)
+      .split(/\n/)
       .filter((line) => line.match(/^\*/))
       .flatMap((word) =>
-        word.replace(/^\* */, "").replace(/:$/, "").split(/, */).filter(Boolean)
+        word
+          .replace(/^\* */, "")
+          .replace(/:$/, "")
+          .split(/, */)
+          .filter(Boolean)
       );
   }
 
-  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
+  override async gather(args: GatherArguments<Params>): Promise<Item[]> {
     if (
       !args.context.input.match(
         /\\(?:begin\{minted\}|inputminted(?:\[.*?\])?|mint|mintinline){\w*?$/,
@@ -35,12 +38,13 @@ export class Source extends BaseSource<Params> {
     ) {
       return [];
     }
-    return await Promise.all(this.candidates.map(
-      (word) => Promise.resolve({ menu: "minted", word: word }),
-    ));
+    const items = await Promise.all(
+      this.candidates.map((word) => ({ menu: "minted", word: word })),
+    );
+    return items;
   }
 
-  params(): Params {
+  override params(): Params {
     return {};
   }
 }
