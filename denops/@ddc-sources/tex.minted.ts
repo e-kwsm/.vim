@@ -17,13 +17,12 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-
     const lines = new TextDecoder().decode(stdout);
     this.candidates = lines
       .split(/\n/)
       .filter((line) => line.match(/^\*/))
-      .flatMap((word) =>
-        word
+      .flatMap((line) =>
+        line
           .replace(/^\* */, "")
           .replace(/:$/, "")
           .split(/, */)
@@ -39,7 +38,7 @@ export class Source extends BaseSource<Params> {
     ) {
       return [];
     }
-    const items = await Promise.all(
+    const items: Item[] = await Promise.all(
       this.candidates.map((word) => ({ menu: "minted", word: word })),
     );
     return items;
