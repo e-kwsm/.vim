@@ -18,7 +18,8 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-    this.candidates = new TextDecoder().decode(stdout)
+    const lines = new TextDecoder().decode(stdout);
+    this.candidates = lines
       .split(/\n/)
       .filter(Boolean);
   }

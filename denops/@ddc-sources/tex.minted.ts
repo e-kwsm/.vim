@@ -18,7 +18,8 @@ export class Source extends BaseSource<Params> {
     });
     const { stdout } = await command.output();
 
-    this.candidates = new TextDecoder().decode(stdout)
+    const lines = new TextDecoder().decode(stdout);
+    this.candidates = lines
       .split(/\n/)
       .filter((line) => line.match(/^\*/))
       .flatMap((word) =>

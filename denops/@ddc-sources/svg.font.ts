@@ -18,8 +18,8 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-    this.candidates = new TextDecoder().decode(stdout)
-      .split(/\n/);
+    const lines = new TextDecoder().decode(stdout);
+    this.candidates = lines.split(/\n/);
   }
 
   override async gather(args: GatherArguments<Params>): Promise<Item[]> {
