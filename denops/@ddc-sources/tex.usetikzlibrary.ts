@@ -267,7 +267,7 @@ export class Source extends BaseSource<Params> {
           stdout: "piped",
         });
         const { stdout } = await command.output();
-        const texmfdist = new TextDecoder().decode(stdout).replace(/\n/, "");
+        const texmfdist = new TextDecoder().decode(stdout).trim();
         return texmfdist;
       }
       const texmfdist = await kpsewhich();
