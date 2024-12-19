@@ -26,9 +26,9 @@ export class Source extends BaseSource<Params> {
     if (!args.context.input.match(/\bfont-\w+\b.*/)) {
       return [];
     }
-    const items: Item[] = await Promise.all(this.candidates.map(
-      (word) => Promise.resolve({ menu: "font", word: word }),
-    ));
+    const items: Item[] = await Promise.all(
+      this.candidates.map((word) => ({ menu: "font", word: word })),
+    );
     return items;
   }
 
