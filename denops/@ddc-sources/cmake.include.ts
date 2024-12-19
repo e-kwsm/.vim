@@ -25,9 +25,11 @@ export class Source extends BaseSource<Params> {
     if (!args.context.input.match(/\binclude\(\w*$/i)) {
       return [];
     }
-    const items: Item[] = await Promise.all(this.candidates.map(
-      (word) => Promise.resolve({ menu: "include", word: word }),
-    ));
+    const items: Item[] = await Promise.all(
+      this.candidates.map(
+        (word) => Promise.resolve({ menu: "include", word: word }),
+      ),
+    );
     return items;
   }
 
