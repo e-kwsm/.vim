@@ -7,7 +7,9 @@ import { GatherArguments } from "https://deno.land/x/ddc_vim@v6.0.0/base/source.
 type Params = Record<string, never>;
 
 export class Source extends BaseSource<Params> {
-  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
+  override async gather(
+    args: GatherArguments<Params>,
+  ): Promise<DdcGatherItems> {
     if (!args.context.input.match(/^\s*\w*$/)) {
       return [];
     }
@@ -155,7 +157,7 @@ export class Source extends BaseSource<Params> {
     ));
   }
 
-  params(): Params {
+  override params(): Params {
     return {};
   }
 }
