@@ -39,7 +39,9 @@ export class Source extends BaseSource<Params> {
       return [];
     }
     const items: Item[] = await Promise.all(
-      this.candidates.map((word) => ({ menu: "minted", word: word })),
+      this.candidates.map(
+        (word) => Promise.resolve({ menu: "minted", word: word }),
+      ),
     );
     return items;
   }
