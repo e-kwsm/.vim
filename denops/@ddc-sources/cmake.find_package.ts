@@ -27,9 +27,11 @@ export class Source extends BaseSource<Params> {
     if (!args.context.input.match(/\bfind_package\(\w*$/i)) {
       return [];
     }
-    const items: Item[] = await Promise.all(this.candidates.map(
-      (word) => Promise.resolve({ menu: "find_package", word: word }),
-    ));
+    const items: Item[] = await Promise.all(
+      this.candidates.map(
+        (word) => Promise.resolve({ menu: "find_package", word: word }),
+      ),
+    );
     return items;
   }
 
