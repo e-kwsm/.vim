@@ -18,12 +18,15 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-
-    const lines = new TextDecoder().decode(stdout).split(/\n/);
-    this.candidates = lines
+    const lines = new TextDecoder().decode(stdout);
+    this.candidates = lines.split(/\n/)
       .filter((line) => line.match(/^\*/))
-      .flatMap((word) =>
-        word.replace(/^\* */, "").replace(/:$/, "").split(/, */).filter(Boolean)
+      .flatMap((line) =>
+        line
+          .replace(/^\* */, "")
+          .replace(/:$/, "")
+          .split(/, */)
+          .filter(Boolean)
       );
   }
 
@@ -35,9 +38,10 @@ export class Source extends BaseSource<Params> {
     ) {
       return [];
     }
-    return await Promise.all(this.candidates.map(
+    const items = await Promise.all(this.candidates.map(
       (word) => Promise.resolve({ menu: "minted", word: word }),
     ));
+    return items;
   }
 
   params(): Params {
