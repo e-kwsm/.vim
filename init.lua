@@ -10,6 +10,14 @@ if vim.o.diff then
   vim.opt.diffopt:remove("linematch:40")
 end
 
+vim.api.nvim_create_autocmd("TermEnter", {
+  group = "myvimrc",
+  command = "set notermguicolors",
+})
+vim.api.nvim_create_autocmd("TermLeave", {
+  group = "myvimrc",
+  command = "if $COLORTERM == 'truecolor' | set termguicolors | endif",
+})
 vim.api.nvim_create_autocmd("TermOpen", {
   group = "myvimrc",
   pattern = "term://*",
