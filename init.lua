@@ -11,6 +11,7 @@ if vim.o.diff then
 end
 
 vim.api.nvim_create_autocmd("TermOpen", {
+  group = "myvimrc",
   pattern = "term://*",
   command = "startinsert",
 })
