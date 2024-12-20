@@ -35,3 +35,5 @@ vim.api.nvim_create_user_command("Exe", function(args)
   vim.system({ "chmod", "u+x", f }):wait()
   vim.cmd.terminal(vim.fn.shellescape(f) .. " " .. args.args)
 end, { nargs = "*" })
+
+require("config.lazy")
