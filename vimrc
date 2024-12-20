@@ -287,13 +287,6 @@ set suffixes+=.aux,.bbl,.bcf,.blg,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv  "
 set suffixes+=.mod,.smod  " fortran
 set title
 set visualbell
-
-if has('nvim')
-  set inccommand=split
-  if $TERM =~ '.\+256color$'
-    set termguicolors
-  endif
-endif
 " }}}1
 
 " map {{{1
@@ -422,14 +415,6 @@ augroup myvimrc " {{{1
   au BufReadPost COMMIT_EDITMSG		:1
   au BufReadPost addp-hunk-edit.diff	:3
   au BufReadPost git-rebase-todo	:1
-
-  if has('nvim')
-    if $TERM =~ '.\+256color$'
-      au TermEnter * set notermguicolors
-      au TermLeave * set termguicolors
-    endif
-    au TermOpen term://* set nonumber norelativenumber | startinsert
-  endif
 augroup END " }}}1
 
 " command {{{1
@@ -443,12 +428,6 @@ endif
 
 if !exists(':ShExe')
   command -nargs=* ShExe up | !chmod u+x % && %:p <args>
-endif
-
-if has('nvim')
-  if !exists(':Exe')
-    command -nargs=* Exe up | te chmod u+x % && %:p <args>
-  endif
 endif
 " }}}1
 
