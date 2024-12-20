@@ -9,3 +9,15 @@ if vim.o.diff then
   vim.o.autoread = false
   vim.opt.diffopt:remove("linematch:40")
 end
+
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "term://*",
+  command = "startinsert",
+})
+
+vim.api.nvim_create_user_command("Exe", function(args)
+  vim.cmd.update()
+  local f = vim.api.nvim_buf_get_name(0)
+  vim.system({ "chmod", "u+x", f }):wait()
+  vim.cmd.terminal(vim.fn.shellescape(f) .. " " .. args.args)
+end, { nargs = "*" })
