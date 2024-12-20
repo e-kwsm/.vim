@@ -12,14 +12,14 @@ type Params = Record<string, never>;
 export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
-  async onInit(_args: OnInitArguments<Params>): Promise<void> {
+  override async onInit(_args: OnInitArguments<Params>): Promise<void> {
     const command = new Deno.Command("fc-list", {
       args: ["--format", "%{family[0]}\n"],
       env: { "LANG": "C" },
       stdin: "null",
       stdout: "piped",
     });
-    const { _code, stdout, _stderr } = await command.output();
+    const { stdout } = await command.output();
     this.candidates = new TextDecoder().decode(stdout).split(/\n/);
   }
 

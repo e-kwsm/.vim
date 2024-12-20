@@ -12,13 +12,13 @@ type Params = Record<string, never>;
 export class Source extends BaseSource<Params> {
   candidates: string[] = [];
 
-  async onInit(_args: OnInitArguments<Params>): Promise<void> {
+  override async onInit(_args: OnInitArguments<Params>): Promise<void> {
     const command = new Deno.Command("cmake", {
       args: ["--help-module-list"],
       stdin: "null",
       stdout: "piped",
     });
-    const { _code, stdout, _stderr } = await command.output();
+    const { stdout } = await command.output();
     const lines = new TextDecoder().decode(stdout).split(/\n/);
     this.candidates = lines
       .filter((line) => line.match(/^Find\S+/))
