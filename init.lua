@@ -8,6 +8,7 @@ end
 vim.o.inccommand = "split"
 
 vim.api.nvim_create_autocmd("TermOpen", {
+  group = "myvimrc",
   pattern = "term://*",
   command = "startinsert",
 })
