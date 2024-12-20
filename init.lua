@@ -7,6 +7,7 @@ vim.o.inccommand = "split"
 vim.o.spellfile = os.getenv("XDG_CONFIG_HOME") .. "/nvim/spell/en.utf-8.add"
 
 vim.api.nvim_create_autocmd("TermOpen", {
+  group = "myvimrc",
   pattern = "term://*",
   command = "startinsert",
 })
