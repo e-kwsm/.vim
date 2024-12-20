@@ -20,8 +20,8 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-    this.candidates = new TextDecoder().decode(stdout)
-      .split(/\n/).filter(Boolean);
+    const lines = new TextDecoder().decode(stdout);
+    this.candidates = lines.trim().split(/\n/);
   }
 
   async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
@@ -32,9 +32,10 @@ export class Source extends BaseSource<Params> {
     ) {
       return [];
     }
-    return await Promise.all(this.candidates.map(
+    const items = await Promise.all(this.candidates.map(
       (word) => Promise.resolve({ menu: "font", word: word }),
     ));
+    return items;
   }
 
   params(): Params {
