@@ -20,3 +20,5 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 vim.api.nvim_create_user_command("Exe", "up | te chmod u+x % && %:p <args>", { nargs = "*" })
+
+require("config.lazy")
