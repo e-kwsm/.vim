@@ -1,11 +1,9 @@
+import { Item } from "jsr:@shougo/ddc-vim@^9.1.0/types";
 import {
   BaseSource,
-  DdcGatherItems,
-} from "https://deno.land/x/ddc_vim@v6.0.0/types.ts#^";
-import {
   GatherArguments,
   OnInitArguments,
-} from "https://deno.land/x/ddc_vim@v6.0.0/base/source.ts#^";
+} from "jsr:@shougo/ddc-vim@^9.1.0/source";
 
 type Params = Record<string, never>;
 
@@ -287,7 +285,7 @@ export class Source extends BaseSource<Params> {
         stdin: "null",
         stdout: "piped",
       });
-      const { _code, stdout, _stderr } = await find.output();
+      const { stdout } = await find.output();
       return new TextDecoder().decode(stdout).split(/\n/).filter(Boolean);
     }
 
@@ -296,25 +294,21 @@ export class Source extends BaseSource<Params> {
     );
   }
 
-  async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
+  override async gather(args: GatherArguments<Params>): Promise<Item[]> {
     if (!args.context.input.match(/\\usetikzlibrary\b/)) {
       return [];
     }
-    return await Promise.all(this.candidates
-      .map((word) =>
-        word.startsWith("tikzlibrary")
-          ? Promise.resolve({
-            menu: "tikz",
-            word: word.replace(/^tikzlibrary/, ""),
-          })
-          : Promise.resolve({
-            menu: "pgf",
-            word: word.replace(/^pgflibrary/, ""),
-          })
-      ));
+    const items: Item[] = await Promise.all(this.candidates.map(
+      (word) =>
+        Promise.resolve({
+          menu: word.startsWith("tikzlibrary") ? "tikz" : "pgf",
+          word: word.replace(/^[a-z]+library/, ""),
+        }),
+    ));
+    return items;
   }
 
-  params(): Params {
+  override params(): Params {
     return {};
   }
 }
