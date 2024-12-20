@@ -19,19 +19,20 @@ export class Source extends BaseSource<Params> {
       stdout: "piped",
     });
     const { stdout } = await command.output();
-    const lines = new TextDecoder().decode(stdout).split(/\n/);
-    this.candidates = lines
+    const lines = new TextDecoder().decode(stdout);
+    this.candidates = lines.split(/\n/)
       .filter((line) => line.match(/^Find\S+/))
-      .map((word) => word.replace(/^Find/, ""));
+      .map((line) => line.replace(/^Find/, ""));
   }
 
   async gather(args: GatherArguments<Params>): Promise<DdcGatherItems> {
     if (!args.context.input.match(/\bfind_package\(\w*$/i)) {
       return [];
     }
-    return await Promise.all(this.candidates.map(
+    const items = await Promise.all(this.candidates.map(
       (word) => Promise.resolve({ menu: "find_package", word: word }),
     ));
+    return items;
   }
 
   params(): Params {

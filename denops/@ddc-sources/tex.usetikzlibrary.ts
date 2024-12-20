@@ -269,7 +269,7 @@ export class Source extends BaseSource<Params> {
           stdout: "piped",
         });
         const { stdout } = await command.output();
-        const texmfdist = new TextDecoder().decode(stdout).replace(/\n/, "");
+        const texmfdist = new TextDecoder().decode(stdout).trim();
         return texmfdist;
       }
       const texmfdist = await kpsewhich();
@@ -288,7 +288,8 @@ export class Source extends BaseSource<Params> {
         stdout: "piped",
       });
       const { stdout } = await find.output();
-      return new TextDecoder().decode(stdout).split(/\n/).filter(Boolean);
+      const lines = new TextDecoder().decode(stdout);
+      return lines.trim().split(/\n/);
     }
 
     this.candidates = await candidates().then((cs) =>
@@ -300,18 +301,14 @@ export class Source extends BaseSource<Params> {
     if (!args.context.input.match(/\\usetikzlibrary\b/)) {
       return [];
     }
-    return await Promise.all(this.candidates
-      .map((word) =>
-        word.startsWith("tikzlibrary")
-          ? Promise.resolve({
-            menu: "tikz",
-            word: word.replace(/^tikzlibrary/, ""),
-          })
-          : Promise.resolve({
-            menu: "pgf",
-            word: word.replace(/^pgflibrary/, ""),
-          })
-      ));
+    const items = await Promise.all(this.candidates.map(
+      (word) =>
+        Promise.resolve({
+          menu: word.startsWith("tikzlibrary") ? "tikz" : "pgf",
+          word: word.replace(/^[a-z]+library/, ""),
+        }),
+    ));
+    return items;
   }
 
   params(): Params {
