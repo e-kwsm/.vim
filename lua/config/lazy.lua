@@ -56,3 +56,166 @@ require("lazy").setup({
   "ujihisa/neco-look",
   "vim-denops/denops.vim",
 })
+
+vim.cmd([[
+  " plugin config {{{1
+  "hrsh7th/vim-vsnip {{{2
+  inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  snoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+
+  " Expand or jump
+  inoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  snoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
+  " Jump forward or backward
+  inoremap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+  snoremap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+  inoremap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+  snoremap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
+  " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
+  " See https://github.com/hrsh7th/vim-vsnip/pull/50
+  "nmap        s   <Plug>(vsnip-select-text)
+  "xmap        s   <Plug>(vsnip-select-text)
+  "nmap        S   <Plug>(vsnip-cut-text)
+  "xmap        S   <Plug>(vsnip-cut-text)
+
+  let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
+
+  " ncm2/float-preview.nvim {{{2
+  let g:float_preview#docked = 1
+
+  " neovim/nvim-lspconfig {{{2
+  lua << EOF
+local ok, lspconfig = pcall(require, "lspconfig")
+if not ok then
+  vim.api.nvim_command('echom "module lspconfig not found"')
+  return nil
+end
+
+lspconfig.clangd.setup {}
+lspconfig.denols.setup {}
+lspconfig.pylsp.setup {}
+EOF
+
+  " Shougo/ddc.vim {{{2
+  if v:true
+    lua << EOF
+local capabilities = require("ddc_source_lsp").make_client_capabilities()
+vim.lsp.config("denols", {
+  capabilities = capabilities,
+})
+EOF
+    au myvimrc CompleteDone * silent! pclose!
+
+    call ddc#custom#patch_global('ui', 'native')
+
+    let s:sources = [
+          \ 'lsp',
+          \ 'vsnip',
+          \ 'around',
+          \ ]
+    call ddc#custom#patch_global('sources', s:sources)
+
+    call ddc#custom#patch_global('sourceOptions', #{
+          \ _: #{
+          \   matchers: ['matcher_head'],
+          \   sorters: ['sorter_rank'],
+          \ },
+          \ around: #{mark: 'A'},
+          \ lsp: #{
+          \   mark: 'lsp',
+          \   forceCompletionPattern: '(?:\.|->)\w*',
+          \ },
+          \ })
+
+    call ddc#custom#patch_global('sourceParams', #{
+          \ around: #{maxSize: 500},
+          \ lsp: #{
+          \   snippetEngine: denops#callback#register({body -> vsnip#anonymous(body)}),
+          \   enableResolveItem: v:true,
+          \   enableAdditionalTextEdit: v:true,
+          \ },
+          \ })
+
+    call ddc#custom#patch_filetype('bib', 'sources', [
+          \ 'bib.field',
+          \ 'bib.type',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
+          \ 'c.clang',
+          \ 'c.doxygen',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('cmake', 'sources', [
+          \ 'cmake.Doxygen',
+          \ 'cmake.FindBLAS',
+          \ 'cmake.FindBoost',
+          \ 'cmake.FindLAPACK',
+          \ 'cmake.FindMPI',
+          \ 'cmake.FindOpenMP',
+          \ 'cmake.FindPython',
+          \ 'cmake.FindPython3',
+          \ 'cmake.GNUInstallDirs',
+          \ 'cmake.configure_file',
+          \ 'cmake.file',
+          \ 'cmake.find_package',
+          \ 'cmake.generator_expressions',
+          \ 'cmake.include',
+          \ 'cmake.list',
+          \ 'cmake.message',
+          \ 'cmake.string',
+          \ 'cmake.variable',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('gnuplot', 'sources', [
+          \ 'gnuplot.colornames',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('markdown', 'sources', [
+          \ 'markdown.github',
+          \ 'markdown.gitlab',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('module', 'sources', [
+          \ 'module.path',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('python', 'sources', [
+          \ 'python.doctest',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('rst', 'sources', [
+          \ 'rst.directive',
+          \ 'rst.pygments',
+          \ 'rst.role',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('sh', 'sources', [
+          \ 'sh.mpi',
+          \ 'sh.openmp',
+          \ 'sh.pbs.environment',
+          \ 'sh.pbs.qsub',
+          \ 'sh.slurm.environment',
+          \ 'sh.slurm.sbatch',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('svg', 'sources', [
+          \ 'svg.attr_name',
+          \ 'svg.color',
+          \ 'svg.element',
+          \ 'svg.font',
+          \ ] + s:sources)
+    call ddc#custom#patch_filetype('tex', 'sources', [
+          \ 'tex.beamercolor',
+          \ 'tex.beamerfont',
+          \ 'tex.beamersize',
+          \ 'tex.beamertemplate',
+          \ 'tex.class',
+          \ 'tex.command',
+          \ 'tex.environment',
+          \ 'tex.font',
+          \ 'tex.minted',
+          \ 'tex.package',
+          \ 'tex.usetikzlibrary',
+          \ 'tex.xcolor',
+          \ ] + s:sources)
+
+    call ddc#enable()
+  endif
+
+]])
+
+-- vi: fdm=marker
