@@ -17,7 +17,7 @@ def update(
     cmd = [vim, "--clean"]
     if Path(vim).name == "nvim":
         cmd.append("--headless")
-    cmd += ["-c", "set spell"]
+    cmd += ["--cmd", "set spell"]
 
     subprocess.run(
         cmd
@@ -47,7 +47,6 @@ def update(
                 "-c",
                 "|".join(
                     [
-                        "set spell",
                         "spelldump",
                         "keepp 0;2/^#/d",
                         f"w! ++enc=utf-8 {ref.name}",
