@@ -40,7 +40,6 @@ require('lazy').setup({
   'cocopon/iceberg.vim',
   'hrsh7th/vim-vsnip',
   'itchyny/lightline.vim',
-  'lambdalisue/vim-unified-diff',
   'ncm2/float-preview.nvim',
   'neovim/nvim-lspconfig',
   'rhysd/vim-clang-format',
