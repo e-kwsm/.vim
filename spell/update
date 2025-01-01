@@ -32,7 +32,7 @@ def update(
                     "%bw",
                     "spelldump",
                     "keepp 0;2/^#/d",
-                    f"w! {ref.name}",
+                    f"w! ++enc=utf-8 {ref.name}",
                     "qa",
                 ]
             ),
