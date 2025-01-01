@@ -17,6 +17,28 @@ def update(
     cmd = [vim, "--clean"]
     if Path(vim).name == "nvim":
         cmd.append("--headless")
+    cmd += ["-c", "set spell"]
+
+    subprocess.run(
+        cmd
+        + [
+            "-c",
+            "|".join(
+                [
+                    "2,$sort u",
+                    "2,$sort i",
+                    "up",
+                    "mkspell! %",
+                    "q",
+                ]
+            ),
+            add,
+        ],
+        env=os.environ | {"LANG": "C"},
+        check=True,
+    )
+    if not check:
+        return
 
     with NamedTemporaryFile() as ref:
         cmd += [
@@ -24,12 +46,6 @@ def update(
             "|".join(
                 [
                     "set spell",
-                    f"e {add}",
-                    "2,$sort u",
-                    "2,$sort i",
-                    "up",
-                    "mkspell! %",
-                    "%bw",
                     "spelldump",
                     "keepp 0;2/^#/d",
                     f"w! ++enc=utf-8 {ref.name}",
@@ -38,9 +54,6 @@ def update(
             ),
         ]
         subprocess.run(cmd, env=os.environ | {"LANG": "C"}, check=True)
-
-        if not check:
-            return
 
         pat = re.compile("/[^/]+$")
 
