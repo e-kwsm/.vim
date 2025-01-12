@@ -103,121 +103,117 @@ lspconfig.pylsp.setup {}
 EOF
 
   " Shougo/ddc.vim {{{3
-  if v:true
-    lua << EOF
+  lua << EOF
 local capabilities = require("ddc_source_lsp").make_client_capabilities()
 require("lspconfig").denols.setup({
   capabilities = capabilities,
 })
 EOF
-    au myvimrc CompleteDone * silent! pclose!
+  au myvimrc CompleteDone * silent! pclose!
 
-    call ddc#custom#patch_global('ui', 'native')
+  call ddc#custom#patch_global('ui', 'native')
 
-    let s:sources = [
-          \ 'lsp',
-          \ 'vsnip',
-          \ 'around',
-          \ ]
-    call ddc#custom#patch_global('sources', s:sources)
+  let s:sources = [
+        \ 'lsp',
+        \ 'vsnip',
+        \ 'around',
+        \ ]
+  call ddc#custom#patch_global('sources', s:sources)
 
-    call ddc#custom#patch_global('sourceOptions', #{
-          \ _: #{
-          \   matchers: ['matcher_head'],
-          \   sorters: ['sorter_rank'],
-          \ },
-          \ around: #{mark: 'A'},
-          \ lsp: #{
-          \   mark: 'lsp',
-          \   forceCompletionPattern: '(?:\.|->)\w*',
-          \ },
-          \ })
+  call ddc#custom#patch_global('sourceOptions', #{
+        \ _: #{
+        \   matchers: ['matcher_head'],
+        \   sorters: ['sorter_rank'],
+        \ },
+        \ around: #{mark: 'A'},
+        \ lsp: #{
+        \   mark: 'lsp',
+        \   forceCompletionPattern: '(?:\.|->)\w*',
+        \ },
+        \ })
 
-    call ddc#custom#patch_global('sourceParams', #{
-          \ around: #{maxSize: 500},
-          \ lsp: #{
-          \   snippetEngine: denops#callback#register({body -> vsnip#anonymous(body)}),
-          \   enableResolveItem: v:true,
-          \   enableAdditionalTextEdit: v:true,
-          \ },
-          \ })
+  call ddc#custom#patch_global('sourceParams', #{
+        \ around: #{maxSize: 500},
+        \ lsp: #{
+        \   snippetEngine: denops#callback#register({body -> vsnip#anonymous(body)}),
+        \   enableResolveItem: v:true,
+        \   enableAdditionalTextEdit: v:true,
+        \ },
+        \ })
 
-    call ddc#custom#patch_filetype('bib', 'sources', [
-          \ 'bib.field',
-          \ 'bib.type',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
-          \ 'c.clang',
-          \ 'c.doxygen',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('cmake', 'sources', [
-          \ 'cmake.Doxygen',
-          \ 'cmake.FindBLAS',
-          \ 'cmake.FindBoost',
-          \ 'cmake.FindLAPACK',
-          \ 'cmake.FindMPI',
-          \ 'cmake.FindOpenMP',
-          \ 'cmake.FindPython',
-          \ 'cmake.FindPython3',
-          \ 'cmake.GNUInstallDirs',
-          \ 'cmake.configure_file',
-          \ 'cmake.file',
-          \ 'cmake.find_package',
-          \ 'cmake.generator_expressions',
-          \ 'cmake.include',
-          \ 'cmake.list',
-          \ 'cmake.message',
-          \ 'cmake.string',
-          \ 'cmake.variable',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('gnuplot', 'sources', [
-          \ 'gnuplot.colornames',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('markdown', 'sources', [
-          \ 'markdown.github',
-          \ 'markdown.gitlab',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('module', 'sources', [
-          \ 'module.path',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('python', 'sources', [
-          \ 'python.doctest',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('rst', 'sources', [
-          \ 'rst.directive',
-          \ 'rst.pygments',
-          \ 'rst.role',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('sh', 'sources', [
-          \ 'sh.mpi',
-          \ 'sh.openmp',
-          \ 'sh.pbs.environment',
-          \ 'sh.pbs.qsub',
-          \ 'sh.slurm.environment',
-          \ 'sh.slurm.sbatch',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('svg', 'sources', [
-          \ 'svg.attr_name',
-          \ 'svg.color',
-          \ 'svg.element',
-          \ 'svg.font',
-          \ ] + s:sources)
-    call ddc#custom#patch_filetype('tex', 'sources', [
-          \ 'tex.beamercolor',
-          \ 'tex.beamerfont',
-          \ 'tex.beamersize',
-          \ 'tex.beamertemplate',
-          \ 'tex.class',
-          \ 'tex.command',
-          \ 'tex.environment',
-          \ 'tex.font',
-          \ 'tex.minted',
-          \ 'tex.package',
-          \ 'tex.usetikzlibrary',
-          \ 'tex.xcolor',
-          \ ] + s:sources)
+  call ddc#custom#patch_filetype('bib', 'sources', [
+        \ 'bib.field',
+        \ 'bib.type',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', [
+        \ 'c.clang',
+        \ 'c.doxygen',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('cmake', 'sources', [
+        \ 'cmake.Doxygen',
+        \ 'cmake.FindBLAS',
+        \ 'cmake.FindBoost',
+        \ 'cmake.FindLAPACK',
+        \ 'cmake.FindMPI',
+        \ 'cmake.FindOpenMP',
+        \ 'cmake.FindPython',
+        \ 'cmake.FindPython3',
+        \ 'cmake.GNUInstallDirs',
+        \ 'cmake.configure_file',
+        \ 'cmake.file',
+        \ 'cmake.find_package',
+        \ 'cmake.generator_expressions',
+        \ 'cmake.include',
+        \ 'cmake.list',
+        \ 'cmake.message',
+        \ 'cmake.string',
+        \ 'cmake.variable',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('gnuplot', 'sources', [
+        \ 'gnuplot.colornames',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('markdown', 'sources', [
+        \ 'markdown.github',
+        \ 'markdown.gitlab',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('module', 'sources', [
+        \ 'module.path',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('python', 'sources', [
+        \ 'python.doctest',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('rst', 'sources', [
+        \ 'rst.directive',
+        \ 'rst.pygments',
+        \ 'rst.role',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('sh', 'sources', [
+        \ 'sh.openmp',
+        \ 'sh.pbs.environment',
+        \ 'sh.pbs.qsub',
+        \ 'sh.slurm.environment',
+        \ 'sh.slurm.sbatch',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('svg', 'sources', [
+        \ 'svg.attr_name',
+        \ 'svg.color',
+        \ 'svg.element',
+        \ 'svg.font',
+        \ ] + s:sources)
+  call ddc#custom#patch_filetype('tex', 'sources', [
+        \ 'tex.beamercolor',
+        \ 'tex.beamerfont',
+        \ 'tex.beamersize',
+        \ 'tex.beamertemplate',
+        \ 'tex.class',
+        \ 'tex.command',
+        \ 'tex.environment',
+        \ 'tex.font',
+        \ 'tex.minted',
+        \ 'tex.package',
+        \ 'tex.usetikzlibrary',
+        \ 'tex.xcolor',
+        \ ] + s:sources)
 
-    call ddc#enable()
-  endif
-
+  call ddc#enable()
 ]])
