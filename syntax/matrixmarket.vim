@@ -24,8 +24,8 @@ syn keyword mtxType complex integer pattern real contained nextgroup=mtxQualifie
 syn keyword mtxQualifier general hermitian symmetric contained
 syn match mtxQualifier '\<skew-symmetric\>' contained
 
-syn match mtxInteger '\%(^\|\s\)\zs[+-]\?\%(0\|[1-9][0-9]*\)\ze\%(\s\|$\)'
-syn match mtxFloat '\s\zs[+-]\?\%(0\|[1-9][0-9]*\)\.\%([0-9]*\|[0-9]*E[+-]\?[0-9]\+\)\ze\%(\s\|$\)'
+syn match mtxInteger '\%(^\|\s\)\zs[+-]\?\%(0\|[1-9][0-9]*\)\ze\_s'
+syn match mtxFloat '\s\zs[+-]\?\%(0\|[1-9][0-9]*\)\.\%([0-9]*\|[0-9]*E[+-]\?[0-9]\+\)\ze\_s'
 
 hi def link mtxError Error
 hi def link mtxComment Comment
