@@ -1,12 +1,4 @@
 {
-  "include <>": {
-    "prefix": ["#inc", "inc"],
-    "body": "#include <${1:iostream}>"
-  },
-  "include \"\"": {
-    "prefix": ["#inc2", "inc2"],
-    "body": "#include \"${1}\""
-  },
   "main": {
     "prefix": "main",
     "body": ["int main(int argc, char** argv) {", "\t${0}", "}"]
