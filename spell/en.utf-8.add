@@ -394,6 +394,7 @@ DOI
 dopants
 Drude
 Ds/=
+DTD
 dubnium
 Duhem
 EBNF
@@ -473,6 +474,7 @@ filesystem
 Firebird
 flerovium
 fluoronium
+FMA
 Fock
 formamide
 formamidine
@@ -686,6 +688,7 @@ Kohn
 Kolmogorov
 Koopmans
 Koster
+Kovalevskaya
 kPa/=
 Kramers
 Kroll
@@ -901,6 +904,7 @@ oligosaccharide
 oligosaccharides
 oligothiophene
 oneAPI/=
+oneDNN/=
 oneMKL/=
 oneTBB/=
 ONIOM
@@ -1246,6 +1250,7 @@ SVD
 SVG
 SVM
 SVR
+SYCL
 symmetrisation/4
 symmetrization
 synthesisable/4
@@ -1295,6 +1300,7 @@ titanate
 titania
 tmp/=?
 TODO
+Toeplitz
 TOML
 toml/=
 TPSS
@@ -1333,6 +1339,7 @@ UUID
 valent
 van der Waals
 Vandermonde
+variadic
 VASP
 VBM
 vdW/=
@@ -1383,6 +1390,7 @@ xetex/=
 xml/=
 XPath/=
 XRD
+XSLT
 XYG3
 XYGJ-OS
 XYZ
