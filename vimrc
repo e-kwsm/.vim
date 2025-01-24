@@ -272,6 +272,8 @@ highlight LineNr ctermfg=darkred
 let &titleold=getcwd()
 
 augroup myvimrc " {{{1
+  au FileType asciidoc	setl spell
+  au FileType awk	setl noexpandtab shiftwidth=0
   au FileType bib	setl spell
   au FileType c,cpp	setl shiftwidth=2 textwidth=100
   au FileType csv	setl noexpandtab
@@ -295,6 +297,8 @@ augroup myvimrc " {{{1
   au FileType text	setl spell
   au FileType vim	setl foldmethod=marker
   au FileType xyz	setl cursorline
+
+  au BufReadPost git-rebase-todo setl nowrap
 
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
