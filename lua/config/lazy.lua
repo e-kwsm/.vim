@@ -42,6 +42,7 @@ require('lazy').setup({
   'itchyny/lightline.vim',
   'ncm2/float-preview.nvim',
   'neovim/nvim-lspconfig',
+  -- 'rebelot/kanagawa.nvim',
   'rhysd/vim-clang-format',
   'Shougo/ddc-matcher_head',
   'Shougo/ddc-sorter_rank',
