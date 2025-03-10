@@ -699,6 +699,7 @@ hypochlorous
 Hölder
 Hückel
 ideality
+ij/=?
 imidazole
 imidazolium
 imide
@@ -1240,6 +1241,7 @@ REPL
 reST/=
 RESTful/=
 reStructuredText/=
+Reuss
 revPBE/=
 revPBE0/=
 revTPSS/=
@@ -1525,6 +1527,7 @@ Wb/=
 Weierstraß
 Weisfeiler/?
 Weizsäcker
+Wh/=
 whitespace
 whitespaces
 Wien
@@ -1556,6 +1559,7 @@ ylide
 YYYY
 zenodo
 ZINDO
+zirconia
 ZnO/=
 ZnS/=
 zstandard
