@@ -95,6 +95,7 @@ arginine
 argmax/=
 argmin/=
 args/=?
+args/?
 argv/=?
 arity
 Arnoldi
@@ -107,6 +108,7 @@ arylation
 aspartic
 AST
 atm/=
+attr/=?
 aufbau
 aug-cc-pCV5Z/=
 aug-cc-pCVDZ/=
@@ -1074,6 +1076,7 @@ Painlevé
 parallelogramic
 parallelogrammic
 param/=?
+params/?
 Parrinello
 passivate
 passivates
