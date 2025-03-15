@@ -295,6 +295,7 @@ classmethod/?
 Clebsch
 CMake/=
 cmake/=
+cmd/=?
 cm²/=
 cm³/=
 Cn/=
@@ -329,6 +330,7 @@ crystallinity
 csc/=
 csch/=
 csv/=
+CTAN
 cubane
 cubature
 cuBLAS/=
@@ -522,6 +524,7 @@ epimerisation/4
 epimerization
 epimers
 EPYC
+eq/=?
 equimolar
 erf/=
 erfc/=
@@ -816,6 +819,7 @@ lactones
 LAMMPS
 Lanczos
 Landauer
+lang/=?
 Langevin
 LANL2DZ
 LANL2DZdp
@@ -825,6 +829,8 @@ lanthanoids
 LAPACK
 Laplacian
 Larmor
+LaTeX2e
+LaTeX3
 LC-ωPBE/=
 LCAO
 LDA
@@ -1336,6 +1342,7 @@ semilattice
 semilattices
 semiring
 semirings
+sep/=
 serialisable/4
 serializable
 Serret
@@ -1505,6 +1512,7 @@ trehalose
 tribology
 tridentate
 tridiagonal
+trie
 trigonal
 trimer
 trimers
