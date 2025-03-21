@@ -319,7 +319,7 @@ augroup myvimrc " {{{1
   au BufNewFile *.sed	put!='#!/usr/bin/env -S sed -f' | :2
   au BufNewFile *.sh	call setline(1, ['#!/bin/sh', 'set -eux']) | :2
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
-  au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux']) | :2
+  au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux', 'set -o pipefail']) | :3
 
   au BufNewFile .editorconfig	call setline(1, [
         \ 'root = true',
