@@ -100,6 +100,7 @@ end
 
 lspconfig.clangd.setup {}
 lspconfig.denols.setup {}
+-- lspconfig.hls.setup {}
 lspconfig.pylsp.setup {}
 EOF
 
@@ -218,3 +219,5 @@ EOF
 
   call ddc#enable()
 ]])
+
+vim.diagnostic.config({virtual_text = true})
