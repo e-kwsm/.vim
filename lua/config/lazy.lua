@@ -96,6 +96,7 @@ vim.cmd([[
 -- neovim/nvim-lspconfig {{{1
 vim.lsp.enable("clangd")
 vim.lsp.enable("denols")
+-- vim.lsp.enable("hls")
 vim.lsp.enable("pylsp")
 
 -- Shougo/ddc.vim {{{1
@@ -214,5 +215,7 @@ vim.cmd([[
   call ddc#enable()
 ]])
 -- }}}1
+
+vim.diagnostic.config({virtual_text = true})
 
 -- vi: fdm=marker
