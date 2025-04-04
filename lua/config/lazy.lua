@@ -34,7 +34,7 @@ require("lazy").setup({
   -- checker = { enabled = true },
 
   "https://github.com/bronson/vim-trailing-whitespace",
-  "https://github.com/hrsh7th/vim-vsnip",
+  -- "https://github.com/hrsh7th/vim-vsnip",
   "https://github.com/itchyny/lightline.vim",
   -- "https://github.com/ncm2/float-preview.nvim",
   "https://github.com/neovim/nvim-lspconfig",
