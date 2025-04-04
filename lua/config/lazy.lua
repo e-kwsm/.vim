@@ -34,29 +34,29 @@ vim.g.maplocalleader = "\\"
 --   checker = { enabled = true },
 -- })
 
-require('lazy').setup({
-  'bronson/vim-trailing-whitespace',
-  'cespare/vim-toml',
-  'cocopon/iceberg.vim',
-  'hrsh7th/vim-vsnip',
-  'itchyny/lightline.vim',
-  'ncm2/float-preview.nvim',
-  'neovim/nvim-lspconfig',
-  -- 'rebelot/kanagawa.nvim',
-  'rhysd/vim-clang-format',
-  'Shougo/ddc-matcher_head',
-  'Shougo/ddc-sorter_rank',
-  'Shougo/ddc-source-around',
-  'Shougo/ddc-source-lsp',
-  'Shougo/ddc-ui-native',
-  'Shougo/ddc.vim',
-  'Shougo/neco-syntax',
-  'Shougo/neoinclude.vim',
-  'tpope/vim-endwise',
-  'tpope/vim-surround',
-  'uga-rosa/ddc-source-vsnip',
-  'ujihisa/neco-look',
-  'vim-denops/denops.vim',
+require("lazy").setup({
+  "bronson/vim-trailing-whitespace",
+  "cespare/vim-toml",
+  "cocopon/iceberg.vim",
+  "hrsh7th/vim-vsnip",
+  "itchyny/lightline.vim",
+  "ncm2/float-preview.nvim",
+  "neovim/nvim-lspconfig",
+  -- "rebelot/kanagawa.nvim",
+  "rhysd/vim-clang-format",
+  "Shougo/ddc-matcher_head",
+  "Shougo/ddc-sorter_rank",
+  "Shougo/ddc-source-around",
+  "Shougo/ddc-source-lsp",
+  "Shougo/ddc-ui-native",
+  "Shougo/ddc.vim",
+  "Shougo/neco-syntax",
+  "Shougo/neoinclude.vim",
+  "tpope/vim-endwise",
+  "tpope/vim-surround",
+  "uga-rosa/ddc-source-vsnip",
+  "ujihisa/neco-look",
+  "vim-denops/denops.vim",
 })
 
 vim.cmd([[
@@ -220,4 +220,4 @@ EOF
   call ddc#enable()
 ]])
 
-vim.diagnostic.config({virtual_text = true})
+vim.diagnostic.config({ virtual_text = true })
