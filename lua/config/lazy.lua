@@ -37,10 +37,11 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   "https://github.com/bronson/vim-trailing-whitespace",
   "https://github.com/cespare/vim-toml",
-  "https://github.com/hrsh7th/vim-vsnip",
+  -- "https://github.com/hrsh7th/vim-vsnip",
   "https://github.com/itchyny/lightline.vim",
   "https://github.com/ncm2/float-preview.nvim",
   "https://github.com/neovim/nvim-lspconfig",
+  -- "https://github.com/rebelot/kanagawa.nvim",
   "https://github.com/rhysd/vim-clang-format",
   "https://github.com/Shougo/ddc-matcher_head",
   "https://github.com/Shougo/ddc-sorter_rank",
