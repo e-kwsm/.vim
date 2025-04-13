@@ -284,7 +284,10 @@ augroup myvimrc " {{{1
   au FileType gnuplot	setl
         \ keywordprg=gnuplot\ -e\ help\\
         \ shiftwidth=4 textwidth=100
+  au FileType help	setl spell
   au FileType markdown	setl shiftwidth=4 spell textwidth=100
+  au FileType nroff	setl spell textwidth=80
+  au FileType pod	setl spell
   au FileType python	setl textwidth=88
   au FileType rst	setl foldmethod=manual spell
   au FileType sh	setl
