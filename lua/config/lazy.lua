@@ -37,7 +37,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   "bronson/vim-trailing-whitespace",
   "cespare/vim-toml",
-  "cocopon/iceberg.vim",
+  -- "cocopon/iceberg.vim",
   "hrsh7th/vim-vsnip",
   "itchyny/lightline.vim",
   "ncm2/float-preview.nvim",
@@ -62,7 +62,8 @@ require("lazy").setup({
 vim.cmd([[
   " plugin config {{{2
   " cocopon/iceberg.vim {{{3
-  try | colorscheme iceberg | let g:lightline = #{colorscheme: 'iceberg'} | catch | colorscheme desert | endtry
+  "try | colorscheme iceberg | let g:lightline = #{colorscheme: 'iceberg'} | catch | colorscheme desert | endtry
+  colorscheme habamax
 
   "hrsh7th/vim-vsnip {{{3
   inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
