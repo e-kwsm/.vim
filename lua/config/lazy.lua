@@ -59,11 +59,6 @@ require("lazy").setup({
   "vim-denops/denops.vim",
 })
 
--- cocopon/iceberg.vim {{{1
-vim.cmd([[
-  try | colorscheme iceberg | let g:lightline = #{colorscheme: 'iceberg'} | catch | colorscheme desert | endtry
-]])
-
 -- hrsh7th/vim-vsnip {{{1
 vim.cmd([[
   inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
