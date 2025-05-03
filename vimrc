@@ -55,6 +55,7 @@ augroup myvimrc " {{{1
         \ keywordprg=gnuplot\ -e\ help\\
         \ shiftwidth=4 textwidth=100
   au FileType help	setl spell
+  au FileType make	setl list
   au FileType markdown	setl shiftwidth=4 spell textwidth=100
   au FileType nroff	setl spell textwidth=80
   au FileType pod	setl spell
@@ -76,7 +77,7 @@ augroup myvimrc " {{{1
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
   au BufNewFile *.bash	call setline(1, ['#!/bin/bash', 'set -eux', 'set -o pipefail']) | :3
-  au BufNewFile *.dash	call setline(1, ['#!/usr/bin/env dash', 'set -eux']) | :2
+  au BufNewFile *.dash	call setline(1, ['#!/usr/bin/env dash', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
   au BufNewFile *.lua	put!='#!/usr/bin/env lua' | :2
   au BufNewFile *.plt	put!='#!/usr/bin/env -S gnuplot -p' | :2
@@ -90,7 +91,7 @@ augroup myvimrc " {{{1
         \ '    main()'
         \ ]) | :3
   au BufNewFile *.sed	put!='#!/usr/bin/env -S sed -f' | :2
-  au BufNewFile *.sh	call setline(1, ['#!/bin/sh', 'set -eux']) | :2
+  au BufNewFile *.sh	call setline(1, ['#!/bin/sh', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
   au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux', 'set -o pipefail']) | :3
 
@@ -117,7 +118,8 @@ augroup myvimrc " {{{1
         \ ])
   au BufNewFile CMake{,User}Presets.json	call setline(1, [
         \ '{',
-        \ '  "version": 3,',
+        \ '  "version": 10,',
+        \ '  "$comment": "",',
         \ '  "configurePresets": [',
         \ '    {',
         \ '      "name": "",',
