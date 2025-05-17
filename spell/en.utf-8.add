@@ -596,6 +596,7 @@ gerade
 Gershgorin
 gfortran/=
 GGA
+GID
 Ginzburg
 gitignore/=
 GitLab/=
@@ -721,6 +722,7 @@ indole
 infectivity
 InfiniBand/=
 init/=?
+inode
 interfacial
 intersystem
 ionically
@@ -1313,6 +1315,7 @@ serialisable/4
 serializable
 Serret
 Sg/=
+SGID
 SHA1
 ShareAlike/=
 sidechain
@@ -1386,6 +1389,7 @@ subshells
 succinate
 succinic
 sudo/=
+SUID
 sulfonate
 sulfonated
 sulfone
@@ -1485,6 +1489,7 @@ tunability
 txt/=
 TypeScript/=
 UFF
+UID
 ultrasoft
 ultrathin
 umask/=?
