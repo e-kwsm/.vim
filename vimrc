@@ -49,7 +49,7 @@ augroup myvimrc " {{{1
   au FileType csv	setl noexpandtab
   au FileType fortran	setl ignorecase
   au FileType gitcommit	setl keywordprg=git\ show spell
-  au FileType gitconfig	setl noexpandtab shiftwidth=8
+  au FileType gitconfig	setl list noexpandtab shiftwidth=8
   au FileType gitrebase	setl keywordprg=git\ show
   au FileType gnuplot	setl
         \ keywordprg=gnuplot\ -e\ help\\
