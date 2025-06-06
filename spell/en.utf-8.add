@@ -551,6 +551,7 @@ fluorene
 fluoronium
 FMA
 Fock
+Foerster/?
 formamide
 formamidine
 formamidinium
@@ -625,6 +626,7 @@ gprof/=
 graphene
 Grignard
 Grimme
+Groebner/?
 GROMACS
 Groß
 Gröbner
@@ -671,6 +673,7 @@ hexylthiophene
 Higgs
 Hirshfeld
 HMAC
+Hoelder/?
 Hohenberg
 homogenous
 homolysis
@@ -922,6 +925,7 @@ miniconda
 Minkowski
 MKL
 MN15
+Moessbauer/?
 MOL
 mol/=
 molality
@@ -950,6 +954,7 @@ mV/=
 MVAPICH
 MySQL/=
 Mössbauer
+Mößbauer
 Møller
 nanocluster
 nanocrystal
@@ -1539,6 +1544,7 @@ wavevectors
 Wb/=
 Weierstraß
 Weisfeiler/?
+Weizsaecker/?
 Weizsäcker
 Wh/=
 whitespace
