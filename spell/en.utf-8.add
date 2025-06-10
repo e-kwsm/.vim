@@ -113,6 +113,7 @@ arXiv/=
 arylation
 aspartic
 AST
+async/=
 atm/=
 attr/=?
 aufbau
@@ -183,6 +184,7 @@ Berny
 bf16/=
 bf8/=
 BFGS
+bfloat16/=
 BFS
 Bh/=
 BHandH/=
@@ -400,12 +402,14 @@ delocalization
 delocalize
 delocalized
 delocalizes
+denorm/=
 denormal
 deoxyribose
 deprotonate
 deprotonated
 deprotonates
 deprotonation
+desc/=?
 deserialisation/4
 deserialise/4
 deserialised/4
@@ -478,6 +482,7 @@ dopants
 doxygen/=
 Drude
 Ds/=
+dst/=?
 DTD
 dubnium
 Duhem
@@ -570,6 +575,7 @@ filesystem
 Firebird
 FIXME
 flerovium
+float16/=
 fluorene
 fluoronium
 FMA
@@ -736,7 +742,10 @@ hypersurfaces
 hypochlorous
 Hölder
 Hückel
+i32/=
+i8/=
 ideality
+idx/=
 ij/=?
 imidazole
 imidazolium
@@ -758,6 +767,7 @@ InfiniBand/=
 init/=?
 inode
 int32/=
+int4/=
 int64/=
 int8/=
 interfacial
@@ -1228,6 +1238,7 @@ prefactors
 preprocess
 prerequirement
 prerequirements
+printf/=
 PRNG
 propanal
 propanoate
@@ -1249,6 +1260,7 @@ pseudopotential
 pseudopotentials
 pseudospectral
 PTPSS
+ptr/=?
 PubChem/=
 Puiseux
 Pulay
@@ -1334,6 +1346,7 @@ Rosenbrock
 rotaxane
 RPA
 RPC
+rst/=
 rsync/=?
 rubrene
 Runge
@@ -1563,9 +1576,11 @@ truthy
 tryptophan
 tunability
 txt/=
+typename/=
 TypeScript/=
 UFF
 UID
+uint16/=
 uint32/=
 uint64/=
 uint8/=
@@ -1574,6 +1589,9 @@ ultrathin
 umask/=?
 uncontracted
 ungerade
+unit32/=
+unit64/=
+unit8/=
 unittest
 unpolarised/4
 unpolarized
