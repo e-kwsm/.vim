@@ -646,6 +646,7 @@ GPGPU
 GPR
 gprof/=
 graphene
+gridwise
 Grignard
 Grimme
 Groebner/?
@@ -728,6 +729,7 @@ hypochlorous
 Hölder
 Hückel
 ideality
+idx/=
 ij/=?
 imidazole
 imidazolium
@@ -1488,6 +1490,7 @@ thioketones
 thiol
 thiols
 thiophene
+threadwise
 threonine
 timestamp
 titanate
