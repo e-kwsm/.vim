@@ -4,6 +4,7 @@
 -ol
 -yne
 .md/=
+.py/=
 :func:/=
 a.u./=
 A64FX
@@ -267,6 +268,7 @@ CC0
 CCSD
 CCSDT
 CCSDTQ
+cd/=?
 CDF
 CdS/=
 CdTe/=
@@ -567,6 +569,7 @@ Foerster/?
 formamide
 formamidine
 formamidinium
+fp16/=
 fp32/=
 fp64/=
 fp8/=
@@ -744,6 +747,7 @@ infectivity
 InfiniBand/=
 init/=?
 inode
+int8/=
 interfacial
 intersystem
 ionically
@@ -942,6 +946,7 @@ microkernel
 mimetics
 miniconda
 Minkowski
+mkdir/=?
 MKL
 MN15
 Moessbauer/?
@@ -971,6 +976,7 @@ multireference
 multiscale
 mutex/=?
 mV/=
+mv/=?
 MVAPICH
 MySQL/=
 Mössbauer
@@ -1452,6 +1458,7 @@ tautomerism
 tautomerization
 tautomers
 TBB
+TBD
 TDDFT
 tennessine
 TensorFlow/=
@@ -1580,6 +1587,7 @@ Weierstraß
 Weisfeiler/?
 Weizsaecker/?
 Weizsäcker
+Welford
 wether/!
 Wh/=
 whitespace
