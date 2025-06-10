@@ -3,6 +3,10 @@
 -ene
 -ol
 -yne
+.c/=
+.cpp/=
+.h/=
+.hpp/=
 .md/=
 .py/=
 :func:/=
@@ -289,6 +293,7 @@ ChemSpider/=
 chirality
 chloric
 chlorous
+chmod/=?
 Cholesky
 CIDR
 CIF
@@ -622,6 +627,7 @@ GID
 Ginzburg
 gitignore/=
 GitLab/=
+globbing
 glycan
 glycans
 glycoconjugate
@@ -889,6 +895,7 @@ LuaTeX/=
 luatex/=
 LUMO
 Lv/=
+lvalue/=?
 Lyapunov
 LYP
 Löwdin
@@ -1040,6 +1047,7 @@ NST
 nuclearity
 nucleophilicity
 nullary
+nullptr/=
 num/?
 NUMA
 numpy
@@ -1328,6 +1336,7 @@ rubrene
 Runge
 rutile
 rutinose
+rvalue/=?
 rydberg
 Ryzen
 S3
