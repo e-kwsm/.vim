@@ -73,6 +73,7 @@ augroup myvimrc " {{{1
   au FileType xyz	setl cursorline
 
   au BufReadPost git-rebase-todo setl nowrap
+  au BufNewFile,BufReadPost CITATION.cff setl spell
 
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
