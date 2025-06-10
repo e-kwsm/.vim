@@ -112,6 +112,7 @@ arXiv/=
 arylation
 aspartic
 AST
+async/=
 atm/=
 attr/=?
 aufbau
@@ -1548,6 +1549,9 @@ ultrathin
 umask/=?
 uncontracted
 ungerade
+unit32/=
+unit64/=
+unit8/=
 unittest
 unpolarised/4
 unpolarized
