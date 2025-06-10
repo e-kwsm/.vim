@@ -197,6 +197,7 @@ biradical
 bispherical
 bitmask
 BLAS
+blockwise
 BLYP
 BNF
 Bogolyubov
@@ -473,6 +474,7 @@ dopants
 doxygen/=
 Drude
 Ds/=
+dst/=?
 DTD
 dubnium
 Duhem
@@ -729,6 +731,8 @@ hypersurfaces
 hypochlorous
 Hölder
 Hückel
+i32/=
+i8/=
 ideality
 idx/=
 ij/=?
@@ -752,6 +756,7 @@ InfiniBand/=
 init/=?
 inode
 int32/=
+int4/=
 int64/=
 int8/=
 interfacial
@@ -1211,6 +1216,7 @@ prefactors
 preprocess
 prerequirement
 prerequirements
+printf/=
 PRNG
 propanal
 propanoate
@@ -1232,6 +1238,7 @@ pseudopotential
 pseudopotentials
 pseudospectral
 PTPSS
+ptr/=?
 PubChem/=
 Pulay
 PV
