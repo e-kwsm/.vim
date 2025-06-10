@@ -568,6 +568,7 @@ FFT
 FFTW
 filesystem
 Firebird
+FIXME
 flerovium
 fluorene
 fluoronium
@@ -756,6 +757,8 @@ infectivity
 InfiniBand/=
 init/=?
 inode
+int32/=
+int64/=
 int8/=
 interfacial
 intersystem
@@ -1563,6 +1566,9 @@ txt/=
 TypeScript/=
 UFF
 UID
+uint32/=
+uint64/=
+uint8/=
 ultrasoft
 ultrathin
 umask/=?
@@ -1630,6 +1636,7 @@ Wyckoff
 X3LYP
 XAFS
 XANES
+xargs/=?
 XDG
 XeLaTeX/=
 xelatex/=
