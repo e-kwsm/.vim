@@ -19,6 +19,8 @@ syn keyword cmakeFindModuleDeprecated
 
 " 3.14
 "syn keyword cmakeFindModuleDeprecated Qt
+"syn match cmakeFindModuleDeprecated /find_program\s*(\s*\zsQt\>/  " no
+"syn region cmakeFindModuleDeprecated start=/\bfind_program\s*(/ end=/\bQt\b/
 " 3.27
 "syn keyword cmakeFindModuleDeprecated Dart
 
