@@ -3,6 +3,7 @@
 -ene
 -ol
 -yne
+.md/=
 :func:/=
 a.u./=
 A64FX
@@ -173,6 +174,8 @@ benzoxazole
 benzoyl
 benzyl
 Berny
+bf16/=
+bf8/=
 BFGS
 BFS
 Bh/=
@@ -288,6 +291,7 @@ classmethod/?
 Clebsch
 CMake/=
 cmake/=
+CMakeLists.txt
 cmd/=?
 cm²/=
 cm³/=
@@ -555,6 +559,9 @@ Foerster/?
 formamide
 formamidine
 formamidinium
+fp32/=
+fp64/=
+fp8/=
 FQDN
 Fraunhofer
 Frenet
@@ -1344,6 +1351,7 @@ sinc
 sinh/=
 Smirnov
 Sobol
+softmax
 SOGGA
 SOGGA11
 soliton
@@ -1546,6 +1554,7 @@ Weierstraß
 Weisfeiler/?
 Weizsaecker/?
 Weizsäcker
+wether/!
 Wh/=
 whitespace
 whitespaces
