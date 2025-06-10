@@ -182,6 +182,7 @@ Berny
 bf16/=
 bf8/=
 BFGS
+bfloat16/=
 BFS
 Bh/=
 BHandH/=
@@ -393,6 +394,7 @@ delocalization
 delocalize
 delocalized
 delocalizes
+denorm/=
 denormal
 deoxyribose
 deprotonate
@@ -561,6 +563,7 @@ filesystem
 Firebird
 FIXME
 flerovium
+float16/=
 fluorene
 fluoronium
 FMA
@@ -1524,6 +1527,7 @@ txt/=
 TypeScript/=
 UFF
 UID
+uint16/=
 uint32/=
 uint64/=
 uint8/=
