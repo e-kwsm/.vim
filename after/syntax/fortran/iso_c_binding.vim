@@ -1,3 +1,5 @@
 syn keyword fortranConstant c_ptrdiff_t c_int128_t c_int_least128_t c_int_fast128_t c_float128 c_float128_complex
 
+syn keyword fortranConstant C_unsigned C_unsigned_short C_unsigned_long C_unsigned_long_long C_unsigned_char C_ssize_t C_uint8_t C_uint16_t C_uint32_t C_uint64_t C_uint_least8_t C_uint_least16_t C_uint_least32_t C_uint_least64_t C_uint_fast8_t C_uint_fast16_t C_uint_fast32_t C_uint_fast64_t C_uintmax_t
+
 syn keyword fortranIntrinsic c_sizeof
