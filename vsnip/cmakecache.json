@@ -5,10 +5,10 @@
   },
   "CMAKE_CXX_CLANG_TIDY": {
     "prefix": "CMAKE_CXX_CLANG_TIDY",
-    "body": "CMAKE_CXX_CLANG_TIDY:STRING=clang-tidy;--use-color"
+    "body": "CMAKE_CXX_CLANG_TIDY:STRING=clang-tidy;--use-color;--header-filter=.*"
   },
   "CMAKE_C_CLANG_TIDY": {
     "prefix": "CMAKE_C_CLANG_TIDY",
-    "body": "CMAKE_C_CLANG_TIDY:STRING=clang-tidy;--use-color"
+    "body": "CMAKE_C_CLANG_TIDY:STRING=clang-tidy;--use-color;--header-filter=.*"
   }
 }
