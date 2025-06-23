@@ -194,6 +194,7 @@ bicontinuous
 bilayered
 Binet
 Biot
+biphenyl
 biradical
 bispherical
 bitmask
@@ -544,6 +545,7 @@ ethanal
 ethanoate
 ethene
 ethoxide
+ethoxy
 ethylamine
 ethylammonium
 ethyne
@@ -776,6 +778,7 @@ isoindole
 isoleucine
 isomerisation/4
 isomerization
+isopentyl
 isopropanol
 isosteric
 isosurface
@@ -1021,6 +1024,7 @@ nitramine
 nitrile
 nitriles
 nitrogens
+nitrosamine
 nitroso
 NMR
 NoDerivatives/=
@@ -1057,6 +1061,7 @@ OAuth/=
 OCaml/=
 octahedra
 octupole
+octyl
 Og/=
 oganesson
 oligo
@@ -1133,6 +1138,7 @@ pentamer
 pentamers
 pentose
 pentoses
+pentyl
 PEP8
 per se
 perceptron
@@ -1158,6 +1164,7 @@ phonons
 phosphane
 phosphinic
 phosphite
+phosphonate
 phosphonic
 photoenergy
 photoexcitation
@@ -1321,6 +1328,7 @@ Rosenbrock
 rotaxane
 RPA
 RPC
+rst/=
 rsync/=?
 rubrene
 Runge
@@ -1484,12 +1492,14 @@ thermochemistry
 thermochmical
 thermochmically
 thermochromism
+thial
 thiazole
 thienyl
 thioacetal
 thioacetals
 thioaldehyde
 thioaldehydes
+thiocyanate
 thioglycoside
 thioglycosides
 thiohemiacetal
@@ -1511,6 +1521,7 @@ tokenizer
 tokenizers
 TOML
 toml/=
+tosyl
 TPSS
 TPSS0
 TPSSh/=
@@ -1528,6 +1539,7 @@ trimers
 trimethylamine
 trimethylammonium
 triphenylene
+triptophan
 tris-/=
 tropylium
 TrueType/=
