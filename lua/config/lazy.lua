@@ -43,6 +43,7 @@ require("lazy").setup({
   "neovim/nvim-lspconfig",
   -- "rebelot/kanagawa.nvim",
   "rhysd/vim-clang-format",
+  { "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
   "Shougo/ddc-matcher_head",
   "Shougo/ddc-sorter_rank",
   "Shougo/ddc-source-around",
@@ -53,40 +54,55 @@ require("lazy").setup({
   "Shougo/neoinclude.vim",
   "tpope/vim-endwise",
   "tpope/vim-surround",
-  "uga-rosa/ddc-source-vsnip",
+  -- "uga-rosa/ddc-source-vsnip",
   "ujihisa/neco-look",
   "vim-denops/denops.vim",
 })
 
 -- hrsh7th/vim-vsnip {{{1
 vim.cmd([[
-  inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
-  snoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+" inoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+" snoremap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 
-  " Expand or jump
-  inoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-  snoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+" " Expand or jump
+" inoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+" snoremap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
 
-  " Jump forward or backward
-  inoremap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-  snoremap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-  inoremap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-  snoremap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+" " Jump forward or backward
+" inoremap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+" snoremap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+" inoremap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+" snoremap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
-  " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
-  " See https://github.com/hrsh7th/vim-vsnip/pull/50
-  "nmap        s   <Plug>(vsnip-select-text)
-  "xmap        s   <Plug>(vsnip-select-text)
-  "nmap        S   <Plug>(vsnip-cut-text)
-  "xmap        S   <Plug>(vsnip-cut-text)
+" " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
+" " See https://github.com/hrsh7th/vim-vsnip/pull/50
+" "nmap        s   <Plug>(vsnip-select-text)
+" "xmap        s   <Plug>(vsnip-select-text)
+" "nmap        S   <Plug>(vsnip-cut-text)
+" "xmap        S   <Plug>(vsnip-cut-text)
 
-  let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
+" let g:vsnip_snippet_dir = expand('~/.vim/vsnip')
 ]])
 
 -- ncm2/float-preview.nvim {{{1
 vim.cmd([[
   let g:float_preview#docked = 1
 ]])
+
+-- L3MON4D3/LuaSnip {{{1
+local ls = require("luasnip")
+
+vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()
+  if ls.choice_active() then
+    ls.change_choice(1)
+  end
+end, {silent = true})
+
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./vsnip" } })
 
 -- neovim/nvim-lspconfig {{{1
 vim.lsp.enable("clangd")
@@ -107,9 +123,9 @@ vim.cmd([[
 
   let s:sources = [
         \ 'lsp',
-        \ 'vsnip',
         \ 'around',
         \ ]
+        "\ 'vsnip',
   call ddc#custom#patch_global('sources', s:sources)
 
   call ddc#custom#patch_global('sourceOptions', #{
@@ -124,14 +140,14 @@ vim.cmd([[
         \ },
         \ })
 
-  call ddc#custom#patch_global('sourceParams', #{
-        \ around: #{maxSize: 500},
-        \ lsp: #{
-        \   snippetEngine: denops#callback#register({body -> vsnip#anonymous(body)}),
-        \   enableResolveItem: v:true,
-        \   enableAdditionalTextEdit: v:true,
-        \ },
-        \ })
+" call ddc#custom#patch_global('sourceParams', #{
+"       \ around: #{maxSize: 500},
+"       \ lsp: #{
+"       \   snippetEngine: denops#callback#register({body -> vsnip#anonymous(body)}),
+"       \   enableResolveItem: v:true,
+"       \   enableAdditionalTextEdit: v:true,
+"       \ },
+"       \ })
 
   call ddc#custom#patch_filetype('bib', 'sources', [
         \ 'bib.field',
