@@ -228,6 +228,6 @@ vim.cmd([[
 ]])
 -- }}}1
 
-vim.diagnostic.config({virtual_text = true})
+vim.diagnostic.config({ virtual_text = true })
 
--- vi: fdm=marker
+-- vi:fdm=marker
