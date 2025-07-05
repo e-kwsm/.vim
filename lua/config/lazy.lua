@@ -224,4 +224,4 @@ vim.fn["ddc#enable"]()
 
 vim.diagnostic.config({ virtual_text = true })
 
--- vi: fdm=marker
+-- vi:fdm=marker
