@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "contributes": {
+    "snippets": [
+      {"language": ["all"], "path": "./global.json"},
+
+      {"language": ["bib"], "path": "./bib.json"},
+      {"language": ["c"], "path": "./c.json"},
+      {"language": ["cif"], "path": "./cif.json"},
+      {"language": ["cmake"], "path": "./cmake.json"},
+      {"language": ["cmakecache"], "path": "./cmakecache.json"},
+      {"language": ["cml"], "path": "./cml.json"},
+      {"language": ["cpp"], "path": "./cpp.json"},
+      {"language": ["fortran"], "path": "./fortran.json"},
+      {"language": ["gnuplot"], "path": "./gnuplot.json"},
+      {"language": ["html"], "path": "./html.json"},
+      {"language": ["lua"], "path": "./lua.json"},
+      {"language": ["make"], "path": "./make.json"},
+      {"language": ["python"], "path": "./python.json"},
+      {"language": ["sh"], "path": "./sh.json"},
+      {"language": ["svg"], "path": "./svg.json"},
+      {"language": ["tex"], "path": "./tex.json"},
+      {"language": ["xhtml"], "path": "./xhtml.json"},
+      {"language": ["xml"], "path": "./xml.json"}
+    ]
+  }
+}
