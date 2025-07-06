@@ -29,6 +29,8 @@ set title
 set visualbell
 " }}}1
 
+colorscheme habamax
+
 " map {{{1
 nnoremap [S [s
 nnoremap [s [S
