@@ -29,6 +29,8 @@ set title
 set visualbell
 " }}}1
 
+colorscheme habamax
+
 " map {{{1
 nnoremap [S [s
 nnoremap [s [S
@@ -166,10 +168,6 @@ endif
 
 if !exists(':Remove')
   command Remove execute('!rm -f ' .. shellescape(expand('%')))
-endif
-
-if !exists(':ShExe')
-  command -nargs=* ShExe up | !chmod u+x % && %:p <args>
 endif
 " }}}1
 
