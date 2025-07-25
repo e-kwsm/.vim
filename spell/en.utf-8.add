@@ -8,6 +8,7 @@ ABI
 accessor
 acene
 acetal
+acetamide
 acetamidine
 acetamidinium
 acetonide
@@ -21,6 +22,7 @@ actinoid
 actinoids
 acyl
 ad hoc
+adamantane
 adatom
 adenosine
 adiabaticity
@@ -65,6 +67,7 @@ anthocyanidins
 anthocyanin
 anthocyanins
 antiferromagnetism
+antiprism
 AO
 AOs/=
 approximant
@@ -92,6 +95,7 @@ arsinh/=
 artanh/=
 arXiv/=
 arylation
+aspartic
 AST
 atm/=
 aufbau
@@ -141,12 +145,17 @@ basisset
 basissets
 Becke
 benzaldehyde
+benzimidazole
 benzo
 benzoate
+benzofuran
 benzonitrile
 benzophenone
 benzopyrylium
 benzoquinone
+benzothiophene
+benzoxazole
+benzoyl
 benzyl
 Berny
 BFGS
@@ -157,12 +166,16 @@ BHandHLYP/=
 BibTeX/=
 bibtex/=
 bicontinuous
+bidentate
 bilayered
 Binet
 Biot
+biphenyl
+bipyramidal
 biradical
 bispherical
 BLAS
+blockwise
 BLYP
 BNF
 Bogolyubov
@@ -189,7 +202,10 @@ butylene
 butyne
 Cahn
 caprolactone
+carbamide
+carbamides
 carbanion
+carbazole
 carbene
 carbocation
 carboxylate
@@ -230,6 +246,7 @@ CdS/=
 CdTe/=
 CentOS/=
 ceria
+cgs/=
 Chai
 chalcogen
 chalcogenide
@@ -290,6 +307,7 @@ cycloheptane
 cyclomatic
 cyclononane
 cyclooctane
+cyclopentadienyl
 cyclopentane
 cyclopropane
 cytokine
@@ -416,6 +434,7 @@ electrocatalyst
 electrocatalytic
 electrophilicity
 electroreduction
+elementwise
 Eliashberg
 emissive
 enamine
@@ -453,6 +472,7 @@ ethanal
 ethanoate
 ethene
 ethoxide
+ethoxy
 ethylamine
 ethylammonium
 ethyne
@@ -540,6 +560,7 @@ GPGPU
 GPR
 gprof/=
 graphene
+gridwise
 Grignard
 Grimme
 GROMACS
@@ -551,6 +572,7 @@ guanidinium
 Gummel
 Hamprecht
 Hankel
+haptic
 hapticity
 Hartree
 hartree/=
@@ -567,6 +589,7 @@ Hellmann
 hemiacetal
 Hessenberg
 heteroaromatic
+heteroaromatics
 heteroatom
 heteroatoms
 heterocycle
@@ -574,6 +597,7 @@ heterogenous
 heterolysis
 heterolytic
 heteronuclear
+hexadentate
 hexahedra
 hexahedral
 hexahedron
@@ -628,6 +652,8 @@ in situ
 InChI/=
 InChIKey/=
 InChIKeys/=
+indazole
+indole
 infectivity
 InfiniBand/=
 interfacial
@@ -637,12 +663,16 @@ ionicity
 irrotational
 isenthalpic
 Ising
+isobenzofuran
 isochoric
 isodesmic
 isoelectronicity
 isoenthalpic
+isoindole
+isoleucine
 isomerisation/4
 isomerization
+isopentyl
 isopropanol
 isosteric
 isosurface
@@ -725,6 +755,7 @@ Lebedev
 lectin
 Leibler
 Lennard-Jones
+leucine
 levelised/4
 levelized
 Levenshtein
@@ -818,6 +849,7 @@ MongoDB/=
 mongodb/=
 monic
 Monkhorst
+monodentate
 Morera
 MOs/=
 moscovium
@@ -862,7 +894,9 @@ NIS
 NIST
 nitramine
 nitrile
+nitriles
 nitrogens
+nitrosamine
 nitroso
 NMR
 NoDerivatives/=
@@ -894,6 +928,7 @@ OAuth/=
 OCaml/=
 octahedra
 octupole
+octyl
 Og/=
 oganesson
 oligo
@@ -914,6 +949,7 @@ OOM
 OpenACC/=
 OpenAPI/=
 OpenBLAS/=
+OpenCL
 OpenMP/=
 OpenType/=
 optimisable/4
@@ -966,6 +1002,7 @@ pentamer
 pentamers
 pentose
 pentoses
+pentyl
 PEP8
 per se
 perceptron
@@ -983,6 +1020,7 @@ perturbative
 perturbatively
 perylene
 phenanthrene
+phenanthroline
 phenoxide
 phenylene
 phononic
@@ -990,6 +1028,7 @@ phonons
 phosphane
 phosphinic
 phosphite
+phosphonate
 phosphonic
 photoenergy
 photoexcitation
@@ -1133,6 +1172,7 @@ Rodrigues
 roentgenium
 ROHF
 Roothaan
+Rosenbrock
 rotaxane
 RPA
 RPC
@@ -1192,6 +1232,7 @@ sinc
 sinh/=
 Smirnov
 Sobol
+softmax
 SOGGA
 SOGGA11
 soliton
@@ -1199,6 +1240,7 @@ solvate
 solvated
 solvation
 Sommerfeld
+SOMO
 spacegroup
 spacegroups
 SPDX
@@ -1231,6 +1273,8 @@ suberate
 suberic
 subgraph
 subgraphs
+submatrices
+submatrix
 subshell
 subshells
 succinate
@@ -1272,6 +1316,7 @@ terephthalate
 terephthalic
 tert/=
 tetracene
+tetradentate
 tetrakis-/=
 tetramer
 tetramers
@@ -1280,12 +1325,14 @@ thermochemistry
 thermochmical
 thermochmically
 thermochromism
+thial
 thiazole
 thienyl
 thioacetal
 thioacetals
 thioaldehyde
 thioaldehydes
+thiocyanate
 thioglycoside
 thioglycosides
 thiohemiacetal
@@ -1295,6 +1342,8 @@ thioketones
 thiol
 thiols
 thiophene
+threadwise
+threonine
 timestamp
 titanate
 titania
@@ -1303,6 +1352,7 @@ TODO
 Toeplitz
 TOML
 toml/=
+tosyl
 TPSS
 TPSS0
 TPSSh/=
@@ -1311,6 +1361,7 @@ trapezohedral
 trapezohedron
 trehalose
 tribology
+tridentate
 tridiagonal
 trigonal
 trimer
@@ -1318,6 +1369,7 @@ trimers
 trimethylamine
 trimethylammonium
 triphenylene
+triptophan
 tris-/=
 tropylium
 TrueType/=
@@ -1337,6 +1389,7 @@ unpolarized
 upconversion
 UUID
 valent
+valine
 van der Waals
 Vandermonde
 variadic
@@ -1365,6 +1418,7 @@ Warshall
 wavefunction
 wavefunctions
 wavenumber
+wavenumbers
 wavepacket
 wavepackets
 wavevector
@@ -1379,10 +1433,12 @@ wildcard
 WIP
 Wronski
 Wronskian
+www/=
 Wyckoff
 X3LYP
 XAFS
 XANES
+XDG
 XeLaTeX/=
 xelatex/=
 XeTeX/=
@@ -1401,6 +1457,7 @@ yaml/=
 ylide
 YYYY
 ZINDO
+zirconia
 ZnO/=
 ZnS/=
 zwitterion
