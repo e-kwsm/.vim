@@ -5,10 +5,13 @@
 -yne
 .c/=
 .cpp/=
+.gif/=
 .h/=
 .hpp/=
 .md/=
+.mp4/=
 .py/=
+.svg/=
 :func:/=
 a.u./=
 A64FX
@@ -344,6 +347,7 @@ csc/=
 csch/=
 csv/=
 CTAN
+Ctrl
 cubane
 cubature
 cuBLAS/=
@@ -1036,7 +1040,7 @@ nitroso
 NMR
 NoDerivatives/=
 Noether
-noexcept
+noexcept/=
 nonadiabatic
 noncanonical
 noncollinear
@@ -1583,6 +1587,7 @@ usr/=?
 UUID
 valent
 valine
+Van der Waals
 van der Waals
 Vandermonde
 variadic
@@ -1679,9 +1684,14 @@ zwitterionic
 ΔSCF
 ΔU
 Δμ/=
+Ω-loop
+α-helix
+β-sheet
+β-turn
 μm/=
 μs/=
 μVT/=
+π-helix
 τ-HCTH/=
 τ-HCTHh/=
 ωB97
