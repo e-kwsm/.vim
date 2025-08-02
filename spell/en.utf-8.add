@@ -13,6 +13,7 @@
 .py/=
 .svg/=
 :func:/=
+:meth:/=
 a.u./=
 A64FX
 Ab Initio
