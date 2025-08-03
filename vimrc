@@ -41,10 +41,6 @@ nnoremap mm :make<CR>
 nnoremap Q gq
 " }}}1
 
-highlight LineNr ctermfg=darkred
-
-let &titleold=getcwd()
-
 augroup myvimrc " {{{1
   au FileType asciidoc	setl spell
   au FileType awk	setl noexpandtab shiftwidth=0
