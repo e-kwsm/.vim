@@ -95,7 +95,7 @@ augroup myvimrc " {{{1
   au BufNewFile *.sh	call setline(1, ['#!/bin/sh', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
   au BufNewFile *.ts	put!='#!/usr/bin/env -S deno run' | :2
-  au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux', 'set -o pipefail']) | :3
+  au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux', 'set -o pipefail', '# ${(%):-%x}']) | :4
 
   au BufNewFile .editorconfig	call setline(1, [
         \ 'root = true',
