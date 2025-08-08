@@ -133,6 +133,8 @@ augroup myvimrc " {{{1
         \ '}',
         \ ])
 
+  au BufWritePost doas.conf if executable('doas') | exe '!doas -C %' | endif
+
   let g:c_gnu = v:true
   let g:is_posix = v:true
   let g:tex_flavor = 'latex'
