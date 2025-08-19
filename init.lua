@@ -8,7 +8,7 @@ vim.o.spellfile = os.getenv("XDG_CONFIG_HOME") .. "/nvim/spell/en.utf-8.add"
 
 vim.api.nvim_create_autocmd("TermEnter", {
   group = "myvimrc",
-  command = "set notermguicolors",
+  command = "setl nospell notermguicolors",
 })
 vim.api.nvim_create_autocmd("TermLeave", {
   group = "myvimrc",
