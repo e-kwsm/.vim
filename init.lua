@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("TermLeave", {
 })
 vim.api.nvim_create_autocmd("TermOpen", {
   group = "myvimrc",
-  pattern = "term://*",
+  pattern = "term://*/bin/[a-z]*sh",
   command = "startinsert",
 })
 
