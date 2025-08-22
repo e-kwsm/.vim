@@ -70,6 +70,7 @@ anatase
 anharmonic
 anharmonicity
 anilide
+anisohedral
 anisole
 anomer
 anomeric
@@ -787,6 +788,7 @@ isochoric
 isodesmic
 isoelectronicity
 isoenthalpic
+isohedral
 isoindole
 isoleucine
 isomerisation/4
@@ -1284,6 +1286,7 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+python3/?
 PYTHONPATH/?
 pytorch
 PyTorch/=
