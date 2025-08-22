@@ -70,6 +70,7 @@ anatase
 anharmonic
 anharmonicity
 anilide
+anisohedral
 anisole
 anomer
 anomeric
@@ -785,6 +786,7 @@ isochoric
 isodesmic
 isoelectronicity
 isoenthalpic
+isohedral
 isoindole
 isoleucine
 isomerisation/4
@@ -1122,6 +1124,7 @@ P3HT
 pA/=
 Padé
 Painlevé
+parallelogrammic
 param/=?
 params/?
 Parrinello
@@ -1276,6 +1279,7 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+python3/?
 PYTHONPATH/?
 pytorch
 PyTorch/=
@@ -1322,6 +1326,7 @@ Rg/=
 rhamnose
 RHEL
 RHF
+rhombi
 rhombohedral
 rhombohedron
 rhs
