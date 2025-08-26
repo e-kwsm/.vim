@@ -1,3 +1,5 @@
+syn keyword cmakeCommand cmake_dependent_option
+
 syn keyword cmakeFindModuleDeprecated GLU
 " 3.10
 "syn keyword cmakeFindModuleDeprecated CUDA
