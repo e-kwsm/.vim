@@ -1,0 +1,6 @@
+{
+  "shebang": {
+    "prefix": ["#!"],
+    "body": "#!/usr/bin/env -S docker build . -f"
+  }
+}
