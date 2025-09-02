@@ -77,7 +77,7 @@ augroup myvimrc " {{{1
 
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
-  au BufNewFile *.bash	call setline(1, ['#!/bin/bash', 'set -eux', 'set -o pipefail']) | :3
+  au BufNewFile *.bash	call setline(1, ['#!/usr/bin/env bash', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.dash	call setline(1, ['#!/usr/bin/env dash', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
   au BufNewFile *.lua	put!='#!/usr/bin/env lua' | :2
@@ -92,7 +92,7 @@ augroup myvimrc " {{{1
         \ '    main()'
         \ ]) | :3
   au BufNewFile *.sed	put!='#!/usr/bin/env -S sed -f' | :2
-  au BufNewFile *.sh	call setline(1, ['#!/bin/sh', 'set -eux', 'set -o pipefail']) | :3
+  au BufNewFile *.sh	call setline(1, ['#!/usr/bin/env sh', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.tlu	put!='#!/usr/bin/env texlua' | :2
   au BufNewFile *.ts	put!='#!/usr/bin/env -S deno run' | :2
   au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env zsh', 'set -eux', 'set -o pipefail', '# ${(%):-%x}']) | :4
