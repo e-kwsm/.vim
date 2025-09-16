@@ -1,9 +1,9 @@
-import { Item } from "jsr:@shougo/ddc-vim@^9.1.0/types";
+import { Item } from "jsr:@shougo/ddc-vim@^10.1.0/types";
 import {
   BaseSource,
   GatherArguments,
   OnInitArguments,
-} from "jsr:@shougo/ddc-vim@^9.1.0/source";
+} from "jsr:@shougo/ddc-vim@^10.1.0/source";
 
 type Params = Record<string, never>;
 
