@@ -25,6 +25,7 @@ def update(
             "-c",
             "|".join(
                 [
+                    r"%s/\/\zs?=$/=?/e",
                     "2,$sort u",
                     "2,$sort i",
                     "sil up",
