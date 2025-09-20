@@ -114,7 +114,7 @@ vim.lsp.enable("pylsp")
 
 -- Shougo/ddc.vim {{{1
 local capabilities = require("ddc_source_lsp").make_client_capabilities()
-require("lspconfig").denols.setup({
+vim.lsp.config("denols", {
   capabilities = capabilities,
 })
 
