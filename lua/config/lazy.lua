@@ -162,7 +162,6 @@ vim.cmd([[
   call ddc#custom#patch_filetype('cmake', 'sources', [
         \ 'cmake.Doxygen',
         \ 'cmake.FindBLAS',
-        \ 'cmake.FindBoost',
         \ 'cmake.FindLAPACK',
         \ 'cmake.FindMPI',
         \ 'cmake.FindOpenMP',
