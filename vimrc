@@ -97,6 +97,29 @@ augroup myvimrc " {{{1
   au BufNewFile *.ts	put!='#!/usr/bin/env -S deno run' | :2
   au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env -S zsh', 'set -eux', 'set -o pipefail', '# ${(%):-%x}']) | :4
 
+  au BufNewFile PKGBUILD	call setline(1, [
+        \ 'pkgname=''''',
+        \ 'pkgver=''''',
+        \ 'pkgrel=1',
+        \ 'pkgdesc=''''',
+        \ 'license=()',
+        \ '# install=$pkgname.install',
+        \ 'arch=(x86_64)',
+        \ 'url=''''',
+        \ 'depends=()',
+        \ 'makedepends=()',
+        \ 'checkdepends=()',
+        \ 'optdepends=()',
+        \ 'source=()',
+        \ 'b2sums=()',
+        \ 'options=()',
+        \ '', 'prepare() { :; }',
+        \ '', '# pkgver() { :; }',
+        \ '', 'build() {', '  cd "$pkgname-$pkgver"', '}',
+        \ '', 'check() {', '  cd "$pkgname-$pkgver"', '}',
+        \ '', 'package() {', '  cd "$pkgname-$pkgver"', '  # DESTDIR="$pkgdir" cmake --install build', '}',
+        \ ])
+
   au BufNewFile .editorconfig	call setline(1, [
         \ 'root = true',
         \ '',
