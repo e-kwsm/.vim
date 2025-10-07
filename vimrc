@@ -104,16 +104,19 @@ augroup myvimrc " {{{1
         \ 'pkgdesc=''''',
         \ 'arch=(x86_64)',
         \ 'url=''''',
-        \ 'license=''''',
+        \ 'license=()',
         \ 'depends=()',
         \ 'makedepends=()',
         \ 'source=()',
         \ 'b2sums=()',
         \ '', 'prepare() { :; }',
-        \ '', 'pkgver() { :; }',
+        \ '', '# pkgver() { :; }',
         \ '', 'build() { cd "$pkgname-$pkgver"; }',
         \ '', 'check() { cd "$pkgname-$pkgver"; }',
-        \ '', 'package() { cd "$pkgname-$pkgver"; }',
+        \ '', 'package() {',
+        \ 'cd "$pkgname-$pkgver"',
+        \ '# DESTDIR="$pkgdir" cmake --install build',
+        \ '}',
         \ ])
 
   au BufNewFile .editorconfig	call setline(1, [
