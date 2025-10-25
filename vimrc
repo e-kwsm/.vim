@@ -54,6 +54,7 @@ augroup myvimrc " {{{1
   au FileType gnuplot	setl
         \ keywordprg=gnuplot\ -e\ help\\
         \ shiftwidth=4 textwidth=100
+  au FileType haskell	setl shiftwidth=4
   au FileType help	setl spell
   au FileType make	setl list
   au FileType markdown	setl shiftwidth=4 spell textwidth=100
@@ -158,6 +159,8 @@ augroup myvimrc " {{{1
 
   let g:c_gnu = v:true
   let g:is_posix = v:true
+  let g:hs_highlight_boolean = v:true
+  let g:hs_highlight_types = v:true
   let g:tex_flavor = 'latex'
   let g:tex_noindent_env = join([
         \ 'document',
