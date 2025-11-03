@@ -1,0 +1,37 @@
+{
+  "shebang": {
+    "prefix": ["#!"],
+    "body": "#!/usr/bin/env -S podman build . -f"
+  },
+
+  # https://docs.docker.com/build/cache/optimize/#use-cache-mounts
+  "apt-get": {
+    "prefix": "apt-get",
+    "body": [
+      "RUN rm -f /etc/apt/apt.conf.d/docker-clean",
+      "RUN \\",
+      "\t--mount=type=cache,target=/var/cache/apt,sharing=locked \\",
+      "\t--mount=type=cache,target=/var/lib/apt,sharing=locked \\",
+      "\tapt-get update && apt-get --no-install-recommends install -y ${1}"
+    ]
+  },
+
+  "microdnf": {
+    "prefix": "microdnf",
+    "body": [
+      "RUN echo 'keepcache=True' >> /etc/dnf/dnf.conf",
+      "RUN \\",
+      "\t--mount=type=cache,target=/var/cache/yum \\",
+      "\t--mount=type=cache,target=/var/lib/dnf \\",
+      "\tmicrodnf -y install ${1}"
+    ]
+  },
+
+  "pip": {
+    "prefix": "pip",
+    "body": [
+      "RUN --mount=type=cache,target=/root/.cache/pip \\",
+      "\tpip install ${1:-r requirements.txt}"
+    ]
+  },
+}
