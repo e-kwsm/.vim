@@ -32,6 +32,8 @@ acetophenone
 acetyl
 acetylide
 achiral
+ack/?
+acked/?
 acrylonitrile
 actinoid
 actinoids
@@ -140,6 +142,7 @@ autoconf/=?
 autoionisation/4
 autoionization
 automake/=?
+autotools/=?
 AVX
 AWS
 azelaic
@@ -285,6 +288,7 @@ CdS/=
 CdTe/=
 CentOS/=
 ceria
+CFLAGS/?
 cgs/=
 Chai
 chalcogen
@@ -323,6 +327,7 @@ colinear
 composable
 conda
 Condon
+conf/=?
 config/=?
 conformant
 const/=?
@@ -339,6 +344,7 @@ counterion
 counterions
 covalency
 CP2K
+CPPFLAGS/?
 CPython/=
 CRENBL
 CRENBS
@@ -362,6 +368,8 @@ cumulants
 cuRAND/=
 cuSOLVER/=
 cuSPARSE/=
+CXX/?
+CXXFLAGS/?
 cycloalkane
 cyclobutane
 cyclobutene
@@ -556,6 +564,7 @@ ETH
 ethanal
 ethanoate
 ethene
+ethernet
 ethoxide
 ethoxy
 ethylamine
@@ -578,6 +587,7 @@ FFI
 FFT
 FFTW
 filesystem
+filesystems
 Firebird
 FIXME
 flerovium
@@ -638,6 +648,7 @@ gfortran/=
 GGA
 GID
 Ginzburg
+github
 gitignore/=
 GitLab/=
 globbing
@@ -752,6 +763,8 @@ i32/=
 i8/=
 ideality
 idx/=
+ifdef/=?
+ifndef/=?
 ij/=?
 imidazole
 imidazolium
@@ -891,6 +904,7 @@ levelized
 Levenshtein
 LHC
 lhs
+libtool
 Lifshitz
 Lindemann
 linter
@@ -947,6 +961,7 @@ MD5
 Meissner
 meitnerium
 Meißner
+Mellanox
 memoisation/4
 memoise/4
 memoised/4
@@ -999,7 +1014,13 @@ MP4
 MPa/=
 MPFR
 MPI
+mpic++/=?
+mpicc/=?
 MPICH
+mpicxx/=?
+mpiexec/=?
+mpifort/=?
+mpirun/=?
 mPW91
 MRCI
 Mulliken
@@ -1355,11 +1376,13 @@ Roothaan
 Rosenbrock
 rotaxane
 RPA
+rpath/?
 RPC
 rst/=
 rsync/=?
 rubrene
 Runge
+runpath/?
 rutile
 rutinose
 rvalue/=?
@@ -1425,6 +1448,7 @@ siloxy
 silyl
 sinc
 sinh/=
+slurm
 Smirnov
 Sobol
 softmax
@@ -1474,6 +1498,8 @@ subgraph
 subgraphs
 submatrices
 submatrix
+submodule
+submodules
 subshell
 subshells
 succinate
@@ -1551,6 +1577,7 @@ timestamp
 titanate
 titania
 tmp/=?
+tmux
 TODO
 Toeplitz
 tokenizer
@@ -1563,6 +1590,7 @@ TPSS
 TPSS0
 TPSSh/=
 traceback/=?
+tradeoff
 translationengleiche/?
 trapezohedral
 trapezohedron
@@ -1599,6 +1627,7 @@ ultrathin
 umask/=?
 uname/=?
 uncontracted
+undef/=?
 ungerade
 unit32/=
 unit64/=
@@ -1619,12 +1648,14 @@ variadic
 VASP
 VBM
 vdW/=
+venv/=?
 Verlet
 vibronic
 vibronically
 vicinal
 vinylene
 virial
+virtualenv/=?
 VLAN
 VMC
 Voigt
