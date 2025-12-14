@@ -387,6 +387,7 @@ d'Alembert
 Da/=
 Dancoff
 darmstadtium
+datatypes
 de Broglie
 de Dominicis
 de Gennes
@@ -492,6 +493,7 @@ docstring/?
 docstrings/?
 DOCTYPE
 DOI
+doi
 dopants
 doxygen/=
 Drude
@@ -537,6 +539,7 @@ enantioselective
 enantioselectivity
 enantiotopic
 enantiotropic
+endif/=?
 endo
 endocyclic
 endohedral
@@ -1618,6 +1621,7 @@ truthy
 tryptophan
 tunability
 txt/=
+typedef/=?
 typename/=
 TypeScript/=
 UFF
@@ -1698,6 +1702,7 @@ Wronski
 Wronskian
 www/=
 Wyckoff
+X11
 X3LYP
 XAFS
 XANES
