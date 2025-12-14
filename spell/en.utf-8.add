@@ -171,6 +171,7 @@ Banquo
 barostat
 barostats
 base64
+basename
 bashrc/=?
 basisset
 basissets
@@ -767,6 +768,7 @@ i8/=
 ideality
 idx/=
 ifdef/=?
+iff
 ifndef/=?
 ij/=?
 imidazole
@@ -1018,6 +1020,7 @@ MPa/=
 MPFR
 MPI
 mpic++/=?
+mpiCC/=?
 mpicc/=?
 MPICH
 mpicxx/=?
@@ -1343,6 +1346,7 @@ rcp/=?
 RDBMS
 RDF
 readline/=?
+readthedocs/?
 Redis
 ReLU/=
 renormalisation/4
