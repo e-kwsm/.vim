@@ -1433,6 +1433,7 @@ sidechain
 sidechains
 SIGABRT
 SIGBUS
+SIGCONT
 SIGHUP
 SIGILL
 SIGINT
@@ -1442,7 +1443,10 @@ signum
 SIGPIPE
 SIGQUIT
 SIGSEGV
+SIGSTOP
 SIGTERM
+SIGUSR1
+SIGUSR2
 SIGXCPU
 siloxy
 silyl
@@ -1721,6 +1725,9 @@ ZINDO
 zirconia
 ZnO/=
 ZnS/=
+zsh
+zshenv/=?
+zshrc/=?
 zstandard
 zstd/=
 zwitterion
