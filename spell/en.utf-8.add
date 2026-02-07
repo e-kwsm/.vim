@@ -345,6 +345,7 @@ counterion
 counterions
 covalency
 CP2K
+cplusplus/=?
 CPPFLAGS/?
 CPython/=
 CRENBL
@@ -355,6 +356,7 @@ cryo
 crystallinity
 csc/=
 csch/=
+css
 csv/=
 CTAN
 Ctrl
@@ -362,6 +364,7 @@ cubane
 cubature
 cuBLAS/=
 CUDA
+cuda
 cuDNN/=
 cuFFT/=
 cumulant
@@ -441,6 +444,7 @@ deuterated
 deuterates
 deuteration
 devel/=?
+DevOps
 DFS
 DFT
 DFT-D2
@@ -485,6 +489,7 @@ discretized
 discretizes
 dispersity
 dll/=
+dlopen
 DMC
 dmesg/=?
 DMRG
@@ -499,6 +504,7 @@ dopants
 doxygen/=
 Drude
 Ds/=
+DSO
 dst/=?
 DTD
 dubnium
@@ -564,6 +570,8 @@ equimolar
 erf/=
 erfc/=
 Ernzerhof
+errno
+errorcode
 ETH
 ethanal
 ethanoate
@@ -737,6 +745,8 @@ homogenous
 homolysis
 homolytic
 homonuclear
+hostfile
+hostfiles
 hostname
 hostnames
 HPC
@@ -747,6 +757,7 @@ HSE06
 HSE12
 Hueckel/?
 Hund
+hwloc
 hydrazone
 hydrogenase
 hydrogens
@@ -895,6 +906,7 @@ LaTeX2e
 LaTeX3
 LC-ωPBE/=
 LCAO
+LD
 LDA
 LDAP
 LDFLAGS
@@ -909,6 +921,8 @@ levelized
 Levenshtein
 LHC
 lhs
+lib64
+libdir
 libtool
 Lifshitz
 Lindemann
@@ -924,6 +938,8 @@ ln/=
 localhost/=
 locant
 locants
+loopback
+LP64
 LSDA
 LSP
 LTO
@@ -942,6 +958,8 @@ Löwdin
 M06-2X
 M06-HF
 mA/=
+machinefile
+machinefiles
 Maclaurin
 macOS/=
 macrocycle
@@ -961,6 +979,7 @@ MariaDB/=
 Markovnikov
 Mauguin
 Mc/=
+MCA
 MCMC
 MD5
 Meissner
@@ -1000,6 +1019,8 @@ Minkowski
 mkdir/=?
 MKL
 MN15
+modulefile
+modulefiles
 Moessbauer/?
 MOL
 mol/=
@@ -1025,8 +1046,12 @@ mpicc/=?
 MPICH
 mpicxx/=?
 mpiexec/=?
+mpif77/=?
+mpif90/=?
 mpifort/=?
 mpirun/=?
+MPIX
+MPMD
 mPW91
 MRCI
 Mulliken
@@ -1101,8 +1126,10 @@ num/?
 NUMA
 numpy
 NumPy/=
+NVCC
 NVE
 NVIDIA
+nvidia
 NVT
 O3LYP
 OAuth/=
@@ -1110,6 +1137,7 @@ OCaml/=
 octahedra
 octupole
 octyl
+ofi
 Og/=
 oganesson
 oligo
@@ -1131,13 +1159,16 @@ OpenACC/=
 OpenAPI/=
 OpenBLAS/=
 OpenCL
+OpenFabrics
 OpenMP/=
+OpenPMIx/=
 OpenType/=
 optimisable/4
 optimizable
 ORCID
 orientational
 ORNL
+ORTE
 orthonormalisation/4
 orthonormalised/4
 orthonormality
@@ -1237,6 +1268,7 @@ plasmon
 plasmonic
 Plesset
 PLSR
+PMIx
 PNG
 png/=
 Pochhammer
@@ -1325,6 +1357,9 @@ QCISD
 QCISDT
 QCISDTQ
 QMC
+qrsh/=
+qstat/=
+qsub/=
 quadruplex
 quasicrystal
 quasigroup
@@ -1342,10 +1377,13 @@ racemization
 Radeon
 radiobutton
 Raman
+rankfile
+rankfiles
 Raphson
 rcp/=?
 RDBMS
 RDF
+RDMA
 readline/=?
 readthedocs/?
 Redis
@@ -1386,8 +1424,10 @@ rotaxane
 RPA
 rpath/?
 RPC
+rsh
 rst/=
 rsync/=?
+RTD
 rubrene
 Runge
 runpath/?
@@ -1399,6 +1439,7 @@ Ryzen
 S3
 Salpeter
 Savart
+sbatch/=
 sbin/=?
 SBKJC
 ScaLAPACK/=
@@ -1437,6 +1478,7 @@ Sg/=
 SGID
 SHA1
 ShareAlike/=
+shmem
 sidechain
 sidechains
 SIGABRT
@@ -1476,13 +1518,16 @@ spacegroup
 spacegroups
 spack/=?
 SPDX
+specfile
 spinel
 spinodal
 spinor
 spintronics
+SPMD
 SPW92
 SQLite/=
 src/=?
+srun
 stderr
 stdin
 stdout
@@ -1540,6 +1585,7 @@ synthesizable
 synthetase
 sys/=?
 systemd/=
+SYSV
 Tamm
 tanh/=
 tautomer
@@ -1550,6 +1596,7 @@ tautomerization
 tautomers
 TBB
 TBD
+tcp
 TDDFT
 tennessine
 TensorFlow/=
@@ -1590,6 +1637,7 @@ titanate
 titania
 tmp/=?
 tmux
+TOC
 TODO
 Toeplitz
 tokenizer
@@ -1650,6 +1698,7 @@ unpolarised/4
 unpolarized
 upconversion
 uplo/=
+uri
 usr/=?
 UUID
 valent
