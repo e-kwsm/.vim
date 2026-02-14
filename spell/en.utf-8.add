@@ -118,6 +118,7 @@ arsinh/=
 artanh/=
 arXiv/=
 arylation
+asciicast
 aspartic
 AST
 async/=
@@ -138,6 +139,7 @@ aug-cc-pwCV5Z/=
 aug-cc-pwCVDZ/=
 aug-cc-pwCVQZ/=
 aug-cc-pwCVTZ/=
+AUR
 autoconf/=?
 autoionisation/4
 autoionization
@@ -970,6 +972,7 @@ magnetizabilities
 magnon
 Mahalanobis
 Majorana
+makepkg
 malate
 maleic
 malic
@@ -1187,6 +1190,7 @@ oxygens
 ozonide
 P3HT
 pA/=
+pacman
 Padé
 Painlevé
 parallelogramic
@@ -1262,6 +1266,7 @@ PID
 piezoluminescence
 pinacol
 pKa/=
+PKGBUILD
 planewave
 planewaves
 plasmon
