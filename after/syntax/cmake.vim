@@ -5,6 +5,7 @@ syn keyword cmakeFindModuleDeprecated GLU
 "syn keyword cmakeFindModuleDeprecated CUDA
 " 3.12
 syn keyword cmakeFindModuleDeprecated PythonInterp PythonLibs
+"syn match cmakeFindModuleDeprecated /\<find_package\s*(\s*Python\%(Interp\|Libs\)\>/
 syn keyword cmakeFindModuleDeprecated
       \ PYTHONINTERP_FOUND
       \ PYTHONLIBS_FOUND
@@ -25,5 +26,7 @@ syn keyword cmakeFindModuleDeprecated
 "syn region cmakeFindModuleDeprecated start=/\bfind_program\s*(/ end=/\bQt\b/
 " 3.27
 "syn keyword cmakeFindModuleDeprecated Dart
+" 3.30
+syn match cmakeFindModuleDeprecated /\<find_package\s*(\s*Boost\>/
 
 hi def link cmakeFindModuleDeprecated WarningMsg
