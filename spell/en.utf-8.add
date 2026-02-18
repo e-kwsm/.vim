@@ -335,6 +335,7 @@ config/=?
 conformant
 const/=?
 constexpr/=?
+contrib/=?
 copernicium
 copolymerisation/4
 copolymerization
@@ -1641,6 +1642,7 @@ timestamp
 titanate
 titania
 tmp/=?
+TMPDIR/?
 tmux
 TOC
 TODO
