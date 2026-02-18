@@ -156,6 +156,38 @@ augroup myvimrc " {{{1
         \ '  ]',
         \ '}',
         \ ])
+  au BufNewFile *.cjson	call setline(1, [
+        \ '{',
+        \ '  "atoms": {',
+        \ '    "coords": { "3d": [0, 0, 0] },',
+        \ '    "elements": { "number": [0] }',
+        \ '  },',
+        \ '  "bonds": {',
+        \ '    "connections": { "index": [] },',
+        \ '    "order": []',
+        \ '  },',
+        \ '  "chemicalJson": 1,',
+        \ '  "name": "",',
+        \ '  "properties": {',
+        \ '    "totalCharge": 0,',
+        \ '    "totalSpinMultiplicity": 1',
+        \ '  }',
+        \ '}',
+        \ ])
+  au BufNewFile *.cml	call setline(1, [
+        \ '<?xml version="1.0" encoding="UTF-8"?>',
+        \ '<cml xmlns="http://www.xml-cml.org/schema">',
+        \ '  <molecule id="m0" formalCharge="0" spinMultiplicity="1">',
+        \ '    <name></name>',
+        \ '    <atomArray>',
+        \ '      <atom id="a1" elementType="Xx" x3="0" y3="0" z3="0"/>',
+        \ '    </atomArray>',
+        \ '    <bondArray>',
+        \ '      <!-- <bond atomRefs2="a1 a2" order="1"/> -->',
+        \ '    </bondArray>',
+        \ '  </molecule>',
+        \ '</cml>',
+        \ ])
 
   let g:c_gnu = v:true
   let g:is_posix = v:true
