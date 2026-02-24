@@ -349,6 +349,7 @@ counterions
 covalency
 CP2K
 cplusplus/=?
+CPP
 CPPFLAGS/?
 CPython/=
 CRENBL
@@ -702,6 +703,7 @@ guanidine
 guanidinium
 Gummel
 gz/=
+hackage
 Hamprecht
 Hankel
 haptic
