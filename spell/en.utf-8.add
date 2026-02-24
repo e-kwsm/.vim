@@ -259,6 +259,7 @@ chirality
 chloric
 chlorous
 Cholesky
+CIDR
 CIF
 CIP
 CISD
@@ -354,6 +355,7 @@ deserialisation/4
 deserialise/4
 deserialised/4
 deserialises/4
+deserialising/4
 deserialization
 deserialize
 deserialized
@@ -850,6 +852,8 @@ mongodb/=
 monic
 Monkhorst
 monodentate
+monoid
+monoids
 Morera
 MOs/=
 moscovium
@@ -918,6 +922,7 @@ NPT
 NST
 nuclearity
 nucleophilicity
+nullary
 NUMA
 NumPy/=
 NVE
@@ -977,6 +982,8 @@ P3HT
 pA/=
 Padé
 Painlevé
+parallelogramic
+parallelogrammic
 Parrinello
 passivate
 passivates
@@ -1105,6 +1112,7 @@ pseudopotential
 pseudopotentials
 pseudospectral
 PTPSS
+Puiseux
 Pulay
 PV
 PW86
@@ -1127,6 +1135,8 @@ QCISDTQ
 QMC
 quadruplex
 quasicrystal
+quasigroup
+quasigroups
 quasiparticle
 quasiparticles
 Queisser
@@ -1159,6 +1169,7 @@ Rg/=
 rhamnose
 RHEL
 RHF
+rhombi
 rhombohedral
 rhombohedron
 rhs
@@ -1205,6 +1216,12 @@ sech/=
 Seitz
 semiconductive
 semidefinite
+semigroup
+semigroups
+semilattice
+semilattices
+semiring
+semirings
 serialisable/4
 serializable
 Serret
@@ -1309,6 +1326,7 @@ tautomerism
 tautomerization
 tautomers
 TBB
+TBD
 TDDFT
 tennessine
 TensorFlow/=
@@ -1352,6 +1370,7 @@ TODO
 Toeplitz
 TOML
 toml/=
+toolchain
 tosyl
 TPSS
 TPSS0
