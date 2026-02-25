@@ -89,6 +89,8 @@ antiprism
 AO
 AOCL
 AOs/=
+AppArmor
+apparmor/=?
 approximant
 approximants
 arccos/=
@@ -376,6 +378,7 @@ cumulants
 cuRAND/=
 cuSOLVER/=
 cuSPARSE/=
+CVE
 CXX/?
 CXXFLAGS/?
 cycloalkane
@@ -1085,6 +1088,7 @@ nanoribbon
 nanorod
 nanosheet
 nanosieve
+Naur
 Navier
 NBO
 nbsp/=?
@@ -1104,6 +1108,7 @@ nitrogens
 nitromethane
 nitrosamine
 nitroso
+NixOS
 NMR
 NoDerivatives/=
 Noether
@@ -1196,6 +1201,7 @@ pA/=
 pacman
 Padé
 Painlevé
+pam/=?
 parallelogramic
 parallelogrammic
 param/=?
@@ -1338,6 +1344,7 @@ pseudospectral
 pthread
 PTPSS
 ptr/=?
+pty/=?
 PubChem/=
 Puiseux
 Pulay
@@ -1437,6 +1444,7 @@ rst/=
 rsync/=?
 RTD
 rubrene
+run0/=?
 Runge
 runpath/?
 rutile
@@ -1482,6 +1490,7 @@ sep/=
 serialisable/4
 serializable
 Serret
+setuid/=?
 Sg/=
 SGID
 SHA1
@@ -1570,6 +1579,8 @@ subshells
 succinate
 succinic
 sudo/=
+sudoedit/=
+sudoers/=
 SUID
 sulfonate
 sulfonated
@@ -1681,6 +1692,7 @@ TrueType/=
 Truhlar
 truthy
 tryptophan
+tty/=?
 tunability
 txt/=
 typedef/=?
