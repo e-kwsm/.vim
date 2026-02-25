@@ -119,6 +119,7 @@ arsech/=
 arsinh/=
 artanh/=
 arXiv/=
+arxiv/=?
 arylation
 asciicast
 aspartic
@@ -1346,6 +1347,7 @@ pseudospectral
 pthread
 PTPSS
 ptr/=?
+PTY
 pty/=?
 PubChem/=
 Puiseux
@@ -1606,6 +1608,7 @@ synthesisable/4
 synthesizable
 synthetase
 sys/=?
+syslog
 systemd/=
 SYSV
 Tamm
@@ -1695,6 +1698,7 @@ TrueType/=
 Truhlar
 truthy
 tryptophan
+TTY
 tty/=?
 tunability
 txt/=
@@ -1775,6 +1779,7 @@ whitespace
 whitespaces
 Wien
 wildcard
+wildcards
 WIP
 Wronski
 Wronskian
