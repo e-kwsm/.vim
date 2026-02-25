@@ -670,6 +670,7 @@ Ginzburg
 github
 gitignore/=
 GitLab/=
+glibc/=
 globbing
 glycan
 glycans
@@ -1068,6 +1069,7 @@ multiconfiguration
 multicrystalline
 multireference
 multiscale
+musl/=?
 mutex/=?
 mV/=
 mv/=?
@@ -1476,6 +1478,7 @@ SDGs/=
 seaborgium
 sebacate
 sebacic
+seccomp/=?
 sech/=
 Seitz
 semiconductive
