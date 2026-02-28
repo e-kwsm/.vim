@@ -1043,6 +1043,7 @@ Monkhorst
 monodentate
 monoid
 monoids
+monoisotopic
 Morera
 MOs/=
 moscovium
@@ -1158,6 +1159,8 @@ oligo
 oligomer
 oligomeric
 oligomers
+oligopeptide
+oligopeptides
 oligosaccharide
 oligosaccharides
 oligothiophene
@@ -1698,6 +1701,8 @@ TrueType/=
 Truhlar
 truthy
 tryptophan
+TSV
+tsv/=
 TTY
 tty/=?
 tunability
