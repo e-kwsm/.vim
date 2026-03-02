@@ -5,6 +5,10 @@ end
 
 vim.o.inccommand = "split"
 vim.o.spellfile = os.getenv("XDG_CONFIG_HOME") .. "/nvim/spell/en.utf-8.add"
+if vim.o.diff then
+  vim.o.autoread = false
+  vim.opt.diffopt:remove("linematch:40")
+end
 
 vim.api.nvim_create_autocmd("TermEnter", {
   group = "myvimrc",
