@@ -3,15 +3,19 @@ if exists('b:current_syntax')
 endif
 
 syn match doasComment /#.*$/
-syn match doasRule /^\s*\zs\%(permit\|deny\)\s\+.*/ contains=doasPermit,doasDeny,doasOptions
+syn match doasRule /^\s*\zs\%(permit\|deny\)\s\+.*/ contains=doasPermit,doasDeny,doasOptions,doasUser,doasCmd
 syn keyword doasPermit permit contained nextgroup=doasOptions
 syn keyword doasDeny deny contained nextgroup=doasOptions
 syn keyword doasOptions nopass nolog persist keepenv contained
 syn region doasOptions start=/\<setenv\s*{/ end=/}/ contained
+syn keyword doasUser as contained
+syn keyword doasCmd cmd args contained
 
 hi def link doasComment Comment
 hi def link doasPermit Added
 hi def link doasDeny Removed
 hi def link doasOptions Special
+hi def link doasUser Special
+hi def link doasCmd Special
 
 let b:current_syntax = 'doas'
