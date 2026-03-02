@@ -23,8 +23,9 @@ set shiftwidth=2
 set softtabstop=-1
 set spelllang+=cjk
 set suffixes-=.h
-set suffixes+=.aux,.bbl,.bcf,.blg,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv  " tex
 set suffixes+=.mod,.smod  " fortran
+set suffixes+=.aux,.bbl,.bcf,.blg,.nav,.out,.pdf,.snm,.toc,.run.xml,.vrb,.xdv  " tex
+set suffixes+=.egg-info/,__pycache__/  " python
 set title
 set visualbell
 " }}}1
