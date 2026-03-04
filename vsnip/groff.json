@@ -1,0 +1,6 @@
+{
+  "SB": {
+    "prefix": ".SB",
+    "body": ".SM\n.B"
+  }
+}
