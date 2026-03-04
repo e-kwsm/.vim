@@ -62,7 +62,7 @@ augroup myvimrc " {{{1
   au FileType nroff	setl spell textwidth=80
   au FileType pod	setl spell
   au FileType python	setl textwidth=88
-  au FileType rst	setl foldmethod=manual spell
+  au FileType rst	setl spell
   au FileType sh	setl
         \ makeprg=shellcheck\ -f\ gcc\ %
         \ shiftwidth=2 textwidth=100
@@ -71,7 +71,6 @@ augroup myvimrc " {{{1
   au FileType tcl	setl iskeyword+=-
   au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell textwidth=100
   au FileType text	setl spell
-  au FileType vim	setl foldmethod=marker
   au FileType xyz	setl cursorline
 
   au BufReadPost git-rebase-todo setl nowrap
