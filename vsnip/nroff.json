@@ -1,0 +1,18 @@
+{
+  "double quote": {
+    "prefix": "\"",
+    "body": "\\[${1|dq,lq,rq|}]"
+  },
+  "lq": {
+    "prefix": "\\*(Lq",
+    "body": "\\[lq]"
+  },
+  "rq": {
+    "prefix": "\\*(Rq",
+    "body": "\\[rq]"
+  },
+  "q": {
+    "prefix": "\\*(q",
+    "body": "\\[dq]"
+  }
+}
