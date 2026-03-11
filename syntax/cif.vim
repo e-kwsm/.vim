@@ -109,7 +109,7 @@ syn keyword cif_coreCIF	_atom_sites_solution_secondary
 syn keyword cif_coreCIF	_atom_sites_solution_hydrogens
 syn keyword cif_coreCIF	_atom_sites_special_details
 " _atom_type_[]
-syn match cif_coreCIF	/\<_atom_type_analytical_mass_%/
+syn keyword cif_coreCIF	_atom_type_analytical_mass_%
 syn keyword cif_coreCIF	_atom_type_description
 syn keyword cif_coreCIF	_atom_type_number_in_cell
 syn keyword cif_coreCIF	_atom_type_oxidation_number
@@ -385,14 +385,14 @@ syn keyword cif_coreCIF	_diffrn_refln_scan_mode_backgd
 syn keyword cif_coreCIF	_diffrn_refln_scan_rate
 syn keyword cif_coreCIF	_diffrn_refln_scan_time_backgd
 syn keyword cif_coreCIF	_diffrn_refln_scan_width
-syn match cif_coreCIF	/\<_diffrn_refln_sint\/lambda\>/
+syn keyword cif_coreCIF	_diffrn_refln_sint/lambda
 syn keyword cif_coreCIF	_diffrn_refln_standard_code
 syn keyword cif_coreCIF	_diffrn_refln_wavelength
 syn keyword cif_coreCIF	_diffrn_refln_wavelength_id
 " _diffrn_reflns_[]
 syn keyword cif_coreCIF	_diffrn_reflns_av_R_equivalents
-syn match cif_coreCIFDeprecated	/\<_diffrn_reflns_av_sigmaI\/netI\>/
-syn match cif_coreCIF	/\<_diffrn_reflns_av_unetI\/netI\>/
+syn keyword cif_coreCIFDeprecated	_diffrn_reflns_av_sigmaI/netI
+syn keyword cif_coreCIF	_diffrn_reflns_av_unetI/netI
 syn keyword cif_coreCIF	_diffrn_reflns_Laue_measured_fraction_full
 syn keyword cif_coreCIF	_diffrn_reflns_Laue_measured_fraction_max
 syn keyword cif_coreCIF	_diffrn_reflns_limit_h_max
@@ -421,8 +421,8 @@ syn keyword cif_coreCIF	_diffrn_reflns_transf_matrix_32
 syn keyword cif_coreCIF	_diffrn_reflns_transf_matrix_33
 " _diffrn_reflns_class_[]
 syn keyword cif_coreCIF	_diffrn_reflns_class_av_R_eq
-syn match cif_coreCIFDeprecated	/\<_diffrn_reflns_class_av_sgI\/I\>/
-syn match cif_coreCIF	/\<_diffrn_reflns_class_av_uI\/I\>/
+syn keyword cif_coreCIFDeprecated	_diffrn_reflns_class_av_sgI/I
+syn keyword cif_coreCIF	_diffrn_reflns_class_av_uI/I
 syn keyword cif_coreCIF	_diffrn_reflns_class_code
 syn keyword cif_coreCIF	_diffrn_reflns_class_d_res_high
 syn keyword cif_coreCIF	_diffrn_reflns_class_d_res_low
@@ -438,7 +438,7 @@ syn keyword cif_coreCIF	_diffrn_source_current
 syn keyword cif_coreCIF	_diffrn_source_details
 syn keyword cif_coreCIF	_diffrn_source_power
 syn keyword cif_coreCIF	_diffrn_source_size
-syn match cif_coreCIF	/\<_diffrn_source_take-off_angle\>/
+syn keyword cif_coreCIF	_diffrn_source_take-off_angle
 syn keyword cif_coreCIF	_diffrn_source_target
 syn keyword cif_coreCIF	_diffrn_source_type
 syn keyword cif_coreCIF	_diffrn_source_voltage
@@ -448,7 +448,7 @@ syn keyword cif_coreCIF	_diffrn_standard_refln_index_h
 syn keyword cif_coreCIF	_diffrn_standard_refln_index_k
 syn keyword cif_coreCIF	_diffrn_standard_refln_index_l
 " _diffrn_standards_[]
-syn match cif_coreCIF	/\<_diffrn_standards_decay_%/
+syn keyword cif_coreCIF	_diffrn_standards_decay_%
 syn keyword cif_coreCIF	_diffrn_standards_interval_count
 syn keyword cif_coreCIF	_diffrn_standards_interval_time
 syn keyword cif_coreCIF	_diffrn_standards_number
@@ -674,12 +674,12 @@ syn keyword cif_coreCIF	_refine_ls_R_I_factor
 syn keyword cif_coreCIF	_refine_ls_restrained_S_all
 syn keyword cif_coreCIF	_refine_ls_restrained_S_gt
 syn keyword cif_coreCIFDeprecated	_refine_ls_restrained_S_obs
-syn match cif_coreCIFDeprecated	/\<_refine_ls_shift\/esd_max\>/
-syn match cif_coreCIFDeprecated	/\<_refine_ls_shift\/esd_mean\>/
-syn match cif_coreCIF	/\<_refine_ls_shift\/su_max\>/
-syn match cif_coreCIF	/\<_refine_ls_shift\/su_max_lt\>/
-syn match cif_coreCIF	/\<_refine_ls_shift\/su_mean\>/
-syn match cif_coreCIF	/\<_refine_ls_shift\/su_mean_lt\>/
+syn keyword cif_coreCIFDeprecated	_refine_ls_shift/esd_max
+syn keyword cif_coreCIFDeprecated	_refine_ls_shift/esd_mean
+syn keyword cif_coreCIF	_refine_ls_shift/su_max
+syn keyword cif_coreCIF	_refine_ls_shift/su_max_lt
+syn keyword cif_coreCIF	_refine_ls_shift/su_mean
+syn keyword cif_coreCIF	_refine_ls_shift/su_mean_lt
 syn keyword cif_coreCIF	_refine_ls_structure_factor_coef
 syn keyword cif_coreCIF	_refine_ls_weighting_details
 syn keyword cif_coreCIF	_refine_ls_weighting_scheme
@@ -724,7 +724,7 @@ syn keyword cif_coreCIF	_refln_phase_calc
 syn keyword cif_coreCIF	_refln_phase_meas
 syn keyword cif_coreCIF	_refln_refinement_status
 syn keyword cif_coreCIF	_refln_scale_group_code
-syn match cif_coreCIF	/\<_refln_sint\/lambda\>/
+syn keyword cif_coreCIF	_refln_sint/lambda
 syn keyword cif_coreCIF	_refln_symmetry_epsilon
 syn keyword cif_coreCIF	_refln_symmetry_multiplicity
 syn keyword cif_coreCIF	_refln_wavelength
@@ -792,7 +792,7 @@ syn keyword cif_coreCIFDeprecated	_reflns_shell_Rmerge_I_obs
 syn keyword cif_coreCIF	_space_group_crystal_system
 syn keyword cif_coreCIF	_space_group_id
 syn keyword cif_coreCIF	_space_group_IT_number
-syn match cif_coreCIF	/\<_space_group_name_H-M_alt\>/
+syn keyword cif_coreCIF	_space_group_name_H-M_alt
 syn keyword cif_coreCIF	_space_group_name_Hall
 " _space_group_symop_[]
 syn keyword cif_coreCIF	_space_group_symop_id
@@ -801,7 +801,7 @@ syn keyword cif_coreCIF	_space_group_symop_sg_id
 " _symmetry_[]
 syn keyword cif_coreCIFDeprecated	_symmetry_cell_setting
 syn keyword cif_coreCIFDeprecated	_symmetry_Int_Tables_number
-syn match cif_coreCIFDeprecated	/\<_symmetry_space_group_name_H-M\>/
+syn keyword cif_coreCIFDeprecated	_symmetry_space_group_name_H-M
 syn keyword cif_coreCIFDeprecated	_symmetry_space_group_name_Hall
 " _symmetry_equiv_[]
 syn keyword cif_coreCIFDeprecated	_symmetry_equiv_pos_as_xyz
@@ -1293,7 +1293,7 @@ hi def link cifSpecial	Special
 hi def link cifString	String
 
 hi def link cif_coreCIF	Identifier
-hi def link cif_coreCIFDeprecated	Error
+hi def link cif_coreCIFDeprecated	Removed
 
 hi def link cif_symCIF_Hall	Special
 hi def link cif_symCIF_H_M	Special
