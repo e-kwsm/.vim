@@ -575,7 +575,7 @@ syn keyword cif_coreCIF	_journal_name_full
 syn keyword cif_coreCIF	_journal_page_first
 syn keyword cif_coreCIF	_journal_page_last
 syn keyword cif_coreCIF	_journal_paper_category
-syn keyword cif_coreCIF	_journal_paper_doi
+syn keyword cif_coreCIF	_journal_paper_doi nextgroup=cifdoi skipwhite
 syn keyword cif_coreCIF	_journal_suppl_publ_number
 syn keyword cif_coreCIF	_journal_suppl_publ_pages
 syn keyword cif_coreCIF	_journal_techeditor_address
@@ -1301,6 +1301,8 @@ syn match cif_SymOpComma contained ',' nextgroup=cif_SymOpElem
 syn match cifFloat '\%([+-]\|\<\)[0-9]\+\.\%([0-9]\+\>\)\?' nextgroup=cifFloatUncert
 syn match cifFloatUncert contained '([0-9]\+)'
 
+syn match cifdoi contained '\<10.[0-9]\+/\S\+'
+
 syn region cifHeredoc start='^;' end='^;$'
 " }}}1
 
@@ -1320,6 +1322,7 @@ hi def link cif_SymOpComma Delimiter
 hi def link cifHeredoc String
 hi def link cifFloat Float
 hi def link cifFloatUncert Float
+hi def link cifdoi Tag
 hi def link cif_space_group_crystal_system Keyword
 
 let b:current_syntax = 'cif'
