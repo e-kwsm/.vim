@@ -1290,11 +1290,15 @@ syn match cif_symCIF_Hall	/'-I 4 2 3'/		" 229
 syn match cif_symCIF_Hall	/'-I 4bd 2c 3'/		" 230
 
 " {{{1
-syn match cif_SymOpElem '\%(\%([1-9]/[1-9]\)\?[+-]\)\?[xyz]\>' nextgroup=cif_SymOpComma
-syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\?\>' nextgroup=cif_SymOpComma
+syn match cif_SymOpElem '\<[xyz]\>' nextgroup=cif_SymOpComma
+syn match cif_SymOpElem '\%([1-9]/[1-9]\)\?\([+-]\?[xyz]\)\+\>' nextgroup=cif_SymOpComma
+syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\>' nextgroup=cif_SymOpComma
 syn match cif_SymOpComma contained ',' nextgroup=cif_SymOpElem
 
-syn region cifHeredoc start='^;$' end='^;$'
+syn match cifFloat '[+-]\?[0-9]\+\.\%([0-9]\+\>\)\?' nextgroup=cifFloatUncert
+syn match cifFloatUncert contained '([0-9]\+)'
+
+syn region cifHeredoc start='^;' end='^;$'
 " }}}1
 
 hi def link cifBlock	Identifier
@@ -1311,6 +1315,8 @@ hi def link cif_symCIF_H_M	Special
 hi def link cif_SymOpElem Label
 hi def link cif_SymOpComma Delimiter
 hi def link cifHeredoc String
+hi def link cifFloat Float
+hi def link cifFloatUncert Float
 
 let b:current_syntax = 'cif'
 let &cpo = s:cpo_save
