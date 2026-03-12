@@ -154,9 +154,9 @@ syn keyword cif_coreCIF	_audit_contact_author_phone
 syn keyword cif_coreCIF	_audit_link_block_code
 syn keyword cif_coreCIF	_audit_link_block_description
 " _cell_[]
-syn keyword cif_coreCIF	_cell_angle_alpha
-syn keyword cif_coreCIF	_cell_angle_beta
-syn keyword cif_coreCIF	_cell_angle_gamma
+syn keyword cif_coreCIF	_cell_angle_alpha nextgroup=cifUnsigned,cifFloat skipwhite
+syn keyword cif_coreCIF	_cell_angle_beta nextgroup=cifUnsigned,cifFloat skipwhite
+syn keyword cif_coreCIF	_cell_angle_gamma nextgroup=cifUnsigned,cifFloat skipwhite
 syn keyword cif_coreCIF	_cell_formula_units_Z nextgroup=cifUnsigned skipwhite
 syn keyword cif_coreCIF	_cell_length_a
 syn keyword cif_coreCIF	_cell_length_b
