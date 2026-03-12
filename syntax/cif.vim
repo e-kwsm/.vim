@@ -1293,9 +1293,8 @@ syn match cif_symCIF_Hall	/'-I 4bd 2c 3'/		" 230
 syn keyword cif_space_group_crystal_system triclinic monoclinic orthorhombic tetragonal trigonal hexagonal cubic contained
 
 " {{{1
-syn match cif_SymOpElem '\<[xyz]\>' nextgroup=cif_SymOpComma
-syn match cif_SymOpElem '\%([1-9]/[1-9]\)\?\([+-][xyz]\)\+\>' nextgroup=cif_SymOpComma
-syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\?\>' nextgroup=cif_SymOpComma
+syn match cif_SymXYZ '^\s*\%([0-9xyz/+-]\+,\)\{2\}\%([0-9xyz/+-]\+\)\_s' transparent contains=cif_SymOpElem,cif_SymOpComma
+syn match cif_SymOpElem contained '\%([0-9xyz/+-]\)\+' nextgroup=cif_SymOpComma
 syn match cif_SymOpComma contained ',' nextgroup=cif_SymOpElem
 
 syn match cifUnsigned contained '\<[1-9][0-9]*\>'
