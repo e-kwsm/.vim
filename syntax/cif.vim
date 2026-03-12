@@ -1292,7 +1292,7 @@ syn match cif_symCIF_Hall	/'-I 4bd 2c 3'/		" 230
 " {{{1
 syn match cif_SymOpElem '\%(\%([1-9]/[1-9]\)\?[+-]\)\?[xyz]\>' nextgroup=cif_SymOpComma
 syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\?\>' nextgroup=cif_SymOpComma
-syn match cif_SymOpComma ',' nextgroup=cif_SymOpElem
+syn match cif_SymOpComma contained ',' nextgroup=cif_SymOpElem
 
 syn region cifHeredoc start='^;$' end='^;$'
 " }}}1
