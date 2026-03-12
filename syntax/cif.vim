@@ -1295,7 +1295,7 @@ syn keyword cif_space_group_crystal_system triclinic monoclinic orthorhombic tet
 " {{{1
 syn match cif_SymOpElem '\<[xyz]\>' nextgroup=cif_SymOpComma
 syn match cif_SymOpElem '\%([1-9]/[1-9]\)\?\([+-][xyz]\)\+\>' nextgroup=cif_SymOpComma
-syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\>' nextgroup=cif_SymOpComma
+syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\?\>' nextgroup=cif_SymOpComma
 syn match cif_SymOpComma contained ',' nextgroup=cif_SymOpElem
 
 syn match cifUnsigned contained '\<[1-9][0-9]*\>'
