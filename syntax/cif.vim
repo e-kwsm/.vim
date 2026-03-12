@@ -157,7 +157,7 @@ syn keyword cif_coreCIF	_audit_link_block_description
 syn keyword cif_coreCIF	_cell_angle_alpha
 syn keyword cif_coreCIF	_cell_angle_beta
 syn keyword cif_coreCIF	_cell_angle_gamma
-syn keyword cif_coreCIF	_cell_formula_units_Z
+syn keyword cif_coreCIF	_cell_formula_units_Z nextgroup=cifUnsigned skipwhite
 syn keyword cif_coreCIF	_cell_length_a
 syn keyword cif_coreCIF	_cell_length_b
 syn keyword cif_coreCIF	_cell_length_c
@@ -1298,6 +1298,8 @@ syn match cif_SymOpElem '\%([1-9]/[1-9]\)\?\([+-][xyz]\)\+\>' nextgroup=cif_SymO
 syn match cif_SymOpElem '\([+-]\?[xyz]\)\+\%([+-][1-9]/[1-9]\)\>' nextgroup=cif_SymOpComma
 syn match cif_SymOpComma contained ',' nextgroup=cif_SymOpElem
 
+syn match cifUnsigned contained '\<[1-9][0-9]*\>'
+
 syn match cifFloat '\%([+-]\|\<\)[0-9]\+\.\%([0-9]\+\>\)\?' nextgroup=cifFloatUncert
 syn match cifFloatUncert contained '([0-9]\+)'
 
@@ -1320,6 +1322,7 @@ hi def link cif_symCIF_H_M	Special
 hi def link cif_SymOpElem Label
 hi def link cif_SymOpComma Delimiter
 hi def link cifHeredoc String
+hi def link cifUnsigned Number
 hi def link cifFloat Float
 hi def link cifFloatUncert Float
 hi def link cifdoi Tag
