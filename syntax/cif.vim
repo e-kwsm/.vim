@@ -789,7 +789,7 @@ syn keyword cif_coreCIF	_reflns_shell_Rmerge_I_all
 syn keyword cif_coreCIF	_reflns_shell_Rmerge_I_gt
 syn keyword cif_coreCIFDeprecated	_reflns_shell_Rmerge_I_obs
 " _space_group_[]
-syn keyword cif_coreCIF	_space_group_crystal_system
+syn keyword cif_coreCIF	_space_group_crystal_system nextgroup=cif_space_group_crystal_system skipwhite
 syn keyword cif_coreCIF	_space_group_id
 syn keyword cif_coreCIF	_space_group_IT_number
 syn keyword cif_coreCIF	_space_group_name_H-M_alt
@@ -799,7 +799,7 @@ syn keyword cif_coreCIF	_space_group_symop_id
 syn keyword cif_coreCIF	_space_group_symop_operation_xyz
 syn keyword cif_coreCIF	_space_group_symop_sg_id
 " _symmetry_[]
-syn keyword cif_coreCIFDeprecated	_symmetry_cell_setting
+syn keyword cif_coreCIFDeprecated	_symmetry_cell_setting nextgroup=cif_space_group_crystal_system skipwhite
 syn keyword cif_coreCIFDeprecated	_symmetry_Int_Tables_number
 syn keyword cif_coreCIFDeprecated	_symmetry_space_group_name_H-M
 syn keyword cif_coreCIFDeprecated	_symmetry_space_group_name_Hall
@@ -1290,7 +1290,7 @@ syn match cif_symCIF_Hall	/'-I 4 2 3'/		" 229
 syn match cif_symCIF_Hall	/'-I 4bd 2c 3'/		" 230
 
 " {{{1
-syn keyword cif_space_group_crystal_system triclinic monoclinic orthorhombic tetragonal trigonal hexagonal cubic
+syn keyword cif_space_group_crystal_system triclinic monoclinic orthorhombic tetragonal trigonal hexagonal cubic contained
 
 " {{{1
 syn match cif_SymOpElem '\<[xyz]\>' nextgroup=cif_SymOpComma
