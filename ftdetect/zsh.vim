@@ -1,1 +1,1 @@
-autocmd BufRead */share/zsh/* setf zsh
+autocmd BufRead */share/zsh/{,site-}functions/* setf zsh
