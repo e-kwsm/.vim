@@ -102,6 +102,7 @@ arcsch/=
 arcsec/=
 arcsin/=
 arctan/=
+are are/!
 arene
 arg max/=
 arg min/=
@@ -180,6 +181,7 @@ basename
 bashrc/=?
 basisset
 basissets
+be be/!
 Becke
 benzaldehyde
 benzimidazole
@@ -820,6 +822,7 @@ intersystem
 ionically
 ionicity
 irrotational
+is is/!
 isenthalpic
 Ising
 isobenzofuran
