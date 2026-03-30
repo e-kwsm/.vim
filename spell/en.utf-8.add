@@ -1530,6 +1530,17 @@ siloxy
 silyl
 sinc
 sinh/=
+Skolem
+Skolemisation/4
+Skolemise/4
+Skolemised/4
+Skolemises/4
+Skolemising/4
+Skolemization
+Skolemize
+Skolemized
+Skolemizes
+Skolemizing
 slurm
 Smirnov
 Sobol
@@ -1783,6 +1794,7 @@ Weizsaecker/?
 Weizsäcker
 Welford
 wether/!
+wget/=
 Wh/=
 whitespace
 whitespaces
