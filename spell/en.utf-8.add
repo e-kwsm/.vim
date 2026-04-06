@@ -503,6 +503,7 @@ dlopen
 DMC
 dmesg/=?
 DMRG
+dnf/=
 DNN
 Dockerfile
 docstring/?
@@ -556,6 +557,7 @@ enantioselective
 enantioselectivity
 enantiotopic
 enantiotropic
+endianness
 endif/=?
 endo
 endocyclic
@@ -1045,6 +1047,7 @@ monic
 Monkhorst
 monodentate
 monoid
+monoidal
 monoids
 monoisotopic
 Morera
@@ -1497,6 +1500,7 @@ semilattice
 semilattices
 semiring
 semirings
+SemVer
 sep/=
 serialisable/4
 serializable
@@ -1757,6 +1761,7 @@ Vandermonde
 variadic
 VASP
 VBM
+VCS
 vdW/=
 venv/=?
 Verlet
