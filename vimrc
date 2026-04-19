@@ -80,7 +80,9 @@ augroup myvimrc " {{{1
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
   au BufNewFile *.bash	call setline(1, ['#!/usr/bin/env bash', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.dash	call setline(1, ['#!/usr/bin/env dash', 'set -eux', 'set -o pipefail']) | :3
+  au BufNewFile *.hs	put!='#!/usr/bin/env runghc' | :2
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
+  au BufNewFile *.lhs	put!='#!/usr/bin/env runghc' | :2
   au BufNewFile *.lua	put!='#!/usr/bin/env lua' | :2
   au BufNewFile *.plt	put!='#!/usr/bin/env -S gnuplot -p' | :2
   au BufNewFile *.py	call setline(1, [
