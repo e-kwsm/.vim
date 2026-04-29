@@ -52,9 +52,7 @@ augroup myvimrc " {{{1
   au FileType gitcommit	setl keywordprg=git\ show spell
   au FileType gitconfig	setl list noexpandtab shiftwidth=8
   au FileType gitrebase	setl keywordprg=git\ show
-  au FileType gnuplot	setl
-        \ keywordprg=gnuplot\ -e\ help\\
-        \ shiftwidth=4 textwidth=100
+  au FileType gnuplot	setl shiftwidth=4 textwidth=100
   au FileType haskell	setl shiftwidth=4
   au FileType help	setl spell
   au FileType make	setl list
