@@ -80,9 +80,7 @@ vim.cmd([[
 ]])
 
 -- ncm2/float-preview.nvim {{{1
-vim.cmd([[
-  "let g:float_preview#docked = 1
-]])
+-- vim.g["float_preview#docked"] = 1
 
 -- L3MON4D3/LuaSnip {{{1
 local ls = require("luasnip")
@@ -114,9 +112,17 @@ vim.lsp.config("denols", {
 
 vim.cmd([[
   au myvimrc CompleteDone * silent! pclose!
+]])
 
-  call ddc#custom#patch_global('ui', 'native')
+vim.fn["ddc#custom#patch_global"]("ui", "native")
 
+-- local sources = {
+--   "lsp",
+--   "around",
+--   -- "vsnip"
+-- }
+-- vim.fn["ddc#custom#patch_global"]("sources", sources)
+vim.cmd([[
   let s:sources = [
         \ 'lsp',
         \ 'around',
@@ -217,9 +223,9 @@ vim.cmd([[
         \ 'tex.usetikzlibrary',
         \ 'tex.xcolor',
         \ ] + s:sources)
-
-  call ddc#enable()
 ]])
+
+vim.fn["ddc#enable"]()
 -- }}}1
 
 vim.diagnostic.config({ virtual_text = true })
