@@ -116,6 +116,12 @@ vim.cmd([[
 
 vim.fn["ddc#custom#patch_global"]("ui", "native")
 
+-- local sources = {
+--   "lsp",
+--   "around",
+--   -- "vsnip"
+-- }
+-- vim.fn["ddc#custom#patch_global"]("sources", sources)
 vim.cmd([[
   let s:sources = [
         \ 'lsp',
