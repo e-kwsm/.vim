@@ -49,7 +49,6 @@ augroup myvimrc " {{{1
   au FileType c,cpp	setl shiftwidth=2 textwidth=100
   au FileType csv	setl noexpandtab
   au FileType fortran	setl ignorecase
-  au FileType gitcommit	setl keywordprg=git\ show spell
   au FileType gitconfig	setl list noexpandtab shiftwidth=8
   au FileType gnuplot	setl
         \ shiftwidth=4 textwidth=100
