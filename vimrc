@@ -50,8 +50,7 @@ augroup myvimrc " {{{1
   au FileType csv	setl noexpandtab
   au FileType fortran	setl ignorecase
   au FileType gitconfig	setl list noexpandtab shiftwidth=8
-  au FileType gnuplot	setl
-        \ shiftwidth=4 textwidth=100
+  au FileType gnuplot	setl shiftwidth=4 textwidth=100
   au FileType haskell	setl shiftwidth=4
   au FileType help	setl spell
   au FileType make	setl list
