@@ -63,7 +63,7 @@ augroup myvimrc " {{{1
         \ makeprg=shellcheck\ -f\ gcc\ %
         \ shiftwidth=2 textwidth=100
   au FileType sshconfig	setl noexpandtab
-  au FileType svg	setl iskeyword+=- shiftwidth=2 textwidth=100
+  au FileType svg	setl shiftwidth=2 textwidth=100
   au FileType tcl	setl iskeyword+=-
   au FileType tex	setl colorcolumn=+1 foldmarker=[[[,]]] foldmethod=marker spell textwidth=100
   au FileType text	setl spell
