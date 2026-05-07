@@ -321,6 +321,7 @@ CIP
 CISD
 CISDT
 CISDTQ
+CLA
 classmethod/?
 Clebsch
 CMake/=
@@ -514,6 +515,7 @@ DOCTYPE
 DOI
 doi/=
 dopants
+Doxygen
 doxygen/=
 Drude
 Ds/=
@@ -1074,6 +1076,7 @@ MPIX
 MPMD
 mPW91
 MRCI
+msgpack
 Mulliken
 multiconfiguration
 multicrystalline
@@ -1828,6 +1831,7 @@ xetex/=
 xml/=
 XPath/=
 XRD
+XSL
 XSLT
 XYG3
 XYGJ-OS
