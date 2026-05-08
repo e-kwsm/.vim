@@ -1,0 +1,22 @@
+{
+  "PYTHONINTERP_FOUND": {
+    "prefix": "PYTHONINTERP_FOUND",
+    "body": "${1|Python_Interpreter_FOUND,Python3_Interpreter_FOUND|}"
+  },
+  "PYTHONLIBS_FOUND": {
+    "prefix": "PYTHONLIBS_FOUND",
+    "body": "${1|Python_Development_FOUND,Python3_Development_FOUND|}"
+  },
+  "PYTHON_EXECUTABLE": {
+    "prefix": "PYTHON_EXECUTABLE",
+    "body": "${1|Python_EXECUTABLE,Python3_EXECUTABLE|}"
+  },
+  "PythonInterp": {
+    "prefix": "PythonInterp",
+    "body": "${1|Python,Python3|} COMPONENTS Interpreter"
+  },
+  "PythonLibs": {
+    "prefix": "PythonLibs",
+    "body": "${1|Python,Python3|} COMPONENTS Development"
+  }
+}
