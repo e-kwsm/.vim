@@ -27,6 +27,15 @@
     ]
   },
 
+  "pacman": {
+    "prefix": "pacman",
+    "body": [
+      "RUN \\",
+      "\t--mount=type=cache,target=/var/cache/pacman,sharing=locked \\",
+      "\tpacman -Syu --noconfirm --needed ${1}"
+    ]
+  },
+
   "pip": {
     "prefix": "pip",
     "body": [
