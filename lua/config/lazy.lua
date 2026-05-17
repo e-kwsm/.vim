@@ -98,11 +98,16 @@ end, {silent = true})
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./vsnip" } })
 
 -- neovim/nvim-lspconfig {{{1
+vim.lsp.enable("basedpyright")
 vim.lsp.enable("clangd")
 -- vim.lsp.enable("codebook")
 vim.lsp.enable("denols")
 vim.lsp.enable("hls")
 vim.lsp.enable("pylsp")
+vim.lsp.enable("pyrefly")
+vim.lsp.enable("ruff")
+vim.lsp.enable("ty")
+vim.lsp.enable("zuban")
 
 -- Shougo/ddc.vim {{{1
 local capabilities = require("ddc_source_lsp").make_client_capabilities()
