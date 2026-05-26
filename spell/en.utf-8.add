@@ -115,6 +115,7 @@ args/=?
 args/?
 argv/=?
 arity
+Armijo
 Arnoldi
 Aronszajn
 arsech/=
@@ -964,6 +965,7 @@ LSP
 LTO
 LTS/?
 lua
+LuaJIT/=
 LuaLaTeX/=
 lualatex/=
 LuaTeX/=
@@ -1108,6 +1110,7 @@ Navier
 NBO
 nbsp/=?
 NDDO
+neovim
 Netlib
 nginx/?
 Nh/=
@@ -1156,6 +1159,7 @@ NVCC
 NVE
 NVIDIA
 nvidia
+nvim
 NVT
 O3LYP
 OAuth/=
@@ -1256,6 +1260,7 @@ perceptron
 perceptrons
 perchloric
 Perdew
+performantly
 permittivities
 perovskite
 perovskites
