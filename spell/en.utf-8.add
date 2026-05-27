@@ -516,8 +516,7 @@ DOCTYPE
 DOI
 doi/=
 dopants
-Doxygen
-doxygen/=
+doxygen
 Drude
 Ds/=
 DSO
@@ -1639,7 +1638,7 @@ synthesisable/4
 synthesizable
 synthetase
 sys/=?
-syslog
+syslog/=?
 systemd/=
 SYSV
 Tamm
