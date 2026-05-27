@@ -5,6 +5,7 @@
 -yne
 .c/=
 .cpp/=
+.cxx/=
 .gif/=
 .h/=
 .hpp/=
@@ -516,8 +517,7 @@ DOCTYPE
 DOI
 doi/=
 dopants
-Doxygen
-doxygen/=
+doxygen
 Drude
 Ds/=
 DSO
@@ -605,6 +605,7 @@ excitons
 exe/=
 exo
 exocyclic
+extern/=?
 extremum
 Eyring
 Faddeeva
@@ -1544,6 +1545,7 @@ siloxy
 silyl
 sinc
 sinh/=
+sizeof/=?
 Skolem
 Skolemisation/4
 Skolemise/4
@@ -1639,7 +1641,7 @@ synthesisable/4
 synthesizable
 synthetase
 sys/=?
-syslog
+syslog/=?
 systemd/=
 SYSV
 Tamm
