@@ -98,7 +98,7 @@ end, {silent = true})
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./vsnip" } })
 
 -- neovim/nvim-lspconfig {{{1
-vim.lsp.enable("basedpyright")
+-- vim.lsp.enable("basedpyright")
 vim.lsp.enable("clangd")
 -- vim.lsp.enable("codebook")
 vim.lsp.enable("denols")
