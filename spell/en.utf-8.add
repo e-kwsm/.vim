@@ -5,6 +5,7 @@
 -yne
 .c/=
 .cpp/=
+.cxx/=
 .gif/=
 .h/=
 .hpp/=
