@@ -604,6 +604,7 @@ excitons
 exe/=
 exo
 exocyclic
+extern/=?
 extremum
 Eyring
 Faddeeva
@@ -1543,6 +1544,7 @@ siloxy
 silyl
 sinc
 sinh/=
+sizeof/=?
 Skolem
 Skolemisation/4
 Skolemise/4
