@@ -86,6 +86,7 @@ vim.api.nvim_create_autocmd("BufNewFile", {
       '  # python -m installer --destdir="$pkgdir" dist/*.whl',
       '}',
     })
+    vim.cmd("1")
   end,
 })
 
