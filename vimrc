@@ -97,22 +97,6 @@ augroup myvimrc " {{{1
   au BufNewFile *.ts	put!='#!/usr/bin/env -S deno run' | :2
   au BufNewFile *.zsh	call setline(1, ['#!/usr/bin/env -S zsh', 'set -eux', 'set -o pipefail', '# ${(%):-%x}']) | :4
 
-  au BufNewFile .editorconfig	call setline(1, [
-        \ 'root = true',
-        \ '',
-        \ '[*]',
-        \ 'insert_final_newline = true',
-        \ 'trim_trailing_whitespace = true',
-        \ '#indent_style = space',
-        \ '#indent_size = 4',
-        \ '#max_line_length = 100',
-        \ '',
-        \ '[*.md]',
-        \ 'trim_trailing_whitespace = false',
-        \ '',
-        \ '[Makefile,makefile,GNUmakefile]',
-        \ 'indent_style = tab',
-        \ ])
   au BufNewFile .gitattributes	call setline(1, [
         \ '* text=auto',
         \ '.gitattributes export-ignore',
