@@ -1,7 +1,7 @@
 {
   "shebang": {
     "prefix": ["#!"],
-    "body": "#!/usr/bin/env -S podman build . -f"
+    "body": "#!/usr/bin/env -S podman build . -f\n"
   },
 
   # https://docs.docker.com/build/cache/optimize/#use-cache-mounts
