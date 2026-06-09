@@ -31,6 +31,30 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 vim.api.nvim_create_autocmd("BufNewFile", {
   group = "myvimrc",
+  pattern = ".editorconfig",
+  callback = function(ev)
+    vim.api.nvim_buf_set_lines(ev.buf, 0, 0, false, {
+        'root = true',
+        '',
+        '[*]',
+        'insert_final_newline = true',
+        'trim_trailing_whitespace = true',
+        '# indent_style = space',
+        '# indent_size = 4',
+        '# max_line_length = 100',
+        '',
+        '[*.md]',
+        'trim_trailing_whitespace = false',
+        '',
+        '[Makefile,makefile,GNUmakefile]',
+        'indent_style = tab',
+    })
+    vim.cmd("1")
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+  group = "myvimrc",
   pattern = "PKGBUILD",
   callback = function(ev)
     vim.api.nvim_buf_set_lines(ev.buf, 0, 0, false, {
