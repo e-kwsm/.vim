@@ -149,6 +149,7 @@ vim.api.nvim_create_autocmd("BufNewFile", {
       '# pkgver() {',
       '#   cd "${pkgname%-git}"',
       '#   git describe --long --abbrev=7 | sed "s/\\([^-]*-g\\)/r\\1/;s/-/./g"',
+      '#   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"',
       '# }',
       '',
       'build() {',
