@@ -6,6 +6,7 @@
 .c/=
 .cpp/=
 .cxx/=
+.f90
 .gif/=
 .h/=
 .hpp/=
@@ -130,6 +131,7 @@ aspartic
 AST
 async/=
 atm/=
+atomwise
 attr/=?
 aufbau
 aug-cc-pCV5Z/=
@@ -299,6 +301,7 @@ CdS/=
 CdTe/=
 CentOS/=
 ceria
+CFFI
 CFLAGS/?
 cgs/=
 Chai
@@ -640,6 +643,7 @@ Frenet
 Friedmann
 Frobenius
 frontend
+Fréchet
 Fubini
 fugacity
 fullerene
@@ -718,6 +722,7 @@ guanidine
 guanidinium
 Gummel
 gz/=
+Gâteaux
 hackage
 Hamprecht
 Hankel
@@ -976,6 +981,7 @@ Lv/=
 lvalue/=?
 Lyapunov
 LYP
+Lévy
 Löwdin
 M06-2X
 M06-HF
