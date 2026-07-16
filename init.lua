@@ -15,6 +15,8 @@ if vim.o.diff then
   vim.opt.diffopt:remove("linematch:40")
 end
 
+-- require('vim._core.ui2').enable()
+
 vim.api.nvim_create_autocmd("TermEnter", {
   group = "myvimrc",
   command = "setl nospell notermguicolors",
