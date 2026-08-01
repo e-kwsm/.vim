@@ -1386,6 +1386,7 @@ PWD/?
 PWPB95
 pymatgen/?
 PyPI/=
+pyproject/=
 pyranose
 pyranoses
 pyrazine
@@ -1393,6 +1394,7 @@ pyrazole
 pyridazine
 pyridinium
 pyrrole
+pytest/=
 python3/?
 PYTHONPATH/?
 pytorch
