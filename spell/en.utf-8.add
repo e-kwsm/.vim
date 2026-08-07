@@ -10,12 +10,17 @@
 .gif/=
 .h/=
 .hpp/=
+.ini/=
+.io/=?
+.js/=?
 .md/=
 .mp4/=
 .py/=
 .svg/=
+.ts/=?
 :func:/=
 :meth:/=
+:py:/=
 a.u./=
 A64FX
 Ab Initio
@@ -1525,6 +1530,7 @@ serialisable/4
 serializable
 Serret
 setuid/=?
+setuptools/=
 Sg/=
 SGID
 SHA1
