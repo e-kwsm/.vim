@@ -300,6 +300,7 @@ CC0
 CCSD
 CCSDT
 CCSDTQ
+ccTLD/=
 cd/=?
 CDF
 CdS/=
@@ -1707,6 +1708,7 @@ threonine
 timestamp
 titanate
 titania
+TLD
 tmp/=?
 TMPDIR/?
 tmux
