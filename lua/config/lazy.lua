@@ -109,6 +109,7 @@ vim.lsp.enable("hls")
 vim.lsp.enable("pylsp")
 vim.lsp.enable("pyrefly")
 vim.lsp.enable("ruff")
+vim.lsp.enable("shuck")
 vim.lsp.enable("ty")
 vim.lsp.enable("zuban")
 
