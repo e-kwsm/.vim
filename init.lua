@@ -123,6 +123,24 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 
 vim.api.nvim_create_autocmd("BufNewFile", {
   group = "myvimrc",
+  pattern = "compile_commands.json",
+  callback = function(ev)
+    vim.api.nvim_buf_set_lines(ev.buf, 0, 0, false, {
+      '[',
+      '{',
+      '  "directory": "' .. vim.uv.cwd() .. '",',
+      '  "command": "clang++ -std=c++17 -o a.o -c a.cpp",',
+      '  "file": "a.cpp",',
+      '  "output": "a.o"',
+      '}',
+      ']',
+    })
+    vim.cmd("1")
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+  group = "myvimrc",
   pattern = "PKGBUILD",
   callback = function(ev)
     vim.api.nvim_buf_set_lines(ev.buf, 0, 0, false, {
