@@ -112,6 +112,7 @@ vim.lsp.enable("pyrefly")
 vim.lsp.enable("ruff")
 vim.lsp.enable("shuck")
 vim.lsp.enable("ty")
+vim.lsp.enable("zizmor")
 vim.lsp.enable("zuban")
 
 -- Shougo/ddc.vim {{{1
