@@ -75,7 +75,7 @@ augroup myvimrc " {{{1
 
   " shebang
   au BufNewFile *.awk	put!='#!/usr/bin/env -S awk -f' | :2
-  au BufNewFile *.bash	call setline(1, ['#!/usr/bin/env -S bash', 'set -eux', 'set -o pipefail']) | :3
+  au BufNewFile *.bash	call setline(1, ['#!/usr/bin/env -S bash', 'set -eux', 'set -o pipefail', 'shopt -s inherit_errexit']) | :3
   au BufNewFile *.dash	call setline(1, ['#!/usr/bin/env -S dash', 'set -eux', 'set -o pipefail']) | :3
   au BufNewFile *.hs	put!='#!/usr/bin/env runghc' | :2
   au BufNewFile *.jl	put!='#!/usr/bin/env julia' | :2
