@@ -33,6 +33,14 @@
     ]
   },
 
+  "cabal": {
+    "prefix": "cabal",
+    "body": [
+      "RUN --mount=type=cache,target=/root/.cache/cabal/packages,sharing=locked \\",
+      "\tcabal ${1|update|install}"
+    ]
+  },
+
   "pip": {
     "prefix": "pip",
     "body": [
